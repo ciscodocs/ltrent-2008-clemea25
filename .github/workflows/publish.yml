@@ -1,0 +1,27 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: danischm/cl-labs:0.1.5
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::315423322486:role/cl-labs-role-github
+          aws-region: eu-central-1
+      - name: Build
+        run: mkdocs build --clean
+      - name: Publish
+        run: |
+          aws s3 sync site s3://cl-ltr/${{ github.event.repository.name }}

@@ -1,0 +1,36 @@
+article h1 {
+    border-bottom: 2px solid #14284D;
+}
+
+article h2 {
+    border-bottom: 1px solid #1f3f7b;
+}
+
+article h3 {
+    border-bottom: 0.5px solid #3367c8;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media print {
+    html {
+        font-family: 'CiscoSansTT', 'Kelmscott Roman NF', 'Noto Serif JP', serif;
+    }
+
+    body {
+        font-family: 'CiscoSansTT', 'Classico URW T OT', 'Noto Serif JP', serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label {
+        font-family: 'CiscoSansTT', 'Gentium Book Basic', 'Helvetica Neue', Helvetica, Arial, 'Noto Sans JP', 'Roboto', sans-serif;
+    }
+}

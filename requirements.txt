@@ -1,0 +1,5 @@
+mkdocs
+mkdocs-material
+mkdocs-with-pdf
+Pygments
+pygments-ios @ git+https://github.com/vincentbernat/pygments-ios@d6b79303cd9dda7b7130e2bb06934a8a22470b11

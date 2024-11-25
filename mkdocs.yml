@@ -1,0 +1,84 @@
+---
+site_name: LTRXXX-1234 My famous Cisco Live Lab # This must begin with the session ID
+site_description: LTRXXX-1234 My famous Cisco Live Lab # must be same as "site_name"
+site_author: John Doe
+copyright: Copyright &copy; 2025 Cisco
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - content.code.copy
+    - toc.integrate
+  custom_dir: docs/overrides
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: template_assets/cisco_logo.png
+  favicon: template_assets/cisco_logo.png
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - with-pdf:
+      cover_title: LTRXXX-1234
+      cover_subtitle: My famous Cisco Live Lab
+      cover_logo: template_assets/Cisco-Live-White-Blue-APJC.svg
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: fade
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false
+      skip_classes:
+      - custom-skip-class-name
+      auto_caption: true
+      caption_position: top
+markdown_extensions:
+  - md_in_html
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Home: index.md
+  - Lab:
+      - Overview: overview.md
+      - Lab 1 - Getting Started: lab1_getting_started.md
+      - Conclusion: conclusion.md
+  - Topologies: topologies.md
