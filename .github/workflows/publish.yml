@@ -24,4 +24,4 @@ jobs:
         run: mkdocs build --clean
       - name: Publish
         run: |
-          aws s3 sync site s3://cl-ltr/${{ github.event.repository.name }}
+          aws s3 sync site s3://cl-ltr/f591d84c88f4b51795589c8c3573ffad76a7c975
