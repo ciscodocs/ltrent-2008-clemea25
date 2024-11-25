@@ -1,7 +1,7 @@
 ---
-site_name: LTRXXX-1234 My famous Cisco Live Lab # This must begin with the session ID
-site_description: LTRXXX-1234 My famous Cisco Live Lab # must be same as "site_name"
-site_author: John Doe
+site_name: "LTRENT-2008 Beyond Basics: Practical SD-WAN Strategies for Route Leaking and Service Insertion"
+site_description: "LTRENT-2008 Beyond Basics: Practical SD-WAN Strategies for Route Leaking and Service Insertion"
+site_author: Waqas Ahmad Daar, Utsav Dutt
 copyright: Copyright &copy; 2025 Cisco
 theme:
   name: material
@@ -40,8 +40,8 @@ extra_css:
 plugins:
   - search
   - with-pdf:
-      cover_title: LTRXXX-1234
-      cover_subtitle: My famous Cisco Live Lab
+      cover_title: LTRENT-2008
+      cover_subtitle: "Beyond Basics: Practical SD-WAN Strategies for Route Leaking and Service Insertion"
       cover_logo: template_assets/Cisco-Live-White-Blue-APJC.svg
   - glightbox:
       touchNavigation: true
