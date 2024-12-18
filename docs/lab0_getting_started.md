@@ -10,7 +10,7 @@ This lab features a topology comprising four WAN-Edge routers strategically depl
 
 ## Verification
 
-```ciscoios
+```ios
 London-Hub#show sdwan control local-properties 
 personality                       vedge
 sp-organization-name              cml-sdwan-lab-tool
@@ -70,7 +70,5 @@ INTERFACE                IPv4            PORT   IPv4            IPv6            
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 GigabitEthernet1              172.16.1.101    12346  172.16.1.101    ::                                      12346    1/1  biz-internet     up     2     yes/yes/no   No/No  0:00:00:02   0:06:17:23  N    5  Default N/A                           
 GigabitEthernet2              172.16.2.101    12346  172.16.2.101    ::                                      12346    1/0  mpls             up     2     yes/yes/no   No/No  0:00:00:02   0:06:17:23  N    5  Default N/A                           
-
-
 ```
 
