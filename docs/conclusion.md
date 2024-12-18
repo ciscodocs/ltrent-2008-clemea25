@@ -6,6 +6,8 @@ As you apply these techniques in your real-world deployments, you’ll be able t
 
 If you're eager to dive deeper into SD-WAN technology and discover more advanced techniques, we invite you to explore additional sessions and resources that will further expand your expertise in this transformative field.
 
-# Related Sessions at Cisco Live
+# SD-WAN Learning Map 
 
-- [BRKXXX-1111](https://www.ciscolive.com/apjc/learn/session-catalog.html?search=BRKXXX-1111#/) My friend's breakout session
+<figure markdown>
+  ![learning-map](./assets/SD-WAN-learning-map-2025.png)
+</figure>
