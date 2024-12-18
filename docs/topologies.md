@@ -1,4 +1,4 @@
-# Lab topologies
+# Lab topology
 
 <figure markdown>
   ![topo](./assets/sdwan-topology.png)
