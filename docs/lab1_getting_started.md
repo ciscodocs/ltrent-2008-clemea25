@@ -1,4 +1,4 @@
-# Lab 1 - Routing Stockholm to Sydney Traffic Through Local Firewall in Same VRF-1 Network
+# Lab 1 - Route Stockholm to Sydney Traffic through local firewall
 
 ## Introduction
 
