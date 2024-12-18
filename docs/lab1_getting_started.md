@@ -29,7 +29,7 @@ interface GigabitEthernet1
 Image:
 
 <figure markdown>
-  ![ACI](./assets/aci.png){ width="500" }
+  ![Traffic Flow Scenario 1](./assets/Scenario-1.gif)
 </figure>
 
 ## Section 2
