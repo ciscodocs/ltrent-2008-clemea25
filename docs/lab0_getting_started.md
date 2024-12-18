@@ -41,7 +41,7 @@ To verify the SD-WAN fabric's control connections, we can utilize following show
 - show sdwan bfd sessions table
 - show sdwan tunnel statistics table 
 
-!!! info 
+!!! info
     Each WAN-Edge router in the topology is configured with the default username and password combination (**admin**/**admin**).
 
 
