@@ -9,7 +9,7 @@ Here is a breakdown of the key components involved in the network path:
 - **Source**: The traffic originates from a **Stockholm-User** user in the **EMEA-Stockholm-Branch (site-10)**.
 - **Destination**: The intended recipient is a **Sydney-User** in the **APAC-Sydney-Branch (site-20)**.
 - **Firewall**: All traffic passes through a **firewall (Stockholm-FW)**, which is hosted locally at the **EMEA-Stockholm-Branch (site-10)**.
-- **WAN Edge Router**: The **Stockholm-Branch** WAN-Edge router, configured in ***<font color="red">VRF-1</font>***, facilitates the traffic's reachability to the firewall and subsequent routing towards the destination.
+- **WAN Edge Router**: The **Stockholm-Branch** WAN-Edge router, configured in ***<font color="blue">VRF-1</font>***, facilitates the traffic's reachability to the firewall and subsequent routing towards the destination.
 
 Ensure that each component is properly configured and verify the traffic flow is going through **Stockholm-FW**.
 
