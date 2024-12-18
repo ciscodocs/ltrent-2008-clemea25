@@ -8,9 +8,11 @@ This lab features a topology comprising four WAN-Edge routers strategically depl
   ![topo](./assets/sdwan-topology.png)
 </figure>
 
+## Lab Connectivity
+
 ## Verification
 
-``` {.ios, .no-copy}
+``` { .ios, .no-copy }
 London-Hub#show sdwan control local-properties 
 personality                       vedge
 sp-organization-name              cml-sdwan-lab-tool
