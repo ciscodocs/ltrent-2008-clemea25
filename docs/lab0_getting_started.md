@@ -42,7 +42,7 @@ To verify the SD-WAN fabric's control connections, we can utilize following show
 - show sdwan tunnel statistics table 
 
 !!! info
-     Every WAN-Edge router in the topology have default username and password (**admin**/**admin**).
+Each WAN-Edge router in the topology is configured with the default username and password combination (**admin**/**admin**).
 
 
 Initially, the WAN-Edge routers are configured for full mesh connectivity. Due to the use of the **restrict** option under the TLOC configuration, IPSec tunnels and BFD sessions are established only among TLOCs with matching colors. As a result, each WAN-Edge router will establish a total of **6 IPSec tunnels and 6 BFD sessions**, ensuring robust and efficient connectivity within the SD-WAN fabric.
