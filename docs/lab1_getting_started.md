@@ -13,6 +13,8 @@ Here is a breakdown of the key components involved in the network path:
 
 Ensure that each component is properly configured and verify the traffic flow is going through **Stockholm-FW**.
 
+!!! note
+    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***without requiring any additional configuration***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats. 
 
 Please use the following credentials to connect to device:
 
@@ -25,8 +27,7 @@ Please use the following credentials to connect to device:
 
 My content
 
-!!! note
-    This is a note
+
 
 Cisco IOS code block:
 
