@@ -7,7 +7,7 @@ This lab features a topology comprising four WAN-Edge routers strategically depl
 
 In the lab topology, each WAN-Edge router is configured with dual transport connectivity: the **GigabitEthernet 1** interface is connected to the **Internet transport**, while the **GigabitEthernet 2** interface is connected to the **MPLS transport**. For simplification, the deployment includes a single SD-WAN validator (vBond) and a single SD-WAN controller (vSmart), each assigned the following system ip mentioned in below table.
 
-| <font color="light gray">Device</font> | <font color="light gray">System IP</font>   |
+| Device | System IP   |
 |--------------------------------------|-------------|
 | Validator  (vBond)                   | 100.0.0.201 |
 | Controller (vSmart)                  | 100.0.0.101 |
