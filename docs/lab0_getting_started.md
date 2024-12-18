@@ -5,7 +5,7 @@ This lab features a topology comprising four WAN-Edge routers strategically depl
 
 ## Device Connectivity and Interfaces
 
-In the lab topology, each WAN-Edge router is configured with dual transport connectivity: the **GigabitEthernet 1** interface is connected to the **Internet transport**, while the **GigabitEthernet 2** interface is connected to the **MPLS transport**. For simplification, the deployment includes a single SD-WAN validator (vBond) and a single SD-WAN controller (vSmart), each assigned the following system ip mentioned in below table.
+In the lab topology, each WAN-Edge router is configured with dual transport connectivity: the **GigabitEthernet 1** interface is connected to the **Internet transport**, while the **GigabitEthernet 2** interface is connected to the **MPLS transport**. For simplification, the deployment includes a single SD-WAN validator (vBond) and a single SD-WAN controller (vSmart), each assigned the following **system ip** mentioned in below table.
 
 | Device               | System IP   |
 |----------------------|-------------|
@@ -15,7 +15,7 @@ In the lab topology, each WAN-Edge router is configured with dual transport conn
 
 Additionally, the **GigabitEthernet 4** interface on each region WAN-Edge router is connected to a **firewall** within the service VPN. ***Branch users*** are also part of the service VPN and are connected to the WAN-Edge routers through the **GigabitEthernet 3** interface, as shown in the topology diagram. This setup enables seamless traffic flow and inspection while ensuring a realistic representation of enterprise network environments.
 
-Each WAN-Edge router is uniquely identified by a system IP address, as detailed in the table below. These system IPs are critical for establishing secure communication and management within the SD-WAN fabric, enabling streamlined routing, control, and policy enforcement across the network. The table provides a clear mapping of each WAN-Edge router to its respective system IP address for reference throughout the lab.
+Each WAN-Edge router is uniquely identified by a **system ip** address, as detailed in the table below. These system IPs are critical for establishing secure communication and management within the SD-WAN fabric, enabling streamlined routing, control, and policy enforcement across the network. The table provides a clear mapping of each WAN-Edge router to its respective system IP address for reference throughout the lab.
 
 | Device             | System IP |
 |:-------------------|-----------|
