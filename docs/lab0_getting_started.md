@@ -1,7 +1,18 @@
-# Initial Topology and verification
+# Lab Topology Overview and Connectivity Verification
 
-## Introduction
+## Understanding the Lab Topology
 This lab features a topology comprising four WAN-Edge routers strategically deployed across two regions: EMEA and APAC. In the EMEA region, the routers are located in London and Stockholm, while in the APAC region, they are deployed in Singapore and Sydney. Each WAN-Edge router is integrated with a firewall, which is essential for redirecting traffic for inspection across various use cases. The deployment leverages two transport types Internet and MPLS to provide reliable connectivity between the WAN-Edge routers across regions. This setup creates a robust environment for simulating real-world traffic routing and inspection scenarios.
+
+## Device Connectivity and Interfaces
+
+In the lab topology, each WAN-Edge router is configured with dual transport connectivity: the GigabitEthernet 1 interface is connected to the Internet transport, while the GigabitEthernet 2 interface is connected to the MPLS transport. For simplification, the deployment includes a single SD-WAN validator (vBond) and a single SD-WAN controller (vSmart), each assigned a specific system IP.
+
+| Device               | System IP   |
+|----------------------|-------------|
+| Validator  (vBond)   | 100.0.0.201 |
+| Controller (vSmart)  | 100.0.0.101 |
+| Manager    (vManage) | 100.0.0.1   |
+
 ## Topology diagram
 
 <figure markdown>
@@ -10,7 +21,7 @@ This lab features a topology comprising four WAN-Edge routers strategically depl
 
 ## Lab Connectivity
 
-## Verification
+## Verifying Lab Connectivity
 
 ``` { .ios, .no-copy }
 London-Hub#show sdwan control local-properties 
