@@ -13,7 +13,7 @@ In the lab topology, each WAN-Edge router is configured with dual transport conn
 | Controller (vSmart)  | 100.0.0.101 |
 | Manager    (vManage) | 100.0.0.1   |
 
-Additionally, the **GigabitEthernet 4** interface on each region WAN-Edge router is connected to a **firewall** within the service VPN. ***Branch users*** are also part of the service VPN and are connected to the WAN-Edge routers through the **GigabitEthernet 3** interface, as shown in the topology diagram. This setup enables seamless traffic flow and inspection while ensuring a realistic representation of enterprise network environments.
+Additionally, the **GigabitEthernet 4** interface on each region WAN-Edge router is connected to a <font color="red">**firewall**</font> within the service VPN. <font color="orange">***Branch users***</font> are also part of the service VPN and are connected to the WAN-Edge routers through the **GigabitEthernet 3** interface, as shown in the topology diagram. This setup enables seamless traffic flow and inspection while ensuring a realistic representation of enterprise network environments.
 
 Each WAN-Edge router is uniquely identified by a **system ip** address, as detailed in the table below. These system IPs are critical for establishing secure communication and management within the SD-WAN fabric, enabling streamlined routing, control, and policy enforcement across the network. The table provides a clear mapping of each WAN-Edge router to its respective system IP address for reference throughout the lab.
 
