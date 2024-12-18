@@ -19,10 +19,10 @@ Each WAN-Edge router is uniquely identified by a system IP address, as detailed 
 
 | Device             | System IP |
 |:-------------------|-----------|
-| London    WAN-Edge |           |
-| Singapore WAN-Edge |           |
-| Stockholm WAN-Edge |           |           
-| Sydney    WAN-Edge |           |
+| London    WAN-Edge | 10.0.0.1  |
+| Singapore WAN-Edge | 10.0.0.2  |
+| Stockholm WAN-Edge | 10.1.1.1  |           
+| Sydney    WAN-Edge | 10.1.1.2  |
 
 
 ## Topology diagram
