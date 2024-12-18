@@ -1,37 +1,9 @@
 # Initial Topology and verification
 
-## Section 1
-
-Please use the following credentials to connect to device:
-
-| <!-- -->         | <!-- -->         |
-| ---------------- | ---------------- |
-| `IP Address`     | 1.1.1.1          |
-| `Username`       | admin            |
-| `Password`       | C1sco123         |
-
-
-My content
-
-!!! note
-    This is a note
-
-Cisco IOS code block:
-
-```ios
-hostname ABC
-interface GigabitEthernet1
- ip address 122.1.1.1
-```
-
-
-
-Image:
+## Introduction
+This lab features a topology comprising four WAN-Edge routers strategically deployed across two regions: EMEA and APAC. In the EMEA region, the routers are located in London and Stockholm, while in the APAC region, they are deployed in Singapore and Sydney. Each WAN-Edge router is integrated with a firewall, which is essential for redirecting traffic for inspection across various use cases. The deployment leverages two transport types—Internet and MPLS—to provide reliable connectivity between the WAN-Edge routers across regions. This setup creates a robust environment for simulating real-world traffic routing and inspection scenarios.
+## Topology diagram
 
 <figure markdown>
-  ![ACI](./assets/aci.png){ width="500" }
+  ![topo](./assets/sdwan-topology.png)
 </figure>
-
-## Section 2
-
-More content
