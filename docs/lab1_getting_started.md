@@ -14,7 +14,7 @@ Here is a breakdown of the key components involved in the network path:
 Ensure that each component is properly configured and verify the traffic flow is going through **Stockholm-FW**.
 
 !!! note
-    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***without requiring any additional configuration***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats. 
+    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats. 
 
 Please use the following credentials to connect to device:
 
@@ -24,10 +24,7 @@ Please use the following credentials to connect to device:
 | `Username`       | admin            |
 | `Password`       | C1sco123         |
 
-
 My content
-
-
 
 Cisco IOS code block:
 
@@ -37,14 +34,9 @@ interface GigabitEthernet1
  ip address 122.1.1.1
 ```
 
-
-
-Image:
+## Traffic Flow Diagram 
 
 <figure markdown>
   ![Scenario-1](./assets/Scenario-1.gif)
 </figure>
 
-## Section 2
-
-More content
