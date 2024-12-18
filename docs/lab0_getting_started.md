@@ -13,7 +13,7 @@ In the lab topology, each WAN-Edge router is configured with dual transport conn
 | Controller (vSmart)  | 100.0.0.101 |
 | Manager    (vManage) | 100.0.0.1   |
 
-
+Additionally, the **GigabitEthernet 4** interface on each WAN-Edge router is connected to a firewall within the service VPN. Branch users are also part of the service VPN and are connected to the WAN-Edge routers through the **GigabitEthernet 3** interface, as shown in the topology diagram. This setup enables seamless traffic flow and inspection while ensuring a realistic representation of enterprise network environments.
 
 ## Topology diagram
 
