@@ -80,5 +80,10 @@ nav:
   - Lab:
       - Overview: overview.md
       - Lab 1 - Getting Started: lab1_getting_started.md
+      - Lab 2 - Getting Started: lab2_getting_started.md
+      - Lab 3 - Getting Started: lab3_getting_started.md
+      - Lab 4 - Getting Started: lab4_getting_started.md
+      - Lab 5 - Getting Started: lab5_getting_started.md
+      - Lab 6 - Getting Started: lab6_getting_started.md
       - Conclusion: conclusion.md
   - Topologies: topologies.md

@@ -1,5 +1,5 @@
 # Lab topologies
 
 <figure markdown>
-  ![ACI](./assets/aci.png)
+  ![topo](./assets/sdwan-topology.png)
 </figure>
