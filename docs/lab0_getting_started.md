@@ -50,31 +50,7 @@ Initially, the WAN-Edge routers are configured for full mesh connectivity. Due t
 
 ## Verifying Lab Connectivity
 
-The first step is to verify that the certificates are correctly installed on each WAN-Edge router, as they are essential for establishing secure communication within the SD-WAN fabric. Additionally, ensure that all interfaces are operational and in an "up" state. This validation is critical to confirm that the devices are properly configured and ready for subsequent tasks in the lab.
-
-```{ .ios, .no-copy}
-Stockholm-Branch#show ip interface brief 
-Interface              IP-Address      OK? Method Status                Protocol
-GigabitEthernet1       172.16.1.10     YES other  up                    up      
-GigabitEthernet2       172.16.2.10     YES other  up                    up      
-GigabitEthernet3       192.168.10.1    YES other  up                    up      
-GigabitEthernet4       10.10.10.1      YES other  up                    up      
-GigabitEthernet5       unassigned      YES unset  up                    up      
-GigabitEthernet6       unassigned      YES unset  up                    up      
-GigabitEthernet7       unassigned      YES unset  up                    up      
-GigabitEthernet8       unassigned      YES unset  up                    up      
-Sdwan-system-intf      10.1.1.1        YES unset  up                    up      
-vmanage_system         unassigned      YES unset  up                    up      
-Loopback65528          192.168.1.1     YES other  up                    up      
-Loopback65529          11.1.1.1        YES other  up                    up      
-NVI0                   unassigned      YES unset  up                    up      
-Tunnel1                172.16.1.10     YES TFTP   up                    up      
-Tunnel2                172.16.2.10     YES TFTP   up                    up      
-Stockholm-Branch#
-```
-
-Next, verify that the control connections are successfully established with the SD-WAN Manager (vManage) and the SD-WAN Controller (vSmart) on each WAN-Edge device. This step ensures that the WAN-Edge routers are fully integrated into the SD-WAN fabric. Additionally, confirm that OMP (Overlay Management Protocol) peering is active on each WAN-Edge router, as this is critical for route exchange and the implementation of SD-WAN policies.
-
+The first step is to verify that the certificates are correctly installed on each WAN-Edge router, as they are essential for establishing secure communication within the SD-WAN fabric. 
 
 ``` { .ios, .no-copy }
 Stockholm-Branch#show sdwan control local-properties 
@@ -138,3 +114,53 @@ GigabitEthernet1              172.16.1.10     12386  172.16.1.10     ::         
 GigabitEthernet2              172.16.2.10     12386  172.16.2.10     ::                                      12386    1/0  mpls             up     2     yes/yes/no   No/No  0:00:00:00   0:11:17:15  N    5  Default N/A                           
 ```
 
+Additionally, ensure that all interfaces are operational and in an "up" state. This validation is critical to confirm that the devices are properly configured and ready for subsequent tasks in the lab.
+
+```{ .ios, .no-copy}
+Stockholm-Branch#show ip interface brief 
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       172.16.1.10     YES other  up                    up      
+GigabitEthernet2       172.16.2.10     YES other  up                    up      
+GigabitEthernet3       192.168.10.1    YES other  up                    up      
+GigabitEthernet4       10.10.10.1      YES other  up                    up      
+GigabitEthernet5       unassigned      YES unset  up                    up      
+GigabitEthernet6       unassigned      YES unset  up                    up      
+GigabitEthernet7       unassigned      YES unset  up                    up      
+GigabitEthernet8       unassigned      YES unset  up                    up      
+Sdwan-system-intf      10.1.1.1        YES unset  up                    up      
+vmanage_system         unassigned      YES unset  up                    up      
+Loopback65528          192.168.1.1     YES other  up                    up      
+Loopback65529          11.1.1.1        YES other  up                    up      
+NVI0                   unassigned      YES unset  up                    up      
+Tunnel1                172.16.1.10     YES TFTP   up                    up      
+Tunnel2                172.16.2.10     YES TFTP   up                    up      
+Stockholm-Branch#
+```
+
+Next, verify that the control connections are successfully established with the SD-WAN Manager (vManage) and the SD-WAN Controller (vSmart) on each WAN-Edge device. This step ensures that the WAN-Edge routers are fully integrated into the SD-WAN fabric. Additionally, confirm that OMP (Overlay Management Protocol) peering is active on each WAN-Edge router, as this is critical for route exchange and the implementation of SD-WAN policies.
+
+```{ .ios, .no-copy}
+Stockholm-Branch#show sdwan control connections
+                                                                                          PEER                                          PEER                                          CONTROLLER
+PEER    PEER    PEER            SITE       DOMAIN PEER                                    PRIV  PEER                                    PUB                                           GROUP
+TYPE    PROT    SYSTEM IP       ID         ID     PRIVATE IP                              PORT  PUBLIC IP                               PORT  ORGANIZATION            LOCAL COLOR     PROXY STATE UPTIME      ID
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+vsmart  dtls    100.0.0.101     100        1      172.16.0.101                            12346 172.16.0.101                            12346 cml-sdwan-lab-tool      biz-internet    No    up     0:00:45:19 0           
+vsmart  dtls    100.0.0.101     100        1      172.16.0.101                            12346 172.16.0.101                            12346 cml-sdwan-lab-tool      mpls            No    up     0:00:45:19 0           
+vmanage dtls    100.0.0.1       100        0      172.16.0.1                              12746 172.16.0.1                              12746 cml-sdwan-lab-tool      biz-internet    No    up     0:00:45:19 0           
+```
+
+``` { .ios, .no-copy}
+Stockholm-Branch#show sdwan bfd sessions 
+                                      SOURCE TLOC      REMOTE TLOC                                      DST PUBLIC                      DST PUBLIC         DETECT      TX                              
+SYSTEM IP        SITE ID     STATE       COLOR            COLOR            SOURCE IP                                       IP                                              PORT        ENCAP  MULTIPLIER  INTERVAL(msec  UPTIME          TRANSITIONS   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.1.1.2         20          up          biz-internet     biz-internet     172.16.1.10                                     172.16.1.20                                     12366       ipsec  7           1000           0:00:46:34      2             
+10.0.0.1         101         up          biz-internet     biz-internet     172.16.1.10                                     172.16.1.101                                    12346       ipsec  7           1000           0:00:46:34      4             
+10.0.0.2         102         up          biz-internet     biz-internet     172.16.1.10                                     172.16.1.102                                    12346       ipsec  7           1000           0:00:46:33      2             
+10.1.1.2         20          up          mpls             mpls             172.16.2.10                                     172.16.2.20                                     12366       ipsec  7           1000           0:00:46:34      2             
+10.0.0.1         101         up          mpls             mpls             172.16.2.10                                     172.16.2.101                                    12346       ipsec  7           1000           0:00:46:34      4             
+10.0.0.2         102         up          mpls             mpls             172.16.2.10                                     172.16.2.102                                    12346       ipsec  7           1000           0:00:46:34      2             
+
+Stockholm-Branch# 
+```
