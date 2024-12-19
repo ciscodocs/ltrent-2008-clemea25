@@ -94,6 +94,11 @@ Commit pending:          false
 Configuration template:  EMEA-London-Hub
 Chassis serial number:   SSI130300YK
 ```
+If any WAN-Edge router is **not managed by the SD-WAN Manager (vManage)** or does not have a configuration group attached, you can log in to SD-WAN Manager (vManage) to investigate and resolve the issue.
+
+!!! info
+    **SD-WAN Manager(vManage)** is configured with the username and password combination (**clams2008**/**clams2008**).
+
 
 ## Lab Connectivity
 
