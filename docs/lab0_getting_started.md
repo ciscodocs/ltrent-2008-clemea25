@@ -102,7 +102,7 @@ If any WAN-Edge router is **not managed by the SD-WAN Manager (vManage)** or doe
 You can follow the path once you logged into SD-WAN Manager by clicking **<font color="green">Configuration -> Configuration Groups</font>**.
 
 <figure markdown>
-  ![cg](./assets/Configuration-Group.png){ width="300", align=left }
+  ![cg](./assets/Configuration-Group.png){ width="300", align=left, .off-glb }
 </figure>
 
 ## Lab Connectivity
