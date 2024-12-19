@@ -108,7 +108,7 @@ You can follow the path once you logged into SD-WAN Manager by clicking **<font 
 Verify that corresponding configuration group have a device associated with it or not like below.
 
 <figure markdown>
-  ![cg](./assets/CG-Association.png){ width="300", align=left, .off-glb }
+  ![Configuration Group Association](./assets/CG-Association.png){ align=left, .off-glb }
 </figure>
 
 ## Lab Connectivity
