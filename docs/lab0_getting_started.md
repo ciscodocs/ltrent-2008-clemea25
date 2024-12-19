@@ -137,7 +137,7 @@ Tunnel2                172.16.2.10     YES TFTP   up                    up
 Stockholm-Branch#
 ```
 
-Next, verify that the control connections are successfully established with the SD-WAN Manager (vManage) and the SD-WAN Controller (vSmart) on each WAN-Edge device. This step ensures that the WAN-Edge routers are fully integrated into the SD-WAN fabric. Additionally, confirm that OMP (Overlay Management Protocol) peering is active on each WAN-Edge router, as this is critical for route exchange and the implementation of SD-WAN policies.
+Next, verify that the control connections are successfully established with the SD-WAN Manager (vManage) and the SD-WAN Controller (vSmart) on each WAN-Edge device. This step ensures that the WAN-Edge routers are fully integrated into the SD-WAN fabric. 
 
 ```{ .ios, .no-copy}
 Stockholm-Branch#show sdwan control connections
@@ -149,6 +149,22 @@ vsmart  dtls    100.0.0.101     100        1      172.16.0.101                  
 vsmart  dtls    100.0.0.101     100        1      172.16.0.101                            12346 172.16.0.101                            12346 cml-sdwan-lab-tool      mpls            No    up     0:00:45:19 0           
 vmanage dtls    100.0.0.1       100        0      172.16.0.1                              12746 172.16.0.1                              12746 cml-sdwan-lab-tool      biz-internet    No    up     0:00:45:19 0           
 ```
+
+Additionally, confirm that OMP (Overlay Management Protocol) peering is active on each WAN-Edge router, as this is critical for route exchange and the implementation of SD-WAN policies.
+
+```{ .ios, .no-copy}
+Stockholm-Branch#show sdwan omp peers 
+R -> routes received
+I -> routes installed
+S -> routes sent
+
+TENANT                             DOMAIN    OVERLAY   SITE      REGION                                
+ID        PEER             TYPE    ID        ID        ID        ID        STATE    UPTIME           R/I/S  
+-----------------------------------------------------------------------------------------------------------------
+0         100.0.0.101      vsmart  1         1         100       None      up       13:13:06:55      6/6/4
+```
+
+Verify that if BFD session established among all the WAN-Edges in the topology.
 
 ``` { .ios, .no-copy}
 Stockholm-Branch#show sdwan bfd sessions 
