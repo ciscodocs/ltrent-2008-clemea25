@@ -16,26 +16,9 @@ Ensure that each component is properly configured and verify the traffic flow is
 !!! note
     Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats. 
 
-Please use the following credentials to connect to device:
-
-| <!-- -->         | <!-- -->         |
-| ---------------- | ---------------- |
-| `IP Address`     | 1.1.1.1          |
-| `Username`       | admin            |
-| `Password`       | C1sco123         |
-
-My content
-
-Cisco IOS code block:
-
-```ios
-hostname ABC
-interface GigabitEthernet1
- ip address 122.1.1.1
-```
-
 ## Traffic Flow Diagram 
 
+The following diagram illustrates the flow of traffic within the network for this scenario. Traffic is initiated from the **Stockholm-User** and is first redirected to the **Stockholm-Firewall** for <font color="orange">**inspection**</font>. After the traffic undergoes inspection, it is then forwarded to the **Sydney-User** in the **Sydney Branch**. This scenario demonstrates how traffic is securely routed through the firewall for inspection before reaching its final destination, ensuring that security policies are applied effectively within the SD-WAN fabric.
 <figure markdown>
   ![Scenario-1](./assets/Scenario-1.gif)
 </figure>
