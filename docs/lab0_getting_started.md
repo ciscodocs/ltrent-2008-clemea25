@@ -47,8 +47,12 @@ The table below lists the configuration group names assigned to each WAN-Edge ro
 
 To confirm the configuration, you can use the <font color="orange">**show sdwan system status</font>** command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
 
-``` {.ios, .no-copy, title="Configuration Template Verification", linenums="1", hl_lines="1 40"}
-London-Hub#show sdwan system status
+!!! note
+    The show outputs provided below are from the **London-Hub**; however, it is important to perform this verification on each WAN-Edge router in the topology.
+
+
+``` {.ios, .no-copy, title="Configuration Template Verification", linenums="1", hl_lines="38 40"}
+London-Hub#**show sdwan system status**
 Viptela (tm) vEdge Operating System Software
 Copyright (c) 2013-2024 by Viptela, Inc.
 Controller Compatibility: 20.15
