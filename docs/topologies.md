@@ -1,5 +1,5 @@
 # Lab topology
 
 <figure markdown>
-  ![topo](./assets/sdwan-topology.png)
+  ![SD-WAN Topology](./assets/sdwan-topology.png)
 </figure>

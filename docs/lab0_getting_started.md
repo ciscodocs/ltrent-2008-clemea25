@@ -28,7 +28,7 @@ Each WAN-Edge router is uniquely identified by a **system ip** address, as detai
 ## Topology diagram
 
 <figure markdown>
-  ![topo](./assets/sdwan-topology.png)
+  ![SD-WAN Topology](./assets/sdwan-topology.png)
 </figure>
 
 ## Ensuring Proper Configuration Using Configuration Groups
