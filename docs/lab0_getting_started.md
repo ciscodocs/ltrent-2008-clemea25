@@ -39,10 +39,10 @@ The table below lists the configuration group names assigned to each WAN-Edge ro
 
 | **Device**       | **Configuration Group Name** | **System IP** |
 |------------------|------------------------------|---------------|
-| London-Hub       | EMEA-London-Hub              |               |
-| Stockholm-Branch | EMEA-Stockholm-Branch        |               |
-| Singapore-Hub    | APAC-Singapore-Hub           |               |
-| Sydney-Branch    | APAC-Sydney-Branch           |               |
+| London-Hub       | EMEA-London-Hub              | 10.0.0.1      |
+| Stockholm-Branch | EMEA-Stockholm-Branch        | 10.1.1.1      |
+| Singapore-Hub    | APAC-Singapore-Hub           | 10.0.0.2      |
+| Sydney-Branch    | APAC-Sydney-Branch           | 10.1.1.2      |
 
 
 To confirm the configuration, you can use the show sdwan system status command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
