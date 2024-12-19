@@ -114,7 +114,7 @@ Verify that corresponding configuration group have a device associated with it o
 If the WAN-Edge router is not associated with the configuration group, then we can click **Add**.
 
 <figure markdown>
-  ![Configuration Group Add Device](./assets/cg-add.png){ align=left, .off-glb }
+  ![Configuration Group Add Device](./assets/cg-add.png){ width="300", align=left, .off-glb }
 </figure>
 
 One we see list of WAN-Edge devices, we need to make sure we select the right device as per the configuration group name.
