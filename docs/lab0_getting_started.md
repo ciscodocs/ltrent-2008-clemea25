@@ -50,8 +50,34 @@ Initially, the WAN-Edge routers are configured for full mesh connectivity. Due t
 
 ## Verifying Lab Connectivity
 
+The first step is to verify that the certificates are correctly installed on each WAN-Edge router, as they are essential for establishing secure communication within the SD-WAN fabric. Additionally, ensure that all interfaces are operational and in an "up" state. This validation is critical to confirm that the devices are properly configured and ready for subsequent tasks in the lab.
+
+```{ .ios, .no-copy}
+Stockholm-Branch#show ip interface brief 
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       172.16.1.10     YES other  up                    up      
+GigabitEthernet2       172.16.2.10     YES other  up                    up      
+GigabitEthernet3       192.168.10.1    YES other  up                    up      
+GigabitEthernet4       10.10.10.1      YES other  up                    up      
+GigabitEthernet5       unassigned      YES unset  up                    up      
+GigabitEthernet6       unassigned      YES unset  up                    up      
+GigabitEthernet7       unassigned      YES unset  up                    up      
+GigabitEthernet8       unassigned      YES unset  up                    up      
+Sdwan-system-intf      10.1.1.1        YES unset  up                    up      
+vmanage_system         unassigned      YES unset  up                    up      
+Loopback65528          192.168.1.1     YES other  up                    up      
+Loopback65529          11.1.1.1        YES other  up                    up      
+NVI0                   unassigned      YES unset  up                    up      
+Tunnel1                172.16.1.10     YES TFTP   up                    up      
+Tunnel2                172.16.2.10     YES TFTP   up                    up      
+Stockholm-Branch#
+```
+
+Next, verify that the control connections are successfully established with the SD-WAN Manager (vManage) and the SD-WAN Controller (vSmart) on each WAN-Edge device. This step ensures that the WAN-Edge routers are fully integrated into the SD-WAN fabric. Additionally, confirm that OMP (Overlay Management Protocol) peering is active on each WAN-Edge router, as this is critical for route exchange and the implementation of SD-WAN policies.
+
+
 ``` { .ios, .no-copy }
-London-Hub#show sdwan control local-properties 
+Stockholm-Branch#show sdwan control local-properties 
 personality                       vedge
 sp-organization-name              cml-sdwan-lab-tool
 organization-name                 cml-sdwan-lab-tool
@@ -60,8 +86,8 @@ root-ca-crl-status                Not-Installed
 
 certificate-status                Installed
 certificate-validity              Valid
-certificate-not-valid-before      Nov 26 15:34:51 2024 GMT
-certificate-not-valid-after       Nov 24 15:34:51 2034 GMT
+certificate-not-valid-before      Nov 26 14:23:05 2024 GMT
+certificate-not-valid-after       Nov 24 14:23:05 2034 GMT
 
 enterprise-cert-status            Not Applicable
 enterprise-cert-validity          Not Applicable
@@ -69,22 +95,22 @@ enterprise-cert-not-valid-before  Not Applicable
 enterprise-cert-not-valid-after   Not Applicable
 
 dns-name                          validator.sdwan.local
-site-id                           101
+site-id                           10
 domain-id                         1
 protocol                          dtls
 tls-port                          0
-system-ip                         10.0.0.1
-chassis-num/unique-id             C8K-27148AFE-7160-69D3-ACC5-F77560530D63
-serial-num                        2960F4DD
+system-ip                         10.1.1.1
+chassis-num/unique-id             C8K-3D1A8960-6E76-532C-DA93-50626FC5797E
+serial-num                        42F4AE15
 subject-serial-num                N/A
 enterprise-serial-num             No certificate installed
 token                             Invalid
 keygen-interval                   1:00:00:00
-retry-interval                    0:00:00:18
+retry-interval                    0:00:00:17
 no-activity-exp-interval          0:00:00:20
 dns-cache-ttl                     0:00:00:00
-port-hopped                       FALSE
-time-since-last-port-hop          0:00:00:00
+port-hopped                       TRUE
+time-since-last-port-hop          13:12:53:22
 embargo-check                     success
 device-role                       edge-router
 region-id-set                     N/A
@@ -108,7 +134,7 @@ number-active-wan-interfaces      2
 INTERFACE                IPv4            PORT   IPv4            IPv6                                    PORT    VS/VM COLOR            STATE CNTRL CONTROL/     LR/LB  CONNECTION   REMAINING   TYPE CON REG     INTERFACE
                                                                                                                                                    STUN                                              PRF IDs
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-GigabitEthernet1              172.16.1.101    12346  172.16.1.101    ::                                      12346    1/1  biz-internet     up     2     yes/yes/no   No/No  0:00:00:02   0:06:17:23  N    5  Default N/A                           
-GigabitEthernet2              172.16.2.101    12346  172.16.2.101    ::                                      12346    1/0  mpls             up     2     yes/yes/no   No/No  0:00:00:02   0:06:17:23  N    5  Default N/A                           
+GigabitEthernet1              172.16.1.10     12386  172.16.1.10     ::                                      12386    1/1  biz-internet     up     2     yes/yes/no   No/No  0:00:00:00   0:11:17:15  N    5  Default N/A                           
+GigabitEthernet2              172.16.2.10     12386  172.16.2.10     ::                                      12386    1/0  mpls             up     2     yes/yes/no   No/No  0:00:00:00   0:11:17:15  N    5  Default N/A                           
 ```
 
