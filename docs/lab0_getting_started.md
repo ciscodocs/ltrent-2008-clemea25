@@ -117,6 +117,13 @@ If the WAN-Edge router is not associated with the configuration group, then we c
   ![Configuration Group Add Device](./assets/cg-add.png){ align=left, .off-glb }
 </figure>
 
+One we see list of WAN-Edge devices, we need to make sure we select the right device as per the configuration group name.
+As in our exhibit below, we selected **EMEA-Stockhoml-Branch**
+
+<figure markdown>
+  ![Configuration Device Selection](./assets/cg-associate-selection.png){ align=left, .off-glb }
+</figure>
+
 ## Lab Connectivity
 
 To verify the SD-WAN fabric's control connections, we can utilize following show commands to confirm that each WAN-Edge router has established a control connection with the SD-WAN controllers, including the **SD-WAN Manager (vManage, System IP: 100.0.0.1)** and the **SD-WAN Controller (vSmart, System IP: 100.0.0.101)**. Additionally, it is crucial to validate that OMP (Overlay Management Protocol) peering is established with the SD-WAN Controller, as this is essential for route exchange and policy enforcement.
