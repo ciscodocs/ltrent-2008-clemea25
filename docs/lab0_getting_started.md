@@ -47,6 +47,50 @@ The table below lists the configuration group names assigned to each WAN-Edge ro
 
 To confirm the configuration, you can use the <font color="orange">**show sdwan system status</font>** command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
 
+``` {.ios, .no-copy, title="Configuration Template Verification", linenums="1"}
+London-Hub#show sdwan system status
+Viptela (tm) vEdge Operating System Software
+Copyright (c) 2013-2024 by Viptela, Inc.
+Controller Compatibility: 20.15
+Version: 17.15.01a.0.193
+Build: Not applicable
+
+System logging to host  is disabled
+System logging to disk is enabled
+
+System state:            GREEN. All daemons up
+System FIPS state:       Disabled
+
+Last reboot:             reload. 
+CPU-reported reboot:     Initiated by other
+Boot loader version:     Not applicable
+System uptime:           9 days 19 hrs 42 min 56 sec
+Current time:            Thu Dec 19 11:15:28 UTC 2024
+
+Hypervisor Type:         KVM
+Cloud Hosted Instance:   false
+
+Load average:            1 minute: 1.69, 5 minutes: 1.65, 15 minutes: 1.53
+Processes:               358 total
+CPU allocation:          4 total,   1 control,   3 data
+CPU states:              20.06% user,   8.30% system,   71.61% idle
+Memory usage:            4985676K total,    3488952K used,   1496724K free
+                         25700K buffers,  1645468K cache
+
+Disk usage:              Filesystem      Size   Used  Avail   Use %  Mounted on
+                         /dev/disk/by-label/fs-bootflash       4933M  1312M  3350M   28%   /bootflash
+                                387M  165M  217M   43   /bootflash/.sdwaninstaller
+
+Personality:             vEdge
+Model name:              C8000V
+Device role:             cEdge-SDWAN
+Services:                None
+vManaged:                true
+Commit pending:          false
+Configuration template:  EMEA-London-Hub
+Chassis serial number:   SSI130300YK
+```
+
 ## Lab Connectivity
 
 To verify the SD-WAN fabric's control connections, we can utilize following show commands to confirm that each WAN-Edge router has established a control connection with the SD-WAN controllers, including the **SD-WAN Manager (vManage, System IP: 100.0.0.1)** and the **SD-WAN Controller (vSmart, System IP: 100.0.0.101)**. Additionally, it is crucial to validate that OMP (Overlay Management Protocol) peering is established with the SD-WAN Controller, as this is essential for route exchange and policy enforcement.
