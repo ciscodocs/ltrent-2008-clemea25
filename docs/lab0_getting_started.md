@@ -33,16 +33,16 @@ Each WAN-Edge router is uniquely identified by a **system ip** address, as detai
 
 ## Ensuring Proper Configuration Using Configuration Groups
 
-In this lab, the WAN-Edge routers will be provisioned using configuration groups (CG), while the SD-WAN Controller (vSmart) is managed through template. This approach ensures that the vSmart controller remains fully integrated with the SD-WAN Manager (vManage), enabling the seamless creation and deployment of various policies later in the lab. 
+In this lab, the WAN-Edge routers will be provisioned using **configuration groups (CG)**, while the **SD-WAN Controller (vSmart)** is managed through **template**. This approach ensures that the **SD-WAN controller (vSmart)** remains fully integrated with the SD-WAN Manager (vManage), enabling the seamless creation and deployment of various policies later in the lab. 
 
 The table below lists the configuration group names assigned to each WAN-Edge router. It is essential to verify that each WAN-Edge router is correctly attached to its designated configuration group to ensure proper functionality.
 
 | **Device** | **Configuration Group Name** | **System IP** |
 |------------|------------------------------|---------------|
-|            |                              |               |
-|            |                              |               |
-|            |                              |               |
-|            |                              |               |
+|            | EMEA-London-Hub              |               |
+|            | EMEA-Stockholm-Branch        |               |
+|            | APAC-Singapore-Hub           |               |
+|            | APAC-Sydney-Branch           |               |
 
 
 To confirm the configuration, you can use the show sdwan system status command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
