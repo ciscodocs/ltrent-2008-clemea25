@@ -52,6 +52,9 @@ Initially, the WAN-Edge routers are configured for full mesh connectivity. Due t
 
 The first step is to verify that the certificates are correctly installed on each WAN-Edge router, as they are essential for establishing secure communication within the SD-WAN fabric. 
 
+!!! note
+    The show outputs provided below are from the **Stockholm Branch**; however, it is important to perform this verification on each WAN-Edge router in the topology.
+
 ``` { .ios, .no-copy }
 Stockholm-Branch#show sdwan control local-properties 
 personality                       vedge
@@ -164,8 +167,7 @@ ID        PEER             TYPE    ID        ID        ID        ID        STATE
 0         100.0.0.101      vsmart  1         1         100       None      up       13:13:06:55      6/6/4
 ```
 
-Verify that if BFD session established among all the WAN-Edges in the topology.
-
+Verify that **BFD (Bidirectional Forwarding Detection) sessions** are successfully established among all WAN-Edge routers in the topology. BFD sessions are critical for ensuring fast detection of link failures and maintaining the reliability of the network. Confirming the establishment of these sessions ensures that the WAN-Edge routers can quickly react to any connectivity issues, contributing to the overall stability and performance of the SD-WAN fabric.
 ``` { .ios, .no-copy}
 Stockholm-Branch#show sdwan bfd sessions 
                                       SOURCE TLOC      REMOTE TLOC                                      DST PUBLIC                      DST PUBLIC         DETECT      TX                              
