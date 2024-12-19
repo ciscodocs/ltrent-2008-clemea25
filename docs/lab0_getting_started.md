@@ -96,13 +96,14 @@ Chassis serial number:   SSI130300YK
 ```
 If any WAN-Edge router is **not managed by the SD-WAN Manager (vManage)** or does not have a configuration group attached, you can log in to SD-WAN Manager (vManage) if WAN-Edge router is associated with configuration group or not.
 
-You can follow the path once you logged into SD-WAN Manager by clicking **<font color="green">Configuration -> Configuration Groups</font>**.
-
-
-
 !!! info
     **SD-WAN Manager(vManage)** is configured with the username and password combination (**clams2008**/**clams2008**).
 
+You can follow the path once you logged into SD-WAN Manager by clicking **<font color="green">Configuration -> Configuration Groups</font>**.
+
+<figure markdown>
+  ![cg](./assets/Configuration-Group.png)
+</figure>
 
 ## Lab Connectivity
 
