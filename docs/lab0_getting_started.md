@@ -52,7 +52,7 @@ To confirm the configuration, you can use the <font color="orange">**show sdwan 
 
 
 ``` {.ios, .no-copy, title="Configuration Template Verification", linenums="1", hl_lines="38 40"}
-London-Hub#**show sdwan system status**
+London-Hub#show sdwan system status
 Viptela (tm) vEdge Operating System Software
 Copyright (c) 2013-2024 by Viptela, Inc.
 Controller Compatibility: 20.15
