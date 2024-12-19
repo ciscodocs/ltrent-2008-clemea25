@@ -185,3 +185,5 @@ Stockholm-Branch#
 
 !!! hint
     To quickly verify OMP peering across the SD-WAN fabric, log in to the SD-WAN Controller (vSmart) and confirm that OMP peering is successfully established with all WAN-Edge routers using show command **show omp peers**. This step ensures that the control plane is fully operational, allowing the exchange of routes and policies between the SD-WAN Controller (vSmart) and all WAN-Edge devices.
+
+Having verified that the control connections are established and all interfaces are operational, we are now ready to proceed to the next phase of the lab. In this step, we will explore various scenarios of service insertion and route leaking, leveraging the existing topology.
