@@ -37,12 +37,12 @@ In this lab, the WAN-Edge routers will be provisioned using **configuration grou
 
 The table below lists the configuration group names assigned to each WAN-Edge router. It is essential to verify that each WAN-Edge router is correctly attached to its designated configuration group to ensure proper functionality.
 
-| **Device** | **Configuration Group Name** | **System IP** |
-|------------|------------------------------|---------------|
-|            | EMEA-London-Hub              |               |
-|            | EMEA-Stockholm-Branch        |               |
-|            | APAC-Singapore-Hub           |               |
-|            | APAC-Sydney-Branch           |               |
+| **Device**       | **Configuration Group Name** | **System IP** |
+|------------------|------------------------------|---------------|
+| London-Hub       | EMEA-London-Hub              |               |
+| Stockholm-Branch | EMEA-Stockholm-Branch        |               |
+| Singapore-Hub    | APAC-Singapore-Hub           |               |
+| Sydney-Branch    | APAC-Sydney-Branch           |               |
 
 
 To confirm the configuration, you can use the show sdwan system status command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
