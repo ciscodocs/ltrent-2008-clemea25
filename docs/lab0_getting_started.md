@@ -45,7 +45,7 @@ The table below lists the configuration group names assigned to each WAN-Edge ro
 | Sydney-Branch    | APAC-Sydney-Branch           | 10.1.1.2      |
 
 
-To confirm the configuration, you can use the show sdwan system status command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
+To confirm the configuration, you can use the <font color="orange">**show sdwan system status</font>** command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
 
 ## Lab Connectivity
 
