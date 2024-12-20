@@ -1,4 +1,4 @@
-# Lab 1 - Route Stockholm to Sydney Traffic through local firewall
+# Lab 1 - Route traffic from Stockholm to Sydney via local firewall in Stockholm
 
 ## Introduction
 
