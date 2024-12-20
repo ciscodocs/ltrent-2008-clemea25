@@ -79,7 +79,7 @@ nav:
   - Home: index.md
   - Lab:
       - Overview: overview.md
-      - Lab 0 - Getting Started: getting_started.md
+      - Getting Started: getting_started.md
       - Lab 1 - Route traffic from Stockholm to Sydney via local firewall in Stockholm: lab1_getting_started.md
       - Lab 2 - Getting Started: lab2_getting_started.md
       - Lab 3 - Getting Started: lab3_getting_started.md
