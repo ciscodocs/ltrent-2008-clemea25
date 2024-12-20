@@ -16,14 +16,3 @@ In today’s rapidly evolving IT landscape, optimizing network performance, secu
 ## Disclaimer
 
 This training document is to familiarize participants with SD-WAN route leaking and service insertion. The lab design and configuration examples are tweaked to illustrate the lab content and are not a real design, thus not all recommended features are used, or enabled optimally. For a design related questions please contact your representative at Cisco, or a Cisco partner.
-## Lab Access
-
-From your workstation open an RDP (Remote Desktop) session to the following host named "wkst1":
-
-- IP: 1.2.3.4
-- Username: corp\demouser
-- Password: C1sco12345
-
-## Getting Started
-
-This lab leverages Cisco dCloud ...
