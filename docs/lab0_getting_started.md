@@ -1,4 +1,5 @@
-# Lab Topology Overview and Connectivity Verification
+# Getting Started
+Connecting to the lab network requires VPN access to the lab environment. After successfully establishing VPN connection, you access with RDP the jumphost workstation with preconfigured sessions manager.
 
 ## Understanding the Lab Topology
 This lab features a topology comprising four WAN-Edge routers strategically deployed across two regions: **EMEA** and **APAC**. In the **EMEA region**, the routers are located in **London** and **Stockholm**, while in the **APAC region**, they are deployed in **Singapore** and **Sydney**. Each WAN-Edge router is integrated with a <font color="red">**firewall**</font>, which is essential for redirecting traffic for inspection across various use cases. The deployment leverages two transport types ***Internet*** and ***MPLS*** to provide reliable connectivity between the WAN-Edge routers across regions. This setup creates a robust environment for simulating real-world traffic routing and inspection scenarios.
