@@ -16,10 +16,60 @@ Ensure that each component is properly configured and verify the traffic flow is
 !!! note
     Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats. 
 
-## Traffic Flow Diagram 
+## Intended Traffic Flow Diagram 
 
 The following diagram illustrates the **<font color="orange">flow of traffic within the network for this scenario</font>**. Traffic is initiated from the **Stockholm-User** and is first redirected to the **Stockholm-Firewall** for <font color="orange">**inspection**</font>. After the traffic undergoes inspection, it is then forwarded to the **Sydney-User** in the **Sydney Branch**. This scenario demonstrates how traffic is securely routed through the firewall for inspection before reaching its final destination, ensuring that security policies are applied effectively within the SD-WAN fabric.
 <figure markdown>
   ![Scenario-1 Traffic Flow](./assets/Scenario-1.gif)
 </figure>
 
+## Traffic flow without any policy
+
+In the initial configuration, without applying any traffic policies, the routes learned from the Sydney-Branch are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
+
+```{.ios, .no-copy}
+
+Stockholm-Branch#show sdwan omp routes vpn 1 192.168.20.0/24  
+Generating output, this might take time, please wait ...
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                                                                                AFFINITY                                 
+                                                      PATH                      ATTRIBUTE                                                       GROUP                                    
+TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0         1      192.168.20.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.2         mpls             ipsec  -           None        None        -                
+                                     100.0.0.101      2      1003     C,I,R     installed  10.1.1.2         biz-internet     ipsec  -           None        None        -                
+```
+
+To verify this, we initiate a ping from the Stockholm-User (IP: 192.168.10.2) to the Sydney-User (IP: 192.168.20.2). A successful ping response confirms that reachability between the two branches is intact.
+
+```{.ios, .no-copy}
+Stockholm-User:~$ ping 192.168.20.2
+PING 192.168.20.2 (192.168.20.2): 56 data bytes
+64 bytes from 192.168.20.2: seq=0 ttl=42 time=4.002 ms
+64 bytes from 192.168.20.2: seq=1 ttl=42 time=4.058 ms
+64 bytes from 192.168.20.2: seq=2 ttl=42 time=2.677 ms
+64 bytes from 192.168.20.2: seq=3 ttl=42 time=2.955 ms
+64 bytes from 192.168.20.2: seq=4 ttl=42 time=3.034 ms
+^C
+--- 192.168.20.2 ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 2.677/3.345/4.058 ms
+Stockholm-User:~$ 
+```
+Additionally, traffic originating from the Stockholm-Branch flows directly to the Sydney-Branch via the available TLOCs, ensuring efficient and balanced connectivity in the absence of traffic policies.
