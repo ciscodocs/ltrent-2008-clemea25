@@ -96,3 +96,13 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 ## Configuring Service-Chain in Configuration Group
 
 Next, we will configure a service chain within the service-profile parcel in the configuration group. This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services to be applied to the traffic, such as redirection through a firewall. This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
+
+1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups. 
+
+<figure markdown>
+  ![Configuration-Group](./assets/S-1-figure-4.gif)
+</figure>
+
+2. Locate and click on the **EMEA-Stockholm-Branch** Configuration Group as illustrated below. 
+3. Click the edit icon for the **EMEA-Stockholm-Branch - Service Profile** as illustrated below. 
+4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
