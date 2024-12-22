@@ -85,7 +85,7 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
 !!! note
     In the traceroute above, we observe that the traffic is currently routed over the INET TLOC. However, it is also possible for the traffic to use the MPLS TLOC, as SD-WAN employs ECMP (Equal-Cost Multi-Path) to balance traffic across all available TLOCs.
 
-Following Table exhibit how traffic is flowing from **Stockholm Branch** to **Sydney Branch**.
+Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydney-User**.
 
 | Interface         | IP Address   | Description                                                                                                                            |
 |-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
