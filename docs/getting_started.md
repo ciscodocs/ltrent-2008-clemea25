@@ -125,6 +125,14 @@ As in our exhibit below, we selected **EMEA-Stockhoml-Branch**
   ![Configuration Device Selection](./assets/cg-associate-selection.png){ align=left, .off-glb }
 </figure>
 
+To populate the values for the variables used in the configuration group, you can utilize the **import** feature in the SD-WAN Manager (vManage). 
+Navigate to the appropriate section for the configuration group, click ***import***, and locate the respective CSV file for each device. 
+These files are conveniently stored on the desktop of the workstation. Importing the CSV file will automatically fill in the required variable values, ensuring the configuration group is deployed successfully and accurately to the intended devices.
+
+<figure markdown>
+  ![Attaching CSV File to Configuration Group](./assets/Attaching-CSV-To-CG.png){ align=left, .off-glb }
+</figure>
+
 ## Lab Connectivity
 
 To verify the SD-WAN fabric's control connections, we can utilize following show commands to confirm that each WAN-Edge router has established a control connection with the SD-WAN controllers, including the **SD-WAN Manager (vManage, System IP: 100.0.0.1)** and the **SD-WAN Controller (vSmart, System IP: 100.0.0.101)**. Additionally, it is crucial to validate that OMP (Overlay Management Protocol) peering is established with the SD-WAN Controller, as this is essential for route exchange and policy enforcement.
