@@ -133,6 +133,19 @@ These files are conveniently stored on the desktop of the workstation. Importing
   ![Attaching CSV File to Configuration Group](./assets/Attaching-CSV-To-CG.png){ align=left, .off-glb }
 </figure>
 
+After successfully importing the CSV file, it is important to verify the configuration before deployment. You can do this by clicking **Preview CLI** in the SD-WAN Manager (vManage). This feature allows you to review the CLI commands generated based on the imported variables, providing a clear view of the changes that will be applied to the device. 
+Reviewing the CLI output ensures accuracy and helps identify any potential errors before proceeding. Once satisfied with the configuration, you can confidently click **Deploy** to apply the settings to the device.
+
+<figure markdown>
+  ![Preview CLI](./assets/Preview-CLI.png){ align=left, .off-glb }
+</figure>
+
+After the configuration group is successfully deployed, the SD-WAN Manager (vManage) will display a **Success** notification. This confirmation indicates that the configuration has been applied without errors and is now active on the device. The notification serves as a validation step, ensuring that the deployment process was completed successfully and that the device is fully integrated with the intended settings within the SD-WAN fabric.
+
+<figure markdown>
+  ![Configuration Group Deployment Succesfully](./assets/CG-Success.png){ align=left, .off-glb }
+</figure>
+
 ## Lab Connectivity
 
 To verify the SD-WAN fabric's control connections, we can utilize following show commands to confirm that each WAN-Edge router has established a control connection with the SD-WAN controllers, including the **SD-WAN Manager (vManage, System IP: 100.0.0.1)** and the **SD-WAN Controller (vSmart, System IP: 100.0.0.101)**. Additionally, it is crucial to validate that OMP (Overlay Management Protocol) peering is established with the SD-WAN Controller, as this is essential for route exchange and policy enforcement.
