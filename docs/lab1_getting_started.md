@@ -73,3 +73,11 @@ round-trip min/avg/max = 2.677/3.345/4.058 ms
 Stockholm-User:~$ 
 ```
 Additionally, traffic originating from the Stockholm-Branch flows directly to the Sydney-Branch via the available TLOCs, ensuring efficient and balanced connectivity in the absence of traffic policies.
+
+```{.ios, .no-copy}
+Stockholm-User:~$ traceroute 192.168.20.2 -n 
+traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
+ 1  192.168.10.1  1.048 ms  0.582 ms  0.548 ms
+ 2  172.16.1.20  1.449 ms  172.16.2.20  1.098 ms  1.440 ms
+ 3  192.168.20.2  2.551 ms  2.358 ms  1.750 ms
+```
