@@ -84,9 +84,9 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
 
 Following Table exhibit how traffic is flowing from **Stockholm Branch** to **Sydney Branch**.
 
-| Interface         | IP Address | Description                                                                                                                       |
-|-------------------|------|-----------------------------------------------------------------------------------------------------------------------------------|
-| GigabitEthernet 3 |192.168.10.1      | <font color="blue"> **Stockholm-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** going towards Stockholm-User. |
-|                   |      |                                                                                                                                   |
-|                   |      |                                                                                                                                   |
-|                   |      |                                                                                                                                   |
+| Interface         | IP Address   | Description                                                                                                                            |
+|-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| GigabitEthernet 3 | 192.168.10.1 | <font color="blue"> **Stockholm-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** connected with **Stockholm-User**. |
+| GigabitEthernet2  | 172.16.1.20  | <font color="blue"> **Sydney-Branch** WAN-Edge interface  **INET TLOC**.</font>                                                        |
+|                   |              |                                                                                                                                        |
+|                   |              |                                                                                                                                        |
