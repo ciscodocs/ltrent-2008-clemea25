@@ -56,7 +56,7 @@ TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    
                                      100.0.0.101      2      1003     C,I,R     installed  10.1.1.2         biz-internet     ipsec  -           None        None        -                
 ```
 
-To verify this, we initiate a ping from the Stockholm-User (IP: 192.168.10.2) to the Sydney-User (IP: 192.168.20.2). A successful ping response confirms that reachability between the two branches is intact.
+To verify this, we initiate a ping from the **Stockholm-User** (**<font color="blue">IP: 192.168.10.2</font>**) to the Sydney-User (**<font color="blue">IP: 192.168.20.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
 
 ```{.ios, .no-copy}
 Stockholm-User:~$ ping 192.168.20.2
@@ -72,7 +72,7 @@ PING 192.168.20.2 (192.168.20.2): 56 data bytes
 round-trip min/avg/max = 2.677/3.345/4.058 ms
 Stockholm-User:~$ 
 ```
-Additionally, traffic originating from the Stockholm-Branch flows directly to the Sydney-Branch via the available TLOCs, ensuring efficient and balanced connectivity in the absence of traffic policies.
+Additionally, traffic originating from the **Stockholm-Branch** flows directly to the **Sydney-Branch** via the available TLOCs, ensuring efficient and balanced connectivity in the absence of traffic policies.
 
 ```{.ios, .no-copy}
 Stockholm-User:~$ traceroute 192.168.20.2 -n 
