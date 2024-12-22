@@ -25,7 +25,7 @@ The following diagram illustrates the **<font color="orange">flow of traffic wit
 
 ## Traffic flow without any policy
 
-In the initial configuration, without applying any traffic policies, the routes learned from the Sydney-Branch are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
+In the initial configuration, without applying any traffic policies, the routes learned from the **Sydney-Branch** are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
 
 ```{.ios, .no-copy}
 
@@ -81,3 +81,12 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
  2  172.16.1.20  1.449 ms  172.16.2.20  1.098 ms  1.440 ms
  3  192.168.20.2  2.551 ms  2.358 ms  1.750 ms
 ```
+
+Following Table exhibit how traffic is flowing from **Stockholm Branch** to **Sydney Branch**.
+
+| Interface         | IP Address | Description                                                                                                                       |
+|-------------------|------|-----------------------------------------------------------------------------------------------------------------------------------|
+| GigabitEthernet 3 |192.168.10.1      | <font color="blue"> **Stockholm-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** going towards Stockholm-User. |
+|                   |      |                                                                                                                                   |
+|                   |      |                                                                                                                                   |
+|                   |      |                                                                                                                                   |
