@@ -87,6 +87,6 @@ Following Table exhibit how traffic is flowing from **Stockholm Branch** to **Sy
 | Interface         | IP Address   | Description                                                                                                                            |
 |-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | GigabitEthernet 3 | 192.168.10.1 | <font color="blue"> **Stockholm-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** connected with **Stockholm-User**. |
-| GigabitEthernet2  | 172.16.1.20  | <font color="blue"> **Sydney-Branch** WAN-Edge interface  **INET TLOC**.</font>                                                        |
+| GigabitEthernet 2 | 172.16.1.20  | <font color="blue"> **Sydney-Branch** WAN-Edge interface  **INET TLOC**.</font>                                                        |
 |                   |              |                                                                                                                                        |
 |                   |              |                                                                                                                                        |
