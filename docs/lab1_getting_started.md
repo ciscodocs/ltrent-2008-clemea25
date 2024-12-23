@@ -271,3 +271,4 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 17. Scroll to the **right** to select <font color="green">**Service Chain**</font>.
     ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC7</font>**.
+    ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
