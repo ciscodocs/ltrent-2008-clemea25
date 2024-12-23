@@ -125,6 +125,6 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![How to go back to Configuration Group](./assets/S-1-figure-15.png){ .off-glb }
 15. As we add the **Service Attachment Gateway Definition**, not configuration group for **EMEA-Stockholm-Branch** goes <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
-16. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button. 
+16. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button and Click **Next**.  
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 
