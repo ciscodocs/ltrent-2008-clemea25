@@ -141,6 +141,38 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
 
 ## Verification of Service Chain configuration on Stockholm-Branch
+In the Cisco SD-WAN solution, each **VRF/VPN** is treated as a service, including **firewall services**. These services are advertised across the SD-WAN fabric using the OMP (Overlay Management Protocol). 
+
+When the firewall service was introduced on the **Stockholm Branch** router, the router assigned a **label (e.g., 1009)** to the firewall service and advertised this label to the **SD-WAN controller (vSmart)** through OMP. As a result, all WAN-Edge routers within the SD-WAN fabric are aware that to access the firewall service located at the **Stockholm Branch**, they must use the **label 1009**. This mechanism ensures efficient service discovery and routing across the SD-WAN environment.
+
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}}
+Stockholm-Branch#show sdwan omp services       
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Stg -> staged
+IA  -> On-demand inactive
+Inv -> invalid
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                 AFFINITY                            
+ADDRESS                                                         PATH   REGION    GROUP                               
+FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID        NUMBER      LABEL    STATUS    VRF  
+---------------------------------------------------------------------------------------------------------------------
+ipv4     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+         0         1      SC7      10.1.1.1    0.0.0.0          66     None      None        1009     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1009     C,Red,R   1    
+ipv6     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+```
 
 To verify the service chain configuration on the **Stockholm-Branch** WAN-Edge router, access the device CLI and execute the command:
 
@@ -173,33 +205,4 @@ Service Chain: SC7
             rx: GigabitEthernet4, 10.10.10.2
                 endpoint-tracker: auto
                 state: up
-```
-
-```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}}
-Stockholm-Branch#show sdwan omp services       
-C   -> chosen
-I   -> installed
-Red -> redistributed
-Rej -> rejected
-L   -> looped
-R   -> resolved
-S   -> stale
-Ext -> extranet
-Stg -> staged
-IA  -> On-demand inactive
-Inv -> invalid
-BR-R -> Border-Router reoriginated
-TGW-R -> Transport-Gateway reoriginated
-R-TGW-R -> Reoriginated Transport-Gateway reoriginated
-
-                                                                                 AFFINITY                            
-ADDRESS                                                         PATH   REGION    GROUP                               
-FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID        NUMBER      LABEL    STATUS    VRF  
----------------------------------------------------------------------------------------------------------------------
-ipv4     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
-                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
-         0         1      SC7      10.1.1.1    0.0.0.0          66     None      None        1009     C,Red,R   1    
-                                               0.0.0.0          68     None      None        1009     C,Red,R   1    
-ipv6     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
-                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
 ```
