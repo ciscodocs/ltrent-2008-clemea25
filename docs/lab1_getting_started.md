@@ -283,6 +283,8 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 24. Keep **From Service** radio button checked.
 25. Keep **Site List** radio button checked
 26. **Select Site List** by clicking in the box – **Stockholm-Branch**
+    ![Data Policy](./assets/S-1-figure-45.png){ .off-glb .small .center }
 27. Click outside the selection box to expose **Select VPN List**.
+    ![Data Policy](./assets/S-1-figure-46.png){ .off-glb .small .center }
 
 
