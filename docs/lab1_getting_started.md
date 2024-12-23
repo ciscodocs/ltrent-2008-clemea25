@@ -256,3 +256,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
    Under the **Actions section**, select **<font color="green">Accept</font>** to ensure that unmatched traffic is allowed by default. Once done, click **Save** and **Match** to confirm the settings.
 10. To configure the data policy, begin by clicking **Sequence Type**. In the Add Data Policy pop-up window, select **Custom** as the sequence type to define a tailored policy.
     ![Traffic Data Rules](./assets/S-1-figure-33.png){ .off-glb .small .center }
+11. Click **Sequence Rule**.
+    ![Traffic Data Sequence Rules](./assets/S-1-figure-34.png){ .off-glb .small .center }
