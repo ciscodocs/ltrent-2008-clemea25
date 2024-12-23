@@ -142,7 +142,9 @@ Next, we will configure a service chain within the service-profile parcel in the
 
 ## Verification of Service Chain configuration on Stockholm-Branch
 
-To verify the service chain configuration on the **Stockholm-Branch** WAN-Edge router, access the device CLI and execute the command ***show platform software sdwan service-chain database***. 
+To verify the service chain configuration on the **Stockholm-Branch** WAN-Edge router, access the device CLI and execute the command:
+
+- **show platform software sdwan service-chain database**. 
 
 Review the output to confirm the following details: the **<font color="green">Service Chain ID (e.g., SC7)</font>**, the **<font color="green">VRF (e.g., vrf: 1)</font>**, and the State, which should display **UP** to indicate proper functionality. 
 
@@ -171,4 +173,33 @@ Service Chain: SC7
             rx: GigabitEthernet4, 10.10.10.2
                 endpoint-tracker: auto
                 state: up
+```
+
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}}
+Stockholm-Branch#show sdwan omp services       
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Stg -> staged
+IA  -> On-demand inactive
+Inv -> invalid
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                 AFFINITY                            
+ADDRESS                                                         PATH   REGION    GROUP                               
+FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID        NUMBER      LABEL    STATUS    VRF  
+---------------------------------------------------------------------------------------------------------------------
+ipv4     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+         0         1      SC7      10.1.1.1    0.0.0.0          66     None      None        1009     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1009     C,Red,R   1    
+ipv6     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
 ```
