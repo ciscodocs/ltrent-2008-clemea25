@@ -212,4 +212,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small .center }
 2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
-![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small .center }
+   ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small .center }
+3. 
