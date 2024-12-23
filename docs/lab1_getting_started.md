@@ -286,5 +286,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy](./assets/S-1-figure-45.png){ .off-glb .small .center }
 27. Click outside the selection box to expose **Select VPN List**.
     ![Data Policy](./assets/S-1-figure-46.png){ .off-glb .small .center }
-
+28. Click outside selection box and click **Add** and after that click **Save** Policy at the bottom.
 
