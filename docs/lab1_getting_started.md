@@ -139,3 +139,9 @@ Next, we will configure a service chain within the service-profile parcel in the
      ![CLI Preview of Service Chain Number](./assets/S-1-figure-21.png){ .off-glb }
 21. To verify the configuration group status, click on the **EMEA-Stockholm-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is correctly linked to the **Stockholm-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
+
+To verify the service chain configuration on the **Stockholm-Branch** WAN-Edge router, access the device CLI and execute the command ***show platform software sdwan service-chain database***. 
+
+Review the output to confirm the following details: the **<font color="green">Service Chain ID (e.g., SC7)</font>**, the **<font color="green">VRF (e.g., vrf: 1)</font>**, and the State, which should display **UP** to indicate proper functionality. 
+
+Additionally, verify that the Service is set to **<font color="green">FW (Firewall)</font>**, the TX and RX interface is **GigabitEthernet4**, and the associated IP address is **10.10.10.2**. This verification ensures that the service chain configuration is active and correctly aligned with the intended design.
