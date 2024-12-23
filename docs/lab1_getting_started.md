@@ -101,3 +101,9 @@ Next, we will configure a service chain within the service-profile parcel in the
    ![Configuration Group](./assets/S-1-figure-4.png)
 2. Locate and click on the **EMEA-Stockholm-Branch** Configuration Group as illustrated below.
    ![Locate Configuration Group](./assets/S-1-figure-5.png)
+3. Click the edit icon for the **EMEA-Stockholm-Branch - Service Profile** as illustrated below.   
+   ![EMEA Stockholm Configuration Group](./assets/S-1-figure-6.png)
+4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
+   ![Adding New Feature in Configuration Group](./assets/S-1-figure-7.png)
+5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
+   ![Attaching Service Attachment in Configuration Group](./assets/S-1-figure-9.png)
