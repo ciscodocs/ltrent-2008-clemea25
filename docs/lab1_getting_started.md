@@ -108,5 +108,5 @@ Next, we will configure a service chain within the service-profile parcel in the
 5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
    ![Attaching Service Attachment in Configuration Group](./assets/S-1-figure-9.png)
 6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">Stockholm-Branch-Service-Attachment</font>**.
-   ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png){.off-glb}
+   ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png)
    
