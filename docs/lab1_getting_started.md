@@ -114,7 +114,7 @@ Next, we will configure a service chain within the service-profile parcel in the
 8. Enter the name **Stockholm-Firewall-SC-Def** and Description **Stockholm-Firewall-SC-Def** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-1-figure-12.png)
-10. Under Basic Information, enter **VPN 1**.
+10. Under Basic Information, enter **VPN** <font color="orange">**1**</font>.
 11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png)
 12. Enter **Service IPv4 Address <font color="blue">10.10.10.2</font>**. This is the IP address of **Stockholm Firewall (***<font color="green">Stockholm-FW</font>***)**.
