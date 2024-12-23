@@ -249,3 +249,7 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
    ![Traffic Data Rules](./assets/S-1-figure-30.png){ .off-glb .small .center }
 7. Next, click on the **Add Policy** dropdown menu and choose **Create New** to begin defining the traffic rules for the policy. 
    This step allows you to specify how traffic should be handled within the SD-WAN fabric based on the configured criteria.
+   ![Traffic Data Rules](./assets/S-1-figure-31.png){ .off-glb .small .center }
+8. To create a new data policy, enter the Name as **Scenario-1-Data-Policy** and provide the Description as **Scenario-1-Data-Policy**. 
+9. Next, click on the **Default Action** icon to configure the **default behavior** of the policy. 
+   Under the **Actions section**, select **<font color="green">Accept</font>** to ensure that unmatched traffic is allowed by default. Once done, click **Save** and **Match** to confirm the settings.
