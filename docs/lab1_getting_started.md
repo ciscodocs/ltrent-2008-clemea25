@@ -213,4 +213,17 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small .center }
 2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small .center }
-3. 
+3. To create the required **Groups of Interest**, start by selecting Data Prefix from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
+   ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb .small .center }
+   1. Click New Data Prefix List to define the first prefix list:
+      1. Data Prefix List Name: "Internet"
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: 8.8.8.8/32, 4.2.2.2/32
+   2. Click New Data Prefix List again to define the second prefix list:
+      1. Data Prefix List Name: "Stockholm-Branch-User"
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: 192.168.10.0/24
+   3. Click New Data Prefix List once more to define the third prefix list:
+      1. Data Prefix List Name: "Sydney-Branch-User"
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: 192.168.20.0/24
