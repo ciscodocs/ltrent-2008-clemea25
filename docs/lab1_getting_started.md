@@ -98,31 +98,31 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services to be applied to the traffic, such as redirection through a firewall. This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
-   ![Configuration Group](./assets/S-1-figure-4.png)
+   ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
 2. Locate and click on the **EMEA-Stockholm-Branch** Configuration Group as illustrated below.
-   ![Locate Configuration Group](./assets/S-1-figure-5.png)
-3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){.off-glb, width=25} icon for the **EMEA-Stockholm-Branch - Service Profile** as illustrated below.   
-   ![EMEA Stockholm Configuration Group](./assets/S-1-figure-6.png)
+   ![Locate Configuration Group](./assets/S-1-figure-5.png){ .off-glb }
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-Stockholm-Branch - Service Profile** as illustrated below.   
+   ![EMEA Stockholm Configuration Group](./assets/S-1-figure-6.png){ .off-glb }
 4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
-   ![Adding New Feature in Configuration Group](./assets/S-1-figure-7.png)
+   ![Adding New Feature in Configuration Group](./assets/S-1-figure-7.png){ .off-glb }
 5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
-   ![Attaching Service Attachment in Configuration Group](./assets/S-1-figure-9.png)
+   ![Attaching Service Attachment in Configuration Group](./assets/S-1-figure-9.png){ .off-glb }
 6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">Stockholm-Branch-Service-Attachment</font>**.
-   ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png)
+   ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
-   ![Service Attachment Gateway](./assets/S-1-figure-11.png)
+   ![Service Attachment Gateway](./assets/S-1-figure-11.png){ .off-glb }
 8. Enter the name **Stockholm-Firewall-SC-Def** and Description **Stockholm-Firewall-SC-Def** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
-   ![Service Attachment Gateway Definition](./assets/S-1-figure-12.png)
+   ![Service Attachment Gateway Definition](./assets/S-1-figure-12.png){ .off-glb }
 10. Under Basic Information, enter **VPN** <font color="orange">**1**</font>.
 11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
-    ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png)
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb }
 12. Enter **Service IPv4 Address <font color="blue">10.10.10.2</font>**. This is the IP address of **Stockholm Firewall (***<font color="green">Stockholm-FW</font>***)**.
 13. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>. 
-    ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png)
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
     The **GigabitEthernet4** interface on the **Stockholm-Branch** WAN-Edge router serves as the connection point for the **Stockholm-FW firewall**. This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment.
 14. Click **Back** at bottom left.
-    ![How to go back to Configuration Group](./assets/S-1-figure-15.png)
+    ![How to go back to Configuration Group](./assets/S-1-figure-15.png){ .off-glb }
 15. As we add the **Service Attachment Gateway Definition**, not configuration group for **Stockholm-Branch** goes <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Add**</font>.
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
 
