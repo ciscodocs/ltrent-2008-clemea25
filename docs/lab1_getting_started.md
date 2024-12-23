@@ -268,3 +268,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-38.png){ .off-glb .small .center }
 16. Scroll up and select **Actions**, and Click **Accept** radio button.
     ![Data Policy](./assets/S-1-figure-39.png){ .off-glb .small .center }
+17. Scroll to the **right** to select <font color="green">**Service Chain**</font>.
+    ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
