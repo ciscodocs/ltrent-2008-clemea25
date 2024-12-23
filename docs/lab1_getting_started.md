@@ -146,7 +146,7 @@ In the Cisco SD-WAN solution, each **VRF/VPN** is treated as a service, includin
 
 When the firewall service was introduced on the **Stockholm Branch** router, the router assigned a **label (e.g., 1009)** to the firewall service and advertised this label to the **SD-WAN controller (vSmart)** through OMP. As a result, all WAN-Edge routers within the SD-WAN fabric are aware that to access the firewall service located at the **Stockholm Branch**, they must use the **label 1009**. This mechanism ensures efficient service discovery and routing across the SD-WAN environment.
 
-```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}}
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
 Stockholm-Branch#show sdwan omp services       
 C   -> chosen
 I   -> installed
