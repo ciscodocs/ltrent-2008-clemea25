@@ -14,7 +14,7 @@ Here is a breakdown of the key components involved in the network path:
 Ensure that each component is properly configured and verify the traffic flow is going through **Stockholm-FW**.
 
 !!! note
-Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
+    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
 
 ## Intended Traffic Flow Diagram
 
@@ -131,5 +131,6 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
 18. After uploading the CSV files, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
     ![CLI Preview](./assets/S-1-figure-19.png){ .off-glb }
-19. Scroll down the **New Configuration** section to locate the **service-chain number** displayed in green. Make a note of this number, as it will be required when configuring the data policy in later sections. The service-chain number is a critical identifier used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
+19. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="blue">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections. The service-chain number is a critical identifier used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
     ![CLI Preview of Service Chain Number](./assets/S-1-figure-20.png){ .off-glb }
+20. 
