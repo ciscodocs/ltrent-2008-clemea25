@@ -99,3 +99,5 @@ Next, we will configure a service chain within the service-profile parcel in the
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
    ![Configuration Group](./assets/S-1-figure-4.png)
+2. Locate and click on the **EMEA-Stockholm-Branch** Configuration Group as illustrated below.
+   ![](./assets/S-1-figure-5.png)
