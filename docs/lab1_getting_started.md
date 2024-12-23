@@ -122,3 +122,6 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png)
 14. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-1-figure-15.png)
+15. Click **EMEA-Stockholm-Branch** Configuration Group -> Click **<font color="green">Add**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png)
+    
