@@ -243,7 +243,7 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
       3. Add VPN: <font color="orange">1</font>
    ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small .center }
    3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the policy creation process.
-5. To proceed with configuring traffic rules for the centralized data policy, click **Next** to navigate to the **traffic rules** configuration section. 
+5. To proceed with configuring traffic rules for the centralized data policy, click **Next** to navigate to the **Configure Traffic Rules** configuration section. 
    ![Traffic Rules](./assets/S-1-figure-29.png){ .off-glb .small .center }
 6. Under the heading Choose a tab and add **Traffic rules** under the selected type, select the **Traffic Data** tab.
    ![Traffic Data Rules](./assets/S-1-figure-30.png){ .off-glb .small .center }
