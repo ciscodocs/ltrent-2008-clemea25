@@ -127,4 +127,5 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
 16. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button and Click **Next**.  
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
-
+17. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
+    ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
