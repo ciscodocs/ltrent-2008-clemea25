@@ -300,6 +300,7 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy Push](./assets/S-1-figure-51.png){ .off-glb }
 
 ## Verification
+
 After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been propagated by the SD-WAN controller (vSmart) to the WAN-Edges. In this case, we need to ensure that the **Stockholm-Branch** WAN-Edge has received the policy via OMP and is correctly steering traffic through the **Stockholm-FW** as intended. To verify this, we can utilize the following show command on the **Stockholm-Branch** WAN-Edge. This will help confirm whether the centralized data policy has been effectively pushed from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
 
 ```{.ios, .no-copy, title="Stockholm-Branch Centralized Policy", linenums="1"}
@@ -325,4 +326,38 @@ from-vsmart lists data-prefix-list Stockholm-Branch-User
 from-vsmart lists data-prefix-list Sydney-Branch-User
  ip-prefix 192.168.20.0/24
 ```
+To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
 
+- Perform a traceroute to the Sydney-User located in the **Sydney-Branch** site using the **traceroute** command:
+  - _traceroute 192.168.20.2 -n_
+  - Observe the traceroute output to confirm that traffic is hitting the **Stockholm firewall (Stockholm-FW)** at IP address **10.10.10.2**.
+
+```{.ios .no-copy }
+Stockholm-User:~$ traceroute 192.168.20.2 -n 
+traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
+ 1  192.168.10.1  0.605 ms  0.327 ms  0.425 ms
+ 2  10.10.10.2  1.206 ms  0.989 ms  1.104 ms
+ 3  192.168.10.1  1.321 ms  1.045 ms  1.204 ms
+ 4  172.16.2.20  1.802 ms  1.752 ms  2.030 ms
+ 5  192.168.20.2  2.023 ms  1.990 ms  2.198 ms
+Stockholm-User:~$ 
+```
+
+```{.ios no-copy title="Stockholm Firewall traffic inspection"}
+Stockholm-FW# show conn all
+12 in use, 13 most used
+
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33447, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33440, idle 0:00:03, bytes 0, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33449, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33438, idle 0:00:03, bytes 0, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33442, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33439, idle 0:00:03, bytes 0, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33446, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33444, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33448, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33443, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33441, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.10.2:53460 inside  192.168.20.2:33445, idle 0:00:03, bytes 18, flags - 
+Stockholm-FW# 
+```
