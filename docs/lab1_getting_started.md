@@ -288,13 +288,13 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy](./assets/S-1-figure-46.png){ .off-glb }
 28. Click outside selection box and click **Add** and after that click **Save** Policy at the bottom.
     ![Data Policy](./assets/S-1-figure-47.png){ .off-glb }
-29. On **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb .xsmall } on the **Scenario-1** policy.
+29. On **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb width="50" } on the **Scenario-1** policy.
     ![Data Policy](./assets/S-1-figure-48.png){ .off-glb } 
 30. Click Preview to review the policy and after reviewing click **OK**.
     ![Data Policy](./assets/S-1-figure-49.png){ .off-glb }
 31. Now go to **Policies > Centralized Policy** page, click 3 dots on the **Scenario-1** policy.
-    1. Click “Activate”. 
-    2. Click “Activate” on “Activate Policy” pop-up. 
+    1. Click **Activate**. 
+    2. Click **Activate** on **Activate Policy** pop-up. 
     ![Data Policy Push](./assets/S-1-figure-50.png){ .off-glb }
 32. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
     ![Data Policy Push](./assets/S-1-figure-51.png){ .off-glb }
