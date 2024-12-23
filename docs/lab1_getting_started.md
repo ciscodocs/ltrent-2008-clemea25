@@ -258,3 +258,4 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Traffic Data Rules](./assets/S-1-figure-33.png){ .off-glb .small .center }
 11. Click **Sequence Rule**.
     ![Traffic Data Sequence Rules](./assets/S-1-figure-34.png){ .off-glb .small .center }
+12. Click **Match -> Scroll** right to select and click **Source Data Prefix**. 
