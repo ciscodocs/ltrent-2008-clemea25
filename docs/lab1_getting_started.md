@@ -289,4 +289,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 28. Click outside selection box and click **Add** and after that click **Save** Policy at the bottom.
     ![Data Policy](./assets/S-1-figure-47.png){ .off-glb }
 29. On **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb } on the **Scenario-1** policy.
+    ![Data Policy](./assets/S-1-figure-48.png){ .off-glb } 
 30. Click Preview to review the policy
