@@ -277,5 +277,12 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
     ![Data Policy](./assets/S-1-figure-43.png){ .off-glb .small .center }
 21. Enter **Policy Name** – **Scenario-1**. 
-22. Enter **Policy Description** - **Scenario-1**. 
-23. Click **Traffic Data**. 
+22. Enter **Policy Description** - **Scenario-1**.
+    ![Data Policy](./assets/S-1-figure-44.png){ .off-glb .small .center }
+23. Click **Traffic Data** and then click **New Site/WAN Region List and VPN List**
+24. Keep **From Service** radio button checked.
+25. Keep **Site List** radio button checked
+26. **Select Site List** by clicking in the box – **Stockholm-Branch**
+27. Click outside the selection box to expose **Select VPN List**.
+
+
