@@ -112,3 +112,5 @@ Next, we will configure a service chain within the service-profile parcel in the
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-1-figure-11.png)
 8. Enter the name **Stockholm-Firewall-SC-Def** for the service chain definition.
+   ![Service Attachment Gateway Definition](./assets/S-1-figure-12.png)
+9. 
