@@ -273,3 +273,4 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC7</font>**.
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
 19. Under **TLOC List** select **Local** and uncheck **Restrict**.
+    ![Data Policy](./assets/S-1-figure-42.png){ .off-glb .small .center }
