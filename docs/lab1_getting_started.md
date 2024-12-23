@@ -169,6 +169,4 @@ Service Chain: SC7
             rx: GigabitEthernet4, 10.10.10.2
                 endpoint-tracker: auto
                 state: up
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
