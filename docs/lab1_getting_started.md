@@ -266,3 +266,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-37.png){ .off-glb .small .center }
 15. Under **Match Conditions**, Scroll down and click in box with **Destination Data Prefix List** and select > **Sydney-Branch-User**.
     ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-38.png){ .off-glb .small .center }
+16. Scroll up and select **Actions**, and Click **Accept** radio button.
+    ![Data Policy](./assets/S-1-figure-39.png){ .off-glb .small .center }
