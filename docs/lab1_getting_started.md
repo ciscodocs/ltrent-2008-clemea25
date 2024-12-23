@@ -296,5 +296,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     1. Click “Activate”. 
     2. Click “Activate” on “Activate Policy” pop-up. 
     ![Data Policy Push](./assets/S-1-figure-50.png){ .off-glb }
-32. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Success – Push vSmart Policy**. 
+32. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
     ![Data Policy Push](./assets/S-1-figure-51.png){ .off-glb }
