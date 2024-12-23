@@ -274,3 +274,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
 19. Under **TLOC List** select **Local** and uncheck **Restrict**.
     ![Data Policy](./assets/S-1-figure-42.png){ .off-glb .small .center }
+20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
+    ![Data Policy](./assets/S-1-figure-43.png){ .off-glb .small .center }
