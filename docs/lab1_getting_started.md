@@ -146,7 +146,7 @@ Review the output to confirm the following details: the **<font color="green">Se
 
 Additionally, verify that the Service is set to **<font color="green">FW (Firewall)</font>**, the TX and RX interface is **GigabitEthernet4**, and the associated IP address is **10.10.10.2**. This verification ensures that the service chain configuration is active and correctly aligned with the intended design.
 
-```{.ios, .no-copy}
+```{.ios, .no-copy, linenums="1"}
 Stockholm-Branch#show platform software sdwan service-chain database 
 
 Service Chain: SC7
