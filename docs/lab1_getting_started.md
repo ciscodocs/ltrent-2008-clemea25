@@ -118,7 +118,9 @@ Next, we will configure a service chain within the service-profile parcel in the
 11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png)
 12. Enter **Service IPv4 Address <font color="blue">10.10.10.2</font>**. This is the IP address of **Stockholm Firewall (***<font color="green">Stockholm-FW</font>***)**.
-13. Enter SD-WAN Router Interface as **GigabitEthernet 4** and click <font color="orange">**Save**</font>.
+13. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>.
+    !!! note
+        **GigabitEthernet4 interface where Stockholm-FW is connected with **Stockholm-Branch** WAN-Edge router.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png)
 14. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-1-figure-15.png)
