@@ -262,3 +262,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy Match Rules](./assets/S-1-figure-35.png){ .off-glb .small .center }
 13. Under **Match Conditions**. Click in box with **Source Data Prefix List** and select > **Stockholm-Branch-User**.
     ![Data Policy Match Source Data Prefix](./assets/S-1-figure-36.png){ .off-glb .small .center }
+14. Click **Match** and **<font color="green">Scroll right</font>** to select and click **Destination Data Prefix**.
+15. 
