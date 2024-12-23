@@ -226,4 +226,4 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
    3. Click New Data Prefix List once more to define the third prefix list:
       1. Data Prefix List Name: **Sydney-Branch-User**
       2. Internet Protocol: IPv4 
-      3. Add Data Prefix: 192.168.20.0/24
+      3. Add Data Prefix: **192.168.20.0/24**
