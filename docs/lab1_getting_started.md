@@ -134,6 +134,6 @@ Next, we will configure a service chain within the service-profile parcel in the
 19. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="blue">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections. 
     ![CLI Preview of Service Chain Number](./assets/S-1-figure-20.png){ .off-glb }
     !!! note
-        The service-chain number is a critical identifier used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
+    The service-chain number is a critical identifier used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
 20. After finalizing the configuration, click Cancel to exit the current screen and then click Deploy to initiate the deployment process. Once the deployment is triggered, navigate to the View Deployment Status section to monitor the progress. Wait until the deployment status indicates Success, confirming that the configuration has been successfully applied to the relevant devices.
      ![CLI Preview of Service Chain Number](./assets/S-1-figure-21.png){ .off-glb }
