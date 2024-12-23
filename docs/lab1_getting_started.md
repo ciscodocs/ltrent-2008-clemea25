@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab exercise, you will explore the traffic flow from a user located in the **EMEA-Stockholm-Branch (site-10)** to a user situated at the **APAC-Sydney-Branch (site-20)**. 
+In this lab exercise, you will explore the traffic flow from a user located in the **EMEA-Stockholm-Branch (site-10)** to a user situated at the **APAC-Sydney-Branch (site-20)**.
 
 Here is a breakdown of the key components involved in the network path:
 
@@ -14,9 +14,9 @@ Here is a breakdown of the key components involved in the network path:
 Ensure that each component is properly configured and verify the traffic flow is going through **Stockholm-FW**.
 
 !!! note
-    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats. 
+Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
 
-## Intended Traffic Flow Diagram 
+## Intended Traffic Flow Diagram
 
 The following diagram illustrates the **<font color="orange">flow of traffic within the network for this scenario</font>**. Traffic is initiated from the **Stockholm-User** and is first redirected to the **Stockholm-Firewall** for <font color="orange">**inspection**</font>. After the traffic undergoes inspection, it is then forwarded to the **Sydney-User** in the **Sydney Branch**. This scenario demonstrates how traffic is securely routed through the firewall for inspection before reaching its final destination, ensuring that security policies are applied effectively within the SD-WAN fabric.
 <figure markdown>
@@ -83,7 +83,7 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
 ```
 
 !!! note
-    In the traceroute above, we observe that the traffic is currently routed over the **INET** TLOC. However, it is also possible for the traffic to use the **MPLS** TLOC, as SD-WAN employs ECMP (Equal-Cost Multi-Path) to balance traffic across all available TLOCs.
+In the traceroute above, we observe that the traffic is currently routed over the **INET** TLOC. However, it is also possible for the traffic to use the **MPLS** TLOC, as SD-WAN employs ECMP (Equal-Cost Multi-Path) to balance traffic across all available TLOCs.
 
 Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydney-User**.
 
@@ -125,5 +125,5 @@ Next, we will configure a service chain within the service-profile parcel in the
 11. Click **Save** to confirm the service chain definition.
 12. Under Basic Information, specify **VPN 1** to define the VPN context. Refer to S-1-figure-13.
 13. Scroll to the IPv4 Attachment: (1 Interface) section and configure the following:
-  * Service IPv4 Address: Enter **10.10.10.2**, which is the IP address of the **Stockholm Firewall (Stockholm-FW)**. Refer to S-1-figure-14.
-  * SD-WAN Router Interface: Enter **GigabitEthernet 4**. Refer to S-1-figure-14.
+* Service IPv4 Address: Enter **10.10.10.2**, which is the IP address of the **Stockholm Firewall (Stockholm-FW)**. Refer to S-1-figure-14.
+* SD-WAN Router Interface: Enter **GigabitEthernet 4**. Refer to S-1-figure-14.
