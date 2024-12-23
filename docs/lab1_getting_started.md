@@ -276,3 +276,6 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy](./assets/S-1-figure-42.png){ .off-glb .small .center }
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
     ![Data Policy](./assets/S-1-figure-43.png){ .off-glb .small .center }
+21. Enter **Policy Name** – **Scenario-1**. 
+22. Enter **Policy Description** - **Scenario-1**. 
+23. Click **Traffic Data**. 
