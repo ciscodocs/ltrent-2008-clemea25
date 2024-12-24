@@ -119,3 +119,5 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Locate Configuration Group](./assets/S-2-figure-1.png){ .off-glb }
 3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
    ![EMEA London Configuration Group](./assets/S-2-figure-2.png){ .off-glb }
+4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
+   ![Adding New Feature in Configuration Group](./assets/S-2-figure-3.png){ .off-glb }
