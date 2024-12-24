@@ -146,6 +146,13 @@ This configuration ensures that the desired service policies are enforced as tra
 17. In **Deploy Configuration Group** page, select **EMEA-London-Branch** by clicking the square Radio Button and Click **Next**.  
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-2-figure-9.png){ .off-glb }
 18. Click **Import**, and load **EMEA-London-Branch.csv** file which loads all the values for the variables.
-    ![Attaching CSV file](./assets/S-2-figure-1-.png){ .off-glb }
+    ![Attaching CSV file](./assets/S-2-figure-10.png){ .off-glb }
 
-    
+
+19. After uploading the CSV files, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition 
+    is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
+    This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
+    ![CLI Preview](./assets/S-2-figure-11.png){ .off-glb }
+20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="blue">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
+    The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
+    ![CLI Preview of Service Chain Number](./assets/S-1-figure-20.png){ .off-glb } 
