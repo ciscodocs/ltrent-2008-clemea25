@@ -326,5 +326,76 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     2. Click **Activate** on **Activate Policy** pop-up. 
     ![Data Policy Push](./assets/S-1-figure-23.png){ .off-glb } 
 31. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
-    ![Data Policy Push](./assets/S-1-figure-51.png){ .off-glb }
+    ![Data Policy Push](./assets/S-1-figure-24.png){ .off-glb }
 
+## Verification
+
+After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been propagated by the SD-WAN controller (vSmart) to the WAN-Edges. 
+In this case, we need to ensure that the **Stockholm-Branch** WAN-Edge has received the policy via OMP and is correctly steering traffic through the **London-FW** as intended. 
+To verify this, we can utilize the following show command on the **Stockholm-Branch** WAN-Edge. This will help confirm whether the centralized data policy has been effectively pushed 
+from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
+
+```{ .ios, .no-copy, title="Stockholm-Branch Centralized Policy"}
+Stockholm-Branch#show sdwan policy from-vsmart 
+from-vsmart data-policy _VPN-1_scenario-2
+ direction from-service
+ vpn-list VPN-1
+  sequence 1
+   match
+    source-data-prefix-list      Stockholm-Branch-User
+    destination-data-prefix-list Sydney-Branch-User
+   action accept
+    set
+     vpn-label 8389615
+     service-chain SC5
+     service-chain vpn 1
+     service-chain fall-back
+     service-chain tloc 10.0.0.1
+     service-chain tloc color biz-internet
+     service-chain tloc encap ipsec
+  default-action accept
+from-vsmart lists vpn-list VPN-1
+ vpn 1
+from-vsmart lists data-prefix-list Stockholm-Branch-User
+ ip-prefix 192.168.10.0/24
+from-vsmart lists data-prefix-list Sydney-Branch-User
+ ip-prefix 192.168.20.0/24
+```
+To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
+
+- Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
+    - _traceroute 192.168.20.2 -n_
+- Observe the traceroute output to confirm that traffic is hitting the **London firewall (London-FW)** at IP address **<font color="blue">10.101.101.2</font>**.
+
+```{.ios .no-copy }
+Stockholm-User:~$ traceroute 192.168.20.2 -n 
+traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
+ 1  192.168.10.1  0.710 ms  0.301 ms  0.424 ms
+ 2  172.16.1.101  1.404 ms  1.026 ms  1.006 ms
+ 3  10.101.101.2  3.159 ms  1.907 ms  3.837 ms
+ 4  172.16.1.101  1.813 ms  1.856 ms  1.487 ms
+ 5  172.16.1.20  2.817 ms  1.299 ms  2.456 ms
+ 6  192.168.20.2  3.181 ms  2.854 ms  1.695 ms
+Stockholm-User:~$ 
+```
+- Next, verify on the **London-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. 
+- This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
+
+```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
+London-Hub-FW# show conn all
+12 in use, 37 most used
+
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33451, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33448, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33441, idle 0:00:08, bytes 0, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33449, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33444, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33443, idle 0:00:08, bytes 0, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33446, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33450, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33445, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33447, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33442, idle 0:00:08, bytes 0, flags - 
+UDP inside  192.168.10.2:45482 inside  192.168.20.2:33452, idle 0:00:08, bytes 18, flags - 
+London-Hub-FW# 
+```
