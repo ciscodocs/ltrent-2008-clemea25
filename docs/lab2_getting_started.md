@@ -97,6 +97,14 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 | GigabitEthernet 2 | 172.16.2.20  | <font color="blue"> **Sydney-Branch** WAN-Edge interface **MPLS TLOC**.</font>                                                         |
 | eth0              | 192.168.20.2 | <font color="blue"> **Sydney-User** IP address.</font>                                                                                 |
 
+The **London-Branch** WAN-Edge router establishes connectivity with the **London-FW** firewall through its **<font color="blue">GigabitEthernet 4</font>** interface. This interface facilitates the secure and efficient inspection of traffic passing through the firewall. 
+
+The following table provides a detailed overview of the IP addressing configuration assigned to the London-Branch WAN-Edge router, ensuring clarity and ease of reference for subsequent tasks in the lab.
+
+| Interface         | IP Address   | Description                                                                      |
+|-------------------|--------------|----------------------------------------------------------------------------------|
+| GigabitEthernet 4 | 10.101.101.2 | <font color="blue"> **London-FW** GigabitEthernet 4 interface IP address.</font> |
+
 
 ## Configuring Service-Chain in Configuration Group
 
