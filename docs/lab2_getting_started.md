@@ -140,7 +140,7 @@ This configuration ensures that the desired service policies are enforced as tra
     This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment.
 14. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-2-figure-8.png){ .off-glb }
-15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-London-Branch** goes <font color="red">out of sync</font>. 
+15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-London-Branch** is now marked as <font color="red">out of sync</font>. 
 16. Click **London-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
 17. In **Deploy Configuration Group** page, select **EMEA-London-Branch** by clicking the square Radio Button and Click **Next**.  
