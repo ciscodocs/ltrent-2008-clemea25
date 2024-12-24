@@ -143,5 +143,9 @@ This configuration ensures that the desired service policies are enforced as tra
 15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-London-Branch** goes <font color="red">out of sync</font>. 
 16. Click **London-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
-17. 
+17. In **Deploy Configuration Group** page, select **EMEA-London-Branch** by clicking the square Radio Button and Click **Next**.  
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-2-figure-9.png){ .off-glb }
+18. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
+    ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
+
     
