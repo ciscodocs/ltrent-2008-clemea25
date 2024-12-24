@@ -398,3 +398,13 @@ UDP inside  192.168.10.2:45482 inside  192.168.20.2:33442, idle 0:00:08, bytes 0
 UDP inside  192.168.10.2:45482 inside  192.168.20.2:33452, idle 0:00:08, bytes 18, flags - 
 London-Hub-FW# 
 ```
+## Conclusion
+In conclusion, the configuration group and centralized traffic data policy implemented in this lab successfully ensured that traffic originating from the **Stockholm-User** 
+at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** was routed through the **firewall (London-FW)** at **London-Branch**. 
+The firewall, reachable via the Stockholm-Branch WAN-Edge in **VRF-1**, effectively inspected the traffic before allowing it to proceed to its destination. 
+This demonstrates the practical application of service chaining and centralized data policies in steering traffic through desired network functions within the Cisco SD-WAN fabric.
+
+!!! info
+    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized data policy configured in the current exercise. **Deactivating** the policy 
+    ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized data policy is successfully deactivated 
+    and confirmed, you can confidently move forward to the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
