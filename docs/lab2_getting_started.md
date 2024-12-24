@@ -165,3 +165,8 @@ This configuration ensures that the desired service policies are enforced as tra
 
 ## Verification of Service Chain configuration on London-Branch
 
+When the firewall service was introduced on the **London Branch** router, the router assigned a **label (e.g., 1007)** to the firewall service and advertised this label to the **SD-WAN controller (vSmart)** through OMP. 
+As a result, all WAN-Edge routers within the SD-WAN fabric are aware that to access the firewall service located at the **Stockholm Branch**, they must use the **label 1007**. This mechanism ensures efficient service discovery 
+and routing across the SD-WAN environment.
+
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
