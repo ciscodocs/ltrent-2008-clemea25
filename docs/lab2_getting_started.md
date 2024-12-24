@@ -296,3 +296,11 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
     ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC5</font>**.
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
+19. To proceed with the configuration, follow the steps below to set up the VPN and TLOC parameters for the service attachment:
+    1. Enter VPN: **<font color="green">1</font>** in the designated field.
+    2. Under the TLOC section
+       1. Specify the IP address as the **system IP** of the **London-Branch**: **<font color="blue">10.0.0.1</font>**
+       2. Select the **color** from the drop-down menu: **<font color="green">biz-internet</font>**.
+       3. Choose the Encapsulation type from the drop-down menu: **IPSEC**.
+    3. Ensure that the **<font color="orange">Remote</font>** option is selected to complete this configuration step.
+    ![Data Policy](./assets/S-2-figure-16.png){ .off-glb .small .center }
