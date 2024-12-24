@@ -165,8 +165,35 @@ This configuration ensures that the desired service policies are enforced as tra
 
 ## Verification of Service Chain configuration on London-Branch
 
-When the firewall service was introduced on the **London Branch** router, the router assigned a **label (e.g., 1007)** to the firewall service and advertised this label to the **SD-WAN controller (vSmart)** through OMP. 
-As a result, all WAN-Edge routers within the SD-WAN fabric are aware that to access the firewall service located at the **Stockholm Branch**, they must use the **label 1007**. This mechanism ensures efficient service discovery 
-and routing across the SD-WAN environment.
+In the Cisco SD-WAN architecture, service nodes communicate their available services to the **SD-WAN Controller (vSmart)** using the **Overlay Management Protocol (OMP)** with the service route address family. Each WAN-Edge router is responsible for advertising its service routes to the SD-WAN Controller (vSmart), which then maintains these service routes within its **Routing Information Base (RIB)**. 
+
+**<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
 ```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
+London-Branch#show sdwan omp services 
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Stg -> staged
+IA  -> On-demand inactive
+Inv -> invalid
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                 AFFINITY                            
+ADDRESS                                                         PATH   REGION    GROUP                               
+FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID        NUMBER      LABEL    STATUS    VRF  
+---------------------------------------------------------------------------------------------------------------------
+ipv4     0         1      VPN      10.0.0.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+         0         1      SC5      10.0.0.1    0.0.0.0          66     None      None        1007     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1007     C,Red,R   1    
+ipv6     0         1      VPN      10.0.0.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+```

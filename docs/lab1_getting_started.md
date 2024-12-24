@@ -140,9 +140,10 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
 
 ## Verification of Service Chain configuration on Stockholm-Branch
-In the Cisco SD-WAN solution, each **VRF/VPN** is treated as a service, including **firewall services**. These services are advertised across the SD-WAN fabric using the OMP (Overlay Management Protocol). 
 
-When the firewall service was introduced on the **Stockholm Branch** router, the router assigned a **label (e.g., 1009)** to the firewall service and advertised this label to the **SD-WAN controller (vSmart)** through OMP. As a result, all WAN-Edge routers within the SD-WAN fabric are aware that to access the firewall service located at the **Stockholm Branch**, they must use the **label 1009**. This mechanism ensures efficient service discovery and routing across the SD-WAN environment.
+In the Cisco SD-WAN architecture, service nodes communicate their available services to the **SD-WAN Controller (vSmart)** using the **Overlay Management Protocol (OMP)** with the service route address family. Each WAN-Edge router is responsible for advertising its service routes to the SD-WAN Controller (vSmart), which then maintains these service routes within its **Routing Information Base (RIB)**. 
+
+**<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
 ```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
 Stockholm-Branch#show sdwan omp services       
