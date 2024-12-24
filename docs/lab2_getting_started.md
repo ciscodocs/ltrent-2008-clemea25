@@ -125,3 +125,8 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Attaching Service Attachment in Configuration Group](./assets/S-2-figure-4.png){ .off-glb }
 6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">London-Branch-Service-Attachment</font>**.
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
+7. Click **Add Service Chain Definition** to define the service chain. 
+   ![Service Attachment Gateway](./assets/S-2-figure-6.png){ .off-glb }
+8. Enter the name **London-Firewall-SC-Def** and Description **London-Firewall-SC-Def** for the service chain definition.
+9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
+   ![Service Attachment Gateway Definition](./assets/S-2-figure-7.png){ .off-glb }
