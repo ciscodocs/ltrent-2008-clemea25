@@ -367,7 +367,7 @@ To verify that the centralized data policy is functioning as intended, navigate 
     - _traceroute 192.168.20.2 -n_
 - Observe the traceroute output to confirm that traffic is hitting the **London firewall (London-FW)** at IP address **<font color="blue">10.101.101.2</font>**.
 
-```{.ios .no-copy }
+```{.ios .no-copy linenums="1" hl_lines="5 8"}
 Stockholm-User:~$ traceroute 192.168.20.2 -n 
 traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
  1  192.168.10.1  0.710 ms  0.301 ms  0.424 ms
