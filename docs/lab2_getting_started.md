@@ -169,7 +169,7 @@ In the Cisco SD-WAN architecture, service nodes communicate their available serv
 
 **<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
-```{.ios, .no-copy, linenums="1", hl_lines="23 24"}
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
 London-Branch#show sdwan omp services 
 C   -> chosen
 I   -> installed
@@ -229,3 +229,4 @@ Service Chain: SC5
                 endpoint-tracker: auto
                 state: up
 ```
+## Configuring Centralized Policy for Traffic Steering
