@@ -303,7 +303,7 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 
 After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been propagated by the SD-WAN controller (vSmart) to the WAN-Edges. In this case, we need to ensure that the **Stockholm-Branch** WAN-Edge has received the policy via OMP and is correctly steering traffic through the **Stockholm-FW** as intended. To verify this, we can utilize the following show command on the **Stockholm-Branch** WAN-Edge. This will help confirm whether the centralized data policy has been effectively pushed from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
 
-```{.ios, .no-copy, title="Stockholm-Branch Centralized Policy"}
+```{ .ios, .no-copy, title="Stockholm-Branch Centralized Policy"}
 Stockholm-Branch#show sdwan policy from-vsmart 
 from-vsmart data-policy _VPN-1_scenario-1
  direction from-service
@@ -344,7 +344,7 @@ Stockholm-User:~$
 ```
 - Next, verify on the **Stockholm-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
 
-```{.ios no-copy title="Stockholm Firewall traffic inspection"}
+```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
 Stockholm-FW# show conn all
 12 in use, 13 most used
 
