@@ -162,3 +162,6 @@ This configuration ensures that the desired service policies are enforced as tra
     correctly linked to the **London-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-2-figure-15.png){ .off-glb }
+
+## Verification of Service Chain configuration on London-Branch
+
