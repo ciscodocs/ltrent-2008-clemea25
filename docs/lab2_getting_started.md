@@ -1,37 +1,19 @@
-# Lab 2 - Getting Started
+# Lab 2 - Route traffic from Stockholm to Sydney via London Firewall in same VRF
 
-## Section 1
+## Introduction
 
-Please use the following credentials to connect to device:
+In this lab exercise, you will analyze the traffic flow between a user in the **<font color="Green">EMEA-Stockholm-Branch (site-10)</font>** and a user in the **<font color="Green">APAC-Sydney-Branch (site-20)</font>**, with the traffic routed through a **firewall** **<font color="Green">(London-Hub-Firewall)</font>** hosted at the 
+**EMEA-London-Hub (site-101)**. The **London-Hub-Firewall**, accessible via the **London-Hub** WAN-Edge router in **<font color="blue">VRF-1</font>**, plays a critical role in inspecting and securing the traffic as it traverses the network. This exercise will focus on understanding the configuration and verification of service chaining, 
+centralized policies, and the interactions between network elements to ensure the intended traffic flow through the designated security device.
 
-| <!-- -->         | <!-- -->         |
-| ---------------- | ---------------- |
-| `IP Address`     | 1.1.1.1          |
-| `Username`       | admin            |
-| `Password`       | C1sco123         |
+Here is a breakdown of the key components involved in the network path:
 
+- **Source:** The traffic originates from a **Stockholm-User** user in the **EMEA-Stockholm-Branch (site-10)**.
+- **Destination:** The intended recipient is a **Sydney-User** in the **APAC-Sydney-Branch (site-20)**.
+- **Firewall:** All traffic passes through a **firewall (London-FW)**, which is hosted locally at the **EMEA-London-Branch (site-101)**.
+- **WAN Edge Router:** The **London-Branch** WAN-Edge router, configured in ***<font color="blue">VRF-1</font>***, facilitates the traffic's reachability to the firewall and subsequent routing towards the destination.
 
-My content
+Ensure that each component is properly configured and verify the traffic flow is going through **London-FW**.
 
 !!! note
-    This is a note
-
-Cisco IOS code block:
-
-```ios
-hostname ABC
-interface GigabitEthernet1
- ip address 122.1.1.1
-```
-
-
-
-Image:
-
-<figure markdown>
-  ![ACI](./assets/aci.png){ width="500" }
-</figure>
-
-## Section 2
-
-More content
+    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
