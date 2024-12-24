@@ -115,3 +115,7 @@ This configuration ensures that the desired service policies are enforced as tra
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
    ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
+2. Locate and click on the **EMEA-London-Branch** Configuration Group as illustrated below.
+   ![Locate Configuration Group](./assets/S-2-figure-1.png){ .off-glb }
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
+   ![EMEA London Configuration Group](./assets/S-2-figure-2.png){ .off-glb }
