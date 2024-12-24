@@ -121,3 +121,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2-figure-2.png){ .off-glb }
 4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
    ![Adding New Feature in Configuration Group](./assets/S-2-figure-3.png){ .off-glb }
+5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
+   ![Attaching Service Attachment in Configuration Group](./assets/S-2-figure-4.png){ .off-glb }
+6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">London-Branch-Service-Attachment</font>**.
+   ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
