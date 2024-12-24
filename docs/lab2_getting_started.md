@@ -169,7 +169,7 @@ In the Cisco SD-WAN architecture, service nodes communicate their available serv
 
 **<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
-```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
+```{.ios, .no-copy, linenums="1", hl_lines="23 24"}
 London-Branch#show sdwan omp services 
 C   -> chosen
 I   -> installed
@@ -205,7 +205,7 @@ Review the output to confirm the following details: the **<font color="green">Se
 
 Additionally, verify that the Service is set to **<font color="green">FW (Firewall)</font>**, the TX and RX interface is **GigabitEthernet4**, and the associated IP address is **10.101.101.2**. This verification ensures that the service chain configuration is active and correctly aligned with the intended design.
 
-```{ .ios, .no-copy, linenums="1", hl_lines="3 4 5 6 9 17 20" }
+```{.ios, .no-copy, linenums="1", hl_lines="3 4 5 6 9 17 20" }
 London-Branch#show platform software sdwan service-chain database 
 
 Service Chain: SC5
