@@ -75,7 +75,6 @@ PING 192.168.20.2 (192.168.20.2): 56 data bytes
 --- 192.168.20.2 ping statistics ---
 5 packets transmitted, 5 packets received, 0% packet loss
 round-trip min/avg/max = 2.677/3.345/4.058 ms
-Stockholm-User:~$ 
 ```
 Additionally, traffic originating from the **Stockholm-Branch** flows directly to the **Sydney-Branch** via the available TLOCs, ensuring efficient and balanced connectivity in the absence of traffic policies.
 
