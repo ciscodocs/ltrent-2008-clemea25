@@ -99,7 +99,7 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 
 The **London-Branch** WAN-Edge router establishes connectivity with the **London-FW** firewall through its **<font color="blue">GigabitEthernet 4</font>** interface. This interface facilitates the secure and efficient inspection of traffic passing through the firewall. 
 
-The following table provides a detailed overview of the IP addressing configuration assigned to the London-Branch WAN-Edge router, ensuring clarity and ease of reference for subsequent tasks in the lab.
+The following table provides a detailed overview of the IP addressing configuration assigned to the **London-Branch** WAN-Edge router, ensuring clarity and ease of reference for subsequent tasks in the lab.
 
 | Interface         | IP Address   | Description                                                                      |
 |-------------------|--------------|----------------------------------------------------------------------------------|
