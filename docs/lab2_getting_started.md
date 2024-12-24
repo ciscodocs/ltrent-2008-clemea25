@@ -25,5 +25,5 @@ The following diagram illustrates the **<font color="orange">flow of traffic wit
 This scenario demonstrates how traffic is securely routed through the firewall for inspection before reaching its final destination, ensuring that security policies are applied effectively within the SD-WAN fabric.
 
 <figure markdown>
-  ![Scenario-2 Traffic Flow](./assets/Scenario-1.gif)
+  ![Scenario-2 Traffic Flow](./assets/Scenario-2.gif)
 </figure>
