@@ -304,3 +304,5 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
        3. Choose the Encapsulation type from the drop-down menu: **IPSEC**.
     3. Ensure that the **<font color="orange">Remote</font>** option is selected to complete this configuration step.
     ![Data Policy](./assets/S-2-figure-16.png){ .off-glb .small .center }
+20. Click **Save Match and Actions**.
+    ![Data Policy](./assets/S-2-figure-17.png){ .off-glb .small .center }
