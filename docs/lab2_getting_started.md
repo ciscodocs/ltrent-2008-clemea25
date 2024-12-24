@@ -139,3 +139,7 @@ This configuration ensures that the desired service policies are enforced as tra
     
     !!! info 
         The **GigabitEthernet4** interface on the **London-Branch** WAN-Edge router serves as the connection point for the **London-FW firewall**. This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment.
+14. Click **Back** at bottom left.
+    ![How to go back to Configuration Group](./assets/S-1-figure-15.png){ .off-glb }
+15. As we add the **Service Attachment Gateway Definition**, not configuration group for **EMEA-Stockholm-Branch** goes <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
