@@ -140,5 +140,6 @@ This configuration ensures that the desired service policies are enforced as tra
     ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
 14. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-2-figure-8.png){ .off-glb }
-15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-London-Branch** goes <font color="red">out of sync</font>.Click **London-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
-    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
+15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-London-Branch** goes <font color="red">out of sync</font>. 
+16. Click **London-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-2-figure-9.png){ .off-glb }
