@@ -32,9 +32,8 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 
 In the initial configuration, without applying any traffic policies, the routes learned from the **Sydney-Branch** are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
 
-```{.ios, .no-copy}
-
-Stockholm-Branch#show sdwan omp routes vpn 1 192.168.20.0/24  
+```{.ios, .no-copy, linenums="1", hl_lines="30 31"}
+Stockholm-Branch#show sdwan omp routes 
 Generating output, this might take time, please wait ...
 Code:
 C   -> chosen
@@ -57,8 +56,16 @@ R-TGW-R -> Reoriginated Transport-Gateway reoriginated
                                                       PATH                      ATTRIBUTE                                                       GROUP                                    
 TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-0         1      192.168.20.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.2         mpls             ipsec  -           None        None        -                
-                                     100.0.0.101      2      1003     C,I,R     installed  10.1.1.2         biz-internet     ipsec  -           None        None        -                
+0         1      10.10.10.0/24       0.0.0.0          66     1003     C,Red,R   installed  10.1.1.1         mpls             ipsec  -           None        None        -                
+                                     0.0.0.0          68     1003     C,Red,R   installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
+0         1      10.101.101.0/24     100.0.0.101      1      1003     C,I,R     installed  10.0.0.1         mpls             ipsec  -           None        None        -                
+                                     100.0.0.101      2      1003     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
+0         1      10.102.102.102/32   100.0.0.101      1      1008     C,I,R     installed  10.0.0.2         biz-internet     ipsec  -           None        None        -                
+                                     100.0.0.101      2      1008     C,I,R     installed  10.0.0.2         mpls             ipsec  -           None        None        -                
+0         1      192.168.10.0/24     0.0.0.0          66     1003     C,Red,R   installed  10.1.1.1         mpls             ipsec  -           None        None        -                
+                                     0.0.0.0          68     1003     C,Red,R   installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
+0         1      192.168.20.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.2         biz-internet     ipsec  -           None        None        -                
+                                     100.0.0.101      2      1003     C,I,R     installed  10.1.1.2         mpls             ipsec  -           None        None        -                
 ```
 
 To verify this, we initiate a ping from the **Stockholm-User** (**<font color="blue">IP: 192.168.10.2</font>**) to the **Sydney-User** (**<font color="blue">IP: 192.168.20.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
