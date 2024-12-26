@@ -129,6 +129,9 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2-figure-2.png){ .off-glb }
 4. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon of **EMEA-London-Branch-Service-VPN-1** service VPN parcel as illustrated below.
    ![EMEA London Configuration Group](./assets/S-2b-figure-1.png){ .off-glb }
+5. Now click, **Service**, in the VPN service parcel like below.
+   ![EMEA London Configuration Group](./assets/S-2b-figure-2.png){ .off-glb }
+6. 
 
 
 ## Verification of Service Chain configuration on London-Branch
