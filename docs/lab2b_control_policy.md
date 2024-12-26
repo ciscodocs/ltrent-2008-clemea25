@@ -138,7 +138,8 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-4.png){ .off-glb }
 8. As we introduce **FW** service in <font color="green">**VPN-1**</font>, so configuration group is now <font color="red">out of sync</font>.
    ![EMEA London Configuration Group](./assets/S-2b-figure-5.png){ .off-glb }
-
+9. Now click **Deploy** and check select **EMEA-London-Branch**.
+   ![EMEA London Configuration Group](./assets/S-2b-figure-6.png){ .off-glb }
 
 ## Verification of Service Chain configuration on London-Branch
 
