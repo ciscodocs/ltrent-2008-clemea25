@@ -82,6 +82,7 @@ nav:
       - Getting Started: getting_started.md
       - Lab 1 - Route traffic from Stockholm to Sydney via local firewall in Stockholm: lab1_getting_started.md
       - Lab 2 - Route traffic from Stockholm to Sydney via London firewall in Same VRF: lab2_getting_started.md
+          - Lab 2 - Route traffic from Stockholm to Sydney via London firewall in Same VRF:
       - Lab 3 - Getting Started: lab3_getting_started.md
       - Lab 4 - Getting Started: lab4_getting_started.md
       - Lab 5 - Getting Started: lab5_getting_started.md
