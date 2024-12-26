@@ -123,7 +123,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Adding New Feature in Configuration Group](./assets/S-2-figure-3.png){ .off-glb }
 5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
    ![Attaching Service Attachment in Configuration Group](./assets/S-2-figure-4.png){ .off-glb }
-6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">London-Branch-Service-Attachment</font>**.
+6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name and description **<font color="orange">London-Branch-Service-Attachment</font>**.
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-2-figure-6.png){ .off-glb }
@@ -407,4 +407,5 @@ This demonstrates the practical application of service chaining and centralized 
 !!! info
     Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized data policy configured in the current exercise. **Deactivating** the policy 
     ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized data policy is successfully deactivated 
-    and confirmed, you can confidently move forward to the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
+    and confirmed, delete the service chain parcel **London-Branch-Service-Attachment** in **London-Branch** WAN-Edge service profile **EMEA-London-Branch-Service-VPN**. Now we can confidently move forward to 
+    the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
