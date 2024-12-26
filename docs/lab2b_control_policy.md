@@ -148,6 +148,10 @@ This configuration ensures that the desired service policies are enforced as tra
     ![Attaching CSV file](./assets/S-2b-figure-7.png){ .off-glb }
 20. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
     ![Attaching CSV file](./assets/S-2b-figure-8.png){ .off-glb }
+21. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
+    ![Attaching CSV file](./assets/S-2b-figure-9.png){ .off-glb }
+22. 
+
 
 ## Verification of Service Chain configuration on London-Branch
 
