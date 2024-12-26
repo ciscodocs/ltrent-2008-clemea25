@@ -131,7 +131,8 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-1.png){ .off-glb }
 5. Now click, **Service**, and in order to Add **<font color="green">FW service</font>** click **Add Service** like below.
    ![EMEA London Configuration Group](./assets/S-2b-figure-2.png){ .off-glb }
-6. 
+6. Select **FW** from the list and enter IP address of FW **<font color="blue">10.101.101.2</font>** as exhibited below.
+   ![EMEA London Configuration Group](./assets/S-2b-figure-3.png){ .off-glb }
 
 
 ## Verification of Service Chain configuration on London-Branch
