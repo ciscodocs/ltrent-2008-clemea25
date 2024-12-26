@@ -30,7 +30,7 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 
 ## Traffic flow without any policy
 
-In the initial configuration, without applying any traffic policies, the routes learned from the **Sydney-Branch** are distributed equally across both **Sydney-Branch** WAN-Edge TLOCs (**<biz-internet:10.1.1.2>**, **<mpls:10.1.1.2>**), leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
+In the initial configuration, without applying any traffic policies, the routes learned from the **Sydney-Branch** are distributed equally across both **Sydney-Branch** WAN-Edge TLOCs (**biz-internet:10.1.1.2**, **mpls:10.1.1.2**), leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
 
 ```{.ios, .no-copy, linenums="1", hl_lines="32 33"}
 Stockholm-Branch#show sdwan omp routes 
