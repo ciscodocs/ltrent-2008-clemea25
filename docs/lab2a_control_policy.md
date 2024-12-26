@@ -1,4 +1,4 @@
-# Lab 2 - Route traffic from Stockholm to Sydney via London Firewall in same VRF using <font color="blue">Control Policy</font>
+# Lab 2 - Route traffic from Stockholm to Sydney via London Firewall in same VRF using <font color="blue">**Control Policy**</font>
 
 ## Introduction
 
