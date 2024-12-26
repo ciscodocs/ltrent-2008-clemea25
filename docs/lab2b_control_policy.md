@@ -133,7 +133,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-2.png){ .off-glb }
 6. Select **FW** from the list and enter IP address of **FW** **<font color="blue">10.101.101.2</font>** as exhibited below.
    ![EMEA London Configuration Group](./assets/S-2b-figure-3.png){ .off-glb }
-7. After ensuring all the necessary details have been entered correctly, the next step involves adding and introducing **Firewall (FW)** services at the London-Branch. This integration is critical to route and secure the traffic flow between **Stockholm** and **Sydney**. 
+7. After ensuring all the necessary details have been entered correctly, the next step involves adding and introducing **Firewall (FW)** services at the **London-Branch**. This integration is critical to route and secure the traffic flow between **Stockholm** and **Sydney**. 
    ![EMEA London Configuration Group](./assets/S-2b-figure-4.png){ .off-glb }
 8. As we introduce **FW** service in <font color="green">**VPN-1**</font>, so configuration group is now <font color="red">out of sync</font>.
    ![EMEA London Configuration Group](./assets/S-2b-figure-5.png){ .off-glb }
