@@ -127,7 +127,10 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Locate Configuration Group](./assets/S-2-figure-1.png){ .off-glb }
 3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
    ![EMEA London Configuration Group](./assets/S-2-figure-2.png){ .off-glb }
-4. 
+4. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon of **EMEA-London-Branch-Service-VPN-1** service VPN parcel as illustrated below.
+   ![EMEA London Configuration Group](./assets/S-2b-figure-1.png){ .off-glb }
+
+
 ## Verification of Service Chain configuration on London-Branch
 
 In the Cisco SD-WAN architecture, service nodes communicate their available services to the **SD-WAN Controller (vSmart)** using the **Overlay Management Protocol (OMP)** with the service route address family. Each WAN-Edge router is responsible for advertising its service routes to the SD-WAN Controller (vSmart), which then maintains these service routes within its **Routing Information Base (RIB)**. 
