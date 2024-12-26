@@ -161,7 +161,7 @@ In the Cisco SD-WAN architecture, service nodes communicate their available serv
 
 **<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
-```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
+```{ .ios, .no-copy, linenums="1", hl_lines="18 19"}
 London-Branch#show sdwan omp services 
 C   -> chosen
 I   -> installed
@@ -184,10 +184,11 @@ FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID       
 ---------------------------------------------------------------------------------------------------------------------
 ipv4     0         1      VPN      10.0.0.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
                                                0.0.0.0          68     None      None        1003     C,Red,R   1    
-         0         1      SC5      10.0.0.1    0.0.0.0          66     None      None        1007     C,Red,R   1    
-                                               0.0.0.0          68     None      None        1007     C,Red,R   1    
+         0         1      FW       10.0.0.1    0.0.0.0          66     None      None        1014     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1014     C,Red,R   1    
 ipv6     0         1      VPN      10.0.0.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
                                                0.0.0.0          68     None      None        1003     C,Red,R   1    
+
 ```
 To verify the service chain configuration on the **London-Branch** WAN-Edge router, access the device CLI and execute the command:
 
