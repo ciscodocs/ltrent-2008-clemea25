@@ -142,9 +142,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-6.png){ .off-glb }
 10. Click **Import**, and load **EMEA-London-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-2-figure-10.png){ .off-glb }
-19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the **FW service**  
-    is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
-    This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
+19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the **FW service** is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
     ![Attaching CSV file](./assets/S-2b-figure-7.png){ .off-glb }
 20. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
     ![Attaching CSV file](./assets/S-2b-figure-8.png){ .off-glb }
@@ -161,7 +159,7 @@ In the Cisco SD-WAN architecture, service nodes communicate their available serv
 
 **<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
-```{ .ios, .no-copy, linenums="1", hl_lines="18 19"}
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
 London-Branch#show sdwan omp services 
 C   -> chosen
 I   -> installed
