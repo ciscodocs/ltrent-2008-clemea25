@@ -113,7 +113,7 @@ The following table provides a detailed overview of the IP addressing configurat
 | GigabitEthernet 4 | 10.101.101.2 | <font color="blue"> **London-FW** GigabitEthernet 4 interface IP address.</font> |
 
 
-## Configuring Service-Chain in Configuration Group
+## Configuring Firewall Service in Configuration Group
 
 Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. 
 This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined 
