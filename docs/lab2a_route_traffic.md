@@ -1,4 +1,4 @@
-# Lab 2 - Route traffic from Stockholm to Sydney via London Firewall in same VRF
+# Lab 2a - Route traffic from Stockholm to Sydney via London Firewall in same VRF
 
 ## Introduction
 
