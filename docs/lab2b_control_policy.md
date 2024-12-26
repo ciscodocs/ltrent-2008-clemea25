@@ -150,8 +150,10 @@ This configuration ensures that the desired service policies are enforced as tra
     ![Attaching CSV file](./assets/S-2b-figure-8.png){ .off-glb }
 21. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
     ![Attaching CSV file](./assets/S-2b-figure-9.png){ .off-glb }
-22. 
-
+22. To verify the configuration group status, click on the **EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
+    correctly linked to the **London-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
+    and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
+    ![Attaching CSV file](./assets/S-2b-figure-10.png){ .off-glb }
 
 ## Verification of Service Chain configuration on London-Branch
 
