@@ -252,7 +252,8 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 12. Next, click **Action** and select **Accept** to define the behavior of the control policy for matched routes. Once the action is set to **Accept**, proceed to configure the Service by selecting <font color="green">Firewall</font> from the dropdown menu. This step ensures that the traffic will be steered through the designated firewall service.
     Specify the **VPN** where the firewall is hosted — in this topology, the VPN is <font color="green">1</font>. Under the TLOC IP section, input the TLOC IP address **<font color="green">10.0.0.1</font>**, and select the color as **biz-internet** and Encapsulation as **IPSEC**. These configurations direct the traffic through the appropriate TLOC path, ensuring secure and optimized routing through the firewall.
     ![Adding VPN List](./assets/S-2b-figure-18.png){ .off-glb .small }
-13. Once the match conditions and actions are fully configured, click **Save Match and Actions** to finalize the rule. This step ensures that the defined criteria and corresponding actions are stored within the control policy. By saving, you confirm the rule’s configuration, making it ready to be included in the policy sequence.
+13. Once the match conditions and actions are fully configured, click **Save Match and Actions** to finalize the rule. This step ensures that the defined criteria and corresponding actions are stored within the control policy. 
+    By saving, you confirm the rule’s configuration, making it ready to be included in the policy sequence.
     ![Adding VPN List](./assets/S-2b-figure-19.png){ .off-glb .small }
 14. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
     ![Adding VPN List](./assets/S-2b-figure-20.png){ .off-glb .small }
