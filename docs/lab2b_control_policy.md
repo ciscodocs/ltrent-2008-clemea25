@@ -209,11 +209,11 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
       2. Internet Protocol: IPv4 
       3. Add Data Prefix: **8.8.8.8/32, 4.2.2.2/32**
    2. Click **New Data Prefix List** again to define the second prefix list:
-      1. Data Prefix List Name: **Stockholm-Branch-User**
+      1. Data Prefix List Name: **Stockholm-Branch-User-Subnet**
       2. Internet Protocol: IPv4 
       3. Add Data Prefix: **192.168.10.0/24**
    3. Click **New Data Prefix List** once more to define the third prefix list:
-      1. Data Prefix List Name: **Sydney-Branch-User**
+      1. Data Prefix List Name: **Sydney-Branch-User-Subnet**
       2. Internet Protocol: IPv4 
       3. Add Data Prefix: **192.168.20.0/24**
   ![Adding Data Prefix List](./assets/S-1-figure-26.png){ .off-glb .small }
