@@ -284,7 +284,7 @@ In this case, we need to ensure that the **Stockholm-Branch** WAN-Edge has recei
 To verify this, we can utilize the following show command on the **Stockholm-Branch** WAN-Edge. This will help confirm whether the centralized data policy has been effectively pushed 
 from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
 
-```{ .ios, .no-copy, title="Stockholm-Branch Centralized Policy"}
+```{ .ios .no-copy  title="Stockholm-Branch Centralized Policy"}
 Stockholm-Branch#show sdwan policy from-vsmart 
 from-vsmart data-policy _VPN-1_scenario-2
  direction from-service
