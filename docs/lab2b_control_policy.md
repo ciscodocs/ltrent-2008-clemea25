@@ -259,6 +259,9 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     ![Adding VPN List](./assets/S-2b-figure-19.png){ .off-glb .small }
 14. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
     ![Adding VPN List](./assets/S-2b-figure-20.png){ .off-glb .small }
+15. Under **Topology** section click **New Site/WAN Region List**.
+    ![Adding VPN List](./assets/S-2b-figure-21.png){ .off-glb .small }
+
 
 ## Verification
 
