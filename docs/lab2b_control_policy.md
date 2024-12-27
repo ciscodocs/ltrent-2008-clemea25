@@ -323,7 +323,7 @@ policy configuration. This behavior contrasts with the earlier state, prior to a
 subnet **<font color="green">192.168.20.0/24</font>** was advertised with **both Sydney-Branch TLOCs** (<font color="orange">**biz-internet, mpls**</font>). 
 This change demonstrates the effectiveness of the centralized control policy in steering traffic dynamically by modifying route advertisements to align with the desired topology.
 
-```{ .ios .no-copy linenums="1", hl_lines="25"}
+```{ .ios .no-copy linenums="1", hl_lines="32"}
 Stockholm-Branch#show sdwan omp routes 
 Generating output, this might take time, please wait ...
 Code:
