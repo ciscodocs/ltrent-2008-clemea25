@@ -242,7 +242,11 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
    ![Adding VPN List](./assets/S-2b-figure-13.png){ .off-glb .small }
 8. Now click **Default Action** and click **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
    ![Adding VPN List](./assets/S-2b-figure-14.png){ .off-glb .small }
-9. 
+9. Now click **Sequence Type**.
+
+   ![Adding VPN List](./assets/S-2b-figure-15.png){ .off-glb .small }
+10. In this step, we create a sequence within the control policy to handle routes specific to **Sydney-Branch** user traffic. This sequence matches the routes belonging to the Sydney-Branch user subnet and sets the next hop to the London-Branch TLOC. This TLOC is configured to direct traffic towards the London-Branch Firewall (FW), ensuring that all matched traffic is routed through the firewall for inspection and policy enforcement. This configuration is a critical step in defining how traffic is dynamically steered within the SD-WAN environment to meet security and routing requirements.
+
 
 ## Verification
 
