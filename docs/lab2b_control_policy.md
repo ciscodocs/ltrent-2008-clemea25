@@ -273,6 +273,9 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 20. Now go to **Policies > Centralized Policy** page, click 3 dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
     1. Click **Activate**. 
     2. Click **Activate** on **Activate Policy** pop-up. 
+    ![Preview Policy](./assets/S-2b-figure-26.png){ .off-glb .small }
+21. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
+    ![Preview Policy](./assets/S-2b-figure-27.png){ .off-glb .small }
 
 ## Verification
 
