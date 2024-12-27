@@ -448,8 +448,8 @@ The firewall, reachable via the Stockholm-Branch WAN-Edge in **VRF-1**, effectiv
 This demonstrates the practical application of service chaining and centralized data policies in steering traffic through desired network functions within the Cisco SD-WAN fabric.
 
 !!! info
-    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized data policy configured in the current exercise. **Deactivating** the policy 
-    ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized data policy is successfully deactivated 
-    and confirmed, delete the service chain parcel **London-Branch-Service-Attachment** in **London-Branch** WAN-Edge service profile **EMEA-London-Branch-Service-VPN**. Now we can confidently move forward to 
+    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized control policy configured in the current exercise. **Deactivating** the policy 
+    ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized control policy is successfully deactivated 
+    and confirmed, delete the service in **London-Branch-Service-Attachment** in **London-Branch** WAN-Edge service profile **EMEA-London-Branch-Service-VPN**. Now we can confidently move forward to 
     the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
 
