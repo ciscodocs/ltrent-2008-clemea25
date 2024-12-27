@@ -261,8 +261,11 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     ![Adding VPN List](./assets/S-2b-figure-21.png){ .off-glb .small }
 16. Make sure we select **Site List** and under **Outbound Site List**, we select **<font color="green">Stockholm-Branch</font>**. So intent of the control policy is to select
     when SD-WAN Controller (vSmart), advertised the routes of **Sydney-Branch** more specifically **Sydney-Branch-User**, we set the TLOC of **London-Branch** and advertised towards the
-    **Stockholm-Branch**, as policy is applied in **<font color="green">outbound</font>** direction.
+    **Stockholm-Branch**, as policy is applied in **<font color="green">outbound</font>** direction. Once **Stockholm-Branch** is selected from **Outbound Site List**, we select **Add**. So
+    configuration of the direction is saved under control policy like below.
     ![Adding VPN List](./assets/S-2b-figure-22.png){ .off-glb .small }
+17. Now configure the policy name and description with **scenario-2**.
+    ![Adding VPN List](./assets/S-2b-figure-23.png){ .off-glb .small }
 
 
 ## Verification
