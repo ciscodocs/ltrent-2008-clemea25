@@ -235,6 +235,8 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 5. To proceed with configuring **control policy** rules for the centralized control policy, click **Next** to navigate to the **Configure Topology and VPN Membership** configuration section. 
    Under the heading Choose a tab and click **Topology** under the selected type, select the **Add Topology** tab.  
    ![Adding VPN List](./assets/S-2b-figure-11.png){ .off-glb .small .center }
+6. Now select **Custom Control (Route & TLOC)**.
+   ![Adding VPN List](./assets/S-2b-figure-12.png){ .off-glb .small .center }
 
 
 ## Verification
