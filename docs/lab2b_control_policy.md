@@ -192,7 +192,10 @@ After configuring the Firewall (FW) service on the London-Branch WAN-Edge router
 
 ## Configuring Centralized Control policy for Traffic Steering
 
-Next, we will configure a centralized data policy to ensure that traffic initiated from the **Stockholm-User** destined for the **Sydney-User** is first inspected by the **London-FW** before reaching its destination. This policy enforces the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we will use the **service-chain number** that was previously configured and noted in **<font color="green">step 20</font>**. This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
+The SD-WAN control policy named **scenario-2-cp** is crafted to dynamically steer traffic by utilizing route and site matching criteria. 
+This policy is configured to specifically match routes advertised by the **Sydney site** (<font color="green">**site-id 20**</font>) that belong to the **Sydney user subnet** <font color="green">**192.168.20.0/24**</font>. 
+Once matched, the policy directs these routes towards the **London Firewall** for inspection. The control policy is applied to the control-plane advertisements leaving the **Stockholm-Branch** site (<font color="green">**site-id 10**</font>), 
+ensuring that traffic destined for the **Sydney-Branch** site (<font color="green">**site-id 20**</font>) follows the desired path through the **<font color="blue">London Firewall</font>**, enabling enhanced traffic management and security enforcement.
 
 1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small .center }
