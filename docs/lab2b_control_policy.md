@@ -232,65 +232,10 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
       3. Add VPN: <font color="orange">1</font>
    ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small .center }
    3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the **<font color="green">control policy</font> creation** process.
-5. To proceed with configuring traffic rules for the centralized data policy, click **Next** to navigate to the **Configure Traffic Rules** configuration section. 
-   ![Traffic Rules](./assets/S-1-figure-29.png){ .off-glb .small .center }
-6. Under the heading Choose a tab and add **Traffic rules** under the selected type, select the **Traffic Data** tab.
-   ![Traffic Data Rules](./assets/S-1-figure-30.png){ .off-glb .small .center }
-7. Next, click on the **Add Policy** dropdown menu and choose **Create New** to begin defining the traffic rules for the policy. 
-   This step allows you to specify how traffic should be handled within the SD-WAN fabric based on the configured criteria.
-   ![Traffic Data Rules](./assets/S-1-figure-31.png){ .off-glb .small .center }
-8. To create a new data policy, enter the **Name** as **Scenario-2-Data-Policy** and provide the **Description** as **Scenario-2-Data-Policy**. 
-   ![Traffic Data Rules Name and Description](./assets/S-1-figure-32.png){ .off-glb .small .center }
-9. Next, click on the **Default Action** icon to configure the **default behavior** of the policy. 
-   Under the **Actions section**, select **<font color="green">Accept</font>** to ensure that unmatched traffic is allowed by default. Once done, click **Save** and **Match** to confirm the settings.
-10. To configure the data policy, begin by clicking **Sequence Type**. In the Add Data Policy pop-up window, select **Custom** as the sequence type to define a tailored policy.
-    ![Traffic Data Rules](./assets/S-1-figure-33.png){ .off-glb .small .center }
-11. Click **Sequence Rule**.
-    ![Traffic Data Sequence Rules](./assets/S-1-figure-34.png){ .off-glb .small .center }
-12. Click **Match** and **<font color="green">Scroll right</font>** to select and click **Source Data Prefix**. 
-    ![Data Policy Match Rules](./assets/S-1-figure-35.png){ .off-glb .small .center }
-13. Under **Match Conditions**. Click in box with **Source Data Prefix List** and select > **Stockholm-Branch-User**.
-    ![Data Policy Match Source Data Prefix](./assets/S-1-figure-36.png){ .off-glb .small .center }
-14. Click **Match** and **<font color="green">Scroll right</font>** to select and click **Destination Data Prefix**.
-    ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-37.png){ .off-glb .small .center }
-15. Under **Match Conditions**, Scroll down and click in box with **Destination Data Prefix List** and select > **Sydney-Branch-User**.
-    ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-38.png){ .off-glb .small .center }
-16. Scroll up and select **Actions**, and Click **Accept** radio button.
-    ![Data Policy](./assets/S-1-figure-39.png){ .off-glb .small .center }
-17. Scroll to the **right** to select <font color="green">**Service Chain**</font>.
-    ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
-18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC5</font>**.
-    ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
-19. To proceed with the configuration, follow the steps below to set up the VPN and TLOC parameters for the service attachment:
-    1. Enter VPN: **<font color="green">1</font>** in the designated field.
-    2. Under the TLOC section
-       1. Specify the IP address as the **system IP** of the **London-Branch**: **<font color="blue">10.0.0.1</font>**
-       2. Select the **color** from the drop-down menu: **<font color="green">biz-internet</font>**.
-       3. Choose the Encapsulation type from the drop-down menu: **IPSEC**.
-    3. Ensure that the **<font color="orange">Remote</font>** option is selected to complete this configuration step.
-    ![Data Policy](./assets/S-2-figure-16.png){ .off-glb .small .center }
-20. Click **Save Match and Actions** and **Save Data Policy**.
-    ![Data Policy](./assets/S-2-figure-17.png){ .off-glb .small .center }
-21. Click **Next** and Enter **Policy Name** and **Policy Description**: **<font color="orange">Scenario-2</font>**.
-22.	Click **Traffic Data** and **New Site/WAN Region List and VPN List**.
-    ![Data Policy](./assets/S-2-figure-18.png){ .off-glb .small .center }
-23. Keep **From Service** radio button checked and Keep **Site List** radio button checked.
-24. **Select Site List** by clicking in the box – **<font color="green">Stockholm-Branch</font>**
-    ![Data Policy](./assets/S-2-figure-19.png){ .off-glb .small .center }
-25. Click outside the selection box to expose **Select VPN List**
-26. Select VPN List by clicking in the box – **<font color="green">VPN-1</font>**.
-    ![Data Policy](./assets/S-2-figure-20.png){ .off-glb .small }
-27. Click **Save Policy** at the bottom.
-28. On **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb width="25" } on the **Scenario-2** policy.
-    ![Data Policy](./assets/S-2-figure-21.png){ .off-glb } 
-29. Click Preview to review the policy and after reviewing click **OK**.
-    ![Data Policy](./assets/S-2-figure-22.png){ .off-glb } 
-30. Now go to **Policies > Centralized Policy** page, click 3 dots on the **Scenario-2** policy.
-    1. Click **Activate**. 
-    2. Click **Activate** on **Activate Policy** pop-up. 
-    ![Data Policy Push](./assets/S-2-figure-23.png){ .off-glb } 
-31. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
-    ![Data Policy Push](./assets/S-2-figure-24.png){ .off-glb }
+
+
+5. 
+
 
 ## Verification
 
