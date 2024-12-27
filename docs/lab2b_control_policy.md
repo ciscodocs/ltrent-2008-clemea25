@@ -266,6 +266,8 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     ![Adding VPN List](./assets/S-2b-figure-22.png){ .off-glb .small }
 17. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-2</font>** as the name and description.
     ![Adding VPN List](./assets/S-2b-figure-23.png){ .off-glb .small }
+18. Now click the three dots (./assets/S-1-figure-dots.png){ .off-glb .small }.
+    ![Activating Policy](./assets/S-2b-figure-24.png){ .off-glb .small }
 
 
 ## Verification
