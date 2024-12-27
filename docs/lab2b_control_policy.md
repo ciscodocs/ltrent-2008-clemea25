@@ -317,6 +317,47 @@ policy
  !
 !
 ```
+After activating the centralized control policy, we can observe that the **Sydney-Branch** user subnet **<font color="green">192.168.20.0/24</font>** is 
+now associated exclusively with the **London-Branch TLOC** (**<font color="green">biz-internet:10.0.0.1</font>**) as per the 
+policy configuration. This behavior contrasts with the earlier state, prior to applying the control policy, where the same 
+subnet **<font color="green">192.168.20.0/24</font>** was advertised with **both Sydney-Branch TLOCs** (<font color="orange">**biz-internet, mpls**</font>). 
+This change demonstrates the effectiveness of the centralized control policy in steering traffic dynamically by modifying route advertisements to align with the desired topology.
+
+```{ .ios .no-copy linenums="1", hl_lines="25"}
+Stockholm-Branch#show sdwan omp routes 
+Generating output, this might take time, please wait ...
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                                                                                AFFINITY                                 
+                                                      PATH                      ATTRIBUTE                                                       GROUP                                    
+TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0         1      10.10.10.0/24       0.0.0.0          66     1003     C,Red,R   installed  10.1.1.1         mpls             ipsec  -           None        None        -                
+                                     0.0.0.0          68     1003     C,Red,R   installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
+0         1      10.101.101.0/24     100.0.0.101      1      1003     C,I,R     installed  10.0.0.1         mpls             ipsec  -           None        None        -                
+                                     100.0.0.101      2      1003     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
+0         1      10.102.102.102/32   100.0.0.101      1      1008     C,I,R     installed  10.0.0.2         biz-internet     ipsec  -           None        None        -                
+                                     100.0.0.101      2      1008     C,I,R     installed  10.0.0.2         mpls             ipsec  -           None        None        -                
+0         1      192.168.10.0/24     0.0.0.0          66     1003     C,Red,R   installed  10.1.1.1         mpls             ipsec  -           None        None        -                
+                                     0.0.0.0          68     1003     C,Red,R   installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
+0         1      192.168.20.0/24     100.0.0.101      2      1014     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
+```
+
 To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
 
 - Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
