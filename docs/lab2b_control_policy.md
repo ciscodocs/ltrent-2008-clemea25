@@ -240,6 +240,8 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
    ![Adding VPN List](./assets/S-2b-figure-12.png){ .off-glb .small }
 7. To define the topology policy, provide the name and description as **scenario-2-cp**.
    ![Adding VPN List](./assets/S-2b-figure-13.png){ .off-glb .small }
+8. Now click **Default Action** and click **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
+   ![Adding VPN List](./assets/S-2b-figure-14.png){ .off-glb .small }
 
 ## Verification
 
