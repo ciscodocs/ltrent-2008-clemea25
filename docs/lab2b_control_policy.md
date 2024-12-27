@@ -358,6 +358,34 @@ TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    
 0         1      192.168.20.0/24     100.0.0.101      2      1014     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
 ```
 
+We also notice that 
+
+```{ .ios .no-copy linenums="1", hl_lines="20" }
+Stockholm-Branch#show sdwan omp routes 192.168.20.0/24
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                                                                                AFFINITY                                 
+                                                      PATH                      ATTRIBUTE                                                       GROUP                                    
+TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0         1      192.168.20.0/24     100.0.0.101      2      1014     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
+```
+
 To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
 
 - Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
