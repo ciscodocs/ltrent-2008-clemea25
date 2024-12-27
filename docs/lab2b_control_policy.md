@@ -442,7 +442,7 @@ UDP inside  192.168.10.2:42735 inside  192.168.20.2:33442, idle 0:00:01, bytes 0
 UDP inside  192.168.10.2:42735 inside  192.168.20.2:33451, idle 0:00:01, bytes 18, flags - 
 ```
 ## Conclusion
-In conclusion, the configuration group and centralized traffic data policy implemented in this lab successfully ensured that traffic originating from the **Stockholm-User** 
+In conclusion, the configuration group and centralized control policy implemented in this lab successfully ensured that traffic originating from the **Stockholm-User** 
 at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** was routed through the **firewall (London-FW)** at **London-Branch**. 
 The firewall, reachable via the Stockholm-Branch WAN-Edge in **VRF-1**, effectively inspected the traffic before allowing it to proceed to its destination. 
 This demonstrates the practical application of service chaining and centralized data policies in steering traffic through desired network functions within the Cisco SD-WAN fabric.
