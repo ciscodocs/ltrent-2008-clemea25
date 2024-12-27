@@ -268,7 +268,11 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     ![Adding VPN List](./assets/S-2b-figure-23.png){ .off-glb .small }
 18. Now click the three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
     ![Activating Policy](./assets/S-2b-figure-24.png){ .off-glb .small }
-
+19. Click **Preview** to review the policy and after reviewing click **OK**.
+    ![Preview Policy](./assets/S-2b-figure-25.png){ .off-glb .small }
+20. Now go to **Policies > Centralized Policy** page, click 3 dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
+    1. Click **Activate**. 
+    2. Click **Activate** on **Activate Policy** pop-up. 
 
 ## Verification
 
