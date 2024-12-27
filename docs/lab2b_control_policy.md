@@ -362,30 +362,46 @@ The output of the command "**show sdwan omp routes** <font color="green">**192.1
 which represents the **Sydney-Branch** user subnet, has been assigned the **label <font color="green">1014</font>**. This label corresponds to the 
 **firewall (FW)** service label advertised by the **London-Branch** and is applied as per the centralized control policy configured on the SD-WAN controller (vSmart). 
 
-```{ .ios .no-copy linenums="1", hl_lines="20" }
-Stockholm-Branch#show sdwan omp routes 192.168.20.0/24
-Code:
-C   -> chosen
-I   -> installed
-Red -> redistributed
-Rej -> rejected
-L   -> looped
-R   -> resolved
-S   -> stale
-Ext -> extranet
-Inv -> invalid
-Stg -> staged
-IA  -> On-demand inactive
-U   -> TLOC unresolved
-BR-R -> Border-Router reoriginated
-TGW-R -> Transport-Gateway reoriginated
-R-TGW-R -> Reoriginated Transport-Gateway reoriginated
-
-                                                                                                                                                AFFINITY                                 
-                                                      PATH                      ATTRIBUTE                                                       GROUP                                    
-TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-0         1      192.168.20.0/24     100.0.0.101      2      1014     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
+```{ .ios .no-copy linenums="1", hl_lines="8 16" }
+Stockholm-Branch#show sdwan omp routes 192.168.20.0/24 detail 
+--------------------------------------------------------------------------
+omp route entries for tenant-id 0 vpn 1 route 192.168.20.0/24
+--------------------------------------------------------------------------
+            RECEIVED FROM:                   
+peer            100.0.0.101
+path-id         2
+label           1014
+status          C,I,R
+loss-reason     not set
+lost-to-peer    not set
+lost-to-path-id not set
+    Attributes:
+     originator       10.1.1.2
+     type             installed
+     tloc             10.0.0.1, biz-internet, ipsec
+     ultimate-tloc    not set
+     domain-id        not set
+     overlay-id        1
+     site-id          20
+     preference       not set
+     affinity-group  None
+     derived-affinity-group  None
+     affinity-preference-order  None
+     device-group     not set
+     region-id        None
+     br-preference    not set
+     mrf-route-originator      not set
+     region-path      not set
+     route-reoriginator      not set
+     tag              not set
+     origin-proto     connected
+     origin-metric    0
+     as-path          not set
+     community        not set
+     site-type        not set
+     unknown-attr-len not set
+     management-gateway   not set
+     management-region   not set
 ```
 
 To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
