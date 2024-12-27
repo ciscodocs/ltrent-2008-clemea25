@@ -279,36 +279,43 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 
 ## Verification
 
-After the centralized control policy has been successfully deployed, the next step is to confirm that the policy has been propagated by the SD-WAN controller (vSmart) to the WAN-Edges. 
-In this case, we need to ensure that the **Stockholm-Branch** WAN-Edge has received the policy via OMP and is correctly steering traffic through the **London-FW** as intended. 
-To verify this, we can utilize the following show command on the **Stockholm-Branch** WAN-Edge. This will help confirm whether the centralized data policy has been effectively pushed 
-from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
+After the successful deployment of the centralized control policy <font color="green">**scenario-2**</font>, it is essential 
+to verify its application on the **SD-WAN controller (vSmart)** and confirm that routes are being propagated according to the 
+policy. Specifically, we need to ensure that the **Stockholm-Branch** WAN-Edge has received the **Sydney-Branch user routes** with 
+the **London-Branch** TLOC as defined in the policy. This verification can be performed using the following show commands on 
+the **SD-WAN Controller(vSmart)**. These commands allow us to confirm the correct route advertisements and validate that the 
+policy is functioning as intended.
 
-```{ .ios .no-copy  title="Stockholm-Branch Centralized Policy"}
-Stockholm-Branch#show sdwan policy from-vsmart 
-from-vsmart data-policy _VPN-1_scenario-2
- direction from-service
- vpn-list VPN-1
+```{ .ios .no-copy  title="Centralized Control Policy on SD-WAN Controller"}
+Controller-1# show running-config policy
+policy
+ lists
+  site-list Stockholm-Branch
+   site-id 10
+  !
+  site-list Sydney-Branch
+   site-id 20
+  !
+  prefix-list Sydney-Branch-User-Subnet
+   ip-prefix 192.168.20.0/24
+  !
+ !
+ control-policy scenario-2-control-policy
   sequence 1
-   match
-    source-data-prefix-list      Stockholm-Branch-User
-    destination-data-prefix-list Sydney-Branch-User
+   match route
+    prefix-list Sydney-Branch-User-Subnet
+    site-list   Sydney-Branch
+   !
    action accept
     set
-     vpn-label 8389615
-     service-chain SC5
-     service-chain vpn 1
-     service-chain fall-back
-     service-chain tloc 10.0.0.1
-     service-chain tloc color biz-internet
-     service-chain tloc encap ipsec
+     service FW vpn 1
+     service tloc 10.0.0.1 color biz-internet encap ipsec
+    !
+   !
+  !
   default-action accept
-from-vsmart lists vpn-list VPN-1
- vpn 1
-from-vsmart lists data-prefix-list Stockholm-Branch-User
- ip-prefix 192.168.10.0/24
-from-vsmart lists data-prefix-list Sydney-Branch-User
- ip-prefix 192.168.20.0/24
+ !
+!
 ```
 To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
 
@@ -317,14 +324,14 @@ To verify that the centralized data policy is functioning as intended, navigate 
 - Observe the traceroute output to confirm that traffic is hitting the **London firewall (London-FW)** at IP address **<font color="blue">10.101.101.2</font>**.
 
 ```{.ios .no-copy linenums="1" hl_lines="5 8"}
-Stockholm-User:~$ traceroute 192.168.20.2 -n 
+Stockholm-User:~$ traceroute 192.168.20.2 -n
 traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
- 1  192.168.10.1  0.710 ms  0.301 ms  0.424 ms
- 2  172.16.1.101  1.404 ms  1.026 ms  1.006 ms
- 3  10.101.101.2  3.159 ms  1.907 ms  3.837 ms
- 4  172.16.1.101  1.813 ms  1.856 ms  1.487 ms
- 5  172.16.1.20  2.817 ms  1.299 ms  2.456 ms
- 6  192.168.20.2  3.181 ms  2.854 ms  1.695 ms
+ 1  192.168.10.1  0.622 ms  0.757 ms  0.306 ms
+ 2  172.16.1.101  1.735 ms  0.660 ms  0.639 ms
+ 3  10.101.101.2  2.857 ms  1.571 ms  2.234 ms
+ 4  10.101.101.1  1.652 ms  1.654 ms  1.504 ms
+ 5  172.16.1.20  2.936 ms  1.835 ms  1.436 ms
+ 6  192.168.20.2  2.596 ms  2.295 ms  2.625 ms
 Stockholm-User:~$ 
 ```
 - Next, verify on the **London-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. 
@@ -332,21 +339,20 @@ Stockholm-User:~$
 
 ```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
 London-Hub-FW# show conn all
-12 in use, 37 most used
+12 in use, 100 most used
 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33451, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33448, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33441, idle 0:00:08, bytes 0, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33449, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33444, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33443, idle 0:00:08, bytes 0, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33446, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33450, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33445, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33447, idle 0:00:08, bytes 18, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33442, idle 0:00:08, bytes 0, flags - 
-UDP inside  192.168.10.2:45482 inside  192.168.20.2:33452, idle 0:00:08, bytes 18, flags - 
-London-Hub-FW# 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33444, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33446, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33450, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33452, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33448, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33441, idle 0:00:01, bytes 0, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33449, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33443, idle 0:00:01, bytes 0, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33445, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33447, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33442, idle 0:00:01, bytes 0, flags - 
+UDP inside  192.168.10.2:42735 inside  192.168.20.2:33451, idle 0:00:01, bytes 18, flags - 
 ```
 ## Conclusion
 In conclusion, the configuration group and centralized traffic data policy implemented in this lab successfully ensured that traffic originating from the **Stockholm-User** 
