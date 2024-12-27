@@ -264,7 +264,7 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     **Stockholm-Branch**, as policy is applied in **<font color="green">outbound</font>** direction. Once **Stockholm-Branch** is selected from **Outbound Site List**, we select **Add**. So
     configuration of the direction is saved under control policy like below.
     ![Adding VPN List](./assets/S-2b-figure-22.png){ .off-glb .small }
-17. Now configure the policy name and description with **scenario-2**.
+17. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-2</font>** as the name and description.
     ![Adding VPN List](./assets/S-2b-figure-23.png){ .off-glb .small }
 
 
