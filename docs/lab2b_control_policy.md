@@ -334,7 +334,7 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
  6  192.168.20.2  2.596 ms  2.295 ms  2.625 ms
 Stockholm-User:~$ 
 ```
-- Next, verify on the **London-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. 
+- Next, verify on the **London-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Sydney-User**. 
 - This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
 
 ```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
