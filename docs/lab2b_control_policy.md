@@ -118,7 +118,7 @@ The following table provides a detailed overview of the IP addressing configurat
 Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. 
 This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined 
 for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services 
-to be applied to the traffic, such as redirection through a **London-FW** firewall in **<font color="bluw">VRF 1</font>**. 
+to be applied to the traffic, such as redirection through a **London-FW** firewall in **<font color="blue">VRF 1</font>**. 
 This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
@@ -131,7 +131,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-1.png){ .off-glb }
 5. Now click, **Service**, and in order to Add **<font color="green">FW service</font>** click **Add Service** like below.
    ![EMEA London Configuration Group](./assets/S-2b-figure-2.png){ .off-glb }
-6. Select **FW** from the list and enter IP address of **FW** **<font color="blue">10.101.101.2</font>** as exhibited below.
+6. Select **FW** from the list and enter IP address of **FW** **<font color="green">10.101.101.2</font>** as exhibited below.
    ![EMEA London Configuration Group](./assets/S-2b-figure-3.png){ .off-glb }
 7. After ensuring all the necessary details have been entered correctly, the next step involves adding and introducing **Firewall (FW)** services at the **London-Branch**. 
    This integration is critical to route and secure the traffic flow between **Stockholm** and **Sydney**. 
@@ -188,7 +188,7 @@ ipv6     0         1      VPN      10.0.0.1    0.0.0.0          66     None     
                                                0.0.0.0          68     None      None        1003     C,Red,R   1    
 
 ```
-After configuring the **Firewall (FW)** service on the **London-Branch** WAN-Edge router, the system generates a unique label, **<font color="blue">1014</font>**, to identify the service. 
+After configuring the **Firewall (FW)** service on the **London-Branch** WAN-Edge router, the system generates a unique label, **<font color="green">1014</font>**, to identify the service. 
 This label, along with the associated service information, is then advertised to the SD-WAN controller (vSmart) using the **Overlay Management Protocol (OMP)**. 
 
 ## Configuring Centralized Control policy for Traffic Steering
@@ -196,7 +196,7 @@ This label, along with the associated service information, is then advertised to
 The SD-WAN control policy named **scenario-2-cp** is crafted to dynamically steer traffic by utilizing route and site matching criteria. 
 This policy is configured to specifically match routes advertised by the **Sydney site** (<font color="green">**site-id 20**</font>) that belong to the **Sydney user subnet** <font color="green">**192.168.20.0/24**</font>. 
 Once matched, the policy directs these routes towards the **London Firewall** for inspection. The control policy is applied to the control-plane advertisements leaving the **Stockholm-Branch** site (<font color="green">**site-id 10**</font>), 
-ensuring that traffic destined for the **Sydney-Branch** site (<font color="green">**site-id 20**</font>) follows the desired path through the **<font color="blue">London Firewall</font>**, enabling enhanced traffic management and security enforcement.
+ensuring that traffic destined for the **Sydney-Branch** site (<font color="green">**site-id 20**</font>) follows the desired path through the **<font color="green">London Firewall</font>**, enabling enhanced traffic management and security enforcement.
 
 1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small }
@@ -245,7 +245,7 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 9. Now click **Sequence Type**.
 
    ![Adding VPN List](./assets/S-2b-figure-15.png){ .off-glb .small }
-10. In this step, we create a sequence within the control policy to handle routes specific to **Sydney-Branch** user traffic. This sequence matches the routes belonging to the **Sydney-Branch** **<font color="green">user subnet (<font color="blue">192.168.20.0/24</font>)</font>** and sets the next hop to the **London-Branch TLOC (<font color="blue">biz-internet:10.0.0.1</font>)**. 
+10. In this step, we create a sequence within the control policy to handle routes specific to **Sydney-Branch** user traffic. This sequence matches the routes belonging to the **Sydney-Branch** **<font color="green">user subnet (<font color="green">192.168.20.0/24</font>)</font>** and sets the next hop to the **London-Branch TLOC (<font color="blue">biz-internet:10.0.0.1</font>)**. 
     This TLOC is configured to direct traffic towards the **London-Branch Firewall (FW)**, ensuring that all matched traffic is routed through the firewall for inspection and policy enforcement. This configuration is a critical step in defining how traffic is dynamically steered within the SD-WAN environment to meet security and routing requirements.
     ![Adding VPN List](./assets/S-2b-figure-16.png){ .off-glb .small }
 11. Now, click **Sequence Rule** and select **Match** to define the criteria for the control policy. In this step, we configure the policy to match routes based on a specific site-id and a designated prefix-list. The site-id used in this control policy corresponds to **Sydney-Branch** (<font color="green">**site-id 20**</font>), ensuring the policy applies only to 
@@ -253,10 +253,12 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     ![Adding VPN List](./assets/S-2b-figure-17.png){ .off-glb .small }
 12. Next, click **Action** and select **Accept** to define the behavior of the control policy for matched routes. Once the action is set to **Accept**, proceed to configure the Service by selecting <font color="green">Firewall</font> from the dropdown menu. This step ensures that the traffic will be steered through the designated firewall service.
     Specify the **VPN** where the firewall is hosted — in this topology, the VPN is <font color="green">1</font>. Under the TLOC IP section, input the TLOC IP address **<font color="green">10.0.0.1</font>**, and select the color as **biz-internet** and Encapsulation as **IPSEC**. These configurations direct the traffic through the appropriate TLOC path, ensuring secure and optimized routing through the firewall.
-13. ![Adding VPN List](./assets/S-2b-figure-18.png){ .off-glb .small }
+    ![Adding VPN List](./assets/S-2b-figure-18.png){ .off-glb .small }
 13. Now click **Save Match and Actions**.
 
     ![Adding VPN List](./assets/S-2b-figure-19.png){ .off-glb .small }
+14. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
+    ![Adding VPN List](./assets/S-2b-figure-20.png){ .off-glb .small }
 
 ## Verification
 
