@@ -188,6 +188,7 @@ ipv6     0         1      VPN      10.0.0.1    0.0.0.0          66     None     
                                                0.0.0.0          68     None      None        1003     C,Red,R   1    
 
 ```
+After configuring the Firewall (FW) service on the London-Branch WAN-Edge router, the system generates a unique label, 1014, to identify the service. This label, along with the associated service information, is then advertised to the SD-WAN controller (vSmart) using the Overlay Management Protocol (OMP). This process ensures that all WAN-Edge routers within the SD-WAN fabric are aware of the Firewall service hosted on the **London-Branch** router and can utilize label **<font color="blue">1014</font>** to direct traffic to this service as required.
 
 ## Configuring Centralized Control policy for Traffic Steering
 
