@@ -232,7 +232,7 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
       3. Add VPN: <font color="orange">1</font>
    ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small .center }
    3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the **<font color="green">control policy</font> creation** process.
-5. Click 
+5. To proceed with configuring control policy rules for the centralized control policy, click **Next** to navigate to the **Configure Topology and VPN Membership** configuration section.  
    ![Adding VPN List](./assets/S-2b-figure-11.png){ .off-glb .small .center }
 
 
