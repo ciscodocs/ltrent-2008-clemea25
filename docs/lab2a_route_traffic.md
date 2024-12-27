@@ -229,7 +229,7 @@ Service Chain: SC5
                 endpoint-tracker: auto
                 state: up
 ```
-## Configuring Centralized Policy for Traffic Steering
+## Configuring Centralized Data Policy for Traffic Steering
 
 Next, we will configure a centralized data policy to ensure that traffic initiated from the **Stockholm-User** destined for the **Sydney-User** is first inspected by the **London-FW** before reaching its destination. This policy enforces the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we will use the **service-chain number** that was previously configured and noted in **<font color="green">step 20</font>**. This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
 
