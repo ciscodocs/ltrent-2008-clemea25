@@ -251,7 +251,11 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 11. Now, click **Sequence Rule** and select **Match** to define the criteria for the control policy. In this step, we configure the policy to match routes based on a specific site-id and a designated prefix-list. The site-id used in this control policy corresponds to **Sydney-Branch** (<font color="green">**site-id 20**</font>), ensuring the policy applies only to 
     traffic originating from this site. Additionally, the prefix-list selected for the control policy is **Sydney-Branch-User-Subnet**, which includes the subnet <font color="green">**192.168.20.0/24**</font>. This configuration ensures precise targeting of routes for the desired traffic steering behavior.
     ![Adding VPN List](./assets/S-2b-figure-17.png){ .off-glb .small }
-12.
+12. Now click **Action**.
+    ![Adding VPN List](./assets/S-2b-figure-18.png){ .off-glb .small }
+13. Now click **Save Match and Actions**.
+    ![Adding VPN List](./assets/S-2b-figure-19.png){ .off-glb .small }
+
 ## Verification
 
 After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been propagated by the SD-WAN controller (vSmart) to the WAN-Edges. 
