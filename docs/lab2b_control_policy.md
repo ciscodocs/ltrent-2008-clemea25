@@ -236,8 +236,7 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
    Under the heading Choose a tab and click **Topology** under the selected type, select the **Add Topology** tab.  
    ![Adding VPN List](./assets/S-2b-figure-11.png){ .off-glb .small }
 6. Now select **Custom Control (Route & TLOC)**.
-
-   ![Adding VPN List](./assets/S-2b-figure-12.png){ .off-glb .small }
+   ![](./assets/S-2b-figure-12.png){ .off-glb .small }
 7. To define the topology policy, provide the name and description as **scenario-2-control-policy**.
    ![Adding VPN List](./assets/S-2b-figure-13.png){ .off-glb .small }
 8. Now click **<font color="green">Default Action</font>** and click **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
