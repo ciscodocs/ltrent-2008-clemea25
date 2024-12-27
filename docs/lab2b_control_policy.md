@@ -358,7 +358,9 @@ TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    
 0         1      192.168.20.0/24     100.0.0.101      2      1014     C,I,R     installed  10.0.0.1         biz-internet     ipsec  -           None        None        -                
 ```
 
-We also notice that 
+The output of the command "**show sdwan omp routes** <font color="green">**192.168.20.0/24**</font>" confirms that the route **192.168.20.0/24**, 
+which represents the **Sydney-Branch** user subnet, has been assigned the **label <font color="green">1014</font>**. This label corresponds to the 
+**firewall (FW)** service label advertised by the **London-Branch** and is applied as per the centralized control policy configured on the SD-WAN controller (vSmart). 
 
 ```{ .ios .no-copy linenums="1", hl_lines="20" }
 Stockholm-Branch#show sdwan omp routes 192.168.20.0/24
