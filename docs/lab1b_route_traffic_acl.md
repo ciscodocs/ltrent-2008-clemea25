@@ -202,6 +202,7 @@ sdwan
 4. As we modify the **CLI Add-On parcel**, now configuration group for **EMEA-Stockholm-Branch** is now marked as <font color="red">out of sync</font>. 
    Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
+
 5. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button and Click **Next**.  
    ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 6. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
