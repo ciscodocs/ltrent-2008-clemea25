@@ -197,3 +197,5 @@ sdwan
  exit
 !
 ```
+3. Once verified that variable name and ACL configuration is correct, we can click **Save**.
+   ![Save CLI Add on](./assets/S-1b-figure-2.png){ .off-glb }
