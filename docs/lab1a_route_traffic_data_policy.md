@@ -95,7 +95,7 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 
 ## Configuring Service-Chain in Configuration Group
 
-Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services to be applied to the traffic, such as redirection through a firewall. This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
+Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below steps. This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services to be applied to the traffic, such as redirection through a firewall. This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
    ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
@@ -126,7 +126,7 @@ Next, we will configure a service chain within the service-profile parcel in the
 15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-Stockholm-Branch** is now marked as <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
 16. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button and Click **Next**.  
-    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
+    ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 17. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
 18. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
