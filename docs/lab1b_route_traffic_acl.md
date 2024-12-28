@@ -149,4 +149,7 @@ from or destined for a specific interface is steered through the designated serv
     Due to this issue, we will configure the service chaining through a CLI Add-On Template, which provides a reliable alternative. This template will be linked to the Configuration Group of the **Stockholm-Branch WAN-Edge** router, 
     ensuring proper implementation of the service-chaining feature. By leveraging this approach, we can bypass the limitations and achieve the desired traffic flow and service chaining functionality.
 
-1. To configure the **ACL** for service chaining, begin by navigating to the **CLI Add-On** Profile associated with the **Stockholm-Branch** WAN-Edge router. Locate the profile and click the edit icon to open the configuration editor. This step allows you to modify the CLI Add-On Template to include the necessary Access Control List (ACL) settings required for implementing the service-chaining functionality. By editing the profile directly, we ensure that the ACL configurations are properly applied to the router, enabling effective traffic steering as per the lab requirements.
+1. To configure the **ACL** for service chaining, begin by navigating to the **CLI Add-On** Profile associated with the **Stockholm-Branch** WAN-Edge router. 
+   Locate the profile and click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon to open the configuration editor. This step allows you 
+   to modify the CLI Add-On Template to include the necessary Access Control List (ACL) settings required for implementing the service-chaining functionality. 
+   By editing the profile directly, we ensure that the ACL configurations are properly applied to the router, enabling effective traffic steering as per the lab requirements.
