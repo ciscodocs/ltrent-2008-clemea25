@@ -159,8 +159,8 @@ from or destined for a specific interface is steered through the designated serv
    service chaining requirements. Ensure the configuration is accurate before saving, as it plays a critical role in steering the traffic through the intended service path.
 
 !!! note 
-   In the following policy configuration, an **Access Control List (ACL)** is created to redirect traffic to the **Stockholm Firewall (Stockholm-FW)**. Within the ACL, a variable name **<font color="green">{{Stockholm-Service-Chain-Number}}</font>** is used to define the service chain, allowing flexibility during deployment. 
-   The specific value for the service chain, which was previously noted in **Step 19**, will be applied during the deployment of the configuration group to the Stockholm-Branch. This approach ensures consistency and adaptability, as the service chain value can be dynamically assigned at the time of deployment.
+    In the following policy configuration, an **Access Control List (ACL)** is created to redirect traffic to the **Stockholm Firewall (Stockholm-FW)**. Within the ACL, a variable name **<font color="green">{{Stockholm-Service-Chain-Number}}</font>** is used to define the service chain, allowing flexibility during deployment. 
+    The specific value for the service chain, which was previously noted in **Step 19**, will be applied during the deployment of the configuration group to the Stockholm-Branch. This approach ensures consistency and adaptability, as the service chain value can be dynamically assigned at the time of deployment.
 
 ```{.ios linenums="1", hl_lines="20" Title="ACL Configuration for CLI Add-ON for Stockholm-Branch"}
 !
