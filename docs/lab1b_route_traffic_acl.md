@@ -211,4 +211,9 @@ sdwan
    ![Service chain number](./assets/S-1b-figure-3.png){ .off-glb }
 !!! note
     To retrieve the service chain number configured on the **Stockholm-Branch** WAN-Edge router, we can use the command <font color="green">**show platform software sdwan service-chain database**</font>. 
-8. 
+8. Scroll down the **New Configuration** section to locate the **ACL configuration and service-chain number**.
+   ![CLI Preview of Service Chain Number](./assets/S-1b-figure-4.png){ .off-glb } 
+9. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
+    ![CLI Preview of Service Chain Number](./assets/S-1-figure-21.png){ .off-glb } 
+21. To verify the configuration group status, click on the **EMEA-Stockholm-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is correctly linked to the **Stockholm-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
+    ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
