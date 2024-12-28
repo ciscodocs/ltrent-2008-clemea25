@@ -146,7 +146,7 @@ from or destined for a specific interface is steered through the designated serv
 
 !!! warning
     In SD-WAN software release **20.15.1/17.15.1**, there is a _known limitation_ where the service-chaining feature **does not function as expected** when applied using Policy Groups or Access Control Lists (ACLs). 
-    Due to this issue, we will configure the service chaining through a CLI Add-On Template, which provides a reliable alternative. This template will be linked to the Configuration Group of the **Stockholm-Branch WAN-Edge** router, 
+    Due to this issue, we will configure the service chaining through a **CLI Add-On** parcel, which provides a reliable alternative. This template will be linked to the Configuration Group of the **Stockholm-Branch WAN-Edge** router, 
     ensuring proper implementation of the service-chaining feature. By leveraging this approach, we can bypass the limitations and achieve the desired traffic flow and service chaining functionality.
 
 1. To configure the **ACL** for service chaining, begin by navigating to the **CLI Add-On** Profile associated with the **Stockholm-Branch** WAN-Edge router. 
