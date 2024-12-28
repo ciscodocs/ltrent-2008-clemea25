@@ -140,3 +140,6 @@ Next, we will configure a service chain within the service-profile parcel in the
     ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
 
 ## Configuring Access Control List (ACL)
+In SD-WAN environments, an interface **Access Control List (ACL)** can be used to direct traffic through a service chain based on the specified interface for incoming or outgoing traffic. 
+This method is particularly useful when traffic forwarding decisions need to account for prior routing lookups or data policies. By applying an ACL, you can enforce that all traffic originating 
+from or destined for a specific interface is steered through the designated service chain, ensuring consistent and predictable traffic inspection or processing.
