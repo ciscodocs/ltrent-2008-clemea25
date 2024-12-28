@@ -80,8 +80,9 @@ nav:
   - Lab:
       - Overview: overview.md
       - Getting Started: getting_started.md
-      - Lab 1 - Route traffic from Stockholm to Sydney via local firewall in Stockholm: lab1_getting_started.md
-      - Lab 2a - Using Data Policy for Route traffic from Stockholm to Sydney via London firewall in Same VRF: lab2a_route_traffic.md
+      - Lab 1a - Using Data Policy for Route traffic from Stockholm to Sydney via local firewall in Stockholm: lab1a_route_traffic_data_policy.md
+      - Lab 1b - Using Access Control List for Route traffic from Stockholm to Sydney via local firewall in Stockholm: lab1b_route_traffic_acl.md
+      - Lab 2a - Using Data Policy for Route traffic from Stockholm to Sydney via London firewall in Same VRF: lab2a_route_traffic_data_policy.md
       - Lab 2b - Using Control Policy for Route traffic from Stockholm to Sydney via London firewall in Same VRF: lab2b_control_policy.md
       - Lab 3 - Getting Started: lab3_getting_started.md
       - Lab 4 - Getting Started: lab4_getting_started.md
