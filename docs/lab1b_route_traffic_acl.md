@@ -151,5 +151,42 @@ from or destined for a specific interface is steered through the designated serv
 
 1. To configure the **ACL** for service chaining, begin by navigating to the **CLI Add-On** Profile associated with the **Stockholm-Branch** WAN-Edge router. 
    Locate the profile and click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon to open the configuration editor. This step allows you 
-   to modify the CLI Add-On Template to include the necessary Access Control List (ACL) settings required for implementing the service-chaining functionality. 
+   to modify the CLI Add-On parcel to include the necessary Access Control List (ACL) settings required for implementing the service-chaining functionality. 
    By editing the profile directly, we ensure that the ACL configurations are properly applied to the router, enabling effective traffic steering as per the lab requirements.
+   ![Edit Icon](./assets/S-1b-figure-1.png){ .off-glb }
+2. In this step, **copy and paste** the provided **Access Control List (ACL)** configuration into the CLI Add-On parcel editor. This ACL configuration is specifically designed to enable service chaining and is applied to the GigabitEthernet3 interface. By applying the ACL directly to this interface, all traffic passing through it will be directed as per the service chaining requirements. Ensure the configuration is accurate before saving, as it plays a critical role in steering the traffic through the intended service path.
+```{.ios}
+!
+policy
+!
+ lists
+  data-prefix-list Stockholm-Branch-User
+   ip-prefix 192.168.10.0/24
+  !
+  data-prefix-list Sydney-Branch-User
+   ip-prefix 192.168.20.0/24
+  !
+ access-list CL-ACL-Service-Chain
+  sequence 10
+   match
+    source-data-prefix-list      Stockholm-Branch-User
+    destination-data-prefix-list Sydney-Branch-User
+   !
+   action accept
+    count MATCH-SYDNEY-DATA-TRAFFIC
+    set
+     service-chain {{Stockholm-Service-Chain-Number}}
+     service-chain vpn 1
+     service-chain fall-back
+    !
+   !
+  !
+  default-action accept
+ !
+!
+sdwan
+ interface GigabitEthernet3
+  access-list CL-ACL-Service-Chain in
+ exit
+!
+```
