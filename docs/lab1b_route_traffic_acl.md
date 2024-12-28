@@ -207,7 +207,8 @@ sdwan
    ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 6. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
    ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
-7. Now we need to enter the value of the **service-chain** number which we noted down in **step 19** above.
+7. Now we need to enter the value of the variable _Stockholm-Service-Chain-Number_ for **service-chain** number which we noted down in **step 19** above.
    ![Service chain number](./assets/S-1b-figure-3.png){ .off-glb }
 !!! note
-    To retrieve the service chain number configured on the Stockholm-Branch WAN-Edge router, we can use the command <font color="green">show platform software sdwan service-chain database</font>. 
+    To retrieve the service chain number configured on the **Stockholm-Branch** WAN-Edge router, we can use the command <font color="green">**show platform software sdwan service-chain database**</font>. 
+8. 
