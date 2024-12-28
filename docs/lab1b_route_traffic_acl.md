@@ -154,8 +154,8 @@ from or destined for a specific interface is steered through the designated serv
    to modify the CLI Add-On parcel to include the necessary Access Control List (ACL) settings required for implementing the service-chaining functionality. 
    By editing the profile directly, we ensure that the ACL configurations are properly applied to the router, enabling effective traffic steering as per the lab requirements.
    ![Edit Icon](./assets/S-1b-figure-1.png){ .off-glb }
-2. In this step, **copy and paste** the provided **Access Control List (ACL)** configuration into the CLI Add-On parcel editor. This ACL configuration is specifically designed to 
-   enable service chaining and is applied to the GigabitEthernet3 interface. By applying the ACL directly to this interface, all traffic passing through it will be directed as per the 
+2. In this step, **copy and paste** the provided **Access Control List (ACL)** configuration into the **CLI Add-On** parcel editor. This ACL configuration is specifically designed to 
+   enable service chaining and is applied to the **GigabitEthernet3** interface. By applying the ACL directly to this interface, all traffic passing through it will be directed as per the 
    service chaining requirements. Ensure the configuration is accurate before saving, as it plays a critical role in steering the traffic through the intended service path.
 
 !!! note 
@@ -201,7 +201,7 @@ sdwan
    ![Save CLI Add on](./assets/S-1b-figure-2.png){ .off-glb }
 4. As we modify the **CLI Add-On parcel**, now configuration group for **EMEA-Stockholm-Branch** is now marked as <font color="red">out of sync</font>. 
    Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
-   ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb .center }
+   ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb } 
 5. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button and Click **Next**.  
    ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 6. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
