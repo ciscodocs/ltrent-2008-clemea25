@@ -282,3 +282,14 @@ Service Chain: SC7
                 endpoint-tracker: auto
                 state: up
 ```
+## Verification of Access Control List(ACL) on Stockholm-Branch WAN-Edge
+
+As the ACL is applied to the service-side interface **<font color="green">GigabitEthernet3</font>**, any traffic originating from the **Stockholm-User** subnet (**<font color="green">192.168.10.0/24</font>**) and destined for the **Sydney-Branch** subnet (**<font color="green">192.168.20.0/24</font>**) will be redirected through the **<font color="orange">Stockholm-FW</font>** for inspection. 
+To ensure that the ACL is correctly applied to the **<font color="green">GigabitEthernet3</font>** interface and verify its behavior, we can execute specific commands to observe and confirm the traffic redirection. These verification steps are essential to validate the service-chaining functionality.
+
+- show sdwan policy access-list-names 
+- show sdwan policy access-list-associations
+
+
+
+- show sdwan policy access-list-counters 
