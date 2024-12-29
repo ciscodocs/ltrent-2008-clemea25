@@ -290,6 +290,24 @@ To ensure that the ACL is correctly applied to the **<font color="green">Gigabit
 - show sdwan policy access-list-names 
 - show sdwan policy access-list-associations
 
-
+To enhance the verification process, we incorporated a **counter functionality** within the ACL. This allows us to monitor and confirm whether traffic is matching the ACL during testing and verification. By observing the counters, we can ensure that the ACL is actively processing traffic as expected. 
+To check the counter values and confirm their increment during testing, the following show command can be executed. This provides a clear indication of the ACL's effectiveness in handling traffic redirection.
 
 - show sdwan policy access-list-counters 
+
+```{.ios linenums="1", hl_lines="4"}
+Stockholm-Branch#show sdwan policy access-list-associations 
+                                        INTERFACE  
+NAME                  INTERFACE NAME    DIRECTION  
+---------------------------------------------------
+CL-ACL-Service-Chain  GigabitEthernet3  in         
+```
+
+
+```{.ios linenums="1", hl_lines="5"}
+Stockholm-Branch#show sdwan policy access-list-counters              
+NAME                  COUNTER NAME                      PACKETS       BYTES             
+----------------------------------------------------------------------------------------
+CL-ACL-Service-Chain  default_action_count              0             0                 
+                      MATCH-SYDNEY-DATA-TRAFFIC         0             0                 
+```
