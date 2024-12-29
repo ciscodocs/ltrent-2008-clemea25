@@ -144,6 +144,7 @@ as traffic flows between the branches.
     allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper 
     configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the 
     firewall, enabling the desired security and traffic management features within the SD-WAN environment.
+
 14. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-1-figure-15.png){ .off-glb }
 15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-Stockholm-Branch** is now marked as <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
@@ -153,7 +154,7 @@ as traffic flows between the branches.
 17. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
 18. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
-    ![CLI Preview](./assets/S-1-figure-19.png){ .off-glb }
+    ![CLI Preview](./assets/S-1-figure-19.png){ .off-glb } 
 19. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="blue">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
     The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
     ![CLI Preview of Service Chain Number](./assets/S-1-figure-20.png){ .off-glb } 
