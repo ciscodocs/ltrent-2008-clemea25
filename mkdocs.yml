@@ -87,6 +87,6 @@ nav:
       - Lab 3 - Getting Started: lab3_getting_started.md
       - Lab 4 - Getting Started: lab4_getting_started.md
       - Lab 5 - Getting Started: lab5_getting_started.md
-      - Lab 6 - Getting Started: lab6_getting_started.md
+      - Lab 6 - Route Traffic from Sydney to Stockholm via Stockholm Firewall in Same VRF: lab6_route_traffic.md
       - Conclusion: conclusion.md
   - Topology: topologies.md
