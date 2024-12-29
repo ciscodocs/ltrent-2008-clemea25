@@ -216,3 +216,37 @@ sdwan
     ![CLI Preview of Service Chain Number](./assets/S-1-figure-21.png){ .off-glb } 
 21. To verify the configuration group status, click on the **EMEA-Stockholm-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is correctly linked to the **Stockholm-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
+
+## Verification of Service Chain configuration on Stockholm-Branch
+
+In the Cisco SD-WAN architecture, service nodes communicate their available services to the **SD-WAN Controller (vSmart)** using the **Overlay Management Protocol (OMP)** with the service route address family. 
+Each WAN-Edge router is responsible for advertising its service routes to the SD-WAN Controller (vSmart), which then maintains these service routes within its **Routing Information Base (RIB)**. 
+
+```{.ios linenums="1", hl_lines="23"}
+Stockholm-Branch#show sdwan omp services 
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Stg -> staged
+IA  -> On-demand inactive
+Inv -> invalid
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                 AFFINITY                            
+ADDRESS                                                         PATH   REGION    GROUP                               
+FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID        NUMBER      LABEL    STATUS    VRF  
+---------------------------------------------------------------------------------------------------------------------
+ipv4     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+         0         1      SC7      10.1.1.1    0.0.0.0          66     None      None        1010     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1010     C,Red,R   1    
+ipv6     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1003     C,Red,R   1    
+```
