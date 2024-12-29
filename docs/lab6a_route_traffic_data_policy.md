@@ -95,5 +95,5 @@ Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockho
 | Interface         | IP Address   | Description                                                                                                                           |
 |-------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="#A8C6A5">VRF 1</font>** connected with **Sydney-User**. |
-| GigabitEthernet 1 | 172.16.1.20  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                     |
+| GigabitEthernet 1 | 172.16.1.10  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                     |
 | eth0              | 192.168.10.2 | <font color="#9AAFCB"> **Stockholm-User** IP address.</font>                                                                                |
