@@ -320,3 +320,35 @@ To verify that the Access Control List(ACL) is functioning as intended, navigate
 - Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
     - _traceroute 192.168.20.2 -n_
 - Observe the traceroute output to confirm that traffic is hitting the **Stockholm firewall (Stockholm-FW)** at IP address **10.10.10.2**.
+
+```{.ios .no-copy linenums="1", hl_lines="4" }
+Stockholm-User:~$ traceroute 192.168.20.2 -n
+traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
+ 1  192.168.10.1  0.813 ms  0.399 ms  0.405 ms
+ 2  10.10.10.2  1.379 ms  1.164 ms  1.077 ms
+ 3  192.168.10.1  1.126 ms  1.135 ms  0.577 ms
+ 4  172.16.1.20  1.581 ms  1.412 ms  1.329 ms
+ 5  192.168.20.2  2.513 ms  2.479 ms  1.808 ms
+Stockholm-User:~$ 
+```
+ Next, verify on the **Stockholm-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. 
+ This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
+
+```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
+Stockholm-FW# show conn all
+12 in use, 36 most used
+
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33444, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33443, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33446, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33445, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33447, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33442, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33448, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33441, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33440, idle 0:01:41, bytes 0, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33439, idle 0:01:41, bytes 0, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33449, idle 0:01:41, bytes 18, flags - 
+UDP inside  192.168.10.2:57221 inside  192.168.20.2:33438, idle 0:01:41, bytes 0, flags - 
+Stockholm-FW# 
+```
