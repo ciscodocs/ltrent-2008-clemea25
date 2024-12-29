@@ -90,7 +90,7 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 | Interface         | IP Address   | Description                                                                                                                                   |
 |-------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | GigabitEthernet 3 | 192.168.10.1 | <font color="#9AAFCB"> **Stockholm-Branch** WAN-Edge interface in **<font color="#A8C6A5">VRF 1</font>** connected with **Stockholm-User**.   |
-| GigabitEthernet 2 | 172.16.1.20  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                             |
+| GigabitEthernet 1 | 172.16.1.20  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                             |
 | eth0              | 192.168.20.2 | <font color="#9AAFCB"> **Sydney-User** IP address.</font>                                                                                     |
 
 ## Configuring Service-Chain in Configuration Group
