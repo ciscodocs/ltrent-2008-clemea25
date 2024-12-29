@@ -353,11 +353,11 @@ UDP inside  192.168.10.2:57221 inside  192.168.20.2:33438, idle 0:01:41, bytes 0
 Stockholm-FW# 
 ```
 ## Conclusion
-In conclusion, the configuration group and centralized traffic data policy implemented in this lab successfully ensured that traffic originating 
+In conclusion, the configuration group and Access Control List(ACL) implemented in this lab successfully ensured that traffic originating 
 from the **Stockholm-User** at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** was routed through 
 the locally hosted **firewall (Stockholm-FW)** at **Stockholm-Branch**. The firewall, reachable via the Stockholm-Branch WAN-Edge in **VRF-1**, effectively 
-inspected the traffic before allowing it to proceed to its destination. This demonstrates the practical application of service chaining and centralized 
-data policies in steering traffic through desired network functions within the Cisco SD-WAN fabric.
+inspected the traffic before allowing it to proceed to its destination. This demonstrates the practical application of service chaining and ACL 
+in steering traffic through desired network functions within the Cisco SD-WAN fabric.
 
 !!! info
     Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized data policy configured in the 
