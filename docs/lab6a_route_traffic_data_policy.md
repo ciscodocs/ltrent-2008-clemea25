@@ -139,12 +139,7 @@ as traffic flows between the branches.
 13. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>. 
     ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
 !!! info 
-    The **GigabitEthernet4** interface on the **Stockholm-Branch** WAN-Edge router serves as the connection point for 
-    the **Stockholm-FW firewall**. This interface facilitates the integration of the firewall into the service chain, 
-    allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper 
-    configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the 
-    firewall, enabling the desired security and traffic management features within the SD-WAN environment.
-
+    The **GigabitEthernet4** interface on the **Stockholm-Branch** WAN-Edge router serves as the connection point for the **Stockholm-FW firewall**. This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment.
 14. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-1-figure-15.png){ .off-glb }
 15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-Stockholm-Branch** is now marked as <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
