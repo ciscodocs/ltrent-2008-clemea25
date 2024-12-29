@@ -23,5 +23,5 @@ After the traffic undergoes inspection, it is then forwarded to the **Stockholm-
 policies are applied effectively within the SD-WAN fabric.
 
 <figure markdown>
-  ![Scenario-1 Traffic Flow](./assets/Scenario-6.gif)
+  ![Scenario-6 Traffic Flow](./assets/Scenario-6.gif)
 </figure>
