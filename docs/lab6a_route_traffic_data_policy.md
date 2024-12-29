@@ -1,4 +1,4 @@
-# Lab 6 - Route traffic from Sydney to Stockholm via remote firewall in Stockholm in same VRF using <font color="grey">**Data Policy**</font>
+# Lab 6a - Route traffic from Sydney to Stockholm via remote firewall in Stockholm in same VRF using <font color="grey">**Data Policy**</font>
 
 ## Introduction
 
