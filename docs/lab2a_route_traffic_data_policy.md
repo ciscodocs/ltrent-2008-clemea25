@@ -3,7 +3,7 @@
 ## Introduction
 
 In this lab exercise, you will analyze the traffic flow between a user in the **<font color="Green">EMEA-Stockholm-Branch (site-10)</font>** and a user in the **<font color="Green">APAC-Sydney-Branch (site-20)</font>**, with the traffic routed through a **firewall** **<font color="Green">(London-Hub-Firewall)</font>** hosted at the 
-**EMEA-London-Hub (site-101)**. The **London-Hub-Firewall**, accessible via the **London-Hub** WAN-Edge router in **<font color="blue">VRF-1</font>**, plays a critical role in inspecting and securing the traffic as it traverses the network. This exercise will focus on understanding the configuration and verification of service chaining, 
+**EMEA-London-Hub (site-101)**. The **London-Hub-Firewall**, accessible via the **London-Hub** WAN-Edge router in **<font color="#9AAFCB">VRF-1</font>**, plays a critical role in inspecting and securing the traffic as it traverses the network. This exercise will focus on understanding the configuration and verification of service chaining, 
 centralized policies, and the interactions between network elements to ensure the intended traffic flow through the designated security device.
 
 Here is a breakdown of the key components involved in the network path:
@@ -11,7 +11,7 @@ Here is a breakdown of the key components involved in the network path:
 - **Source:** The traffic originates from a **Stockholm-User** user in the **EMEA-Stockholm-Branch (site-10)**.
 - **Destination:** The intended recipient is a **Sydney-User** in the **APAC-Sydney-Branch (site-20)**.
 - **Firewall:** All traffic passes through a **firewall (London-FW)**, which is hosted locally at the **EMEA-London-Branch (site-101)**.
-- **WAN Edge Router:** The **London-Branch** WAN-Edge router, configured in ***<font color="blue">VRF-1</font>***, facilitates the traffic's reachability to the firewall and subsequent routing towards the destination.
+- **WAN Edge Router:** The **London-Branch** WAN-Edge router, configured in ***<font color="#9AAFCB">VRF-1</font>***, facilitates the traffic's reachability to the firewall and subsequent routing towards the destination.
 
 Ensure that each component is properly configured and verify the traffic flow is going through **London-FW**.
 
@@ -61,7 +61,7 @@ TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    
                                      100.0.0.101      2      1003     C,I,R     installed  10.1.1.2         biz-internet     ipsec  -           None        None        -                
 ```
 
-To verify this, we initiate a ping from the **Stockholm-User** (**<font color="blue">IP: 192.168.10.2</font>**) to the **Sydney-User** (**<font color="blue">IP: 192.168.20.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
+To verify this, we initiate a ping from the **Stockholm-User** (**<font color="#9AAFCB">IP: 192.168.10.2</font>**) to the **Sydney-User** (**<font color="#9AAFCB">IP: 192.168.20.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
 
 ```{.ios, .no-copy}
 Stockholm-User:~$ ping 192.168.20.2
@@ -93,17 +93,17 @@ Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydn
 
 | Interface         | IP Address   | Description                                                                                                                            |
 |-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| GigabitEthernet 3 | 192.168.10.1 | <font color="blue"> **Stockholm-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** connected with **Stockholm-User**. |
-| GigabitEthernet 2 | 172.16.2.20  | <font color="blue"> **Sydney-Branch** WAN-Edge interface **MPLS TLOC**.</font>                                                         |
-| eth0              | 192.168.20.2 | <font color="blue"> **Sydney-User** IP address.</font>                                                                                 |
+| GigabitEthernet 3 | 192.168.10.1 | <font color="#9AAFCB"> **Stockholm-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** connected with **Stockholm-User**. |
+| GigabitEthernet 2 | 172.16.2.20  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **MPLS TLOC**.</font>                                                         |
+| eth0              | 192.168.20.2 | <font color="#9AAFCB"> **Sydney-User** IP address.</font>                                                                                 |
 
-The **London-Branch** WAN-Edge router establishes connectivity with the **London-FW** firewall through its **<font color="blue">GigabitEthernet 4</font>** interface. This interface facilitates the secure and efficient inspection of traffic passing through the firewall. 
+The **London-Branch** WAN-Edge router establishes connectivity with the **London-FW** firewall through its **<font color="#9AAFCB">GigabitEthernet 4</font>** interface. This interface facilitates the secure and efficient inspection of traffic passing through the firewall. 
 
 The following table provides a detailed overview of the IP addressing configuration assigned to the **London-Branch** WAN-Edge router, ensuring clarity and ease of reference for subsequent tasks in the lab.
 
 | Interface         | IP Address   | Description                                                                      |
 |-------------------|--------------|----------------------------------------------------------------------------------|
-| GigabitEthernet 4 | 10.101.101.2 | <font color="blue"> **London-FW** GigabitEthernet 4 interface IP address.</font> |
+| GigabitEthernet 4 | 10.101.101.2 | <font color="#9AAFCB"> **London-FW** GigabitEthernet 4 interface IP address.</font> |
 
 
 ## Configuring Service-Chain in Configuration Group
@@ -119,7 +119,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Locate Configuration Group](./assets/S-2-figure-1.png){ .off-glb }
 3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
    ![EMEA London Configuration Group](./assets/S-2-figure-2.png){ .off-glb }
-4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
+4. Select **<font color="#9AAFCB">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
    ![Adding New Feature in Configuration Group](./assets/S-2-figure-3.png){ .off-glb }
 5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
    ![Attaching Service Attachment in Configuration Group](./assets/S-2-figure-4.png){ .off-glb }
@@ -133,7 +133,7 @@ This configuration ensures that the desired service policies are enforced as tra
 10. Under Basic Information, enter **VPN** <font color="orange">**1**</font>.
 11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb }
-12. Enter **Service IPv4 Address <font color="blue">10.101.101.2</font>**. This is the IP address of **London Firewall (***<font color="green">London-FW</font>***)**.
+12. Enter **Service IPv4 Address <font color="#9AAFCB">10.101.101.2</font>**. This is the IP address of **London Firewall (***<font color="green">London-FW</font>***)**.
 13. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
     The **GigabitEthernet4** interface on the **London-Branch** WAN-Edge router serves as the connection point for the **London-FW firewall**. 
@@ -151,7 +151,7 @@ This configuration ensures that the desired service policies are enforced as tra
     is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
     This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
     ![CLI Preview](./assets/S-2-figure-11.png){ .off-glb }
-20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="blue">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
+20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**#9AAFCB**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
     The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
     ![CLI Preview of Service Chain Number](./assets/S-2-figure-12.png){ .off-glb }
 21. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
@@ -299,7 +299,7 @@ Next, we will configure a centralized data policy to ensure that traffic initiat
 19. To proceed with the configuration, follow the steps below to set up the VPN and TLOC parameters for the service attachment:
     1. Enter VPN: **<font color="green">1</font>** in the designated field.
     2. Under the TLOC section
-       1. Specify the IP address as the **system IP** of the **London-Branch**: **<font color="blue">10.0.0.1</font>**
+       1. Specify the IP address as the **system IP** of the **London-Branch**: **<font color="#9AAFCB">10.0.0.1</font>**
        2. Select the **color** from the drop-down menu: **<font color="green">biz-internet</font>**.
        3. Choose the Encapsulation type from the drop-down menu: **IPSEC**.
     3. Ensure that the **<font color="orange">Remote</font>** option is selected to complete this configuration step.
@@ -364,7 +364,7 @@ To verify that the centralized data policy is functioning as intended, navigate 
 
 - Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
     - _traceroute 192.168.20.2 -n_
-- Observe the traceroute output to confirm that traffic is hitting the **London firewall (London-FW)** at IP address **<font color="blue">10.101.101.2</font>**.
+- Observe the traceroute output to confirm that traffic is hitting the **London firewall (London-FW)** at IP address **<font color="#9AAFCB">10.101.101.2</font>**.
 
 ```{.ios .no-copy linenums="1" hl_lines="5 8"}
 Stockholm-User:~$ traceroute 192.168.20.2 -n 
