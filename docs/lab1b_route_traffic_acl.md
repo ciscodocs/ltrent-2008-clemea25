@@ -250,3 +250,35 @@ ipv4     0         1      VPN      10.1.1.1    0.0.0.0          66     None     
 ipv6     0         1      VPN      10.1.1.1    0.0.0.0          66     None      None        1003     C,Red,R   1    
                                                0.0.0.0          68     None      None        1003     C,Red,R   1    
 ```
+To verify the service chain configuration on the **Stockholm-Branch** WAN-Edge router, access the device CLI and execute the command:
+
+- **show platform software sdwan service-chain database**. 
+
+Review the output to confirm the following details: the **<font color="green">Service Chain ID (e.g., SC7)</font>**, the **<font color="green">VRF (e.g., vrf: 1)</font>**, and the State, which should display **UP** to indicate proper functionality. 
+
+Additionally, verify that the Service is set to **<font color="green">FW (Firewall)</font>**, the TX and RX interface is **GigabitEthernet4**, and the associated IP address is **10.10.10.2**. This verification ensures that the service chain configuration is active and correctly aligned with the intended design.
+
+```{.ios .no-copy, linenums="1", hl_lines="3 4 5 6 9 17 20"}
+Stockholm-Branch#  show platform software sdwan service-chain database
+
+Service Chain: SC7
+   vrf: 1
+   label: 1010
+   state: up
+   description:  Stockholm-Firewall-SC-Def
+
+   service: FW
+      sequence: 1
+      track-enable: true
+      state: up
+      ha_pair: 1
+         type: ipv4
+         posture: trusted
+         active: [current]
+            tx: GigabitEthernet4, 10.10.10.2
+                endpoint-tracker: auto
+                state: up
+            rx: GigabitEthernet4, 10.10.10.2
+                endpoint-tracker: auto
+                state: up
+```
