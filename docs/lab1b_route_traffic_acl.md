@@ -290,7 +290,7 @@ To ensure that the ACL is correctly applied to the **<font color="green">Gigabit
 - show sdwan policy access-list-names 
 - show sdwan policy access-list-associations
 
-```{.ios linenums="1", hl_lines="4 9"}
+```{.ios linenums="1", hl_lines="4 10"}
 Stockholm-Branch#show sdwan policy access-list-names 
 NAME                  
 ----------------------
