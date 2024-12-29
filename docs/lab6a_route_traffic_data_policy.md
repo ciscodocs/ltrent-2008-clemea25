@@ -404,3 +404,36 @@ UDP inside  192.168.20.2:36909 inside  192.168.10.2:33449, idle 0:00:06, bytes 1
 ICMP inside 192.168.20.2:9 inside  192.168.10.2:0, idle 0:00:00, bytes 280, flags  
 Stockholm-FW# 
 ```
+The following command provides a reliable way to validate that the data policy is functioning correctly and traffic is 
+being processed in accordance with the service-chaining configuration.
+
+- **show platform hardware qfp active feature sdwan datapath service-chain stats**
+
+```{.ios .no-copy linenums="1", hl_lines="7 8"}
+Stockholm-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats    
+Service-Chain ID: 7
+  Global stats: 121
+  Global stats v6: 0
+  Per Service stats 
+    Service: Firewall
+      Tx pkt: 121
+      Rx pkt: 115
+      Tx pkt v6: 0
+      Rx pkt v6: 0
+```
+
+## Conclusion
+
+In conclusion, the configuration group and centralized traffic data policy implemented in this lab successfully ensured 
+that traffic originating from the **Sydney-User** at **Sydney-Branch (site-20)** and destined for the 
+**Stockholm-User** at **Stockholm-Branch (site-10)** was routed through the remote hosted **firewall (Stockholm-FW)** 
+at **Stockholm-Branch**. The firewall, reachable via the Stockholm-Branch WAN-Edge in **VRF-1**, effectively 
+inspected the traffic before allowing it to proceed to its destination. This demonstrates the practical application 
+of service chaining and centralized data policies in steering traffic through desired network functions within the 
+Cisco SD-WAN fabric.
+
+!!! info
+    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized 
+    data policy configured in the current exercise. **Deactivating** the policy ensures that no unintended traffic 
+    steering or service chaining configurations remain active. This step is critical to maintain a clean and 
+    controlled environment for the upcoming configurations and scenarios.
