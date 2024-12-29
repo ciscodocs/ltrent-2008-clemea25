@@ -97,3 +97,14 @@ Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockho
 | GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="#A8C6A5">VRF 1</font>** connected with **Sydney-User**. |
 | GigabitEthernet 1 | 172.16.1.10  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                     |
 | eth0              | 192.168.10.2 | <font color="#9AAFCB"> **Stockholm-User** IP address.</font>                                                                                |
+
+
+## Configuring Service-Chain in Configuration Group
+
+Next, we will configure a service chain within the service-profile parcel in the configuration group by following the 
+below steps. This service chain defines the sequence of services that will be applied to traffic originating 
+from the **Sydney-Branch** and destined for the **Stockholm-Branch**. By specifying the service chain in the 
+configuration, we instruct the **Sydney WAN-Edge** on the type of services to be applied to the traffic, 
+such as redirection through a firewall. This configuration ensures that the desired service policies are enforced 
+as traffic flows between the branches.
+
