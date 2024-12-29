@@ -244,3 +244,67 @@ for the **Stockholm-User** is inspected by the **Stockholm-FW** before reaching 
 the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we will 
 use the **service-chain number** that was previously configured and noted in **<font color="green">step 19</font>**. 
 This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
+
+1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
+   ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small .center }
+2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
+   ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small .center }
+3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
+   ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb .small .center }
+   1. Click **New Data Prefix List** to define the first prefix list:
+      1. Data Prefix List Name: **Internet**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **8.8.8.8/32, 4.2.2.2/32**
+   2. Click **New Data Prefix List** again to define the second prefix list:
+      1. Data Prefix List Name: **Stockholm-Branch-User**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **192.168.10.0/24**
+   3. Click **New Data Prefix List** once more to define the third prefix list:
+      1. Data Prefix List Name: **Sydney-Branch-User**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **192.168.20.0/24**
+  ![Adding Data Prefix List](./assets/S-1-figure-26.png){ .off-glb .small .center }
+4. To configure the required **Site Lists** and **VPN List** for the centralized data policy, follow these steps:
+   1. Navigate to **Site** in the left navigation pane:
+      1. Click **New Site List** to create the first site list:
+         1. Site List Name: **Stockholm-Branch**
+         2. Add Site: **10** 
+      2. Click **New Site List** again to create the second site list:
+         1. Site List Name: **Sydney-Branch**
+         2. Add Site: **20**
+   ![Adding Site List](./assets/S-1-figure-27.png){ .off-glb .small .center }
+   2. Navigate to **VPN** in the left navigation pane. 
+      1. Click **New VPN List** to create the **VPN list**:
+      2. VPN List Name: **VPN-1**
+      3. Add VPN: <font color="orange">1</font>
+   ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small .center }
+   3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the policy creation process.
+5. To proceed with configuring traffic rules for the centralized data policy, click **Next** to navigate to the **Configure Traffic Rules** configuration section. 
+   ![Traffic Rules](./assets/S-1-figure-29.png){ .off-glb .small .center }
+6. Under the heading Choose a tab and add **Traffic rules** under the selected type, select the **Traffic Data** tab.
+   ![Traffic Data Rules](./assets/S-1-figure-30.png){ .off-glb .small .center }
+7. Next, click on the **Add Policy** dropdown menu and choose **Create New** to begin defining the traffic rules for the policy. 
+   This step allows you to specify how traffic should be handled within the SD-WAN fabric based on the configured criteria.
+   ![Traffic Data Rules](./assets/S-1-figure-31.png){ .off-glb .small .center }
+8. To create a new data policy, enter the **Name** as **Scenario-6-Data-Policy** and provide the **Description** as **Scenario-6-Data-Policy**. 
+   ![Traffic Data Rules Name and Description](./assets/S-1-figure-32.png){ .off-glb .small .center }
+9. Next, click on the **Default Action** icon to configure the **default behavior** of the policy. 
+   Under the **Actions section**, select **<font color="green">Accept</font>** to ensure that unmatched traffic is allowed by default. Once done, click **Save** and **Match** to confirm the settings.
+10. To configure the data policy, begin by clicking **Sequence Type**. In the Add Data Policy pop-up window, select **Custom** as the sequence type to define a tailored policy.
+    ![Traffic Data Rules](./assets/S-1-figure-33.png){ .off-glb .small .center }
+11. Click **Sequence Rule**.
+    ![Traffic Data Sequence Rules](./assets/S-1-figure-34.png){ .off-glb .small .center }
+12. Click **Match** and **<font color="green">Scroll right</font>** to select and click **Source Data Prefix**. 
+    ![Data Policy Match Rules](./assets/S-1-figure-35.png){ .off-glb .small .center }
+13. Under **Match Conditions**. Click in box with **Source Data Prefix List** and select > **Sydney-Branch-User**.
+    ![Data Policy Match Source Data Prefix](./assets/S-1-figure-36.png){ .off-glb .small .center }
+14. Click **Match** and **<font color="green">Scroll right</font>** to select and click **Destination Data Prefix**.
+    ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-37.png){ .off-glb .small .center }
+15. Under **Match Conditions**, Scroll down and click in box with **Destination Data Prefix List** and select > **Stockholm-Branch-User**.
+    ![Data Policy Match Destination Data Prefix](./assets/S-1-figure-38.png){ .off-glb .small .center }
+16. Scroll up and select **Actions**, and Click **Accept** radio button.
+    ![Data Policy](./assets/S-1-figure-39.png){ .off-glb .small .center }
+17. Scroll to the **right** to select <font color="green">**Service Chain**</font>.
+    ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
+18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC7</font>**.
+    ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
