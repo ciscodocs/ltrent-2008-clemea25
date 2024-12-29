@@ -311,3 +311,27 @@ This centralized policy ensures that traffic adheres to the intended security an
 19. Under **TLOC List** select **Remote** and uncheck **Restrict**. Now enter the TLOC information of the **<font color="orange">Stockholm-Branch</font>** TLOC 
     (<font color="green">**biz-internet**</font>**:**<font color="green">**10.1.1.1**</font>) and select **IPSEC** Encapsulation.
     ![Data Policy](./assets/S-6a-figure-1.png){ .off-glb }
+20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
+    ![Data Policy](./assets/S-6a-figure-2.png){ .off-glb }
+21. Enter **Policy Name** – **Scenario-6**. 
+22. Enter **Policy Description** - **Scenario-6**.
+    ![Data Policy](./assets/S-1-figure-44.png){ .off-glb }
+23. Click **Traffic Data** and then click **New Site/WAN Region List and VPN List**
+24. Keep **From Service** radio button checked.
+25. Keep **Site List** radio button checked
+26. **Select Site List** by clicking in the box – **Stockholm-Branch**
+    ![Data Policy](./assets/S-1-figure-45.png){ .off-glb }
+27. Click outside the selection box to expose **Select VPN List**. Select VPN List by clicking in the box **VPN-1**
+    ![Data Policy](./assets/S-1-figure-46.png){ .off-glb }
+28. Click outside selection box and click **Add** and after that click **Save** Policy at the bottom.
+    ![Data Policy](./assets/S-1-figure-47.png){ .off-glb }
+29. On **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb width="25" } on the **Scenario-1** policy.
+    ![Data Policy](./assets/S-1-figure-48.png){ .off-glb } 
+30. Click Preview to review the policy and after reviewing click **OK**.
+    ![Data Policy](./assets/S-1-figure-49.png){ .off-glb }
+31. Now go to **Policies > Centralized Policy** page, click 3 dots on the **Scenario-1** policy.
+    1. Click **Activate**. 
+    2. Click **Activate** on **Activate Policy** pop-up. 
+    ![Data Policy Push](./assets/S-1-figure-50.png){ .off-glb }
+32. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
+    ![Data Policy Push](./assets/S-1-figure-51.png){ .off-glb }
