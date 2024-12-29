@@ -222,7 +222,7 @@ sdwan
 In the Cisco SD-WAN architecture, service nodes communicate their available services to the **SD-WAN Controller (vSmart)** using the **Overlay Management Protocol (OMP)** with the service route address family. 
 Each WAN-Edge router is responsible for advertising its service routes to the SD-WAN Controller (vSmart), which then maintains these service routes within its **Routing Information Base (RIB)**. 
 
-```{.ios linenums="1", hl_lines="23"}
+```{.ios linenums="1", hl_lines="23 24"}
 Stockholm-Branch#show sdwan omp services 
 C   -> chosen
 I   -> installed
