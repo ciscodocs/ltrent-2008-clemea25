@@ -361,7 +361,7 @@ inspected the traffic before allowing it to proceed to its destination. This dem
 in steering traffic through desired network functions within the Cisco SD-WAN fabric.
 
 !!! info
-    Before proceeding to the **next lab**, it is essential to **<font color="red">remove</font>** the ACL configuration from **CLI Add-On** parcel and 
+    Before proceeding to the **next lab**, it is essential to **<font color="red">remove</font>** the **ACL configuration** from **<font color="green">CLI Add-On</font>** parcel and 
     also the **<font color="green">Service-Chain definition</font>** from the **Stockholm-Branch** configuration group. 
     **Removing** the ACL policy ensures that no unintended traffic steering or service chaining configurations remain active, which 
     could interfere with subsequent lab tasks. Once the ACL policy is successfully removed and confirmed, you can confidently move forward 
