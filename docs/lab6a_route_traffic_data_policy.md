@@ -108,3 +108,51 @@ configuration, we instruct the **Sydney WAN-Edge** on the type of services to be
 such as redirection through a firewall. This configuration ensures that the desired service policies are enforced 
 as traffic flows between the branches.
 
+!!! note
+    Since the firewall is hosted on the **Stockholm-Branch** WAN-Edge router, it is essential to define the firewall service
+    within the configuration group of the **<font color="green">Stockholm-Branch</font>** WAN-Edge router. This step ensures that the service is recognized
+    and integrated into the SD-WAN topology, allowing traffic to be correctly routed through the firewall as part of the 
+    service chain. By specifying the service in the configuration group, the firewall's role in traffic inspection and 
+    redirection is clearly defined and operationalized within the branch's network setup.
+
+1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
+   ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
+2. Locate and click on the **EMEA-Stockholm-Branch** Configuration Group as illustrated below.
+   ![Locate Configuration Group](./assets/S-1-figure-5.png){ .off-glb }
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-Stockholm-Branch - Service Profile** as illustrated below.   
+   ![EMEA Stockholm Configuration Group](./assets/S-1-figure-6.png){ .off-glb }
+4. Select **<font color="blue">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
+   ![Adding New Feature in Configuration Group](./assets/S-1-figure-7.png){ .off-glb }
+5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
+   ![Attaching Service Attachment in Configuration Group](./assets/S-1-figure-9.png){ .off-glb }
+6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">Stockholm-Branch-Service-Attachment</font>**.
+   ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png){ .off-glb }
+7. Click **Add Service Chain Definition** to define the service chain. 
+   ![Service Attachment Gateway](./assets/S-1-figure-11.png){ .off-glb }
+8. Enter the name **Stockholm-Firewall-SC-Def** and Description **Stockholm-Firewall-SC-Def** for the service chain definition.
+9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
+   ![Service Attachment Gateway Definition](./assets/S-1-figure-12.png){ .off-glb }
+10. Under Basic Information, enter **VPN** <font color="orange">**1**</font>.
+11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb }
+12. Enter **Service IPv4 Address <font color="blue">10.10.10.2</font>**. This is the IP address of **Stockholm Firewall (***<font color="green">Stockholm-FW</font>***)**.
+13. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>. 
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
+    The **GigabitEthernet4** interface on the **Stockholm-Branch** WAN-Edge router serves as the connection point for the **Stockholm-FW firewall**. This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment.
+14. Click **Back** at bottom left.
+    ![How to go back to Configuration Group](./assets/S-1-figure-15.png){ .off-glb }
+15. As we add the **Service Attachment Gateway Definition**, now configuration group for **EMEA-Stockholm-Branch** is now marked as <font color="red">out of sync</font>.Click **Stockholm-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
+16. In **Deploy Configuration Group** page, select **EMEA-Stockholm-Branch** by clicking the square Radio Button and Click **Next**.  
+    ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
+17. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
+    ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
+18. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
+    ![CLI Preview](./assets/S-1-figure-19.png){ .off-glb }
+19. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="blue">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
+    The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
+    ![CLI Preview of Service Chain Number](./assets/S-1-figure-20.png){ .off-glb } 
+20. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
+    ![CLI Preview of Service Chain Number](./assets/S-1-figure-21.png){ .off-glb } 
+21. To verify the configuration group status, click on the **EMEA-Stockholm-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is correctly linked to the **Stockholm-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
+    ![Device is sync.](./assets/S-1-figure-22.png){ .off-glb }
