@@ -308,3 +308,6 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC7</font>**.
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
+19. Under **TLOC List** select **Remote** and uncheck **Restrict**. Now enter the TLOC information of the **<font color="orange">Stockholm-Branch</font>** TLOC 
+    (<font color="green">**biz-internet**</font>**:**<font color="green">**10.1.1.1**</font>) and select **IPSEC** Encapsulation.
+    ![Data Policy](./assets/S-6a-figure-1.png){ .off-glb }
