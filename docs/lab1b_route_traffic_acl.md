@@ -331,26 +331,66 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
  5  192.168.20.2  2.513 ms  2.479 ms  1.808 ms
 Stockholm-User:~$ 
 ```
+Perform a ping to the **Sydney-User** from **Stockholm-Branch**: 
+
+```{.ios .no-copy}
+Stockholm-User:~$ ping 192.168.20.2
+PING 192.168.20.2 (192.168.20.2): 56 data bytes
+64 bytes from 192.168.20.2: seq=0 ttl=42 time=3.165 ms
+64 bytes from 192.168.20.2: seq=1 ttl=42 time=3.063 ms
+64 bytes from 192.168.20.2: seq=2 ttl=42 time=3.359 ms
+64 bytes from 192.168.20.2: seq=3 ttl=42 time=4.132 ms
+64 bytes from 192.168.20.2: seq=4 ttl=42 time=2.740 ms
+64 bytes from 192.168.20.2: seq=5 ttl=42 time=2.887 ms
+64 bytes from 192.168.20.2: seq=26 ttl=42 time=3.622 ms
+^C
+--- 192.168.20.2 ping statistics ---
+27 packets transmitted, 27 packets received, 0% packet loss
+round-trip min/avg/max = 2.165/4.039/11.590 ms
+```
  Next, verify on the **Stockholm-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. 
  This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
 
 ```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
 Stockholm-FW# show conn all
-12 in use, 36 most used
+13 in use, 36 most used
 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33444, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33443, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33446, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33445, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33447, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33442, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33448, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33441, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33440, idle 0:01:41, bytes 0, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33439, idle 0:01:41, bytes 0, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33449, idle 0:01:41, bytes 18, flags - 
-UDP inside  192.168.10.2:57221 inside  192.168.20.2:33438, idle 0:01:41, bytes 0, flags - 
-Stockholm-FW# 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33445, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33447, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33442, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33448, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33441, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33440, idle 0:00:08, bytes 0, flags - 
+ICMP inside 192.168.10.2:76 inside  192.168.20.2:0, idle 0:00:00, bytes 112, flags  
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33439, idle 0:00:08, bytes 0, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33449, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33438, idle 0:00:08, bytes 0, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33444, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33443, idle 0:00:08, bytes 18, flags - 
+UDP inside  192.168.10.2:58180 inside  192.168.20.2:33446, idle 0:00:08, bytes 18, flags - 
+```
+To verify that packets are matching the ACL configuration, we can use the following CLI command:
+
+```{.ios .no-copy linenums="1", hl_lines="4" }
+Stockholm-Branch#show sdwan policy access-list-counters 
+NAME                  COUNTER NAME                      PACKETS       BYTES             
+----------------------------------------------------------------------------------------
+CL-ACL-Service-Chain  default_action_count              0             0                 
+                      MATCH-SYDNEY-DATA-TRAFFIC         58            4772              
+```
+The following command provides a reliable way to validate that the ACL is functioning correctly and traffic is being processed in accordance with the service-chaining configuration.
+
+```{ .ios .no-copy linenums="1", hl_lines="7 8" }
+Stockholm-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats 
+Service-Chain ID: 7
+  Global stats: 131
+  Global stats v6: 0
+  Per Service stats 
+    Service: Firewall
+      Tx pkt: 131
+      Rx pkt: 110
+      Tx pkt v6: 0
+      Rx pkt v6: 0
 ```
 
 ## Conclusion
