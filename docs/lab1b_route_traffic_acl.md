@@ -315,3 +315,8 @@ CL-ACL-Service-Chain  default_action_count              0             0
                       MATCH-SYDNEY-DATA-TRAFFIC         0             0                 
 ```
 ## Verification
+To verify that the Access Control List(ACL) is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
+
+- Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
+    - _traceroute 192.168.20.2 -n_
+- Observe the traceroute output to confirm that traffic is hitting the **Stockholm firewall (Stockholm-FW)** at IP address **10.10.10.2**.
