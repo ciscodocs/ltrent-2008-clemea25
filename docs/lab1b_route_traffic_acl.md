@@ -380,7 +380,7 @@ CL-ACL-Service-Chain  default_action_count              0             0
 ```
 The following command provides a reliable way to validate that the ACL is functioning correctly and traffic is being processed in accordance with the service-chaining configuration.
 
-- show platform hardware qfp active feature sdwan datapath service-chain stats
+- **show platform hardware qfp active feature sdwan datapath service-chain stats**
 
 ```{ .ios .no-copy linenums="1", hl_lines="7 8" }
 Stockholm-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats 
