@@ -335,3 +335,72 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Data Policy Push](./assets/S-1-figure-50.png){ .off-glb }
 32. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
     ![Data Policy Push](./assets/S-6a-figure-7.png){ .off-glb }
+
+## Verification
+
+After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been propagated by the SD-WAN controller (vSmart) to the WAN-Edges. 
+In this case, we need to ensure that the **Sydney-Branch** WAN-Edge has received the policy via OMP and is correctly steering traffic through the **Stockholm-FW** as intended. 
+To verify this, we can utilize the following show command on the **Sydney-Branch** WAN-Edge. This will help confirm whether the centralized data policy has been effectively pushed 
+from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
+
+```{ .ios, .no-copy, title="Sydney Centralized Policy"}
+Sydney-Branch#show sdwan policy from-vsmart
+from-vsmart data-policy _VPN-1_scenario-6
+ direction from-service
+ vpn-list VPN-1
+  sequence 1
+   match
+    source-data-prefix-list      Sydney-Branch-User
+    destination-data-prefix-list Stockholm-Branch-User
+   action accept
+    set
+     vpn-label 8389619
+     service-chain SC7
+     service-chain vpn 1
+     service-chain fall-back
+     service-chain tloc 10.1.1.1
+     service-chain tloc color biz-internet
+     service-chain tloc encap ipsec
+  default-action accept
+from-vsmart lists vpn-list VPN-1
+ vpn 1
+from-vsmart lists data-prefix-list Stockholm-Branch-User
+ ip-prefix 192.168.10.0/24
+from-vsmart lists data-prefix-list Sydney-Branch-User
+ ip-prefix 192.168.20.0/24
+```
+To verify that the centralized data policy is functioning as intended, navigate back to the **Sydney-User** in the **Sydney-Branch** site. 
+
+- Perform a traceroute to the **Stockholm-User** located in the **Stockholm-Branch** site using the **traceroute** command: 
+    - _traceroute 192.168.10.2 -n_
+- Observe the traceroute output to confirm that traffic is hitting the **Stockholm firewall (Stockholm-FW)** at IP address **10.10.10.2**.
+
+```{.ios .no-copy linenums="1", hl_lines="5"}
+Sydney-User:~$ traceroute 192.168.10.2 -n
+traceroute to 192.168.10.2 (192.168.10.2), 30 hops max, 46 byte packets
+ 1  192.168.20.1  0.958 ms  0.754 ms  0.641 ms
+ 2  172.16.1.10  2.257 ms  1.992 ms  1.809 ms
+ 3  10.10.10.2  2.865 ms  1.830 ms  2.729 ms
+ 4  172.16.1.10  2.479 ms  2.025 ms  1.819 ms
+ 5  192.168.10.2  3.325 ms  1.865 ms  2.450 ms
+Sydney-User:~$ 
+```
+- Next, verify on the **Stockholm-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Stockholm-User**. 
+  This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
+
+```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
+Stockholm-FW# show conn all
+10 in use, 36 most used
+
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33444, idle 0:00:06, bytes 18, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33441, idle 0:00:06, bytes 0, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33442, idle 0:00:06, bytes 0, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33443, idle 0:00:06, bytes 0, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33446, idle 0:00:06, bytes 18, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33448, idle 0:00:06, bytes 18, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33447, idle 0:00:06, bytes 18, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33445, idle 0:00:06, bytes 18, flags - 
+UDP inside  192.168.20.2:36909 inside  192.168.10.2:33449, idle 0:00:06, bytes 18, flags - 
+ICMP inside 192.168.20.2:9 inside  192.168.10.2:0, idle 0:00:00, bytes 280, flags  
+Stockholm-FW# 
+```
