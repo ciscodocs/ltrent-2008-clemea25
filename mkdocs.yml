@@ -88,5 +88,6 @@ nav:
       - Lab 4 - Getting Started: lab4_getting_started.md
       - Lab 5 - Getting Started: lab5_getting_started.md
       - Lab 6a - Using Data Policy for Route Traffic from Sydney to Stockholm via remote Firewall in Same VRF: lab6a_route_traffic_data_policy.md
+      - Lab 6b - Using Control Policy for Route Traffic from Sydney to Stockholm via remote Firewall in Same VRF: lab6b_route_traffic_control_policy.md
       - Conclusion: conclusion.md
   - Topology: topologies.md
