@@ -31,8 +31,7 @@ policies are applied effectively within the SD-WAN fabric.
 In the initial configuration, without applying any traffic policies, the routes learned from the **Stockholm-Branch** are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
 
 ```{.ios, .no-copy}
-
-Stockholm-Branch#show sdwan omp routes vpn 1 192.168.20.0/24  
+Sydney-Branch#show sdwan omp routes vpn 1 192.168.10.0/24
 Generating output, this might take time, please wait ...
 Code:
 C   -> chosen
@@ -55,36 +54,37 @@ R-TGW-R -> Reoriginated Transport-Gateway reoriginated
                                                       PATH                      ATTRIBUTE                                                       GROUP                                    
 TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-0         1      192.168.20.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.2         mpls             ipsec  -           None        None        -                
-                                     100.0.0.101      2      1003     C,I,R     installed  10.1.1.2         biz-internet     ipsec  -           None        None        -                
+0         1      192.168.10.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
+                                     100.0.0.101      2      1003     C,I,R     installed  10.1.1.1         mpls             ipsec  -           None        None        -                
 ```
 
 To verify this, we initiate a ping from the **Sydney-User** (**<font color="blue">IP: 192.168.20.2</font>**) to the **Stockholm-User** (**<font color="blue">IP: 192.168.10.2</font>**). 
 A successful ping response confirms that reachability between the two branches is intact.
 
 ```{.ios, .no-copy}
-Stockholm-User:~$ ping 192.168.20.2
-PING 192.168.20.2 (192.168.20.2): 56 data bytes
-64 bytes from 192.168.20.2: seq=0 ttl=42 time=4.002 ms
-64 bytes from 192.168.20.2: seq=1 ttl=42 time=4.058 ms
-64 bytes from 192.168.20.2: seq=2 ttl=42 time=2.677 ms
-64 bytes from 192.168.20.2: seq=3 ttl=42 time=2.955 ms
-64 bytes from 192.168.20.2: seq=4 ttl=42 time=3.034 ms
+Sydney-User:~$ ping 192.168.10.2
+PING 192.168.10.2 (192.168.10.2): 56 data bytes
+64 bytes from 192.168.10.2: seq=0 ttl=42 time=1.678 ms
+64 bytes from 192.168.10.2: seq=1 ttl=42 time=1.389 ms
+64 bytes from 192.168.10.2: seq=2 ttl=42 time=1.596 ms
+64 bytes from 192.168.10.2: seq=3 ttl=42 time=2.214 ms
+64 bytes from 192.168.10.2: seq=4 ttl=42 time=4.609 ms
+64 bytes from 192.168.10.2: seq=5 ttl=42 time=1.374 ms
 ^C
---- 192.168.20.2 ping statistics ---
-5 packets transmitted, 5 packets received, 0% packet loss
-round-trip min/avg/max = 2.677/3.345/4.058 ms
-Stockholm-User:~$ 
+--- 192.168.10.2 ping statistics ---
+6 packets transmitted, 6 packets received, 0% packet loss
+round-trip min/avg/max = 1.374/2.143/4.609 ms
+Sydney-User:~$ 
 ```
 Additionally, traffic originating from the **Sydney-Branch** flows directly to the **Stockholm-Branch** via the available TLOCs, 
 ensuring efficient and balanced connectivity in the absence of traffic policies.
 
 ```{.ios, .no-copy}
-Stockholm-User:~$ traceroute 192.168.20.2 -n 
-traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
- 1  192.168.10.1  1.048 ms  0.582 ms  0.548 ms
- 2  172.16.1.20  1.449 ms  172.16.2.20  1.098 ms  1.440 ms
- 3  192.168.20.2  2.551 ms  2.358 ms  1.750 ms
+Sydney-User:~$ traceroute 192.168.10.2 -n
+traceroute to 192.168.10.2 (192.168.10.2), 30 hops max, 46 byte packets
+ 1  192.168.20.1  0.766 ms  0.903 ms  0.748 ms
+ 2  172.16.1.10  1.352 ms  0.792 ms  1.462 ms
+ 3  192.168.10.2  1.575 ms  2.458 ms  1.601 ms
 ```
 
 !!! note
@@ -92,8 +92,8 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
 
 Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockholm-User**.
 
-| Interface         | IP Address   | Description                                                                                                                                   |
-|-------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| GigabitEthernet 3 | 192.168.10.1 | <font color="#9AAFCB"> **Stockholm-Branch** WAN-Edge interface in **<font color="#A8C6A5">VRF 1</font>** connected with **Stockholm-User**.   |
-| GigabitEthernet 2 | 172.16.1.20  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                             |
-| eth0              | 192.168.20.2 | <font color="#9AAFCB"> **Sydney-User** IP address.</font>                                                                                     |
+| Interface         | IP Address   | Description                                                                                                                           |
+|-------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="#A8C6A5">VRF 1</font>** connected with **Sydney-User**. |
+| GigabitEthernet 2 | 172.16.1.20  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                     |
+| eth0              | 192.168.10.2 | <font color="#9AAFCB"> **Stockholm-User** IP address.</font>                                                                                |
