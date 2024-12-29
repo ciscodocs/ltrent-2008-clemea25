@@ -352,15 +352,16 @@ UDP inside  192.168.10.2:57221 inside  192.168.20.2:33449, idle 0:01:41, bytes 1
 UDP inside  192.168.10.2:57221 inside  192.168.20.2:33438, idle 0:01:41, bytes 0, flags - 
 Stockholm-FW# 
 ```
+
 ## Conclusion
-In conclusion, the configuration group and Access Control List(ACL) implemented in this lab successfully ensured that traffic originating 
+In conclusion, the configuration group and **Access Control List(ACL)** implemented in this lab successfully ensured that traffic originating 
 from the **Stockholm-User** at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** was routed through 
 the locally hosted **firewall (Stockholm-FW)** at **Stockholm-Branch**. The firewall, reachable via the Stockholm-Branch WAN-Edge in **VRF-1**, effectively 
 inspected the traffic before allowing it to proceed to its destination. This demonstrates the practical application of service chaining and ACL 
 in steering traffic through desired network functions within the Cisco SD-WAN fabric.
 
 !!! info
-    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized data policy configured in the 
-    current exercise. **Deactivating** the policy ensures that no unintended traffic steering or service chaining configurations remain active, which 
-    could interfere with subsequent lab tasks. Once the centralized data policy is successfully deactivated and confirmed, you can confidently move forward 
+    Before proceeding to the **next lab**, it is essential to **<font color="red">remove</font>** the ACL configuration from **CLI Add-On** parcel in **Stockholm-Branch** configuration group. 
+    **Removing** the ACL policy ensures that no unintended traffic steering or service chaining configurations remain active, which 
+    could interfere with subsequent lab tasks. Once the ACL policy is successfully removed and confirmed, you can confidently move forward 
     to the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
