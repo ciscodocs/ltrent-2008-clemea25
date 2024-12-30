@@ -280,9 +280,16 @@ Once matched, the policy directs these routes towards the **Stockholm Firewall**
    ![Adding VPN List](./assets/S-2b-figure-11.png){ .off-glb .small }
 6. To create a tailored control policy that aligns with our specific requirements, select Custom Control (Route & TLOC). This option provides the flexibility to define precise route and TLOC configurations, enabling the policy to steer traffic effectively based on the desired criteria.
    ![Custom Control](./assets/S-2b-figure-12.png){ .off-glb .small }
-7. To define the topology policy, provide the name and description as **scenario-2-control-policy**.
+7. To define the topology policy, provide the name and description as **scenario-6-control-policy**.
    ![Adding VPN List](./assets/S-2b-figure-13.png){ .off-glb .small }
 8. Now click **<font color="green">Default Action</font>** and click **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
    ![Adding VPN List](./assets/S-2b-figure-14.png){ .off-glb .small }
-9. Next, click on **Sequence Type** to define the structure of the control policy. The sequence type determines the logical flow of the policy, specifying how matching conditions and corresponding actions are applied to the control plane. By selecting the appropriate sequence type, you can configure precise rules that dictate the routing behavior for specific traffic patterns or destinations.
+9. Next, click on **Sequence Type** to define the structure of the control policy. The sequence type determines the logical flow of the policy, specifying how matching 
+   conditions and corresponding actions are applied to the control plane. By selecting the appropriate sequence type, you can configure precise rules that dictate the routing 
+   behavior for specific traffic patterns or destinations.
    ![Adding VPN List](./assets/S-2b-figure-15.png){ .off-glb .small } 
+10. In this step, we create a sequence within the control policy to handle routes specific to **Stockholm-Branch** user traffic. This sequence matches the routes belonging to 
+    the **Stockholm-Branch** **<font color="green">user subnet (<font color="green">192.168.10.0/24</font>)</font>** and sets the next hop to the **Stockholm-Branch TLOC (<font color="green">biz-internet:10.1.1.1</font>)**. 
+    This TLOC is configured to direct traffic towards the **Stockholm-Branch Firewall (FW)**, ensuring that all matched traffic is routed through the firewall for inspection and policy enforcement. 
+    This configuration is a critical step in defining how traffic is dynamically steered within the SD-WAN environment to meet security and routing requirements.
+    ![Adding VPN List](./assets/S-2b-figure-16.png){ .off-glb .small } 
