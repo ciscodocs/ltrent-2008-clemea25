@@ -30,7 +30,7 @@ policies are applied effectively within the SD-WAN fabric.
 
 In the initial configuration, without applying any traffic policies, the routes learned from the **Stockholm-Branch** are distributed equally across both **Stockholm-Branch** WAN-Edge TLOCs (**biz-internet:10.1.1.1**, **mpls:10.1.1.1**), leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
 
-```{.ios, .no-copy, linenums="1", hl_lines="32 33"}
+```{.ios, .no-copy, linenums="1", hl_lines="30 31"}
 Sydney-Branch#show sdwan omp routes         
 Generating output, this might take time, please wait ...
 Code:
