@@ -318,3 +318,5 @@ Once matched, the policy directs these routes towards the **Stockholm Firewall**
     ![Adding VPN List](./assets/S-6b-figure-5.png){ .off-glb .small }
 17. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-6</font>** as the name and description.
     ![Adding VPN List](./assets/S-6b-figure-6.png){ .off-glb .small }
+18. Now click the three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-6** policy.
+    ![Activating Policy](./assets/S-6b-figure-7.png){ .off-glb .small }
