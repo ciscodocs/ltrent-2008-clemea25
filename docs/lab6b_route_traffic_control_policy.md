@@ -312,7 +312,9 @@ Once matched, the policy directs these routes towards the **Stockholm Firewall**
 15. Under **Topology** section click **New Site/WAN Region List**.
     ![Adding VPN List](./assets/S-6b-figure-4.png){ .off-glb .small }
 16. Make sure we select **Site List** and under **Outbound Site List**, we select **<font color="green">Sydney-Branch</font>**. So intent of the control policy is to select
-    when SD-WAN Controller (vSmart), advertised the routes of **Stockholm-Branch** more specifically **Stockholm-Branch-User**, we set the TLOC of **Stockholm-Branch** and advertised towards the
+    when SD-WAN Controller (vSmart), advertised the routes of **<font color="orange">Stockholm-Branch</font>** more specifically **<font color="orange">Stockholm-Branch-User</font>**, we set the TLOC of **Stockholm-Branch** and advertised towards the
     **Sydney-Branch**, as policy is applied in **<font color="green">outbound</font>** direction. Once **Sydney-Branch** is selected from **Outbound Site List**, we select **Add**. So
     configuration of the direction is saved under control policy like below.
     ![Adding VPN List](./assets/S-6b-figure-5.png){ .off-glb .small }
+17. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-6</font>** as the name and description.
+    ![Adding VPN List](./assets/S-6b-figure-6.png){ .off-glb .small }
