@@ -297,4 +297,10 @@ Once matched, the policy directs these routes towards the **Stockholm Firewall**
     site-id and a designated prefix-list. The site-id used in this control policy corresponds to **Stockholm-Branch** (<font color="green">**site-id 10**</font>), ensuring the 
     policy applies only to traffic originating from this site. Additionally, the prefix-list selected for the control policy is **Stockholm-Branch-User-Subnet**, which includes 
     the subnet <font color="green">**192.168.10.0/24**</font>. This configuration ensures precise targeting of routes for the desired traffic steering behavior.
-    ![Adding VPN List](./assets/S-2b-figure-17.png){ .off-glb .small } 
+    ![Adding VPN List](./assets/S-6b-figure-1.png){ .off-glb .small } 
+12. Next, click **Action** and select **Accept** to define the behavior of the control policy for matched routes. Once the action is set to **Accept**, proceed to configure the 
+    **Service** by selecting <font color="green">Firewall</font> from the dropdown menu. This step ensures that the traffic will be steered through the designated firewall service.
+    Specify the **VPN** where the firewall is hosted — in this topology, the VPN is <font color="green">1</font>. Under the TLOC IP section, input the TLOC IP address 
+    **<font color="green">10.1.1.1</font>**, and select the color as **biz-internet** and Encapsulation as **IPSEC**. These configurations direct the traffic through the 
+    appropriate TLOC path, ensuring secure and optimized routing through the firewall.
+    ![Adding VPN List](./assets/S-6b-figure-2.png){ .off-glb .small }
