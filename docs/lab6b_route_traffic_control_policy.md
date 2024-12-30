@@ -235,4 +235,9 @@ Service Chain: SC7
                 endpoint-tracker: auto
                 state: up
 ```
+## Configuring Centralized Control policy for Traffic Steering
+
+The SD-WAN control policy named **scenario-6-cp** is crafted to dynamically steer traffic by utilizing route and site matching criteria. 
+This policy is configured to specifically match routes advertised by the **Stockholm site** (<font color="green">**site-id 10**</font>) that belong to the **Stockholm user subnet** <font color="green">**192.168.10.0/24**</font>. 
+Once matched, the policy directs these routes towards the **Stockholm Firewall** for inspection. The control policy is applied to the control-plane advertisements leaving the **Sydney** site (<font color="green">**site-id 20**</font>), ensuring that traffic destined for the **Stockholm-Branch** site (<font color="green">**site-id 10**</font>) follows the desired path through the **<font color="green">Stockholm Firewall</font>**, enabling enhanced traffic management and security enforcement.
 
