@@ -328,3 +328,53 @@ Once matched, the policy directs these routes towards the **Stockholm Firewall**
     ![Preview Policy](./assets/S-2b-figure-26.png){ .off-glb .small }
 21. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
     ![Preview Policy](./assets/S-2b-figure-27.png){ .off-glb .small }
+
+## Verification
+
+After the successful deployment of the centralized control policy <font color="green">**scenario-6**</font>, it is essential 
+to verify its application on the **SD-WAN controller (vSmart)** and confirm that routes are being propagated according to the 
+policy. Specifically, we need to ensure that the **Sydney-Branch** WAN-Edge has received the **Stockholm-Branch user routes** with 
+the **Stockholm-Branch** TLOC as defined in the policy. This verification can be performed using the following show commands on 
+the **SD-WAN Controller(vSmart)**. These commands allow us to confirm the correct route advertisements and validate that the 
+policy is functioning as intended.
+
+```{ .ios .no-copy  title="Centralized Control Policy on SD-WAN Controller"}
+Controller-1# show running-config policy
+policy
+ lists
+  site-list Stockholm-Branch
+   site-id 10
+  !
+  site-list Sydney-Branch
+   site-id 20
+  !
+  prefix-list Stockholm-Branch-User-Subnet
+   ip-prefix 192.168.10.0/24
+  !
+ !
+ control-policy service-6-control-policy
+  sequence 1
+   match route
+    prefix-list Stockholm-Branch-User-Subnet
+    site-list   Stockholm-Branch
+   !
+   action accept
+    set
+     service FW vpn 1
+     service tloc 10.1.1.1 color biz-internet encap ipsec
+    !
+   !
+  !
+  default-action accept
+ !
+!
+```
+After activating the centralized control policy, we can observe that the **Stockholm-Branch** user subnet **<font color="green">192.168.10.0/24</font>** is 
+now associated exclusively with the **Stockholm-Branch TLOC** (**<font color="green">biz-internet:10.1.1.1</font>**) as per the 
+policy configuration. This behavior contrasts with the earlier state, prior to applying the control policy, where the same 
+subnet **<font color="green">192.168.10.0/24</font>** was advertised with **both Stockholm-Branch TLOCs** (<font color="orange">**biz-internet, mpls**</font>). 
+This change demonstrates the effectiveness of the centralized control policy in steering traffic dynamically by modifying route advertisements to align with the desired topology.
+
+```{ .ios .no-copy linenums="1", hl_lines="32"}
+
+```
