@@ -241,3 +241,48 @@ The SD-WAN control policy named **scenario-6-cp** is crafted to dynamically stee
 This policy is configured to specifically match routes advertised by the **Stockholm site** (<font color="green">**site-id 10**</font>) that belong to the **Stockholm user subnet** <font color="green">**192.168.10.0/24**</font>. 
 Once matched, the policy directs these routes towards the **Stockholm Firewall** for inspection. The control policy is applied to the control-plane advertisements leaving the **Sydney** site (<font color="green">**site-id 20**</font>), ensuring that traffic destined for the **Stockholm-Branch** site (<font color="green">**site-id 10**</font>) follows the desired path through the **<font color="green">Stockholm Firewall</font>**, enabling enhanced traffic management and security enforcement.
 
+1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
+   ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small }
+2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
+   ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small }
+3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
+   ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb .small }
+   1. Click **New Data Prefix List** to define the first prefix list:
+      1. Data Prefix List Name: **Internet**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **8.8.8.8/32, 4.2.2.2/32**
+   2. Click **New Data Prefix List** again to define the second prefix list:
+      1. Data Prefix List Name: **Stockholm-Branch-User-Subnet**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **192.168.10.0/24**
+   3. Click **New Data Prefix List** once more to define the third prefix list:
+      1. Data Prefix List Name: **-Subnet**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **192.168.20.0/24**
+  ![Adding Data Prefix List](./assets/S-1-figure-26.png){ .off-glb .small }
+4. To configure the required **Site Lists** and **VPN List** for the centralized data policy, follow these steps:
+   1. Navigate to **Site** in the left navigation pane:
+      1. Click **New Site List** to create the first site list:
+         1. Site List Name: **Stockholm-Branch**
+         2. Add Site: **10** 
+      2. Click **New Site List** again to create the second site list:
+         1. Site List Name: **Sydney-Branch**
+         2. Add Site: **20**
+   ![Adding Site List](./assets/S-1-figure-27.png){ .off-glb .small }
+   2. Navigate to **VPN** in the left navigation pane. 
+      1. Click **New VPN List** to create the **VPN list**:
+      2. VPN List Name: **VPN-1**
+      3. Add VPN: <font color="orange">1</font>
+   ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small }
+   3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the **<font color="green">control policy</font> creation** process.
+5. To proceed with configuring **control policy** rules for the centralized control policy, click **Next** to navigate to the **Configure Topology and VPN Membership** configuration section. 
+   Under the heading Choose a tab and click **Topology** under the selected type, select the **Add Topology** tab.  
+   ![Adding VPN List](./assets/S-2b-figure-11.png){ .off-glb .small }
+6. To create a tailored control policy that aligns with our specific requirements, select Custom Control (Route & TLOC). This option provides the flexibility to define precise route and TLOC configurations, enabling the policy to steer traffic effectively based on the desired criteria.
+   ![Custom Control](./assets/S-2b-figure-12.png){ .off-glb .small }
+7. To define the topology policy, provide the name and description as **scenario-2-control-policy**.
+   ![Adding VPN List](./assets/S-2b-figure-13.png){ .off-glb .small }
+8. Now click **<font color="green">Default Action</font>** and click **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
+   ![Adding VPN List](./assets/S-2b-figure-14.png){ .off-glb .small }
+9. Next, click on **Sequence Type** to define the structure of the control policy. The sequence type determines the logical flow of the policy, specifying how matching conditions and corresponding actions are applied to the control plane. By selecting the appropriate sequence type, you can configure precise rules that dictate the routing behavior for specific traffic patterns or destinations.
+   ![Adding VPN List](./assets/S-2b-figure-15.png){ .off-glb .small } 
