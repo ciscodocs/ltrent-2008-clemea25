@@ -304,3 +304,11 @@ Once matched, the policy directs these routes towards the **Stockholm Firewall**
     **<font color="green">10.1.1.1</font>**, and select the color as **biz-internet** and Encapsulation as **IPSEC**. These configurations direct the traffic through the 
     appropriate TLOC path, ensuring secure and optimized routing through the firewall.
     ![Adding VPN List](./assets/S-6b-figure-2.png){ .off-glb .small }
+13. Once the match conditions and actions are fully configured, click **Save Match and Actions** to finalize the rule. This step ensures that the defined criteria and corresponding 
+    actions are stored within the control policy. By saving, you confirm the rule’s configuration, making it ready to be included in the policy sequence.
+    ![Save Match and Actions](./assets/S-6b-figure-3.png){ .off-glb .small }
+14. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
+    ![Adding VPN List](./assets/S-2b-figure-20.png){ .off-glb .small }
+15. Under **Topology** section click **New Site/WAN Region List**.
+    ![Adding VPN List](./assets/S-6b-figure-4.png){ .off-glb .small }
+
