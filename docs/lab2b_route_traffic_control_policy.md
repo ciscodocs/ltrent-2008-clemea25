@@ -191,7 +191,7 @@ ipv6     0         1      VPN      10.0.0.1    0.0.0.0          66     None     
 After configuring the **Firewall (FW)** service on the **London-Branch** WAN-Edge router, the system generates a unique label, **<font color="green">1014</font>**, to identify the service. 
 This label, along with the associated service information, is then advertised to the SD-WAN controller (vSmart) using the **Overlay Management Protocol (OMP)**. 
 
-[## Configuring Centralized Control policy for Traffic Steering
+## Configuring Centralized Control policy for Traffic Steering
 
 The SD-WAN control policy named **scenario-2-cp** is crafted to dynamically steer traffic by utilizing route and site matching criteria. 
 This policy is configured to specifically match routes advertised by the **Sydney site** (<font color="green">**site-id 20**</font>) that belong to the **Sydney user subnet** <font color="green">**192.168.20.0/24**</font>. 
