@@ -117,6 +117,15 @@ This configuration ensures that the desired service policies are enforced as tra
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
    ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
-2. Locate and click on the **EMEA-London-Branch** Configuration Group as illustrated below.
-   ![Locate Configuration Group](./assets/S-2-figure-1.png){ .off-glb }
+2. Locate and click on the **APAC-Sydney-Branch** Configuration Group as illustrated below.
+   ![Locate Configuration Group](./assets/S-3-figure-1.png){ .off-glb }
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
+   ![APAC Sydney Configuration Group](./assets/S-3-figure-2.png){ .off-glb }
+4. Select **<font color="#9AAFCB">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
+   ![Adding New Feature in Configuration Group](./assets/S-3-figure-3.png){ .off-glb }
+5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
+   ![Attaching Service Attachment in Configuration Group](./assets/S-3-figure-4.png){ .off-glb }
+6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name and description **<font color="orange">London-Branch-Service-Attachment</font>**.
+   ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
+
 
