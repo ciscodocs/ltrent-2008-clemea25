@@ -93,11 +93,11 @@ Sydney-User:~$
 
 Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockholm-User**.
 
-| Interface         | IP Address   | Description                                                                                                                            |
-|-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="black">VRF 1</font>** connected with **Sydney-User**. |
-| GigabitEthernet 1 | 172.16.1.10  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                         |
-| eth0              | 192.168.10.2 | <font color="#9AAFCB"> **Stockholm-User** IP address.</font>                                                                                 |
+| Interface         | IP Address   | Description                                                                                                                          |
+|-------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="orange">VRF 1</font>** connected with **Sydney-User**. |
+| GigabitEthernet 1 | 172.16.1.10  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                    |
+| eth0              | 192.168.10.2 | <font color="#9AAFCB"> **Stockholm-User** IP address.</font>                                                                         |
 
 The **Sydney-Branch** WAN-Edge router establishes connectivity with the **Sydney-FW** firewall through its **<font color="#9AAFCB">GigabitEthernet 4</font>** interface, which is part of <font color="orange">**VRF-2**</font>. This interface facilitates the secure and efficient inspection of traffic passing through the firewall. 
 
