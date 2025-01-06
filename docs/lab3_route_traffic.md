@@ -115,3 +115,8 @@ for the **Stockholm-Branch**. By specifying the service chain in the configurati
 to be applied to the traffic, such as redirection through a **Sydney-FW** firewall in **<font color="bluw">VRF 2</font>**. 
 This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
 
+1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
+   ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
+2. Locate and click on the **EMEA-London-Branch** Configuration Group as illustrated below.
+   ![Locate Configuration Group](./assets/S-2-figure-1.png){ .off-glb }
+
