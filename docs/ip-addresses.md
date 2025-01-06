@@ -23,8 +23,8 @@ throughout the lab exercises.
 |------------------|-----------------|
 | GigabitEthernet3 | 192.168.20.1/24 |
 | GigabitEthernet4 | 10.20.20.1/24   |
-| Stockholm-FW     | 10.20.20.2/24   |
-| Stockholm-User   | 192.168.20.2/24 |
+| Sydney-FW        | 10.20.20.2/24   |
+| Sydney-User      | 192.168.20.2/24 |
 
 
 ## London Branch
@@ -39,6 +39,6 @@ throughout the lab exercises.
 | System IP        | 10.0.0.2        |
 |------------------|-----------------|
 | GigabitEthernet4 | 10.102.102.1/24 |
-| London-FW        | 10.102.102.2/24 |
+| Singapore-FW     | 10.102.102.2/24 |
 
 
