@@ -1,6 +1,6 @@
 # Troubleshooting commands
 
-The following troubleshooting commands are essential tools for diagnosing and resolving issues related to service 
+The following troubleshooting commands on WAN-Edge router are essential tools for diagnosing and resolving issues related to service 
 insertion and service chaining in an SD-WAN environment. These commands provide detailed insights into the configuration, 
 operational status, and flow of traffic through service nodes, such as firewalls or other network services. 
 
