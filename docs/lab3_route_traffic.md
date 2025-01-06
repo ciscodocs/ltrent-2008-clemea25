@@ -91,7 +91,7 @@ Sydney-User:~$
 !!! note
     In the traceroute above, we observe that the traffic is currently routed over the **INET** TLOC. However, it is also possible for the traffic to use the **MPLS** TLOC, as SD-WAN employs ECMP (Equal-Cost Multi-Path) to balance traffic across all available TLOCs.
 
-Following Table exhibit how traffic is flowing from **Stockholm-User** to **Sydney-User**.
+Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockholm-User**.
 
 | Interface         | IP Address   | Description                                                                                                                            |
 |-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
