@@ -240,3 +240,12 @@ Service Chain: SC8
 ```
 ## Configuring Centralized Control Policy for Route Leaking
 
+Next, we will configure a centralized **control policy** to ensure that traffic initiated from the **Sydney-User** destined 
+for the **Stockholm-User** is first inspected by the **Sydney-FW** before reaching its destination. Since the 
+**Sydney-Firewall** (**<font color="green">Sydney-FW</font>**) is positioned within **<font color="orange">VRF-2</font>**, it is necessary to configure a centralized control policy 
+to enable **route-leaking**. This configuration ensures that traffic from the **Sydney-User** can reach the **Sydney-Firewall** 
+and maintain connectivity with the **Stockholm-Branch** user in **<font color="orange">VRF-1</font>**. The control policy facilitates seamless 
+communication between the two VRFs, ensuring full bidirectional reachability. By implementing this policy, 
+we establish a cohesive routing environment that allows resources in **VRF-1** and **VRF-2** to interact efficiently, 
+aligning with the network's operational requirements.
+
