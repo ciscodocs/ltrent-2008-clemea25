@@ -27,3 +27,4 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 <figure markdown>
   ![Scenario-2 Traffic Flow](./assets/Scenario-3.gif)
 </figure>
+
