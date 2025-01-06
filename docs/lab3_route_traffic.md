@@ -127,5 +127,35 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Attaching Service Attachment in Configuration Group](./assets/S-3-figure-4.png){ .off-glb }
 6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name and description **<font color="orange">London-Branch-Service-Attachment</font>**.
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
-
+7. Click **Add Service Chain Definition** to define the service chain. 
+   ![Service Attachment Gateway](./assets/S-3-figure-5.png){ .off-glb }
+8. Enter the name **Sydney-Firewall-SC-Def** and Description **Sydney-Firewall-SC-Def** for the service chain definition.
+9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
+   ![Service Attachment Gateway Definition](./assets/S-3-figure-6.png){ .off-glb }
+10. Under Basic Information, enter **VPN** <font color="orange">**2**</font>.
+11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb }
+12. Enter **Service IPv4 Address <font color="#9AAFCB">10.20.20.2</font>**. This is the IP address of **Sydney Firewall (***<font color="green">Sydney-FW</font>***)**.
+13. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>.
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
+    The **GigabitEthernet4** interface on the **Sydney-Branch** WAN-Edge router serves as the connection point for the **Sydney-FW firewall**. 
+    This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for 
+    inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between 
+    the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment.
+14. Click **Back** at bottom left.
+    ![How to go back to Configuration Group](./assets/S-3-figure-7.png){ .off-glb }
+15. As we add the **Service Attachment Gateway Definition**, now configuration group for **APAC-Sydney-Branch** is now marked as <font color="red">out of sync</font>. 
+16. Click **APAC-Sydney-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
+17. In **Deploy Configuration Group** page, select **APAC-Sydney-Branch** by clicking the square Radio Button and Click **Next**.  
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-3-figure-8.png){ .off-glb }
+18. Click **Import**, and load **EMEA-London-Branch.csv** file which loads all the values for the variables.
+    ![Attaching CSV file](./assets/S-3-figure-9.png){ .off-glb }
+19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition 
+    is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
+    This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
+    ![CLI Preview](./assets/S-2-figure-10.png){ .off-glb }
+20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**#9AAFCB**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
+    The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
+    ![CLI Preview of Service Chain Number](./assets/S-2-figure-12.png){ .off-glb }
 
