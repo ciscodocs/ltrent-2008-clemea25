@@ -394,7 +394,7 @@ To ensure that the policy has been applied correctly on the **SD-WAN controller*
 By reviewing the running configuration of the control policy, we can confirm that the **scenario-3** policy is correctly defined and operational. This verification process is essential to
 validate the deployment and ensure that the policy is functioning as intended to achieve the desired route-leaking between **VPN-1** and **VPN-2**.
 
-```{ .ios .no-copy line-numbers="1"}
+```{ .ios .no-copy linenums="1"}
 Controller-1# show running-config policy 
 policy
  lists
@@ -441,4 +441,44 @@ apply-policy
   control-policy scenario-3-route-leak in
  !
 !
+```
+
+
+```{.ios .no-copy linenums="1", hl_lines="21 22 23 24"}
+Controller-1# show omp routes vpn 1 advertised
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+
+VPN    PREFIX              TO PEER          
+--------------------------------------------
+1      10.10.10.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      10.20.20.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.101.101.0/24     10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.102.102.102/32   10.0.0.1         
+                           10.1.1.1         
+                           10.1.1.2         
+1      192.168.10.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      192.168.20.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
 ```
