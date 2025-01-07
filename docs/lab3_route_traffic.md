@@ -631,3 +631,5 @@ This centralized policy ensures that traffic adheres to the intended security an
     - Under **TLOC List** select **<font color="green">Local</font>**. 
     - Uncheck **<font color="green">Restrict</font>**. 
     ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
+16. Click “**Save Match and Actions**”. 
+    ![Configuring Data Policies](./assets/S-3-figure-40.png){ .off-glb }
