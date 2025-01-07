@@ -347,19 +347,19 @@ aligning with the network's operational requirements.
 4. Scroll down and click Next.
 5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
 ![Control Policy](./assets/S-3-figure-16.png){ .off-glb }
-6. Proceed by entering the required details as outlined below and follow the steps to configure the control policy.
-   1. Enter **scenario-3-route-leak** as the policy name.
-   2. Description: Provide a brief description, using **scenario-3-route-leak** for clarity and consistency.
-   3. Navigate to **<font color="green">Sequence Type</font>**. Under **Add Control Policy**, choose **Route** to define the **route-leaking** configuration.
-   These steps ensure that the policy is accurately defined and aligned with the lab's objectives, facilitating effective route-leaking between VPNs as part of the scenario setup.
-![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
+6. Proceed by entering the required details as outlined below and follow the steps to configure the control policy. 
+   * Enter **scenario-3-route-leak** as the policy name. 
+   * Description: Provide a brief description, using **scenario-3-route-leak** for clarity and consistency. 
+   * Navigate to **<font color="green">Sequence Type</font>**. Under **Add Control Policy**, choose **Route** to define the **route-leaking** configuration.
+     These steps ensure that the policy is accurately defined and aligned with the lab's objectives, facilitating effective route-leaking between VPNs as part of the scenario setup.
+     ![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
 7. Click **<font color="green">Sequence Rule</font>**.
 ![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
 8. In the **Match** section, configure the parameters to define the scope of the **control policy**. Begin by selecting Site and VPN as the matching criteria. Next, specify the following details:
-    1. **Site List**: Select <font color="orange">**Both-Branches**</font> to include both branches in the policy. 
-    2. **VPN List**: Choose <font color="orange">**VPN-1-2**</font> to encompass the VPNs involved in the route-leaking configuration.
-   This configuration ensures that the policy applies to the specified sites and VPNs, enabling precise control over route-leaking between the designated network segments.
-![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
+   * **Site List**: Select <font color="orange">**Both-Branches**</font> to include both branches in the policy.
+   * **VPN List**: Choose <font color="orange">**VPN-1-2**</font> to encompass the VPNs involved in the route-leaking configuration.
+     This configuration ensures that the policy applies to the specified sites and VPNs, enabling precise control over route-leaking between the designated network segments.
+   ![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
 9. Next, navigate to the Action section and configure the route-leaking process to enable communication between **VPN-1** and **VPN-2**. 
    Specifically, ensure that routes from **VPN-1** are leaked into **VPN-2** and vice versa. This step is critical to establishing bidirectional
    connectivity, allowing resources in both VPNs to communicate seamlessly. Proper configuration at this stage ensures the integrity of the routing 
