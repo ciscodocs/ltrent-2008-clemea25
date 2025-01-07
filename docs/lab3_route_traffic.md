@@ -489,7 +489,7 @@ This validation confirms the effectiveness of the configured control policy in a
 
 Prefix **10.20.20.0/24** is now visible in the **VRF-1** routing table on the **Stockholm-Branch**. 
 
-```{.ios .no-copy linenums="1", hl_lines="1 22"}
+```{.ios .no-copy linenums="1", hl_lines="1 23"}
 Stockholm-Branch#show ip route vrf 1
 
 Routing Table: 1
@@ -535,7 +535,7 @@ Next, verify the routing table on the **Sydney-Branch** WAN-Edge device in **VRF
 This step ensures that the route-leaking configuration is functioning as expected and that traffic originating from VRF-1 is properly advertised and accessible within VRF-2. 
 By checking the routing table, we can validate the successful propagation of the routes and confirm that the connectivity between the two VRFs is fully operational.
 
-```{.ios .no-copy linenums="1", hl_lines="1 22"}
+```{.ios .no-copy linenums="1", hl_lines="1 23"}
 Sydney-Branch#show ip route vrf 2
 
 Routing Table: 2
