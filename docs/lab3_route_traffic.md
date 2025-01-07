@@ -442,7 +442,9 @@ apply-policy
  !
 !
 ```
-
+The output below demonstrates that the **prefix <font color="green">10.20.20.0/24</font>**, which belongs to **VRF-2**, 
+has been successfully **leaked into VRF-1**. This confirms that the control policy for route-leaking is now active and 
+functioning as intended. The leaked prefix is visible alongside other prefixes **native to VRF-1**, and it is being advertised to the **relevant peers**.
 
 ```{.ios .no-copy linenums="1", hl_lines="21 22 23 24"}
 Controller-1# show omp routes vpn 1 advertised
