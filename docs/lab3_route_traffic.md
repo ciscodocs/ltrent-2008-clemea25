@@ -298,12 +298,12 @@ aligning with the network's operational requirements.
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
 10. Click **<font color="orange">Save Match and Actions</font>**.
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
-11. Click **Default Action**, click(./assets/S-1-figure-dots.png){ .off-glb }icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
+11. Click **Default Action**, click(./assets/S-1-figure-dots.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
 12. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
 ![Save Default Action Control Policy](./assets/S-3-figure-23.png){ .off-glb }
 13. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-3-route-leak</font>** 
     policy in inbound direction on both **Stockholm-Branch** and **Sydney-Branch**. Now after that click **<font color="green">Save Policy</font>**.
 ![Applying Control Policy](./assets/S-3-figure-24.png){ .off-glb }
-14. Now click ![three dots](./assets/S-1-figure-dots.png){ .off-glb } and select **Preview** to see the content of the control policy.
+14. Now click ![three dots](./assets/S-1-figure-dots.png){ .off-glb width="25" } and select **Preview** to see the content of the control policy.
 ![Applying Control Policy](./assets/S-3-figure-25.png){ .off-glb }
