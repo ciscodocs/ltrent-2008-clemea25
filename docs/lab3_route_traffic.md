@@ -598,7 +598,7 @@ This centralized policy ensures that traffic adheres to the intended security an
    ![Configuring Policies](./assets/S-3-figure-28.png){ .off-glb }
 3. In order to add data policy, click **Traffic Rules**.
    ![Configuring Policies](./assets/S-3-figure-29.png){ .off-glb }
-4. Now click **Add Policy** and **Create New**.
+4. Now click **Add Policy** and then click **Create New**.
    ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
 5. Follow the below steps to start configuring data policy. 
    1. Enter Name – **Scenario-3-Data-Policy**
