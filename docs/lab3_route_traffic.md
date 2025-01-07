@@ -321,6 +321,10 @@ verify its implementation. This involves ensuring that the policy has been appli
 Additionally, confirm that full reachability is established between **VPN-1** and **VPN-2**, enabling seamless communication as per the lab objectives. 
 Verification is a critical step to validate the policy's effectiveness and to ensure that the network behaves as designed.
 
+To ensure that the policy has been applied correctly on the **SD-WAN controller**, the next step involves verifying its implementation through the controller's running configuration. 
+By reviewing the running configuration of the control policy, we can confirm that the **scenario-3** policy is correctly defined and operational. This verification process is essential to
+validate the deployment and ensure that the policy is functioning as intended to achieve the desired route-leaking between **VPN-1** and **VPN-2**.
+
 ```{ .ios .no-copy line-numbers="1"}
 Controller-1# show running-config policy 
 policy
