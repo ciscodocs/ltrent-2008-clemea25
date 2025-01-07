@@ -648,4 +648,4 @@ This centralized policy ensures that traffic adheres to the intended security an
 21. In order to activate the policy, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the “Scenario-3” policy.
     * Click **Activate**. 
     * Click **Activate** on **Activate Policy** pop-up.
-    
+    ![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
