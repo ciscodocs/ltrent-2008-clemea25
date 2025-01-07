@@ -155,7 +155,7 @@ This configuration ensures that the desired service policies are enforced as tra
     is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
     This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
     ![CLI Preview](./assets/S-3-figure-10.png){ .off-glb }
-20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**#9AAFCB**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
+20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
     The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
     ![CLI Preview of Service Chain Number](./assets/S-3-figure-11.png){ .off-glb }
 21. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
@@ -581,3 +581,10 @@ Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
 Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/3 ms
 Sydney-Branch#
 ```
+## Configuring Centralized Data Policy for Traffic Steering
+
+Next, we will configure a centralized data policy to ensure that traffic initiated from the **Sydney-User** destined for 
+the **Stockholm-User** is first inspected by the **Sydney-FW** in **VRF-2** before reaching its destination. This policy
+enforces the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we 
+will use the **service-chain number** that was previously configured and noted in **<font color="green">step 20</font>**. 
+This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
