@@ -616,4 +616,5 @@ This centralized policy ensures that traffic adheres to the intended security an
    ![Configuring Data Policies](./assets/S-3-figure-33.png){ .off-glb }
 9. Click “**Sequence Rule**”.
    ![Configuring Data Policies](./assets/S-3-figure-34.png){ .off-glb }
-10. 
+10. **Match** > **Scroll** right to select and click **Source Data Prefix**.
+    ![Configuring Data Policies](./assets/S-3-figure-35.png){ .off-glb }
