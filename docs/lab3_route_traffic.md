@@ -593,7 +593,7 @@ This centralized policy ensures that traffic adheres to the intended security an
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb }
 2. In addition to the previously configured centralized control policy **scenario-3**, where we add **<font color="green">scenario-3-route-leak</font>** for route-leaking, we now introduce a centralized data policy to 
    ensure that traffic is inspected by the **<font color="green">Sydney-FW</font>** in **<font color="green">VRF-2</font>**. This step enhances the traffic management strategy by directing traffic through the firewall 
-   for inspection, providing additional security and compliance. To implement this, navigate to the centralized policy section, click on (./assets/S-1-figure-dots.png){ .off-glb width="25"} next to the <font color="green">**scenario-3**</font> policy, and select **<font color="green">Edit</font>** to add the data policy. 
+   for inspection, providing additional security and compliance. To implement this, navigate to the centralized policy section, click on ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} next to the <font color="green">**scenario-3**</font> policy, and select **<font color="green">Edit</font>** to add the data policy. 
    This ensures seamless integration of traffic inspection within the existing policy framework.
    ![Configuring Policies](./assets/S-3-figure-28.png){ .off-glb }
 3. In order to add data policy, click **Traffic Rules**.
