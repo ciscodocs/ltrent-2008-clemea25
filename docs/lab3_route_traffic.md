@@ -609,3 +609,4 @@ This centralized policy ensures that traffic adheres to the intended security an
 
    1. Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**.
    2. Click “**Save and Match**”.
+   ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
