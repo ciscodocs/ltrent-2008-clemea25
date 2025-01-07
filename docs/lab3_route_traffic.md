@@ -313,3 +313,10 @@ aligning with the network's operational requirements.
 ![Activating Control Policy](./assets/S-3-figure-26.png){ .off-glb }
 16. Once policy is being pushed successfully, we can have **<font color="green">Success</font>** message that policy is pushed successfully to **SD-WAN controller**.
 ![Activating Control Policy](./assets/S-3-figure-27.png){ .off-glb }
+
+## Verification of Centralized Control Policy
+
+With the **scenario-3** **<font color="orange">control policy</font>** successfully pushed to facilitate route-leaking between **VPN-1** and **VPN-2**, the next step is to 
+verify its implementation. This involves ensuring that the policy has been applied correctly and that the intended routes are being leaked between the two VPNs. 
+Additionally, confirm that full reachability is established between **VPN-1** and **VPN-2**, enabling seamless communication as per the lab objectives. 
+Verification is a critical step to validate the policy's effectiveness and to ensure that the network behaves as designed.
