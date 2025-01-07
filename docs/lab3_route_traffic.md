@@ -290,7 +290,6 @@ aligning with the network's operational requirements.
 7. Click **<font color="green">Sequence Rule</font>**.
 ![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
 8. Under Match, select Site and VPN.
-
    1. Site List: **<font color="orange">Both-Branches</font>** 
    2. VPN List: **<font color="orange">VPN-1-2</font>**
 ![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
