@@ -300,7 +300,7 @@ aligning with the network's operational requirements.
    1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**. 
    2. Export To: **<font color="orange">VPN-1-2</font>**
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
-10. Click “**<font color="orange">Save Match and Actions</font>**”.
+10. Click **<font color="orange">Save Match and Actions</font>**.
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
 11. Click **Default Action**, click(./assets/S-1-figure-dots.png){ .off-glb }icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
