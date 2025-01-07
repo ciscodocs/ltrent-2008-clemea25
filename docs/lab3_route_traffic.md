@@ -369,7 +369,7 @@ aligning with the network's operational requirements.
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
 10. Click **<font color="orange">Save Match and Actions</font>**.
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
-11. Click **Default Action**, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
+11. Click **Default Action**, click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
 12. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
 ![Save Default Action Control Policy](./assets/S-3-figure-23.png){ .off-glb }
