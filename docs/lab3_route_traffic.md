@@ -603,6 +603,6 @@ This centralized policy ensures that traffic adheres to the intended security an
 5. Follow the below steps to start configuring data policy. 
    1. Enter Name – **Scenario-3-Data-Policy**
    2. Description - **Scenario-3-Data-Policy**
-6. Now click icon in “Default Action”
-   ii.	Under “Actions” Select Accept
-   iii.	Click “Save and Match”
+6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
+   1. Under “**<font color="orange"Actions</font>**” Select **<font color="green">Accept</font>**.
+   2. Click “**Save and Match**”.
