@@ -617,7 +617,6 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Configuring Data Policies](./assets/S-3-figure-35.png){ .off-glb }
 11. Under “**Match Conditions**”. 
     * Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
-12. Match > Scroll right to select and click **Destination Data Prefix**. 
 13. Under “**Match Conditions**”. 
     * Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Stockholm-Branch-User</font>**.
     ![Configuring Data Policies](./assets/S-3-figure-36.png){ .off-glb }
