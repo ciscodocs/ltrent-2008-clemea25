@@ -305,6 +305,7 @@ VPN    PREFIX              TO PEER
 2      10.20.20.0/24       10.0.0.2         
 2      10.102.102.0/24     10.1.1.2         
 ```
+This output highlights the necessity of implementing the **scenario-3** control policy to enable **route-leaking** and achieve full connectivity **between the VRFs**.
 
 ## Configuring Centralized Control Policy for Route Leaking
 
