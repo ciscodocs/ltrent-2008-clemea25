@@ -280,6 +280,9 @@ VPN    PREFIX              TO PEER
                            10.0.0.2         
                            10.1.1.1         
 ```
+As observed in the output below, the routes from **VRF-1** are <font color="green">**not visible within VRF-2**</font>. 
+The displayed prefixes belong exclusively to **VRF-2**, indicating that route-leaking between **VRF-1** and **VRF-2** has not yet been configured or applied. 
+This behavior is expected in the **absence of a control policy facilitating inter-VRF route exchange**.
 
 ```{.ios .no-copy}
 Controller-1# show omp routes vpn 2 advertised
@@ -302,8 +305,6 @@ VPN    PREFIX              TO PEER
 2      10.20.20.0/24       10.0.0.2         
 2      10.102.102.0/24     10.1.1.2         
 ```
-
-
 
 ## Configuring Centralized Control Policy for Route Leaking
 
