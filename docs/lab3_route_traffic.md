@@ -246,7 +246,62 @@ To verify how the **SD-WAN controller** advertises these routes to the WAN-Edge 
 - **show omp routes <font color ="orange">vpn 1</font> advertised**
 - **show omp routes <font color ="orange">vpn 2</font> advertised**
 
+```{ .ios .no-copy}
+Controller-1# show omp routes vpn 1 advertised
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
 
+VPN    PREFIX              TO PEER          
+--------------------------------------------
+1      10.10.10.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      10.101.101.0/24     10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.102.102.102/32   10.0.0.1         
+                           10.1.1.1         
+                           10.1.1.2         
+1      192.168.10.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      192.168.20.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
+```
+
+```{.ios .no-copy}
+Controller-1# show omp routes vpn 2 advertised
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+
+VPN    PREFIX              TO PEER          
+--------------------------------------------
+2      10.20.20.0/24       10.0.0.2         
+2      10.102.102.0/24     10.1.1.2         
+```
 
 
 
