@@ -660,3 +660,27 @@ has received the policy via OMP and is correctly steering traffic through the **
 
 To verify this, we can utilize the following show command on the **Sydney-Branch** WAN-Edge. This will help confirm whether the 
 centralized data policy has been effectively pushed from the SD-WAN controller (vSmart) to the **Sydney-Branch** router through OMP.
+
+```{ .ios .no-copy linenums="1", hl_lines="1" }
+Sydney-Branch#show sdwan policy from-vsmart 
+from-vsmart data-policy _VPN-1_scenario-3-data-policy
+ direction from-service
+ vpn-list VPN-1
+  sequence 1
+   match
+    source-data-prefix-list      Sydney-Branch-User
+    destination-data-prefix-list Stockholm-Branch-User
+   action accept
+    set
+     service-chain SC8
+     service-chain vpn 2
+     service-chain fall-back
+     service-chain local
+  default-action accept
+from-vsmart lists vpn-list VPN-1
+ vpn 1
+from-vsmart lists data-prefix-list Stockholm-Branch-User
+ ip-prefix 192.168.10.0/24
+from-vsmart lists data-prefix-list Sydney-Branch-User
+ ip-prefix 192.168.20.0/24
+```
