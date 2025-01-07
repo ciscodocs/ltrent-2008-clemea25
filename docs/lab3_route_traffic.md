@@ -304,4 +304,6 @@ aligning with the network's operational requirements.
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
 11. Click **Default Action**, click(./assets/S-1-figure-dots.png){ .off-glb }icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
+12. Test Picture
+![Save Default Action Control Policy](./assets/S-4-figure-1.png){ .off-glb }
 
