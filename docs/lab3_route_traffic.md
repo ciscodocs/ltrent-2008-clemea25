@@ -684,3 +684,9 @@ from-vsmart lists data-prefix-list Stockholm-Branch-User
 from-vsmart lists data-prefix-list Sydney-Branch-User
  ip-prefix 192.168.20.0/24
 ```
+!!! info
+    In our centralized policy configuration, we have implemented both a control policy and a data policy. Within the Cisco SD-WAN policy framework, 
+    it is important to note that centralized control policies are processed directly on the **SD-WAN controller** and are not pushed to the WAN-Edge devices. 
+    Conversely, **centralized data policies** are distributed to the WAN-Edge devices for local enforcement. As a result, when inspecting the configuration 
+    on the **Sydney-Branch** WAN-Edge, only the data policy will be visible. This distinction ensures that control decisions are managed centrally while data traffic 
+    is handled locally at the edge for optimized performance and enforcement.
