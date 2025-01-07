@@ -307,6 +307,66 @@ VPN    PREFIX              TO PEER
 ```
 This output highlights the necessity of implementing the **scenario-3** control policy to enable **route-leaking** and achieve full connectivity **between the VRFs**.
 
+Verify the routes in **VRF-1** and **VRF-2** on **Sydney-Branch** WAN-Edge router to confirm routes are not leaked in VRFs.
+
+```{.ios .no-copy linenums="1" }
+Sydney-Branch#show ip route vrf 1
+
+Routing Table: 1
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+n*Nd  0.0.0.0/0 [6/0], 23:14:47, Null0
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+m        10.10.10.0/24 [251/0] via 10.1.1.1, 08:52:44, Sdwan-system-intf
+m        10.101.101.0/24 [251/0] via 10.0.0.1, 23:14:40, Sdwan-system-intf
+m        10.102.102.102/32 [251/0] via 10.0.0.2, 23:14:40, Sdwan-system-intf
+m     192.168.10.0/24 [251/0] via 10.1.1.1, 08:52:44, Sdwan-system-intf
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, GigabitEthernet3
+L        192.168.20.1/32 is directly connected, GigabitEthernet3
+Sydney-Branch#
+```
+The following output from the **VRF-2** routing table on **Sydney-Branch** confirms that no routes have been leaked from **VRF-2** into **VRF-1**. 
+
+```{.ios .no-copy linenums="1"}
+Sydney-Branch#show ip route vrf 2
+
+Routing Table: 2
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+n*Nd  0.0.0.0/0 [6/0], 23:14:45, Null0
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+C        10.20.20.0/24 is directly connected, GigabitEthernet4
+L        10.20.20.1/32 is directly connected, GigabitEthernet4
+m        10.102.102.0/24 [251/0] via 10.0.0.2, 23:14:38, Sdwan-system-intf
+```
+
 ## Configuring Centralized Control Policy for Route Leaking
 
 Next, we will configure a centralized **control policy** to ensure that traffic initiated from the **Sydney-User** destined 
