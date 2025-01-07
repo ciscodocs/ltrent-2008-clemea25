@@ -600,13 +600,13 @@ This centralized policy ensures that traffic adheres to the intended security an
    ![Configuring Policies](./assets/S-3-figure-29.png){ .off-glb }
 4. Now click **Add Policy** and then click **Create New**.
    ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
-5. Follow the below steps to start configuring data policy. 
-   - Enter Name – **Scenario-3-Data-Policy**
-   - Description - **Scenario-3-Data-Policy**
-6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**” 
-   - Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
-   - Click “**Save and Match**”.
-   ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
+5. Follow the below steps to start configuring data policy.
+   * Enter Name – **scenario-3-Data-Policy**
+   * Description - **scenario-3-Data-Policy**
+6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
+   * Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
+   * Click “**Save and Match**”.
+     ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
 7. Click **Sequence Type**.
    ![Configuring Data Policies](./assets/S-3-figure-32.png){ .off-glb }
 8. From “**Add Data Policy**” pop-up, Select “**Custom**”.
