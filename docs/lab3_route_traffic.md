@@ -600,15 +600,12 @@ This centralized policy ensures that traffic adheres to the intended security an
    ![Configuring Policies](./assets/S-3-figure-29.png){ .off-glb }
 4. Now click **Add Policy** and then click **Create New**.
    ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
-5. Follow the below steps to start configuring data policy.
-
-   1.  Enter Name – **Scenario-3-Data-Policy**
-   2.  Description - **Scenario-3-Data-Policy**
-   
-6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
-
-   1.  Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**.
-   2.  Click “**Save and Match**”.
+5. Follow the below steps to start configuring data policy. 
+   - Enter Name – **Scenario-3-Data-Policy**
+   - Description - **Scenario-3-Data-Policy**
+6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**” 
+   - Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
+   - Click “**Save and Match**”.
    ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
 7. Click **Sequence Type**.
    ![Configuring Data Policies](./assets/S-3-figure-32.png){ .off-glb }
@@ -619,7 +616,8 @@ This centralized policy ensures that traffic adheres to the intended security an
 10. **Match** > **Scroll** right to select and click **Source Data Prefix**.
     ![Configuring Data Policies](./assets/S-3-figure-35.png){ .off-glb }
 11. Under “**Match Conditions**”. 
-        1. Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
+    - Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
 12. Match > Scroll right to select and click **Destination Data Prefix**. 
 13. Under “**Match Conditions**”. 
-        1. Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Stockholm-Branch-User</font>**.
+    -  Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Stockholm-Branch-User</font>**.
+    ![Configuring Data Policies](./assets/S-3-figure-36.png){ .off-glb }
