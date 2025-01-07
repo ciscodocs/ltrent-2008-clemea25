@@ -639,4 +639,5 @@ This centralized policy ensures that traffic adheres to the intended security an
     * Keep **<font color="orange">Site List</font>** radio button checked.
     * Select Site List by clicking in the box – **<font color="green">Sydney-Branch</font>**
     * Click outside the selection box to expose **Select VPN List**.
+    * Select VPN List by clicking in the box – **<font color="green">VPN-1</font>**. 
     ![Configuring Data Policies](./assets/S-3-figure-42.png){ .off-glb }
