@@ -298,6 +298,7 @@ aligning with the network's operational requirements.
    Specifically, ensure that routes from **VPN-1** are leaked into **VPN-2** and vice versa. This step is critical to establishing bidirectional
    connectivity, allowing resources in both VPNs to communicate seamlessly. Proper configuration at this stage ensures the integrity of the routing 
    setup and facilitates the intended traffic flow between the VPNs as per the lab topology design.
+   
    1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**. 
    2. Export To: **<font color="orange">VPN-1-2</font>**
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
@@ -305,4 +306,5 @@ aligning with the network's operational requirements.
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
 11. Click **Default Action**, click(./assets/S-1-figure-dots.png){ .off-glb }icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
+12. 
 
