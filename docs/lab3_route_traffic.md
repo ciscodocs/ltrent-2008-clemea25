@@ -649,3 +649,5 @@ This centralized policy ensures that traffic adheres to the intended security an
     * Click **Activate**. 
     * Click **Activate** on **Activate Policy** pop-up.
     ![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
+22. Now observe **Push vSmart Policy** **Validation success** and **Message** “**<font color="green">Done – Push vSmart Policy**</font>”. 
+    ![Configuring Data Policies](./assets/S-3-figure-45.png){ .off-glb }
