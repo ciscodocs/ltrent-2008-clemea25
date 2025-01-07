@@ -278,10 +278,11 @@ aligning with the network's operational requirements.
 4. Scroll down and click Next.
 5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
 ![Control Policy](./assets/S-3-figure-16.png){ .off-glb }
-6. Now enter the following details and follow the steps:
-   1. Name: **scenario-3-route-leak**
-   2. Description: **scenario-3-route-leak**
-   3. Click “**Sequence Type**” and under “**Add Control Policy**”, click “**Route**”
+6. Proceed by entering the required details as outlined below and follow the steps to configure the control policy.
+   1. Enter **scenario-3-route-leak** as the policy name.
+   2. Description: Provide a brief description, using **scenario-3-route-leak** for clarity and consistency.
+   3. Navigate to **<font color="green">Sequence Type</font>**. Under **Add Control Policy**, choose **Route** to define the **route-leaking** configuration.
+   These steps ensure that the policy is accurately defined and aligned with the lab's objectives, facilitating effective route-leaking between VPNs as part of the scenario setup.
 ![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
 7. Click **<font color="green">Sequence Rule</font>**.
 ![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
