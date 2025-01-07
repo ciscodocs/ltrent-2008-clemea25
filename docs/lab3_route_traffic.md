@@ -320,3 +320,52 @@ With the **scenario-3** **<font color="orange">control policy</font>** successfu
 verify its implementation. This involves ensuring that the policy has been applied correctly and that the intended routes are being leaked between the two VPNs. 
 Additionally, confirm that full reachability is established between **VPN-1** and **VPN-2**, enabling seamless communication as per the lab objectives. 
 Verification is a critical step to validate the policy's effectiveness and to ensure that the network behaves as designed.
+
+```{ .ios .no-copy line-numbers="1"}
+Controller-1# show running-config policy 
+policy
+ lists
+  vpn-list VPN-1-2
+   vpn 1
+   vpn 2
+  !
+  site-list Both-Branches
+   site-id 10
+   site-id 20
+  !
+  site-list Stockholm-Branch
+   site-id 10
+  !
+  site-list Sydney-Branch
+   site-id 20
+  !
+  prefix-list _AnyIpv4PrefixList
+   ip-prefix 0.0.0.0/0 le 32
+  !
+ !
+ control-policy scenario-3-route-leak
+  sequence 1
+   match route
+    prefix-list _AnyIpv4PrefixList
+    site-list   Both-Branches
+    vpn-list    VPN-1-2
+   !
+   action accept
+    export-to
+     vpn-list VPN-1-2
+    !
+   !
+  !
+  default-action accept
+ !
+!
+Controller-1# show running-config apply-policy 
+apply-policy
+ site-list Stockholm-Branch
+  control-policy scenario-3-route-leak in
+ !
+ site-list Sydney-Branch
+  control-policy scenario-3-route-leak in
+ !
+!
+```
