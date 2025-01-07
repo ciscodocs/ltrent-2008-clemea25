@@ -265,4 +265,16 @@ aligning with the network's operational requirements.
       3. Click “**New Site List**” 
          1. Site List Name – **Both-Branches** 
          2. Add Site – <font color="green">10,20</font>
+         
+![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
+   2. Click VPN.  
+      1. Click “**New VPN List**” 
+         1. VPN List Name – **VPN-1** 
+            1. Add VPN – <font color="green">1</font> 
+         2. VPN List Name – **VPN-2** 
+            1. Add VPN – <font color="green">2</font> 
+         3. VPN List Name – **VPN-1-2** 
+            1. Add VPN – <font color="green">1,2</font>
+
+![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
 
