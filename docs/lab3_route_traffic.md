@@ -632,3 +632,5 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
 16. Click “**Save Match and Actions**”. 
     ![Configuring Data Policies](./assets/S-3-figure-40.png){ .off-glb }
+17. Once data policy is saved, we can click **Policy Application** and under **Policy Application**, we select **<font color="green">Traffic Data</font> to apply the data policy.**
+    ![Configuring Data Policies](./assets/S-3-figure-41.png){ .off-glb }
