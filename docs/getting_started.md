@@ -40,9 +40,9 @@ The table below lists the configuration group names assigned to each WAN-Edge ro
 
 | **Device**       | **Configuration Group Name** | **System IP** |
 |------------------|------------------------------|---------------|
-| London-Hub       | EMEA-London-Hub              | 10.0.0.1      |
+| London-Branch    | EMEA-London-Branch           | 10.0.0.1      |
 | Stockholm-Branch | EMEA-Stockholm-Branch        | 10.1.1.1      |
-| Singapore-Hub    | APAC-Singapore-Hub           | 10.0.0.2      |
+| Singapore-Branch | APAC-Singapore-Branch        | 10.0.0.2      |
 | Sydney-Branch    | APAC-Sydney-Branch           | 10.1.1.2      |
 
 
