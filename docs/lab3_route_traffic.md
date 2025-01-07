@@ -564,3 +564,20 @@ m     192.168.10.0/24 [251/0] via 10.1.1.1, 00:13:14, Sdwan-system-intf
 m     192.168.20.0/24 [251/0] via 10.1.1.2 (1), 00:13:14, Sdwan-system-intf
 Sydney-Branch#
 ```
+
+Verify that we have full reachability from Sydney-Branch towards **Stockholm-Branch user** and **Stockholm-FW**.
+
+```{.ios .no-copy linenums="1", hl_lines="1 5"}
+Sydney-Branch#ping vrf 2 192.168.10.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.10.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/3 ms
+
+Sydney-Branch#ping vrf 2 10.10.10.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/3 ms
+Sydney-Branch#
+```
