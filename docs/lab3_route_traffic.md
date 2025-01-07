@@ -281,5 +281,9 @@ aligning with the network's operational requirements.
 5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
 
 ![Control Policy](./assets/S-3-figure-16.png){ .off-glb }
+6. Now enter the following details and follow the steps:
+   1. Name: **scenario-3-route-leak**
+   2. Description: **scenario-3-route-leak**
+   3. Click “**Sequence Type**” and under “**Add Control Policy**”, click “**Route**”
+![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
 
-6.
