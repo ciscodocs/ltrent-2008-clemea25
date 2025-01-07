@@ -690,3 +690,42 @@ from-vsmart lists data-prefix-list Sydney-Branch-User
     Conversely, **centralized data policies** are distributed to the WAN-Edge devices for local enforcement. As a result, when inspecting the configuration 
     on the **Sydney-Branch** WAN-Edge, only the data policy will be visible. This distinction ensures that control decisions are managed centrally while data traffic 
     is handled locally at the edge for optimized performance and enforcement.
+
+To verify that the centralized data policy is functioning as intended, navigate back to the **Sydney-User** in the **Sydney-Branch** site. 
+
+- Perform a traceroute to the **Stockholm-User** located in the **Stockholm-Branch** site using the **traceroute** command: 
+    - _traceroute 192.168.10.2 -n_
+- Observe the traceroute output to confirm that traffic is hitting the **Sydney firewall (Sydney-FW)** at IP address **<font color="#9AAFCB">10.20.20.2</font>**, which is in **<font color="green">VRF-2</font>.
+
+```{.ios .no-copy linenums="1", hl_lines="4"}
+Sydney-User:~$ traceroute 192.168.10.2 -n
+traceroute to 192.168.10.2 (192.168.10.2), 30 hops max, 46 byte packets
+ 1  192.168.20.1  0.823 ms  0.472 ms  0.436 ms
+ 2  10.20.20.2  8.971 ms  1.326 ms  0.993 ms
+ 3  192.168.20.1  1.315 ms  1.006 ms  1.207 ms
+ 4  172.16.2.10  2.063 ms  172.16.1.10  1.954 ms  172.16.2.10  1.301 ms
+ 5  192.168.10.2  2.402 ms  2.087 ms  2.458 ms
+Sydney-User:~$ 
+```
+- Next, verify on the **Sydney-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Stockholm-User**. 
+- This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized policy **<font color="green">even though users are in different VRF</font>**.
+
+```{.ios .no-copy title="Sydney Firewall traffic inspection"}
+Sydney-FW# show conn all
+12 in use, 12 most used
+
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33443, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33449, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33440, idle 0:00:04, bytes 0, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33448, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33438, idle 0:00:04, bytes 0, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33439, idle 0:00:04, bytes 0, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33446, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33447, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33445, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33444, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33441, idle 0:00:04, bytes 18, flags - 
+UDP inside  192.168.20.2:38643 inside  192.168.10.2:33442, idle 0:00:04, bytes 18, flags - 
+Sydney-FW# 
+```
+
