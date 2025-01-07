@@ -535,7 +535,7 @@ Next, verify the routing table on the **Sydney-Branch** WAN-Edge device in **VRF
 This step ensures that the route-leaking configuration is functioning as expected and that traffic originating from VRF-1 is properly advertised and accessible within VRF-2. 
 By checking the routing table, we can validate the successful propagation of the routes and confirm that the connectivity between the two VRFs is fully operational.
 
-```{.ios .no-copy linenums="1", hl_lines="1 23"}
+```{.ios .no-copy linenums="1", hl_lines="1 21 25"}
 Sydney-Branch#show ip route vrf 2
 
 Routing Table: 2
