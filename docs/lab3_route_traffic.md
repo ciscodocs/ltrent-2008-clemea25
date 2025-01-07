@@ -621,3 +621,5 @@ This centralized policy ensures that traffic adheres to the intended security an
 13. Under “**Match Conditions**”. 
     -  Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Stockholm-Branch-User</font>**.
     ![Configuring Data Policies](./assets/S-3-figure-36.png){ .off-glb }
+14. Scroll up and select “**<font color="green">Actions</font>**”.
+15. 
