@@ -567,7 +567,7 @@ Sydney-Branch#
 
 Verify that we have full reachability from Sydney-Branch towards **Stockholm-Branch user** and **Stockholm-FW**.
 
-```{.ios .no-copy linenums="1", hl_lines="1 5"}
+```{.ios .no-copy linenums="1", hl_lines="1 7"}
 Sydney-Branch#ping vrf 2 192.168.10.2
 Type escape sequence to abort.
 Sending 5, 100-byte ICMP Echos to 192.168.10.2, timeout is 2 seconds:
