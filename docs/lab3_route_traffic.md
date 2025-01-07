@@ -278,3 +278,9 @@ aligning with the network's operational requirements.
 
 ![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
 
+4. Scroll down and click Next.
+5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
+
+![Control Policy](./assets/S-3-figure-16.png){ .off-glb }
+
+6.
