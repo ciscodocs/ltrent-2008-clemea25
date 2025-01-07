@@ -652,4 +652,11 @@ This centralized policy ensures that traffic adheres to the intended security an
 22. Once policy is being pushed successfully, we can have **Push vSmart Policy** **Validation success** and **Message** “**<font color="green">Done – Push vSmart Policy**</font>”. 
     ![Configuring Data Policies](./assets/S-3-figure-45.png){ .off-glb }
 
-##
+## Verification
+
+After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been 
+propagated by the SD-WAN controller (vSmart) to the WAN-Edges. In this case, we need to ensure that the **Sydney-Branch** WAN-Edge 
+has received the policy via OMP and is correctly steering traffic through the **Sydney-FW** in **<font color="orange">VRF-2</font>** as intended.
+
+To verify this, we can utilize the following show command on the **Sydney-Branch** WAN-Edge. This will help confirm whether the 
+centralized data policy has been effectively pushed from the SD-WAN controller (vSmart) to the **Sydney-Branch** router through OMP.
