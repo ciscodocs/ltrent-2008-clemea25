@@ -287,4 +287,18 @@ aligning with the network's operational requirements.
    3. Click “**Sequence Type**” and under “**Add Control Policy**”, click “**Route**”
 
 ![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
+7. Click **<font color="green">Sequence Rule</font>**.
+![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
+8. Under Match, select Site and VPN. 
+   1. Site List: **<font color="orange">Both-Branches</font>** 
+   2. VPN List: **<font color="orange">VPN-1-2</font>**
+![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
+9. Next, navigate to the Action section and configure the route-leaking process to enable communication between **VPN-1** and **VPN-2**. 
+   Specifically, ensure that routes from **VPN-1** are leaked into **VPN-2** and vice versa. This step is critical to establishing bidirectional
+   connectivity, allowing resources in both VPNs to communicate seamlessly. Proper configuration at this stage ensures the integrity of the routing 
+   setup and facilitates the intended traffic flow between the VPNs as per the lab topology design.
+   1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**. 
+   2. Export To: **<font color="orange">VPN-1-2</font>**
+![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
+
 
