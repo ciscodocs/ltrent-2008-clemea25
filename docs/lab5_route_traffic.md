@@ -12,7 +12,7 @@ Here is a breakdown of the key components involved in the network path:
 - **Firewall:** All traffic passes through a **firewall (Sydney-FW)**, which is hosted locally at the **APAC-Sydney-Branch (site-20)** in **<font color="green">VRF-2</font>**.
 - **WAN Edge Router:** The **Sydney-Branch** WAN-Edge router, router carries user traffic in ***<font color="#9AAFCB">VRF-1</font>***  and facilitates the firewall reachability in ***<font color="#9AAFCB">VRF-2</font>***. 
 
-Ensure that each component is properly configured and verify the traffic flow is going through **Singapore-FW**.
+Ensure that each component is properly configured and verify the traffic flow is going through **Sydney-FW**.
 
 !!! note
     Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
