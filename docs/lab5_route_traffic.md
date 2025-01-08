@@ -221,3 +221,10 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 16  8.8.8.8  8.830 ms  7.968 ms  7.485 ms
 Sydney-User:~$ 
 ```
+Following Table exhibit how traffic is flowing from **Sydney-User** towards **Google DNS 8.8.8.8**.
+
+| Interface         | IP Address   | Description                                                                                                                          |
+|-------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="orange">VRF 1</font>** connected with **Sydney-User**. |
+| GigabitEthernet 1 | 172.16.1.254 | <font color="#9AAFCB"> **INET** WAN-Edge interface **INET TLOC**.</font>                                                             |
+
