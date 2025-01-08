@@ -130,7 +130,7 @@ In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the 
 
 ## Verification of NAT configuration on Sydney-Branch
 
-```{.ios .no-copy linenums="1", hl_lines="18 19"}
+```{.ios .no-copy linenums="1", hl_lines="19"}
 Sydney-Branch#show ip route vrf 1
 
 Routing Table: 1
