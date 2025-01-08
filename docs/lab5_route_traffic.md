@@ -130,6 +130,15 @@ In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the 
 
 ## Verification of NAT configuration on Sydney-Branch
 
+After enabling NAT on the interface, a static route is installed in **VRF-1** on the **Sydney-Branch** WAN-Edge router,
+
+```{ .ios .no-copy }
+Sydney-Branch#show running-config | i ip nat route vrf 1
+ip nat route vrf 1 0.0.0.0 0.0.0.0 global
+Sydney-Branch#
+```
+As shown in the routing table output below. The route indicates a default gateway (0.0.0.0/0) pointing to **Null0**, signifying that traffic from **VRF-1** destined for external networks will now be processed for **<font color="green">Direct Internet Access (DIA) via the underlay</font>** network. This static route ensures that any traffic not explicitly matched by more specific routes is directed to the NAT-enabled interface for Internet access. The configuration confirms that the NAT setup is successfully integrated with the SD-WAN routing infrastructure, allowing seamless communication between the internal VRF and external networks.
+
 ```{.ios .no-copy linenums="1", hl_lines="19"}
 Sydney-Branch#show ip route vrf 1
 
@@ -159,4 +168,56 @@ m     192.168.10.0/24 [251/0] via 10.1.1.1, 1d11h, Sdwan-system-intf
 C        192.168.20.0/24 is directly connected, GigabitEthernet3
 L        192.168.20.1/32 is directly connected, GigabitEthernet3
 Sydney-Branch#
+```
+Now, Internet access from Sydney-Branch from **<font color="orange">VRF-1</font>** is established, as demonstrated in the output below. 
+
+```{.ios .no-copy}
+Sydney-Branch#ping vrf 1 8.8.8.8
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 7/11/24 ms
+
+Sydney-Branch#ping vrf 1 8.8.4.4  
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 7/8/9 ms
+Sydney-Branch#
+```
+Lets verify from **Sydney-User** if we have internet access or not. 
+
+```{.ios .no-copy}
+Sydney-User:~$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: seq=0 ttl=42 time=10.965 ms
+64 bytes from 8.8.8.8: seq=1 ttl=42 time=10.881 ms
+64 bytes from 8.8.8.8: seq=2 ttl=42 time=9.520 ms
+^C
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 9.520/10.455/10.965 ms
+```
+Lets perform a ***traceroute*** from **<font color="green">Sydney-User</font>** towards Google DNS server **8.8.8.8**.
+
+```{.ios .no-copy}
+Sydney-User:~$ traceroute 8.8.8.8 -n
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
+ 1  192.168.20.1  0.639 ms  0.781 ms  0.916 ms
+ 2  172.16.1.254  1.210 ms  1.193 ms  0.761 ms
+ 3  192.168.255.1  1.560 ms  1.257 ms  2.069 ms
+ 4  198.18.128.1  2.222 ms  2.283 ms  1.956 ms
+ 5  10.255.0.3  1.560 ms  2.146 ms  2.303 ms
+ 6  10.1.27.9  2.436 ms  2.489 ms  2.459 ms
+ 7  4.4.4.2  2.724 ms  2.188 ms  2.010 ms
+ 8  64.103.43.33  2.590 ms  3.745 ms  3.221 ms
+ 9  10.230.4.140  12.564 ms  7.000 ms  7.031 ms
+10  10.230.4.130  8.108 ms  6.868 ms  6.957 ms
+11  64.103.40.93  7.442 ms  7.649 ms  64.103.40.97  9.068 ms
+12  128.107.8.18  10.159 ms  128.107.8.46  7.378 ms  7.507 ms
+13  195.66.224.125  8.222 ms  7.516 ms  9.600 ms
+14  192.178.97.41  9.513 ms  192.178.97.181  8.075 ms  192.178.97.41  8.374 ms
+15  142.251.54.49  7.849 ms  142.251.54.35  8.759 ms  192.178.46.83  8.876 ms
+16  8.8.8.8  8.830 ms  7.968 ms  7.485 ms
+Sydney-User:~$ 
 ```
