@@ -675,6 +675,10 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Configuring Data Policies](./assets/S-3-figure-38.png){ .off-glb }
 15. Click **<font color="orange">Service Chain Type</font>** and scroll the options down a bit and select “**Service Chain Type**” – for example **<font color="green">SC6</font>**. 
     - Under VPN, specify VPN **<font color="green">2</font>**.
-    - Under **TLOC List** select **<font color="green">Local</font>**. 
+    - Select **<font color="orange">Remote</font>**.
+    - Under **TLOC section** enter the following information:
+      - **IP** – **<font color="green">10.0.0.2</font>**.
+      - **Color** – **<font color="green">biz-internet</font>**.
+      - **Encapsulation** - **<font color="green">IPSEC</font>** 
     - Uncheck **<font color="green">Restrict</font>**. 
-    ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-4-figure-19.png){ .off-glb }
