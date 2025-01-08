@@ -794,5 +794,5 @@ The centralized data policy ensured that all traffic was directed through the **
 !!! info
     Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized policy configured in the current exercise. **Deactivating** the policy 
     ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized policy is successfully deactivated 
-    and confirmed, delete the service chain parcel **Sydney-Branch-Service-Attachment** in **Sydney-Branch** WAN-Edge service profile **APAC-Sydney-Branch-Service-VPN**. Now we can confidently move forward to 
+    and confirmed, delete the service chain parcel **Singapore-Branch-Service-Attachment** in **Singapore-Branch** WAN-Edge service profile **APAC-Singapore-Branch-Service-VPN**. Now we can confidently move forward to 
     the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
