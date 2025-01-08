@@ -784,3 +784,15 @@ UDP inside  192.168.10.2:34198 inside  192.168.20.2:33443, idle 0:00:01, bytes 0
 UDP inside  192.168.10.2:34198 inside  192.168.20.2:33450, idle 0:00:01, bytes 18, flags - 
 Singapore-FW# 
 ```
+
+## Conclusion
+In conclusion, the configuration group and centralized policy implemented in this lab successfully achieved the intended traffic 
+flow and inspection requirements. Traffic originating from the **Stockholm-User** at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** 
+was effectively routed through the **Singapore (Singapore-FW)** located at **Singapore-Branch** in a **separate VRF (VRF-2)**. The centralized control policy **enabled route-leaking between VRF-1 and VRF-2**, allowing the **Stockholm-Branch** WAN-Edge to establish connectivity with the firewall. 
+The centralized data policy ensured that all traffic was directed through the **Singapore-firewall** for inspection before proceeding to its destination. This demonstrates the effective use of service chaining and centralized policy mechanisms in Cisco SD-WAN to implement advanced traffic steering and security measures.
+
+!!! info
+    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized policy configured in the current exercise. **Deactivating** the policy 
+    ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized policy is successfully deactivated 
+    and confirmed, delete the service chain parcel **Sydney-Branch-Service-Attachment** in **Sydney-Branch** WAN-Edge service profile **APAC-Sydney-Branch-Service-VPN**. Now we can confidently move forward to 
+    the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
