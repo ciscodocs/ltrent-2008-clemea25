@@ -27,3 +27,79 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 <figure markdown>
   ![Scenario-2 Traffic Flow](./assets/Scenario-4.gif)
 </figure>
+
+## Traffic flow without any policy
+In the initial configuration, without applying any traffic policies, the routes learned from the **Sydney-Branch** are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
+
+```{.ios .no-copy}
+Sydney-Branch#show sdwan omp routes 192.168.10.0/24 
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                                                                                AFFINITY                                 
+                                                      PATH                      ATTRIBUTE                                                       GROUP                                    
+TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    TYPE       TLOC IP          COLOR            ENCAP  PREFERENCE  NUMBER      REGION ID   REGION PATH      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0         1      192.168.10.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.1         mpls             ipsec  -           None        None        -                
+                                     100.0.0.101      2      1003     C,I,R     installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
+
+```
+To verify this, we initiate a ping from the **Sydney-User** (**<font color="#9AAFCB">IP: 192.168.20.2</font>**) to the **Stockholm-User** (**<font color="#9AAFCB">IP: 192.168.10.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
+
+```{.ios, .no-copy}
+Sydney-User:~$ ping 192.168.10.2
+PING 192.168.10.2 (192.168.10.2): 56 data bytes
+64 bytes from 192.168.10.2: seq=0 ttl=42 time=1.777 ms
+64 bytes from 192.168.10.2: seq=1 ttl=42 time=2.463 ms
+64 bytes from 192.168.10.2: seq=2 ttl=42 time=2.217 ms
+64 bytes from 192.168.10.2: seq=3 ttl=42 time=2.247 ms
+^C
+--- 192.168.10.2 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.777/2.176/2.463 ms
+Sydney-User:~$ 
+```
+Additionally, traffic originating from the **Sydney-Branch** flows directly to the **Stockholm-Branch** via the available TLOCs, ensuring efficient and balanced connectivity in the absence of traffic policies.
+
+```{.ios, .no-copy}
+Sydney-User:~$ traceroute  192.168.10.2 -n
+traceroute to 192.168.10.2 (192.168.10.2), 30 hops max, 46 byte packets
+ 1  192.168.20.1  0.416 ms  0.352 ms  0.496 ms
+ 2  172.16.1.10  0.879 ms  0.635 ms  1.400 ms
+ 3  192.168.10.2  0.898 ms  1.423 ms  0.852 ms
+Sydney-User:~$
+```
+
+!!! note
+    In the traceroute above, we observe that the traffic is currently routed over the **INET** TLOC. However, it is also possible for the traffic to use the **MPLS** TLOC, as SD-WAN employs ECMP (Equal-Cost Multi-Path) to balance traffic across all available TLOCs.
+
+Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockholm-User**.
+
+| Interface         | IP Address   | Description                                                                                                                          |
+|-------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| GigabitEthernet 3 | 192.168.20.1 | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface in **<font color="orange">VRF 1</font>** connected with **Sydney-User**. |
+| GigabitEthernet 1 | 172.16.1.10  | <font color="#9AAFCB"> **Sydney-Branch** WAN-Edge interface **INET TLOC**.</font>                                                    |
+| eth0              | 192.168.10.2 | <font color="#9AAFCB"> **Stockholm-User** IP address.</font>                                                                         |
+
+The **Singapore-Branch** WAN-Edge router establishes connectivity with the **Singapore-FW** firewall through its **<font color="#9AAFCB">GigabitEthernet 4</font>** interface, which is part of <font color="orange">**VRF-2**</font>. This interface facilitates the secure and efficient inspection of traffic passing through the firewall. 
+
+The following table provides a detailed overview of the IP addressing configuration assigned to the **Sydney-Branch** WAN-Edge router, ensuring clarity and ease of reference for subsequent tasks in the lab.
+
+| Interface         | IP Address   | Description                                                                            |
+|-------------------|--------------|----------------------------------------------------------------------------------------|
+| GigabitEthernet 4 | 10.102.102.2 | <font color="#9AAFCB"> **Singapore-FW** GigabitEthernet 4 interface IP address.</font> |
+

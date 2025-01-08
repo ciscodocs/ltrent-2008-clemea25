@@ -33,7 +33,6 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 In the initial configuration, without applying any traffic policies, the routes learned from the **Stockholm-Branch** are distributed equally across both TLOCs, leveraging ECMP (Equal-Cost Multi-Path) for optimal path selection.
 
 ```{.ios, .no-copy}
-
 Sydney-Branch#show sdwan omp routes 192.168.10.0/24 
 Code:
 C   -> chosen
@@ -58,7 +57,6 @@ TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0         1      192.168.10.0/24     100.0.0.101      1      1003     C,I,R     installed  10.1.1.1         mpls             ipsec  -           None        None        -                
                                      100.0.0.101      2      1003     C,I,R     installed  10.1.1.1         biz-internet     ipsec  -           None        None        -                
-
 ```
 
 To verify this, we initiate a ping from the **Sydney-User** (**<font color="#9AAFCB">IP: 192.168.20.2</font>**) to the **Stockholm-User** (**<font color="#9AAFCB">IP: 192.168.10.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
