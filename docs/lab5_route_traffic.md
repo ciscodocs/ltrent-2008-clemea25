@@ -58,7 +58,7 @@ C        192.168.20.0/24 is directly connected, GigabitEthernet3
 L        192.168.20.1/32 is directly connected, GigabitEthernet3
 Sydney-Branch#
 ```
-The **Sydney-Branch** WAN-Edge router is able to reach the **Internet** through the **<font color="green">underlay network</font>**, confirming that basic Internet connectivity is functional at the transport level. However, Internet access from **<font color="orange">VRF-1</font>** is not established, as demonstrated in the output below. This indicates that while the underlay network is properly configured for external reachability, additional configurations, such as **NAT**, are required to enable Internet connectivity for VRF-1.
+The **Sydney-Branch** WAN-Edge router is able to reach the **Internet** through the **<font color="green">underlay network</font>**, confirming that basic Internet connectivity is functional at the transport level. 
 
 ```{.ios .no-copy}
 Sydney-Branch#ping 8.8.8.8
@@ -74,3 +74,20 @@ Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:
 Success rate is 100 percent (5/5), round-trip min/avg/max = 7/8/10 ms
 Sydney-Branch#
 ```
+However, Internet access from **<font color="orange">VRF-1</font>** is not established, as demonstrated in the output below. This indicates that while the underlay network is properly configured for external reachability, additional configurations, such as **NAT**, are required to enable Internet connectivity for **<font color="green">VRF-1</font>**.
+
+```{.ios .no-copy}
+Sydney-Branch#ping vrf 1 8.8.8.8
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+
+Sydney-Branch#ping vrf 1 8.8.4.4
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Sydney-Branch#
+```
+
