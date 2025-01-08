@@ -121,3 +121,24 @@ This configuration ensures that the desired service policies are enforced as tra
    ![APAC Singapore Configuration Group](./assets/S-4-figure-3.png){ .off-glb }
 5. Click dropdown arrow and select **Add New** in **Service Chain Attachment Gateway** configuration parcel.
    ![APAC Singapore Configuration Group](./assets/S-4-figure-4.png){ .off-glb }
+6. Enter the name **Singapore-Firewall-Service-Attachment** and Description **Singapore-Firewall-Service-Attachment** for the service chain attachment gateway.
+   ![Service Attachment Gateway Definition](./assets/S-4-figure-5.png){ .off-glb }
+7. Now click **<font color="green">Add Service Chain</font>** to add the service chain definition.
+   ![Service Attachment Gateway Definition](./assets/S-4-figure-4.5.png){ .off-glb }
+7. Select name **Singapore-Firewall-SC-Def** and description **Singapore-Firewall-SC-Def**.
+8. Now select **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
+   ![Service Attachment Gateway Definition](./assets/S-3-figure-6.png){ .off-glb } 
+9. Under Basic Information, enter **VPN** <font color="orange">**2**</font>. 
+10. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb } 
+11. Enter **Service IPv4 Address <font color="#9AAFCB">10.102.102.2</font>**. This is the IP address of **Singapore Firewall (***<font color="green">Singapore-FW</font>***)**. 
+12. Enter SD-WAN Router Interface as **GigabitEthernet4** and click <font color="orange">**Save**</font>.
+    ![Service Attachment Gateway Definition](./assets/S-1-figure-14.png){ .off-glb }
+    The **GigabitEthernet4** interface on the **Singapore-Branch** WAN-Edge router serves as the connection point for the **Singapore-FW firewall**. 
+    This interface facilitates the integration of the firewall into the service chain, allowing traffic to be redirected through the firewall for 
+    inspection or policy enforcement as configured. The proper configuration of this interface is crucial for ensuring seamless communication between 
+    the WAN-Edge router and the firewall, enabling the desired security and traffic management features within the SD-WAN environment. 
+13. Click **Back** at bottom left.
+    ![How to go back to Configuration Group](./assets/S-3-figure-7.png){ .off-glb } 
+14. As we add the **Service Attachment Gateway Definition**, now configuration group for **Singapore-Sydney-Branch** is now marked as <font color="red">out of sync</font>.
+    ![How to go back to Configuration Group](./assets/S-4-figure-6.png){ .off-glb } 
