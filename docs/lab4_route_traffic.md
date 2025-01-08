@@ -689,12 +689,12 @@ This centralized policy ensures that traffic adheres to the intended security an
 18. Now Click **New Site/WAN Region List and VPN List**
     * Keep **<font color="orange">From Service</font>** radio button checked.
     * Keep **<font color="orange">Site List</font>** radio button checked.
-    * Select Site List by clicking in the box – **<font color="green">Sydney-Branch</font>**
+    * Select Site List by clicking in the box – **<font color="green">Stockholm-Branch</font>**
     * Click outside the selection box to expose **Select VPN List**.
     * Select VPN List by clicking in the box – **<font color="green">VPN-1</font>**. 
-    ![Configuring Data Policies](./assets/S-3-figure-42.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-4-figure-21.png){ .off-glb }
 19. Click **<font color="orange">Save Policy</font>** at the bottom.
-20. Now data policy is added into centralized policy **scenario-3**. We can click three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} and click **Preview** to review policy. 
+20. Now data policy is added into centralized policy **scenario-4**. We can click three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} and click **Preview** to review policy. 
     * Click **Okay** once reviewed.
     ![Configuring Data Policies](./assets/S-3-figure-43.png){ .off-glb }
 21. In order to activate the policy, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the “Scenario-3” policy.
