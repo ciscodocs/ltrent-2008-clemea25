@@ -85,7 +85,7 @@ nav:
       - Lab 2a - Using Data Policy for Route traffic from Stockholm to Sydney via London firewall in Same VRF: lab2a_route_traffic_data_policy.md
       - Lab 2b - Using Control Policy for Route traffic from Stockholm to Sydney via London firewall in Same VRF: lab2b_route_traffic_control_policy.md
       - Lab 3 - Route traffic from Sydney to Stockholm via local firewall in Sydney in different VRF: lab3_route_traffic.md
-      - Lab 4 - Getting Started: lab4_route_traffic.md
+      - Lab 4 - Routing traffic through firewall in Singapore across VRFs for Site-to-Site Communication: lab4_route_traffic.md
       - Lab 5 - Getting Started: lab5_getting_started.md
       - Lab 6 - Using Data Policy for Route Traffic from Sydney to Stockholm via remote Firewall in Same VRF: lab6a_route_traffic_data_policy.md
       - Conclusion: conclusion.md
