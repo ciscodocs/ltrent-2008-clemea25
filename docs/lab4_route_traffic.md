@@ -491,7 +491,7 @@ The output below demonstrates that the **prefix <font color="green">10.102.102.0
 has been successfully **leaked into VRF-1**. This confirms that the control policy for route-leaking is now active and 
 functioning as intended. The leaked prefix is visible alongside other prefixes **native to VRF-1**, and it is being advertised to the **relevant peers**.
 
-```{.ios .no-copy linenums="1", hl_lines="21 22 23 24"}
+```{.ios .no-copy linenums="1", hl_lines="21 28 29 30 31"}
 Controller-1# show omp routes vpn 1 advertised
 Code:
 C   -> chosen
@@ -538,7 +538,7 @@ This validation confirms the effectiveness of the configured control policy in a
 
 Prefix **10.102.102.0/24** is now visible in the **VRF-1** routing table on the **Stockholm-Branch**. 
 
-```{.ios .no-copy linenums="1", hl_lines="21 22 23 24"}
+```{.ios .no-copy linenums="1", hl_lines="23 24 25"}
 Stockholm-Branch#show ip route vrf 1
 
 Routing Table: 1
@@ -584,7 +584,7 @@ Next, verify the routing table on the **Sydney-Branch** WAN-Edge device in **VRF
 This step ensures that the route-leaking configuration is functioning as expected and that traffic originating from **VRF-1** is properly advertised and accessible within **VRF-2**. 
 By checking the routing table, we can validate the successful propagation of the routes and confirm that the connectivity between the two VRFs is fully operational.
 
-```{.ios .no-copy linenums="1", hl_lines="1"}
+```{.ios .no-copy linenums="1", hl_lines="1 26 27"}
 Sydney-Branch#show ip route vrf 2
 
 Routing Table: 2
