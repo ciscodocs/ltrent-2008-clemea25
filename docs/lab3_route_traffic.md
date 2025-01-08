@@ -590,7 +590,7 @@ Stockholm-Branch#
 ```
 
 Next, verify the routing table on the **Sydney-Branch** WAN-Edge device in **VRF-2** to confirm if the routes from **VRF-1** have been successfully leaked into **VRF-2**. 
-This step ensures that the route-leaking configuration is functioning as expected and that traffic originating from VRF-1 is properly advertised and accessible within VRF-2. 
+This step ensures that the route-leaking configuration is functioning as expected and that traffic originating from **VRF-1** is properly advertised and accessible within **VRF-2**. 
 By checking the routing table, we can validate the successful propagation of the routes and confirm that the connectivity between the two VRFs is fully operational.
 
 ```{.ios .no-copy linenums="1", hl_lines="1 21 25 26"}

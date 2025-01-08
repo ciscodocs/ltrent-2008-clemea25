@@ -538,3 +538,48 @@ This validation confirms the effectiveness of the configured control policy in a
 
 Prefix **10.102.102.0/24** is now visible in the **VRF-1** routing table on the **Stockholm-Branch**. 
 
+```{.ios .no-copy linenums="1", hl_lines="21 22 23 24"}
+Stockholm-Branch#show ip route vrf 1
+
+Routing Table: 1
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+n*Nd  0.0.0.0/0 [6/0], 1d17h, Null0
+      10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+C        10.10.10.0/24 is directly connected, GigabitEthernet4
+L        10.10.10.1/32 is directly connected, GigabitEthernet4
+m        10.20.20.0/24 [251/0] via 10.1.1.2, 00:03:45, Sdwan-system-intf
+m        10.101.101.0/24 [251/0] via 10.0.0.1, 1d17h, Sdwan-system-intf
+m        10.102.102.0/24 [251/0] via 10.0.0.2, 00:03:45, Sdwan-system-intf
+m        10.102.102.102/32 [251/0] via 10.0.0.2, 1d17h, Sdwan-system-intf
+      192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.10.0/24 is directly connected, GigabitEthernet3
+L        192.168.10.1/32 is directly connected, GigabitEthernet3
+m     192.168.20.0/24 [251/0] via 10.1.1.2, 1d17h, Sdwan-system-intf
+```
+Let's try to ping from **Stockholm-Branch** WAN-Edge router from **VRF-1** towards **Singapore-FW** ip address **10.102.102.2**.
+
+```{.ios .no-copy linenums="1", hl_lines="1"}
+Stockholm-Branch#ping vrf 1 10.102.102.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.102.102.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/3 ms
+Stockholm-Branch#
+```
+Next, verify the routing table on the **Sydney-Branch** WAN-Edge device in **VRF-2** to confirm if the routes from **VRF-1** have been successfully leaked into **VRF-2**. 
+This step ensures that the route-leaking configuration is functioning as expected and that traffic originating from **VRF-1** is properly advertised and accessible within **VRF-2**. 
+By checking the routing table, we can validate the successful propagation of the routes and confirm that the connectivity between the two VRFs is fully operational.
