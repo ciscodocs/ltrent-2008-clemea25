@@ -90,4 +90,6 @@ Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:
 Success rate is 0 percent (0/5)
 Sydney-Branch#
 ```
+## Enabling NAT in Configuration Group for Sydney-Branch 
+
 
