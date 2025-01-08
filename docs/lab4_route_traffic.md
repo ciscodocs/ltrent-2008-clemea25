@@ -766,7 +766,7 @@ Stockholm-User:~$
 - Next, verify on the **Singapore-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Sydney-User**. 
 - This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized policy **<font color="green">even though users are in different VRF</font>**.
 
-```{.ios .no-copy title="Sydney Firewall traffic inspection"}
+```{.ios .no-copy title="Singapore Firewall traffic inspection"}
 Singapore-FW# show conn all
 12 in use, 13 most used
 
