@@ -108,7 +108,7 @@ In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the 
    ![Enable NAT](./assets/S-5-figure-4.png){ .off-glb }
 7. Click **Back**
    ![Enable NAT](./assets/S-5-figure-5.png){ .off-glb } 
-8. As we add the **Service Attachment Gateway Definition**, now configuration group for **APAC-Sydney-Branch** is now marked as <font color="red">out of sync</font>. 
+8. As we enable the **NAT**, now configuration group for **APAC-Sydney-Branch** is now marked as <font color="red">out of sync</font>. 
 9. Click **APAC-Sydney-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb } 
 10. In **Deploy Configuration Group** page, select **APAC-Sydney-Branch** by clicking the square Radio Button and Click **Next**.  
