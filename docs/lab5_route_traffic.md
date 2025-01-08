@@ -550,11 +550,11 @@ aligning with the network's operational requirements.
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
 12. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
 ![Save Default Action Control Policy](./assets/S-5-figure-8.png){ .off-glb }
-13. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-3-route-leak</font>** 
-    policy in inbound direction on both **Stockholm-Branch** and **Sydney-Branch**. Now after that click **<font color="green">Save Policy</font>**.
-![Applying Control Policy](./assets/S-3-figure-24.png){ .off-glb }
+13. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-5-route-leak</font>** 
+    policy in inbound direction on **Sydney-Branch**. Now after that click **<font color="green">Save Policy</font>**.
+![Applying Control Policy](./assets/S-5-figure-9.png){ .off-glb }
 14. Now click ![three dots](./assets/S-1-figure-dots.png){ .off-glb width="25" } and select **Preview** to see the content of the control policy.
-![Applying Control Policy](./assets/S-3-figure-25.png){ .off-glb }
+![Applying Control Policy](./assets/S-5-figure-10.png){ .off-glb }
 15. In order to deploy the policy click **Activate**.
 ![Activating Control Policy](./assets/S-3-figure-26.png){ .off-glb }
 16. Once policy is being pushed successfully, we can have **<font color="green">Success</font>** message that policy is pushed successfully to **SD-WAN controller**.
