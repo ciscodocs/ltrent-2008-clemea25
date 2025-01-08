@@ -110,3 +110,11 @@ This service chain defines the sequence of services that will be applied to traf
 for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services 
 to be applied to the traffic, such as redirection through a **Singapore-FW** firewall in **<font color="bluw">VRF 2</font>**. 
 This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
+
+1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
+   ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
+2. Locate and click on the **APAC-Singapore-Branch** Configuration Group as illustrated below.
+   ![Locate Configuration Group](./assets/S-4-figure-1.png){ .off-glb }
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **APAC-Singapore-Branch - Service Profile** as illustrated below.   
+   ![APAC Sydney Configuration Group](./assets/S-4-figure-2.png){ .off-glb }
+4. 
