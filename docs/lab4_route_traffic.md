@@ -751,3 +751,36 @@ To verify that the centralized data policy is functioning as intended, navigate 
 - Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
     - _traceroute 192.168.20.2 -n_
 - Observe the traceroute output to confirm that traffic is hitting the **Singapore firewall (Singapore-FW)** at IP address **<font color="#9AAFCB">10.102.102.2</font>**, which is in **<font color="green">VRF-2</font>**.
+
+```{.ios .no-copy linenums="1", hl_lines="4"}
+Stockholm-User:~$ traceroute 192.168.20.2 -n
+traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
+ 1  192.168.10.1  1.004 ms  0.638 ms  0.556 ms
+ 2  172.16.1.102  1.222 ms  0.960 ms  1.178 ms
+ 3  10.102.102.2  2.540 ms  1.872 ms  2.170 ms
+ 4  172.16.1.102  2.236 ms  3.146 ms  2.701 ms
+ 5  172.16.2.20  3.736 ms  3.367 ms  3.102 ms
+ 6  192.168.20.2  3.104 ms  3.389 ms  3.177 ms
+Stockholm-User:~$ 
+```
+- Next, verify on the **Singapore-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Sydney-User**. 
+- This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized policy **<font color="green">even though users are in different VRF</font>**.
+
+```{.ios .no-copy title="Sydney Firewall traffic inspection"}
+Singapore-FW# show conn all
+12 in use, 13 most used
+
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33441, idle 0:00:01, bytes 0, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33445, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33447, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33449, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33442, idle 0:00:01, bytes 0, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33446, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33444, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33452, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33451, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33448, idle 0:00:01, bytes 18, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33443, idle 0:00:01, bytes 0, flags - 
+UDP inside  192.168.10.2:34198 inside  192.168.20.2:33450, idle 0:00:01, bytes 18, flags - 
+Singapore-FW# 
+```
