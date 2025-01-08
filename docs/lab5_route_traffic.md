@@ -507,14 +507,8 @@ aligning with the network's operational requirements.
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb }
 3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
    ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb }
-   1. Click Site in left navigation pane and check if following sites are already created. 
+   1. Click Site in left navigation pane and check if following sites are already created.
       1. Click “**New Site List**” 
-         1. Site List Name - **Stockholm-Branch** 
-         2. Add Site – <font color="green">10</font>
-      2. Click “**New Site List**”
-         1. Site List Name - **Sydney-Branch** 
-         2. Add Site – <font color="green">20</font>
-      3. Click “**New Site List**” 
          1. Site List Name – **Stockholm-Sydney** 
          2. Add Site – <font color="green">10,20</font> 
 ![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
