@@ -117,7 +117,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
 2. Locate and click on the **APAC-Sydney-Branch** Configuration Group as illustrated below.
    ![Locate Configuration Group](./assets/S-3-figure-1.png){ .off-glb }
-3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **APAC-Sydney-Branch - Service Profile** as illustrated below.   
    ![APAC Sydney Configuration Group](./assets/S-3-figure-2.png){ .off-glb }
 4. Select **<font color="#9AAFCB">Add New Feature</font>** and add a <font color="orange">**Service Chain Attachment Gateway**</font> as illustrated below.
    ![Adding New Feature in Configuration Group](./assets/S-3-figure-3.png){ .off-glb }
