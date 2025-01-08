@@ -487,3 +487,54 @@ apply-policy
  !
 !
 ```
+The output below demonstrates that the **prefix <font color="green">10.102.102.0/24</font>**, which belongs to **VRF-2**, 
+has been successfully **leaked into VRF-1**. This confirms that the control policy for route-leaking is now active and 
+functioning as intended. The leaked prefix is visible alongside other prefixes **native to VRF-1**, and it is being advertised to the **relevant peers**.
+
+```{.ios .no-copy linenums="1", hl_lines="21 22 23 24"}
+Controller-1# show omp routes vpn 1 advertised
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+
+VPN    PREFIX              TO PEER          
+--------------------------------------------
+1      10.10.10.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      10.20.20.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.101.101.0/24     10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.102.102.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.102.102.102/32   10.0.0.1         
+                           10.1.1.1         
+                           10.1.1.2         
+1      192.168.10.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      192.168.20.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1                
+```
+
+This validation confirms the effectiveness of the configured control policy in achieving route-leaking, thereby enabling connectivity between the two VRFs as per the lab design.
+
+Prefix **10.102.102.0/24** is now visible in the **VRF-1** routing table on the **Stockholm-Branch**. 
+
