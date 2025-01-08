@@ -29,3 +29,32 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 
 In the initial configuration, prior to applying any traffic policies or making modifications to the configuration group, it is observed that connectivity to the Internet, specifically to the **<font color="orange">Google DNS server 8.8.8.8</font>**, is not established from **VRF-1** on the **Sydney-Branch** WAN-Edge router. This lack of connectivity indicates that the current setup does not support direct Internet access from **VRF-1**, highlighting the need for further configuration, such as route adjustments, NAT settings, or centralized policies, to enable Internet reachability. This baseline observation provides a starting point for implementing the necessary changes in subsequent steps.
 
+```{ .ios .no-copy }
+Sydney-Branch#show ip route vrf 1
+
+Routing Table: 1
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+m        10.10.10.0/24 [251/0] via 10.1.1.1, 1d10h, Sdwan-system-intf
+m        10.101.101.0/24 [251/0] via 10.0.0.1, 2d01h, Sdwan-system-intf
+m        10.102.102.102/32 [251/0] via 10.0.0.2, 2d01h, Sdwan-system-intf
+m     192.168.10.0/24 [251/0] via 10.1.1.1, 1d10h, Sdwan-system-intf
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, GigabitEthernet3
+L        192.168.20.1/32 is directly connected, GigabitEthernet3
+Sydney-Branch#
+```
