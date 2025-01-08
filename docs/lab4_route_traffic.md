@@ -141,4 +141,4 @@ This configuration ensures that the desired service policies are enforced as tra
 13. Click **Back** at bottom left.
     ![How to go back to Configuration Group](./assets/S-3-figure-7.png){ .off-glb } 
 14. As we add the **Service Attachment Gateway Definition**, now configuration group for **Singapore-Sydney-Branch** is now marked as <font color="red">out of sync</font>.
-    ![How to go back to Configuration Group](./assets/S-4-figure-6.png){ .off-glb } 
+    ![Out of sync](./assets/S-4-figure-6.png){ .off-glb } 
