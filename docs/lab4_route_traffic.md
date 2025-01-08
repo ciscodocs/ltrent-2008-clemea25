@@ -116,8 +116,8 @@ This configuration ensures that the desired service policies are enforced as tra
 2. Locate and click on the **APAC-Singapore-Branch** Configuration Group as illustrated below.
    ![Locate Configuration Group](./assets/S-4-figure-1.png){ .off-glb }
 3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **APAC-Singapore-Branch - Service Profile** as illustrated below.   
-   ![APAC Singapore Configuration Group](./assets/S-4-figure-2.png){ .off-glb }
-4. Click ![pencil](./assets/S-1-figure-pencil.png){ .off-glb } icon of **APAC-Singapore-Branch-Service Profile** and click **Add New Feature** and click **Servce Chain Attachment Gateway**.
+   ![APAC Singapore Configuration Group](./assets/S-4-figure-2.png){ .off-glb } 
+4. Click **Add New Feature** and click **Servce Chain Attachment Gateway**.
    ![APAC Singapore Configuration Group](./assets/S-4-figure-3.png){ .off-glb }
 5. Click dropdown arrow and select **Add New** in **Service Chain Attachment Gateway** configuration parcel.
    ![APAC Singapore Configuration Group](./assets/S-4-figure-4.png){ .off-glb }
