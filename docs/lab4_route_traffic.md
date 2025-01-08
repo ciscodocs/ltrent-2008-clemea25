@@ -752,7 +752,7 @@ To verify that the centralized data policy is functioning as intended, navigate 
     - _traceroute 192.168.20.2 -n_
 - Observe the traceroute output to confirm that traffic is hitting the **Singapore firewall (Singapore-FW)** at IP address **<font color="#9AAFCB">10.102.102.2</font>**, which is in **<font color="green">VRF-2</font>**.
 
-```{.ios .no-copy linenums="1", hl_lines="4"}
+```{.ios .no-copy linenums="1", hl_lines="3"}
 Stockholm-User:~$ traceroute 192.168.20.2 -n
 traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
  1  192.168.10.1  1.004 ms  0.638 ms  0.556 ms
