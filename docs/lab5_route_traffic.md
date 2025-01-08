@@ -1,4 +1,4 @@
-# Lab 5 - Getting Started
+# Lab 5 - Direct Internet Breakout for APAC-Sydney-Branch (Site-20) Traffic via Underlay with Firewall Inspection
 
 # Routing Traffic Through Firewall in Singapore Branch Across VRFs for Site-to-Site Communication
 
