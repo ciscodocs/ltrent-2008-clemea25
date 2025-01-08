@@ -636,3 +636,45 @@ enforces the required traffic inspection by leveraging the service chain defined
 will use the **service-chain number** that was previously configured and noted in **<font color="green">step 20</font>** under "**Configuring Service-Chain in Configuration Group**" section. 
 This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
 
+
+1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by **Classic**, and then click on **Policies**. 
+   ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb }
+2. In addition to the previously configured centralized control policy **scenario-4**, where we add **<font color="green">scenario-4-route-leak</font>** for route-leaking, we now introduce a centralized data policy to 
+   ensure that traffic is inspected by the **<font color="green">Sydney-FW</font>** in **<font color="green">VRF-2</font>**. This step enhances the traffic management strategy by directing traffic through the firewall 
+   for inspection, providing additional security and compliance. To implement this, navigate to the centralized policy section, click on ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} next to the <font color="green">**scenario-4**</font> policy, and select **<font color="green">Edit</font>** to add the data policy. 
+   This ensures seamless integration of traffic inspection within the existing policy framework.
+   ![Configuring Policies](./assets/S-3-figure-28.png){ .off-glb }
+3. In order to add data policy, click **Traffic Rules**.
+   ![Configuring Policies](./assets/S-3-figure-29.png){ .off-glb }
+4. Now click **Add Policy** and then click **Create New**.
+   ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
+5. Follow the below steps to start configuring data policy.
+   * Enter Name – **scenario-4-data-policy**
+   * Description - **scenario-4-data-policy**
+6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
+   * Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
+   * Click “**Save and Match**”.
+     ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
+7. Click **Sequence Type**.
+   ![Configuring Data Policies](./assets/S-3-figure-32.png){ .off-glb }
+8. From “**Add Data Policy**” pop-up, Select “**Custom**”.
+   ![Configuring Data Policies](./assets/S-3-figure-33.png){ .off-glb }
+9. Click “**Sequence Rule**”.
+   ![Configuring Data Policies](./assets/S-3-figure-34.png){ .off-glb }
+10. **Match** > **Scroll** right to select and click **Source Data Prefix**.
+    ![Configuring Data Policies](./assets/S-3-figure-35.png){ .off-glb }
+11. Under “**Match Conditions**”. 
+    * Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
+13. Under “**Match Conditions**”. 
+    * Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Stockholm-Branch-User</font>**.
+    ![Configuring Data Policies](./assets/S-3-figure-36.png){ .off-glb }
+14. Scroll up and select “**<font color="green">Actions</font>**”.
+    * Click **Accept** Radio button. 
+    ![Configuring Data Policies](./assets/S-3-figure-37.png){ .off-glb }
+    * Scroll to the right to select “**<font color="green">Service Chain</font>**”.
+    ![Configuring Data Policies](./assets/S-3-figure-38.png){ .off-glb }
+15. Click **<font color="orange">Service Chain Type</font>** and scroll the options down a bit and select “**Service Chain Type**” – for example **<font color="green">SC6</font>**. 
+    - Under VPN, specify VPN **<font color="green">2</font>**.
+    - Under **TLOC List** select **<font color="green">Local</font>**. 
+    - Uncheck **<font color="green">Restrict</font>**. 
+    ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
