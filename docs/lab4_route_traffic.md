@@ -166,3 +166,73 @@ This configuration ensures that the desired service policies are enforced as tra
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-4-figure-12.png){ .off-glb }
 
+## Verification of Service Chain configuration on Singapore-Branch
+
+In the Cisco SD-WAN architecture, service nodes communicate their available services to the **SD-WAN Controller (vSmart)** using the **Overlay Management Protocol (OMP)** with the service route address family. Each WAN-Edge router is responsible for advertising its service routes to the SD-WAN Controller (vSmart), which then maintains these service routes within its **Routing Information Base (RIB)**. 
+
+**<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
+
+```{ .ios, .no-copy, linenums="1", hl_lines="23 24"}
+Singapore-Branch#show sdwan omp services 
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Stg -> staged
+IA  -> On-demand inactive
+Inv -> invalid
+BR-R -> Border-Router reoriginated
+TGW-R -> Transport-Gateway reoriginated
+R-TGW-R -> Reoriginated Transport-Gateway reoriginated
+
+                                                                                 AFFINITY                            
+ADDRESS                                                         PATH   REGION    GROUP                               
+FAMILY   TENANT    VPN    SERVICE  ORIGINATOR  FROM PEER        ID     ID        NUMBER      LABEL    STATUS    VRF  
+---------------------------------------------------------------------------------------------------------------------
+ipv4     0         1      VPN      10.0.0.2    0.0.0.0          66     None      None        1008     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1008     C,Red,R   1    
+         0         2      VPN      10.0.0.2    0.0.0.0          66     None      None        1004     C,Red,R   2    
+                                               0.0.0.0          68     None      None        1004     C,Red,R   2    
+         0         2      SC6      10.0.0.2    0.0.0.0          66     None      None        1009     C,Red,R   2    
+                                               0.0.0.0          68     None      None        1009     C,Red,R   2    
+ipv6     0         1      VPN      10.0.0.2    0.0.0.0          66     None      None        1008     C,Red,R   1    
+                                               0.0.0.0          68     None      None        1008     C,Red,R   1    
+         0         2      VPN      10.0.0.2    0.0.0.0          66     None      None        1004     C,Red,R   2    
+                                               0.0.0.0          68     None      None        1004     C,Red,R   2    
+```
+To verify the service chain configuration on the **Singapore-Branch** WAN-Edge router, access the device CLI and execute the command:
+
+- **show platform software sdwan service-chain database**. 
+
+Review the output to confirm the following details: the **<font color="green">Service Chain ID (e.g., SC6)</font>**, the **<font color="green">VRF (e.g., vrf: 2)</font>**, and the State, which should display **UP** to indicate proper functionality. 
+
+Additionally, verify that the Service is set to **<font color="green">FW (Firewall)</font>**, the TX and RX interface is **GigabitEthernet4**, and the associated IP address is **10.102.102.2**. This verification ensures that the service chain configuration is active and correctly aligned with the intended design.
+
+```{.ios, .no-copy, linenums="1", hl_lines="3 4 5 6 9 17 20" }
+Singapore-Branch#show platform software sdwan service-chain database
+
+Service Chain: SC6
+   vrf: 2
+   label: 1009
+   state: up
+   description:  Singapore-Firewall-SC-Def
+
+   service: FW
+      sequence: 1
+      track-enable: true
+      state: up
+      ha_pair: 1
+         type: ipv4
+         posture: trusted
+         active: [current]
+            tx: GigabitEthernet4, 10.102.102.2
+                endpoint-tracker: auto
+                state: up
+            rx: GigabitEthernet4, 10.102.102.2
+                endpoint-tracker: auto
+                state: up
+```
