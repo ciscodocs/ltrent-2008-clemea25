@@ -127,7 +127,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Service Attachment Gateway Definition](./assets/S-4-figure-51.png){ .off-glb } 
 8. Select name **Singapore-Firewall-SC-Def** and description **Singapore-Firewall-SC-Def**. 
 9. Now select **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
-   ![Service Attachment Gateway Definition](./assets/S-4-figure-6.png){ .off-glb } 
+   ![Service Attachment Gateway Definition](./assets/S-4-figure-14.png){ .off-glb } 
 10. Under Basic Information, enter **VPN** <font color="orange">**2**</font>. 
 11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb } 
