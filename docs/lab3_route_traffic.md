@@ -493,6 +493,7 @@ policy
   default-action accept
  !
 !
+
 Controller-1# show running-config apply-policy 
 apply-policy
  site-list Stockholm-Branch

@@ -571,4 +571,126 @@ To ensure that the policy has been applied correctly on the **SD-WAN controller*
 By reviewing the running configuration of the control policy, we can confirm that the **scenario-5** policy is correctly defined and operational. This verification process is essential to
 validate the deployment and ensure that the policy is functioning as intended to achieve the desired route-leaking between **VPN-1** and **VPN-2**.
 
+```{ .ios .no-copy linenums="1" hl_lines="1 36"}
+Controller-1# show running-config policy
+policy
+ lists
+  vpn-list VPN-1-2
+   vpn 1
+   vpn 2
+  !
+  site-list Stockholm-Sydney
+   site-id 10
+   site-id 20
+  !
+  site-list Sydney-Branch
+   site-id 20
+  !
+  prefix-list _AnyIpv4PrefixList
+   ip-prefix 0.0.0.0/0 le 32
+  !
+ !
+ control-policy scenario-5-route-leak
+  sequence 1
+   match route
+    prefix-list _AnyIpv4PrefixList
+    site-list   Stockholm-Sydney
+    vpn-list    VPN-1-2
+   !
+   action accept
+    export-to
+     vpn-list VPN-1-2
+    !
+   !
+  !
+  default-action accept
+ !
+!
 
+Controller-1# show running-config apply-policy 
+apply-policy
+ site-list Sydney-Branch
+  control-policy scenario-5-route-leak in
+ !
+!
+```
+
+The output below demonstrates that the **prefix <font color="green">10.20.20.0/24</font>**, which belongs to **VRF-2**, 
+has been successfully **leaked into VRF-1**. This confirms that the control policy for route-leaking is now active and 
+functioning as intended. The leaked prefix is visible alongside other prefixes **native to VRF-1**, and it is being advertised to the **relevant peers**.
+
+```{.ios .no-copy linenums="1" hl_lines="21 22 23 24"}
+Controller-1# show omp routes vpn 1 advertised
+Code:
+C   -> chosen
+I   -> installed
+Red -> redistributed
+Rej -> rejected
+L   -> looped
+R   -> resolved
+S   -> stale
+Ext -> extranet
+Inv -> invalid
+Stg -> staged
+IA  -> On-demand inactive
+U   -> TLOC unresolved
+
+VPN    PREFIX              TO PEER          
+--------------------------------------------
+1      10.10.10.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      10.20.20.0/24       10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.101.101.0/24     10.0.0.2         
+                           10.1.1.1         
+                           10.1.1.2         
+1      10.102.102.102/32   10.0.0.1         
+                           10.1.1.1         
+                           10.1.1.2         
+1      192.168.10.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.2         
+1      192.168.20.0/24     10.0.0.1         
+                           10.0.0.2         
+                           10.1.1.1         
+```
+
+This validation confirms the effectiveness of the configured control policy in achieving route-leaking, thereby enabling connectivity between the two VRFs as per the lab design.
+
+
+Prefix **10.20.20.0/24** is now visible in the **VRF-1** routing table on the **<font color="green">Sydney-Branch</font>**. 
+
+```{.ios .no-copy linenums="1" hl_lines="1 22"}
+Sydney-Branch#show ip route vrf 1
+
+Routing Table: 1
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+n*Nd  0.0.0.0/0 [6/0], 01:38:29, Null0
+      10.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
+m        10.10.10.0/24 [251/0] via 10.1.1.1, 1d13h, Sdwan-system-intf
+m        10.20.20.0/24 [251/0] via 10.1.1.2 (2), 00:06:11, Sdwan-system-intf
+m        10.101.101.0/24 [251/0] via 10.0.0.1, 2d03h, Sdwan-system-intf
+m        10.102.102.102/32 [251/0] via 10.0.0.2, 2d03h, Sdwan-system-intf
+m     192.168.10.0/24 [251/0] via 10.1.1.1, 1d13h, Sdwan-system-intf
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, GigabitEthernet3
+L        192.168.20.1/32 is directly connected, GigabitEthernet3
+Sydney-Branch#
+```
