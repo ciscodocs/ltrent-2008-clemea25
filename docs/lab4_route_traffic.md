@@ -570,7 +570,7 @@ C        192.168.10.0/24 is directly connected, GigabitEthernet3
 L        192.168.10.1/32 is directly connected, GigabitEthernet3
 m     192.168.20.0/24 [251/0] via 10.1.1.2, 1d17h, Sdwan-system-intf
 ```
-Let's try to ping from **Stockholm-Branch** WAN-Edge router from **VRF-1** towards **Singapore-FW** ip address **10.102.102.2**.
+Let's try to ping from **Stockholm-Branch** WAN-Edge router from **VRF-1** towards **Singapore-FW** ip address **<font color="orange">10.102.102.2</font>**.
 
 ```{.ios .no-copy linenums="1", hl_lines="1"}
 Stockholm-Branch#ping vrf 1 10.102.102.2
