@@ -667,19 +667,19 @@ This centralized policy ensures that traffic adheres to the intended security an
     * Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Stockholm-Branch-User</font>**.
 13. Under “**Match Conditions**”. 
     * Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
-    ![Configuring Data Policies](./assets/S-3-figure-36.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-4-figure-23.png){ .off-glb }
 14. Scroll up and select “**<font color="green">Actions</font>**”.
     * Click **Accept** Radio button. 
     ![Configuring Data Policies](./assets/S-3-figure-37.png){ .off-glb }
     * Scroll to the right to select “**<font color="green">Service Chain</font>**”.
-    ![Configuring Data Policies](./assets/S-3-figure-38.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-4-figure-24.png){ .off-glb }
 15. Click **<font color="orange">Service Chain Type</font>** and scroll the options down a bit and select “**Service Chain Type**” – for example **<font color="green">SC6</font>**. 
     - Under VPN, specify VPN **<font color="green">2</font>**.
     - Select **<font color="orange">Remote</font>**.
     - Under **TLOC section** enter the following information:
-      - **IP** – **<font color="green">10.0.0.2</font>**.
-      - **Color** – **<font color="green">biz-internet</font>**.
-      - **Encapsulation** - **<font color="green">IPSEC</font>** 
+            - **IP** – **<font color="green">10.0.0.2</font>**.
+            - **Color** – **<font color="green">biz-internet</font>**.
+            - **Encapsulation** - **<font color="green">IPSEC</font>** 
     - Uncheck **<font color="green">Restrict</font>**. 
     ![Configuring Data Policies](./assets/S-4-figure-19.png){ .off-glb }
 16. Click “**Save Match and Actions**”. 
