@@ -143,4 +143,10 @@ This configuration ensures that the desired service policies are enforced as tra
 14. As we add the **Service Attachment Gateway Definition**, now configuration group for **Singapore-Sydney-Branch** is now marked as <font color="red">out of sync</font>.
     ![Out of sync](./assets/S-4-figure-6.png){ .off-glb } 
 16. Click **APAC-Singapore-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
-    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb } 
+17. Click **APAC-Singapore-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb } 
+18. In **Deploy Configuration Group** page, select **APAC-Singapore-Branch** by clicking the square Radio Button and Click **Next**.  
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-4-figure-8.png){ .off-glb } 
+19. Click **Import**, and load **APAC-Singapore-Branch.csv** file which loads all the values for the variables.
+    ![Attaching CSV file](./assets/S-4-figure-9.png){ .off-glb }
