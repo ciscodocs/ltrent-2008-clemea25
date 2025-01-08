@@ -108,7 +108,7 @@ The following table provides a detailed overview of the IP addressing configurat
 
 ## Configuring Service-Chain in Configuration Group
 
-Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. 
+Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below steps. 
 This service chain defines the sequence of services that will be applied to traffic originating from the **Sydney-Branch** and destined 
 for the **Stockholm-Branch**. By specifying the service chain in the configuration, we instruct the **Sydney WAN-Edge** on the type of services 
 to be applied to the traffic, such as redirection through a **Sydney-FW** firewall in **<font color="bluw">VRF 2</font>**. 
