@@ -533,7 +533,7 @@ aligning with the network's operational requirements.
 7. Click **<font color="green">Sequence Rule</font>**.
 ![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
 8. In the **Match** section, configure the parameters to define the scope of the **control policy**. Begin by selecting Site and VPN as the matching criteria. Next, specify the following details:
-   * **Site List**: Select <font color="orange">**Both-Branches**</font> to include both branches in the policy.
+   * **Site List**: Select <font color="orange">**Stockholm-Sydney**</font> to include both branches in the policy.
    * **VPN List**: Choose <font color="orange">**VPN-1-2**</font> to encompass the VPNs involved in the route-leaking configuration.
    This configuration ensures that the policy applies to the specified sites and VPNs, enabling precise control over route-leaking between the designated network segments.
    ![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
@@ -541,7 +541,7 @@ aligning with the network's operational requirements.
    Specifically, ensure that routes from **VPN-1** are leaked into **VPN-2** and vice versa. This step is critical to establishing bidirectional
    connectivity, allowing resources in both VPNs to communicate seamlessly. Proper configuration at this stage ensures the integrity of the routing 
    setup and facilitates the intended traffic flow between the VPNs as per the lab topology design.
-    1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**. 
+    1. Click **Action** > **Accept** > **<font color=green">Export To</font>**. 
     2. Export To: **<font color="orange">VPN-1-2</font>**
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
 10. Click **<font color="orange">Save Match and Actions</font>**.
