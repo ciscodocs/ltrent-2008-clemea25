@@ -103,3 +103,10 @@ The following table provides a detailed overview of the IP addressing configurat
 |-------------------|--------------|----------------------------------------------------------------------------------------|
 | GigabitEthernet 4 | 10.102.102.2 | <font color="#9AAFCB"> **Singapore-FW** GigabitEthernet 4 interface IP address.</font> |
 
+
+## Configuring Service-Chain in Configuration Group
+Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. 
+This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined 
+for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services 
+to be applied to the traffic, such as redirection through a **Singapore-FW** firewall in **<font color="bluw">VRF 2</font>**. 
+This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
