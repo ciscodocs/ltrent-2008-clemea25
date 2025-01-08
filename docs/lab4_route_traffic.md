@@ -244,7 +244,7 @@ To verify how the **SD-WAN controller** advertises these routes to the WAN-Edge 
 - **show omp routes <font color ="orange">vpn 1</font> advertised**
 - **show omp routes <font color ="orange">vpn 2</font> advertised**
 
-```{.ios .no-copy linenums="1" hl_lines="3 4 5 6 9 17 20" }
+```{.ios .no-copy linenums="1" hl_lines="1"}
 Controller-1# show omp routes vpn 1 advertised
 Code:
 C   -> chosen
@@ -282,7 +282,7 @@ As observed in the output below, the routes from **VRF-1** are <font color="gree
 The displayed prefixes belong exclusively to **VRF-2**, indicating that route-leaking between **VRF-1** and **VRF-2** has not yet been configured or applied. 
 This behavior is expected in the **absence of a control policy facilitating inter-VRF route exchange**.
 
-```{.ios .no-copy}
+```{.ios .no-copy linenums="1" hl_lines="1"}
 Controller-1# show omp routes vpn 2 advertised
 Code:
 C   -> chosen
@@ -307,7 +307,7 @@ This output highlights the necessity of implementing the **scenario-4** control 
 
 Verify the routes in **VRF-1** and **VRF-2** on **Singapore-Branch** WAN-Edge router to confirm routes are not leaked in VRFs.
 
-```{.ios .no-copy linenums="1" }
+```{.ios .no-copy linenums="1" hl_lines="1"}
 Singapore-Branch#show ip route vrf 1
 
 Routing Table: 1
@@ -335,7 +335,7 @@ m     192.168.20.0/24 [251/0] via 10.1.1.2, 1d15h, Sdwan-system-intf
 ```
 The following output from the **VRF-2** routing table on **Singapore-Branch** confirms that no routes have been leaked from **VRF-2** into **VRF-1**. 
 
-```{.ios .no-copy linenums="1"}
+```{.ios .no-copy linenums="1" hl_lines="1"}
 Singapore-Branch#show ip route vrf 2
 
 Routing Table: 2
