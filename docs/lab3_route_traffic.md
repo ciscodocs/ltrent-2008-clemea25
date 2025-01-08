@@ -753,7 +753,7 @@ To verify that the centralized data policy is functioning as intended, navigate 
 
 - Perform a traceroute to the **Stockholm-User** located in the **Stockholm-Branch** site using the **traceroute** command: 
     - _traceroute 192.168.10.2 -n_
-- Observe the traceroute output to confirm that traffic is hitting the **Sydney firewall (Sydney-FW)** at IP address **<font color="#9AAFCB">10.20.20.2</font>**, which is in **<font color="green">VRF-2</font>.
+- Observe the traceroute output to confirm that traffic is hitting the **Sydney firewall (Sydney-FW)** at IP address **<font color="#9AAFCB">10.20.20.2</font>**, which is in **<font color="green">VRF-2</font>**.
 
 ```{.ios .no-copy linenums="1", hl_lines="4"}
 Sydney-User:~$ traceroute 192.168.10.2 -n

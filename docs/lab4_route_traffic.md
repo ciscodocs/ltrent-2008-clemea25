@@ -703,3 +703,51 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
 22. Once policy is being pushed successfully, we can have **Push vSmart Policy** **Validation success** and **Message** “**<font color="green">Done – Push vSmart Policy**</font>”. 
     ![Configuring Data Policies](./assets/S-3-figure-45.png){ .off-glb }
+
+## Verification
+
+After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been 
+propagated by the SD-WAN controller (vSmart) to the WAN-Edges. In this case, we need to ensure that the **Stockholm-Branch** WAN-Edge 
+has received the policy via OMP and is correctly steering traffic through the **Singapore-FW** in **<font color="orange">VRF-2</font>** as intended.
+
+To verify this, we can utilize the following show command on the **Stockholm-Branch** WAN-Edge. This will help confirm whether the 
+centralized data policy has been effectively pushed from the SD-WAN controller (vSmart) to the **Stockholm-Branch** router through OMP.
+
+```{ .ios .no-copy linenums="1", hl_lines="1" }
+Stockholm-Branch#show sdwan policy from-vsmart 
+from-vsmart data-policy _VPN-1_scenario-4-data-policy
+ direction from-service
+ vpn-list VPN-1
+  sequence 1
+   match
+    source-data-prefix-list      Stockholm-Branch-User
+    destination-data-prefix-list Sydney-Branch-User
+   action accept
+    set
+     vpn-label 8389617
+     service-chain SC6
+     service-chain vpn 2
+     service-chain fall-back
+     service-chain tloc 10.0.0.2
+     service-chain tloc color biz-internet
+     service-chain tloc encap ipsec
+  default-action accept
+from-vsmart lists vpn-list VPN-1
+ vpn 1
+from-vsmart lists data-prefix-list Stockholm-Branch-User
+ ip-prefix 192.168.10.0/24
+from-vsmart lists data-prefix-list Sydney-Branch-User
+ ip-prefix 192.168.20.0/24
+```
+!!! info
+    In our centralized policy configuration, we have implemented both a control policy and a data policy. Within the Cisco SD-WAN policy framework, 
+    it is important to note that centralized control policies are processed directly on the **SD-WAN controller** and are not pushed to the WAN-Edge devices. 
+    Conversely, **centralized data policies** are distributed to the WAN-Edge devices for local enforcement. As a result, when inspecting the configuration 
+    on the **Stockholm-Branch** WAN-Edge, only the data policy will be visible. This distinction ensures that control decisions are managed centrally while data traffic 
+    is handled locally at the edge for optimized performance and enforcement.
+
+To verify that the centralized data policy is functioning as intended, navigate back to the **Sydney-User** in the **Sydney-Branch** site. 
+
+- Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
+    - _traceroute 192.168.20.2 -n_
+- Observe the traceroute output to confirm that traffic is hitting the **Singapore firewall (Singapore-FW)** at IP address **<font color="#9AAFCB">10.102.102.2</font>**, which is in **<font color="green">VRF-2</font>**.
