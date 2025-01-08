@@ -154,9 +154,9 @@ This configuration ensures that the desired service policies are enforced as tra
     ![CLI Preview](./assets/S-3-figure-10.png){ .off-glb } 
 20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
     The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
-    ![CLI Preview of Service Chain Number](./assets/S-4-figure-10.png){ .off-glb } 
-21. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
     ![CLI Preview of Service Chain Number](./assets/S-4-figure-13.png){ .off-glb } 
+21. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
+    ![CLI Preview of Service Chain Number](./assets/S-2-figure-13.png){ .off-glb } 
 22. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
     ![CLI Preview of Service Chain Number](./assets/S-4-figure-11.png){ .off-glb } 
 23. To verify the configuration group status, click on the **APAC-Singapore-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
