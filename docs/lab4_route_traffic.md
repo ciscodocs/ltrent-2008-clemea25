@@ -127,7 +127,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Service Attachment Gateway Definition](./assets/S-4-figure-51.png){ .off-glb } 
 8. Select name **Singapore-Firewall-SC-Def** and description **Singapore-Firewall-SC-Def**. 
 9. Now select **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
-   ![Service Attachment Gateway Definition](./assets/S-3-figure-6.png){ .off-glb } 
+   ![Service Attachment Gateway Definition](./assets/S-4-figure-6.png){ .off-glb } 
 10. Under Basic Information, enter **VPN** <font color="orange">**2**</font>. 
 11. Scroll down to **IPv4 Attachment**: <font color="orange">(1 Interface)</font>.
     ![Service Attachment Gateway Definition](./assets/S-1-figure-13.png){ .off-glb } 
@@ -142,3 +142,5 @@ This configuration ensures that the desired service policies are enforced as tra
     ![How to go back to Configuration Group](./assets/S-4-figure-7.png){ .off-glb } 
 14. As we add the **Service Attachment Gateway Definition**, now configuration group for **Singapore-Sydney-Branch** is now marked as <font color="red">out of sync</font>.
     ![Out of sync](./assets/S-4-figure-6.png){ .off-glb } 
+16. Click **APAC-Singapore-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb }
