@@ -124,7 +124,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Adding New Feature in Configuration Group](./assets/S-3-figure-3.png){ .off-glb }
 5. In the <font color="orange">**Service Chain Attachment Gateway**</font> configuration parcel, click the dropdown arrow and select **Add New**.
    ![Attaching Service Attachment in Configuration Group](./assets/S-3-figure-4.png){ .off-glb }
-6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name and description **<font color="orange">London-Branch-Service-Attachment</font>**.
+6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name and description **<font color="orange">Sydney-Branch-Service-Attachment</font>**.
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-3-figure-5.png){ .off-glb }
