@@ -146,7 +146,7 @@ This configuration ensures that the desired service policies are enforced as tra
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb } 
 17. In **Deploy Configuration Group** page, select **APAC-Singapore-Branch** by clicking the square Radio Button and Click **Next**.  
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-4-figure-8.png){ .off-glb } 
-18. Click **Import**, and load **APAC-Singapore-Branch.csv** file which loads all the values for the variables.
+18. Click **Import**, and load **<font color="green">APAC-Singapore-Branch.csv</font>** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-4-figure-9.png){ .off-glb } 
 19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition 
     is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
