@@ -488,3 +488,80 @@ C        10.20.20.0/24 is directly connected, GigabitEthernet4
 L        10.20.20.1/32 is directly connected, GigabitEthernet4
 m        10.102.102.0/24 [251/0] via 10.0.0.2, 23:14:38, Sdwan-system-intf
 ```
+
+## Configuring Centralized Control Policy for Route Leaking
+
+Next, we will configure a centralized **control policy** to ensure that traffic initiated from the **Sydney-User** destined 
+for the **Internet-Traffic** is first inspected by the **Sydney-FW** before reaching its destination. Since the 
+**Sydney-Firewall** (**<font color="green">Sydney-FW</font>**) is positioned within **<font color="orange">VRF-2</font>**, it is necessary to configure a centralized control policy 
+to enable **route-leaking**. This configuration ensures that traffic from the **Sydney-User** can reach the **Sydney-Firewall** 
+and maintain connectivity with the **Internet via DIA**. 
+
+The control policy facilitates seamless communication between the two VRFs, ensuring full bidirectional reachability. By implementing this policy, 
+we establish a cohesive routing environment that allows resources in **VRF-1** and **VRF-2** to interact efficiently, 
+aligning with the network's operational requirements.
+
+1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
+   ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb }
+2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
+   ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb }
+3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
+   ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb }
+   1. Click Site in left navigation pane and check if following sites are already created. 
+      1. Click “**New Site List**” 
+         1. Site List Name - **Stockholm-Branch** 
+         2. Add Site – <font color="green">10</font>
+      2. Click “**New Site List**”
+         1. Site List Name - **Sydney-Branch** 
+         2. Add Site – <font color="green">20</font>
+      3. Click “**New Site List**” 
+         1. Site List Name – **Stockholm-Sydney** 
+         2. Add Site – <font color="green">10,20</font> 
+![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
+   2. Click VPN.  
+      1. Click “**New VPN List**” 
+         1. VPN List Name – **VPN-1** 
+            1. Add VPN – <font color="green">1</font> 
+         2. VPN List Name – **VPN-2** 
+            1. Add VPN – <font color="green">2</font> 
+         3. VPN List Name – **VPN-1-2** 
+            1. Add VPN – <font color="green">1,2</font>
+![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
+4. Scroll down and click Next.
+5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
+![Control Policy](./assets/S-3-figure-16.png){ .off-glb }
+6. Proceed by entering the required details as outlined below and follow the steps to configure the control policy. 
+   * Enter **<font color="green">scenario-5-route-leak</font>** as the policy name. 
+   * Description: Provide a brief description, using **<font color="green">scenario-5-route-leak</font>** for clarity and consistency. 
+   * Navigate to **<font color="green">Sequence Type</font>**. Under **Add Control Policy**, choose **Route** to define the **route-leaking** configuration.
+     These steps ensure that the policy is accurately defined and aligned with the lab's objectives, facilitating effective route-leaking between VPNs as part of the scenario setup.
+     ![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
+7. Click **<font color="green">Sequence Rule</font>**.
+![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
+8. In the **Match** section, configure the parameters to define the scope of the **control policy**. Begin by selecting Site and VPN as the matching criteria. Next, specify the following details:
+   * **Site List**: Select <font color="orange">**Both-Branches**</font> to include both branches in the policy.
+   * **VPN List**: Choose <font color="orange">**VPN-1-2**</font> to encompass the VPNs involved in the route-leaking configuration.
+   This configuration ensures that the policy applies to the specified sites and VPNs, enabling precise control over route-leaking between the designated network segments.
+   ![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
+9. Next, navigate to the Action section and configure the route-leaking process to enable communication between **VPN-1** and **VPN-2**. 
+   Specifically, ensure that routes from **VPN-1** are leaked into **VPN-2** and vice versa. This step is critical to establishing bidirectional
+   connectivity, allowing resources in both VPNs to communicate seamlessly. Proper configuration at this stage ensures the integrity of the routing 
+   setup and facilitates the intended traffic flow between the VPNs as per the lab topology design.
+    1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**. 
+    2. Export To: **<font color="orange">VPN-1-2</font>**
+![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
+10. Click **<font color="orange">Save Match and Actions</font>**.
+![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
+11. Click **Default Action**, click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
+![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
+12. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
+![Save Default Action Control Policy](./assets/S-3-figure-23.png){ .off-glb }
+13. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-3-route-leak</font>** 
+    policy in inbound direction on both **Stockholm-Branch** and **Sydney-Branch**. Now after that click **<font color="green">Save Policy</font>**.
+![Applying Control Policy](./assets/S-3-figure-24.png){ .off-glb }
+14. Now click ![three dots](./assets/S-1-figure-dots.png){ .off-glb width="25" } and select **Preview** to see the content of the control policy.
+![Applying Control Policy](./assets/S-3-figure-25.png){ .off-glb }
+15. In order to deploy the policy click **Activate**.
+![Activating Control Policy](./assets/S-3-figure-26.png){ .off-glb }
+16. Once policy is being pushed successfully, we can have **<font color="green">Success</font>** message that policy is pushed successfully to **SD-WAN controller**.
+![Activating Control Policy](./assets/S-3-figure-27.png){ .off-glb }
