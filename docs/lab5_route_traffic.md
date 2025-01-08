@@ -127,3 +127,36 @@ In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the 
     correctly linked to the **Sydney-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-3-figure-13.png){ .off-glb }
+
+## Verification of NAT configuration on Sydney-Branch
+
+```{.ios .no-copy linenums="1", hl_lines="18 19"}
+Sydney-Branch#show ip route vrf 1
+
+Routing Table: 1
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+n*Nd  0.0.0.0/0 [6/0], 00:08:23, Null0
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+m        10.10.10.0/24 [251/0] via 10.1.1.1, 1d11h, Sdwan-system-intf
+m        10.101.101.0/24 [251/0] via 10.0.0.1, 2d01h, Sdwan-system-intf
+m        10.102.102.102/32 [251/0] via 10.0.0.2, 2d01h, Sdwan-system-intf
+m     192.168.10.0/24 [251/0] via 10.1.1.1, 1d11h, Sdwan-system-intf
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, GigabitEthernet3
+L        192.168.20.1/32 is directly connected, GigabitEthernet3
+Sydney-Branch#
+```
