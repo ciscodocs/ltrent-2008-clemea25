@@ -657,7 +657,7 @@ This centralized policy ensures that traffic adheres to the intended security an
      ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
 7. Click **Sequence Type**.
    ![Configuring Data Policies](./assets/S-3-figure-32.png){ .off-glb }
-8. From “**Add Data Policy**” pop-up, Select “**Custom**”.
+8. From “**Add Data Policy**” pop-up, Select **<font color="green">Custom</font>**.
    ![Configuring Data Policies](./assets/S-3-figure-33.png){ .off-glb }
 9. Click “**Sequence Rule**”.
    ![Configuring Data Policies](./assets/S-3-figure-34.png){ .off-glb }
