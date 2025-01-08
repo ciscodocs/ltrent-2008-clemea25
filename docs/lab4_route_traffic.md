@@ -234,3 +234,13 @@ Service Chain: SC6
                 endpoint-tracker: auto
                 state: up
 ```
+
+## Routing State Prior to Control Policy Implementation
+
+In an SD-WAN environment, the **SD-WAN controller** maintains routes for each configured **VPN/VRF** and advertises these routes to all 
+WAN-Edge routers associated with the **respective VPN/VRF**. This ensures consistent route propagation and connectivity across the network. 
+To verify how the **SD-WAN controller** advertises these routes to the WAN-Edge routers, we can use the following command:
+
+- **show omp routes <font color ="orange">vpn 1</font> advertised**
+- **show omp routes <font color ="orange">vpn 2</font> advertised**
+
