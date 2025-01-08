@@ -123,8 +123,8 @@ This configuration ensures that the desired service policies are enforced as tra
    ![APAC Singapore Configuration Group](./assets/S-4-figure-4.png){ .off-glb }
 6. Enter the name **Singapore-Firewall-Service-Attachment** and Description **Singapore-Firewall-Service-Attachment** for the service chain attachment gateway.
    ![Service Attachment Gateway Definition](./assets/S-4-figure-5.png){ .off-glb }
-7. Now click **<font color="green">Add Service Chain</font>** to add the service chain definition.
-   ![Service Attachment Gateway Definition](./assets/S-4-figure-4.5.png){ .off-glb } 
+7. Now click **<font color="green">Add Service Chain Definition</font>** to add the service chain definition.
+   ![Service Attachment Gateway Definition](./assets/S-4-figure-51.png){ .off-glb } 
 8. Select name **Singapore-Firewall-SC-Def** and description **Singapore-Firewall-SC-Def**. 
 9. Now select **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-3-figure-6.png){ .off-glb } 
