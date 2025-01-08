@@ -435,3 +435,55 @@ aligning with the network's operational requirements.
 ![Activating Control Policy](./assets/S-3-figure-26.png){ .off-glb }
 16. Once policy is being pushed successfully, we can have **<font color="green">Success</font>** message that policy is pushed successfully to **SD-WAN controller**.
 ![Activating Control Policy](./assets/S-3-figure-27.png){ .off-glb }
+
+## Verification of Centralized Control Policy
+
+With the **scenario-4** **<font color="orange">control policy</font>** successfully pushed to facilitate route-leaking between **VPN-1** and **VPN-2**, the next step is to 
+verify its implementation. This involves ensuring that the policy has been applied correctly and that the intended routes are being leaked between the two VPNs. 
+Additionally, confirm that full reachability is established between **VPN-1** and **VPN-2**, enabling seamless communication as per the lab objectives. 
+Verification is a critical step to validate the policy's effectiveness and to ensure that the network behaves as designed.
+
+To ensure that the policy has been applied correctly on the **SD-WAN controller**, the next step involves verifying its implementation through the controller's running configuration. 
+By reviewing the running configuration of the control policy, we can confirm that the **scenario-4** policy is correctly defined and operational. This verification process is essential to 
+validate the deployment and ensure that the policy is functioning as intended to achieve the desired route-leaking between **VPN-1** and **VPN-2**.
+
+```{ .ios .no-copy linenums="1" hl_lines="1 33"}
+Controller-1# show running-config policy
+policy
+ lists
+  vpn-list VPN-1-2
+   vpn 1
+   vpn 2
+  !
+  site-list Stockholm-Sydney-Singapore
+   site-id 10
+   site-id 102
+   site-id 20
+  !
+  prefix-list _AnyIpv4PrefixList
+   ip-prefix 0.0.0.0/0 le 32
+  !
+ !
+ control-policy scenario-4-route-leak
+  sequence 1
+   match route
+    prefix-list _AnyIpv4PrefixList
+    site-list   Stockholm-Sydney-Singapore
+    vpn-list    VPN-1-2
+   !
+   action accept
+    export-to
+     vpn-list VPN-1-2
+    !
+   !
+  !
+  default-action accept
+ !
+!
+Controller-1# show running-config apply-policy 
+apply-policy
+ site-list Stockholm-Sydney-Singapore
+  control-policy scenario-4-route-leak in
+ !
+!
+```
