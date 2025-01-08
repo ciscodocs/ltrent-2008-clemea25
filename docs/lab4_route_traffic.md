@@ -697,7 +697,7 @@ This centralized policy ensures that traffic adheres to the intended security an
 20. Now data policy is added into centralized policy **scenario-4**. We can click three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} and click **Preview** to review policy. 
     * Click **Okay** once reviewed.
     ![Configuring Data Policies](./assets/S-4-figure-22.png){ .off-glb }
-21. In order to activate the policy, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the “Scenario-3” policy.
+21. In order to activate the policy, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **<font color="green">Scenario-4</font>** policy.
     * Click **Activate**. 
     * Click **Activate** on **Activate Policy** pop-up.
     ![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
