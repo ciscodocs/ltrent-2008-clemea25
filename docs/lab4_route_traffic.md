@@ -677,11 +677,11 @@ This centralized policy ensures that traffic adheres to the intended security an
     - Under VPN, specify VPN **<font color="green">2</font>**.
     - Select **<font color="orange">Remote</font>**.
     - Under **TLOC section** enter the following information:
-            - **IP** – **<font color="green">10.0.0.2</font>**.
-            - **Color** – **<font color="green">biz-internet</font>**.
-            - **Encapsulation** - **<font color="green">IPSEC</font>** 
-    - Uncheck **<font color="green">Restrict</font>**. 
-    ![Configuring Data Policies](./assets/S-4-figure-19.png){ .off-glb }
+      - **IP** – **<font color="green">10.0.0.2</font>**.
+      - **Color** – **<font color="green">biz-internet</font>**.
+      - **Encapsulation** - **<font color="green">IPSEC</font>** 
+  - Uncheck **<font color="green">Restrict</font>**. 
+  ![Configuring Data Policies](./assets/S-4-figure-19.png){ .off-glb }
 16. Click “**Save Match and Actions**”. 
     ![Configuring Data Policies](./assets/S-4-figure-20.png){ .off-glb }
 17. Once data policy is saved, we can click **Policy Application** and under **Policy Application**, we select **<font color="green">Traffic Data</font>** to apply the data policy **scenario-4-data-policy**.
