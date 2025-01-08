@@ -1,4 +1,4 @@
-# Routing Traffic Through Firewall in Singapore Hub Across VRFs for Site-to-Site Communication
+# Routing Traffic Through Firewall in Singapore Branch Across VRFs for Site-to-Site Communication
 
 ## Introduction
 
