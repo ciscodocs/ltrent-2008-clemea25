@@ -98,4 +98,32 @@ In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the 
    ![Configuration Group](./assets/S-1-figure-4.png){ .off-glb }
 2. Locate and click on the **APAC-Sydney-Branch** Configuration Group as illustrated below.
    ![Locate Configuration Group](./assets/S-3-figure-1.png){ .off-glb }
-3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **EMEA-London-Branch - Service Profile** as illustrated below.   
+3. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for the **APAC-Sydney-Branch - Transport & Management Profile** as illustrated below.
+   ![Locate Configuration Group](./assets/S-5-figure-1.png){ .off-glb }   
+4. Click the edit ![Edit Icon](./assets/S-1-edit-icon.png){ .off-glb, width=25 } icon for **APAC-Sydney-Branch-INET** to enable **<font color="green">NAT</font>** for **INET** transport.
+   ![Enable NAT](./assets/S-5-figure-2.png){ .off-glb } 
+5. Now click **<font color="green">NAT</font>** to enable NAT on INET transport(TLOC).
+   ![Enable NAT](./assets/S-5-figure-3.png){ .off-glb } 
+6. Enable **NAT** on INET TLOC by clicking NAT. Once it is enabled click **<font color="green">Save</font>**
+   ![Enable NAT](./assets/S-5-figure-4.png){ .off-glb }
+7. Click **Back**
+   ![Enable NAT](./assets/S-5-figure-5.png){ .off-glb } 
+8. As we add the **Service Attachment Gateway Definition**, now configuration group for **APAC-Sydney-Branch** is now marked as <font color="red">out of sync</font>. 
+9. Click **APAC-Sydney-Branch** Configuration Group -> Click **<font color="green">Deploy**</font>.
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-1-figure-16.png){ .off-glb } 
+10. In **Deploy Configuration Group** page, select **APAC-Sydney-Branch** by clicking the square Radio Button and Click **Next**.  
+    ![Deoplying Configuration Group with Service Chain Definition](./assets/S-3-figure-8.png){ .off-glb } 
+11. Click **Import**, and load **APAC-Sydney-Branch.csv** file which loads all the values for the variables.
+    ![Attaching CSV file](./assets/S-3-figure-9.png){ .off-glb } 
+12. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the **NAT** is enabled on **INET TLOC**. 
+    ![CLI Preview](./assets/S-3-figure-10.png){ .off-glb } 
+13. Scroll down the **New Configuration** section to locate the ***ip nat*** configuration section.
+    ![CLI Preview of Service Chain Number](./assets/S-5-figure-6.png){ .off-glb }
+14. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
+    ![CLI Preview of Service Chain Number](./assets/S-2-figure-13.png){ .off-glb } 
+15. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
+    ![CLI Preview of Service Chain Number](./assets/S-3-figure-12.png){ .off-glb } 
+16. To verify the configuration group status, click on the **APAC-Sydney-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
+    correctly linked to the **Sydney-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
+    and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
+    ![Device is sync.](./assets/S-3-figure-13.png){ .off-glb }

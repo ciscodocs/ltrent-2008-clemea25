@@ -107,6 +107,7 @@ The following table provides a detailed overview of the IP addressing configurat
 
 
 ## Configuring Service-Chain in Configuration Group
+
 Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. 
 This service chain defines the sequence of services that will be applied to traffic originating from the **Sydney-Branch** and destined 
 for the **Stockholm-Branch**. By specifying the service chain in the configuration, we instruct the **Sydney WAN-Edge** on the type of services 
@@ -160,8 +161,8 @@ This configuration ensures that the desired service policies are enforced as tra
     ![CLI Preview of Service Chain Number](./assets/S-2-figure-13.png){ .off-glb } 
 22. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
     ![CLI Preview of Service Chain Number](./assets/S-3-figure-12.png){ .off-glb }
-23. To verify the configuration group status, click on the **EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
-    correctly linked to the **London-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
+23. To verify the configuration group status, click on the **APAC-Sydney-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
+    correctly linked to the **Sydney-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-3-figure-13.png){ .off-glb }
 
