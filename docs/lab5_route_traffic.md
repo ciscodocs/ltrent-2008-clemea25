@@ -730,7 +730,7 @@ This centralized policy ensures that traffic adheres to the intended security an
    ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
 5. Follow the below steps to start configuring data policy.
    1. Enter Name – **scenario-5-data-policy**
-   2. Description - **scenario-5-data-policy**
+   2. Description – **scenario-5-data-policy**
 6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
    1. Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
    2. Click “**Save and Match**”.
