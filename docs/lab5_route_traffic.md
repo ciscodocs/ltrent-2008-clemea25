@@ -507,6 +507,10 @@ aligning with the network's operational requirements.
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb }
 3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
    ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb }
+   1. Click **New Data Prefix List** to define the first prefix list:
+      1. Data Prefix List Name: **Internet**
+      2. Internet Protocol: IPv4 
+      3. Add Data Prefix: **8.8.8.8/32, 4.2.2.2/32**
    1. Click Site in left navigation pane and check if following sites are already created.
       1. Click “**New Site List**” 
          1. Site List Name – **Stockholm-Sydney** 
