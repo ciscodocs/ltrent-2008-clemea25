@@ -734,7 +734,7 @@ This centralized policy ensures that traffic adheres to the intended security an
 6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
    1. Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
    2. Click “**Save and Match**”.
-     ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
+      ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
 7. Click **Sequence Type**.
    ![Configuring Data Policies](./assets/S-3-figure-32.png){ .off-glb }
 8. From “**Add Data Policy**” pop-up, Select **<font color="green">Custom</font>**.
