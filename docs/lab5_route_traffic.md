@@ -775,3 +775,4 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
 22. Once policy is being pushed successfully, we can have **Push vSmart Policy** **Validation success** and **Message** “**<font color="green">Done – Push vSmart Policy**</font>”. 
     ![Configuring Data Policies](./assets/S-3-figure-45.png){ .off-glb }
+
