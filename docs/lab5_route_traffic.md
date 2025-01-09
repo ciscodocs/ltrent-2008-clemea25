@@ -510,7 +510,7 @@ aligning with the network's operational requirements.
    1. Click **New Data Prefix List** to define the first prefix list:
       1. Data Prefix List Name: **Internet**
       2. Internet Protocol: IPv4 
-      3. Add Data Prefix: **8.8.8.8/32, 4.2.2.2/32**
+      3. Add Data Prefix: **8.8.8.8/32**
    1. Click Site in left navigation pane and check if following sites are already created.
       1. Click “**New Site List**” 
          1. Site List Name – **Stockholm-Sydney** 
