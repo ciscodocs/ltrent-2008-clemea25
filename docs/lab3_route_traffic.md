@@ -793,7 +793,7 @@ Sydney-FW#
 
 ## Conclusion
 In conclusion, the configuration group and centralized policy implemented in this lab successfully achieved the intended traffic 
-flow and inspection requirements. Traffic originating from the Sydney-User at Sydney-Branch (site-20) and destined for the **Stockholm-User** at **Stockholm-Branch** (site-10) 
+flow and inspection requirements. Traffic originating from the Sydney-User at **Sydney-Branch (site-20)** and destined for the **Stockholm-User** at **Stockholm-Branch** (site-10) 
 was effectively routed through the **firewall (Sydney-FW)** located at **Sydney-Branch** in a **separate VRF (VRF-2)**. The centralized control policy **enabled route-leaking between VRF-1 and VRF-2**, allowing the **Sydney-Branch** WAN-Edge to establish connectivity with the firewall. 
 The centralized data policy ensured that all traffic was directed through the **Sydney-firewall** for inspection before proceeding to its destination. This demonstrates the effective use of service chaining and centralized policy mechanisms in Cisco SD-WAN to implement advanced traffic steering and security measures.
 
