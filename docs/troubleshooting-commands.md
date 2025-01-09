@@ -10,6 +10,9 @@ they are readily available for future debugging scenarios, streamlining the trou
 network performance and reliability.
 
 
+- **show sdwan control local-properties**
+- **show sdwan control connections**
+- **show sdwan omp peers**
 - **show sdwan omp routes**
 - **show sdwan omp services**
 - **show platform software sdwan service-chain database**
