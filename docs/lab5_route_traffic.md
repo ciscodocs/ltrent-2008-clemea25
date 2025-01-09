@@ -776,3 +776,143 @@ This centralized policy ensures that traffic adheres to the intended security an
 22. Once policy is being pushed successfully, we can have **Push vSmart Policy** **Validation success** and **Message** “**<font color="green">Done – Push vSmart Policy**</font>”. 
     ![Configuring Data Policies](./assets/S-3-figure-45.png){ .off-glb }
 
+## Verification
+
+After the centralized data policy has been successfully deployed, the next step is to confirm that the policy has been 
+propagated by the SD-WAN controller (vSmart) to the WAN-Edges. In this case, we need to ensure that the **Sydney-Branch** WAN-Edge 
+has received the policy via OMP and is correctly steering traffic through the **Sydney-FW** in **<font color="orange">VRF-2</font>** as intended.
+
+To verify this, we can utilize the following show command on the **Sydney-Branch** WAN-Edge. This will help confirm whether the 
+centralized data policy has been effectively pushed from the SD-WAN controller (vSmart) to the **Sydney-Branch** router through OMP.
+
+```{ .ios .no-copy linenums="1", hl_lines="1" }
+Sydney-Branch#show sdwan policy from-vsmart 
+from-vsmart data-policy _VPN-1_scenario-5-data-policy
+ direction from-service
+ vpn-list VPN-1
+  sequence 1
+   match
+    source-data-prefix-list      Sydney-Branch-User
+    destination-data-prefix-list Internet
+   action accept
+    set
+     service-chain SC8
+     service-chain vpn 2
+     service-chain fall-back
+     service-chain local
+  default-action accept
+from-vsmart lists vpn-list VPN-1
+ vpn 1
+from-vsmart lists data-prefix-list Internet
+ ip-prefix 8.8.8.8/32
+from-vsmart lists data-prefix-list Sydney-Branch-User
+ ip-prefix 192.168.20.0/24
+```
+
+!!! info
+    In our centralized policy configuration, we have implemented both a control policy and a data policy. Within the Cisco SD-WAN policy framework, 
+    it is important to note that centralized control policies are processed directly on the **SD-WAN controller** and are not pushed to the WAN-Edge devices. 
+    Conversely, **centralized data policies** are distributed to the WAN-Edge devices for local enforcement. As a result, when inspecting the configuration 
+    on the **Sydney-Branch** WAN-Edge, only the data policy will be visible. This distinction ensures that control decisions are managed centrally while data traffic 
+    is handled locally at the edge for optimized performance and enforcement.
+
+To verify that the centralized data policy is functioning as intended, navigate back to the **Sydney-User** in the **Sydney-Branch** site. 
+
+- Perform a traceroute to the **<font color="green">Google DNS server 8.8.8.8</font>** from **Sydney-User**: 
+    - _traceroute 8.8.8.8 -n_
+- Observe the traceroute output to confirm that traffic is hitting the **Sydney firewall (Sydney-FW)** at IP address **<font color="#9AAFCB">10.20.20.2</font>**, which is in **<font color="green">VRF-2</font>**.
+
+```{.ios .no-copy linenums="1", hl_lines="4"}
+Sydney-User:~$ traceroute 8.8.8.8 -n
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
+ 1  192.168.20.1  1.288 ms  1.244 ms  0.804 ms
+ 2  10.20.20.2  2.648 ms  1.625 ms  1.546 ms
+ 3  192.168.20.1  1.453 ms  1.440 ms  1.275 ms
+ 4  172.16.1.254  2.845 ms  1.852 ms  1.943 ms
+ 5  192.168.255.1  2.619 ms  2.420 ms  3.571 ms
+ 6  198.18.128.1  3.751 ms  2.306 ms  3.243 ms
+ 7  10.255.0.3  2.592 ms  2.715 ms  3.019 ms
+ 8  10.1.27.9  2.996 ms  2.705 ms  3.097 ms
+ 9  4.4.4.2  6.951 ms  4.303 ms  3.846 ms
+10  64.103.43.33  3.192 ms  3.515 ms  3.002 ms
+11  10.230.4.140  15.867 ms  14.236 ms  8.647 ms
+12  10.230.4.130  8.900 ms  9.731 ms  8.482 ms
+13  64.103.40.93  9.529 ms  9.820 ms  64.103.40.97  10.968 ms
+14  128.107.8.46  9.461 ms  128.107.8.18  12.020 ms  128.107.8.46  9.326 ms
+15  195.66.224.125  14.366 ms  11.994 ms  13.270 ms
+16  192.178.97.107  12.348 ms  192.178.97.249  12.282 ms  192.178.97.41  13.088 ms
+17  142.251.54.49  11.068 ms  209.85.252.181  11.958 ms  172.253.66.101  12.680 ms
+18  8.8.8.8  15.640 ms  13.103 ms  11.219 ms
+Sydney-User:~$ 
+```
+- Next, verify on the **Sydney-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Google DNS server**. 
+- This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized policy **<font color="green">even though users are in different VRF</font>**.
+
+```{.ios .no-copy linenums="1", hl_lines="4"}
+Sydney-FW# show conn all
+51 in use, 51 most used
+
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33485, idle 0:00:02, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33448, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33453, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33469, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33455, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33451, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33462, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33464, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33459, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33450, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33446, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33458, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33474, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33454, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33477, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33467, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33465, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33481, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33470, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33488, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33460, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33463, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33441, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33443, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33440, idle 0:00:03, bytes 0, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33461, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33468, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33442, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33479, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33480, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33475, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33452, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33444, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33487, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33471, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33472, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33445, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33478, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33482, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33456, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33466, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33457, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33473, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33476, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33439, idle 0:00:03, bytes 0, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33438, idle 0:00:03, bytes 0, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33486, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33483, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33447, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33484, idle 0:00:03, bytes 18, flags - 
+UDP inside  192.168.20.2:53653 inside  8.8.8.8:33449, idle 0:00:03, bytes 18, flags - 
+Sydney-FW# 
+```
+## Conclusion
+In conclusion, the configuration group and centralized policy implemented in this lab successfully achieved the intended traffic 
+flow and inspection requirements. Traffic originating from the **Sydney-User at Sydney-Branch (site-20)** and destined for the **Internet** was effectively routed through the **firewall (Sydney-FW)** located at **Sydney-Branch** in a **separate VRF (VRF-2)**. The centralized control policy **enabled route-leaking between VRF-1 and VRF-2**, allowing the **Sydney-Branch** WAN-Edge to establish connectivity with the firewall. 
+The centralized data policy ensured that all traffic was directed through the **Sydney-firewall** for inspection before proceeding to its destination. This demonstrates the effective use of service chaining and centralized policy mechanisms in Cisco SD-WAN to implement advanced traffic steering and security measures.
+
+!!! info
+    Before proceeding to the **next lab**, it is essential to **<font color="red">deactivate</font>** the centralized policy configured in the current exercise. **Deactivating** the policy 
+    ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized policy is successfully deactivated 
+    and confirmed, delete the service chain parcel **Sydney-Branch-Service-Attachment** in **Sydney-Branch** WAN-Edge service profile **APAC-Sydney-Branch-Service-VPN**. Now we can confidently move forward to 
+    the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
+
