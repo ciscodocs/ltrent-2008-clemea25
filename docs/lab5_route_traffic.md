@@ -694,3 +694,13 @@ C        192.168.20.0/24 is directly connected, GigabitEthernet3
 L        192.168.20.1/32 is directly connected, GigabitEthernet3
 Sydney-Branch#
 ```
+Let's try to ping from **Sydney-Branch** WAN-Edge router from **VRF-1** towards **Sydney-FW** ip address **10.20.20.2** in **VRF-2**.
+
+```{.ios .no-copy linenums="1", hl_lines="1"}
+Sydney-Branch#ping vrf 1 10.20.20.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.20.20.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Sydney-Branch#
+```
