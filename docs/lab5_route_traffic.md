@@ -744,19 +744,19 @@ This centralized policy ensures that traffic adheres to the intended security an
 10. **Match** > **Scroll** right to select and click **Source Data Prefix**.
     ![Configuring Data Policies](./assets/S-3-figure-35.png){ .off-glb }
 11. Under “**Match Conditions**”. 
-    * Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
+    1. Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
 13. Under “**Match Conditions**”. 
-    * Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Internet</font>**.
+    1. Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Internet</font>**.
     ![Configuring Data Policies](./assets/S-5-figure-12.png){ .off-glb }
 14. Scroll up and select “**<font color="green">Actions</font>**”.
-    * Click **Accept** Radio button. 
+    1. Click **Accept** Radio button. 
     ![Configuring Data Policies](./assets/S-5-figure-13.png){ .off-glb }
-    * Scroll to the right to select “**<font color="green">Service Chain</font>**”.
+    2. Scroll to the right to select “**<font color="green">Service Chain</font>**”.
     ![Configuring Data Policies](./assets/S-5-figure-14.png){ .off-glb }
 15. Click **<font color="orange">Service Chain Type</font>** and scroll the options down a bit and select “**Service Chain Type**” – for example **<font color="green">SC8</font>**. 
-    - Under VPN, specify VPN **<font color="green">2</font>**.
-    - Under **TLOC List** select **<font color="green">Local</font>**. 
-    - Uncheck **<font color="green">Restrict</font>**. 
+    1. Under VPN, specify VPN **<font color="green">2</font>**.
+    2. Under **TLOC List** select **<font color="green">Local</font>**. 
+    3. Uncheck **<font color="green">Restrict</font>**. 
     ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
 16. Click “**Save Match and Actions**”. 
     ![Configuring Data Policies](./assets/S-5-figure-16.png){ .off-glb }
