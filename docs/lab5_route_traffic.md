@@ -712,3 +712,22 @@ the **Internet traffic** is first inspected by the **Sydney-FW** in **VRF-2** be
 enforces the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we 
 will use the **service-chain number** that was previously configured and noted in **<font color="green">step 20</font>** under "**Configuring Service-Chain in Configuration Group**" section. 
 This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
+
+1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by **Classic**, and then click on **Policies**. 
+   ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb }
+2. In addition to the previously configured centralized control policy **scenario-5**, where we add **<font color="green">scenario-3-route-leak</font>** for route-leaking, we now introduce a centralized data policy to 
+   ensure that traffic is inspected by the **<font color="green">Sydney-FW</font>** in **<font color="green">VRF-2</font>**. This step enhances the traffic management strategy by directing traffic through the firewall 
+   for inspection, providing additional security and compliance. To implement this, navigate to the centralized policy section, click on ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} next to the <font color="green">**scenario-3**</font> policy, and select **<font color="green">Edit</font>** to add the data policy. 
+   This ensures seamless integration of traffic inspection within the existing policy framework.
+   ![Configuring Policies](./assets/S-3-figure-28.png){ .off-glb }
+3. In order to add data policy, click **Traffic Rules**.
+   ![Configuring Policies](./assets/S-3-figure-29.png){ .off-glb }
+4. Now click **Add Policy** and then click **Create New**.
+   ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
+5. Follow the below steps to start configuring data policy.
+   * Enter Name – **scenario-5-data-policy**
+   * Description - **scenario-5-data-policy**
+6. Now click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"} icon in “**<font color="green">Default Action</font>**”
+   * Under “**<font color="orange">Actions</font>**” Select **<font color="green">Accept</font>**. 
+   * Click “**Save and Match**”.
+     ![Configuring Data Policies](./assets/S-3-figure-31.png){ .off-glb }
