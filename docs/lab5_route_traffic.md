@@ -743,21 +743,21 @@ This centralized policy ensures that traffic adheres to the intended security an
     * Click in box with “**Source Data Prefix List**” and **select** > **<font color="green">Sydney-Branch-User</font>**.
 13. Under “**Match Conditions**”. 
     * Scroll down and click in box with “**Destination Data Prefix List**” and **select** > **<font color="green">Internet</font>**.
-    ![Configuring Data Policies](./assets/S-3-figure-36.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-5-figure-12.png){ .off-glb }
 14. Scroll up and select “**<font color="green">Actions</font>**”.
     * Click **Accept** Radio button. 
-    ![Configuring Data Policies](./assets/S-3-figure-37.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-5-figure-13.png){ .off-glb }
     * Scroll to the right to select “**<font color="green">Service Chain</font>**”.
-    ![Configuring Data Policies](./assets/S-3-figure-38.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-5-figure-14.png){ .off-glb }
 15. Click **<font color="orange">Service Chain Type</font>** and scroll the options down a bit and select “**Service Chain Type**” – for example **<font color="green">SC8</font>**. 
     - Under VPN, specify VPN **<font color="green">2</font>**.
     - Under **TLOC List** select **<font color="green">Local</font>**. 
     - Uncheck **<font color="green">Restrict</font>**. 
     ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
 16. Click “**Save Match and Actions**”. 
-    ![Configuring Data Policies](./assets/S-3-figure-40.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-5-figure-16.png){ .off-glb }
 17. Once data policy is saved, we can click **Policy Application** and under **Policy Application**, we select **<font color="green">Traffic Data</font>** to apply the data policy **scenario-5-data-policy**.
-    ![Configuring Data Policies](./assets/S-3-figure-41.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-5-figure-15.png){ .off-glb }
 18. Now Click **New Site/WAN Region List and VPN List**
     * Keep **<font color="orange">From Service</font>** radio button checked.
     * Keep **<font color="orange">Site List</font>** radio button checked.
@@ -768,7 +768,7 @@ This centralized policy ensures that traffic adheres to the intended security an
 19. Click **<font color="orange">Save Policy</font>** at the bottom.
 20. Now data policy is added into centralized policy **scenario-5**. We can click three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} and click **Preview** to review policy. 
     * Click **Okay** once reviewed.
-    ![Configuring Data Policies](./assets/S-3-figure-43.png){ .off-glb }
+    ![Configuring Data Policies](./assets/S-5-figure-17.png){ .off-glb }
 21. In order to activate the policy, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **<font color="green">Scenario-5</font>** policy.
     * Click **Activate**. 
     * Click **Activate** on **Activate Policy** pop-up.
