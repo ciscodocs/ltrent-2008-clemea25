@@ -24,7 +24,7 @@ Additionally, any traffic destined for the **Internet** must be inspected by the
 
 ### Intended Traffic Flow Diagram
 
-The following diagram illustrates the **<font color="orange">flow of traffic within the network for the Amsterdam-Branch</font>**.
+The following diagram illustrates the **<font color="orange">flow of traffic for the Amsterdam-Branch</font>**.
 
 <figure markdown>
   ![Ticket Flow Topology](./assets/Challenge.gif)
