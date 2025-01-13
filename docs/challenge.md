@@ -1,7 +1,7 @@
 # Amsterdam-Branch WAN-Edge Router Unable to Join Fabric and Traffic Inspection Requirements
 
 ## Description:
-The IT Administrator is in the process of bringing the **Amsterdam-Branch** online; however, the **Amsterdam-Branch** WAN-Edge router is facing issues and is unable to join the **SD-WAN fabric**. This is preventing the branch from establishing connectivity with other sites within the network.
+The IT Administrator is in the process of bringing the **Amsterdam-Branch** online; however, the **Amsterdam-Branch** WAN-Edge router is facing issues and is unable to join the **SD-WAN fabric**. This is preventing the branch from establishing connectivity with other sites within the network and **Internet**.
 
 Priority: **High**
 
