@@ -91,5 +91,5 @@ nav:
       - Conclusion: conclusion.md
   - Topology: topologies.md
   - IP Addresses: ip-addresses.md
+  - Troubleshooting Ticket : challenge.md
   - Troubleshooting Commands: troubleshooting-commands.md
-  - Challenge:
