@@ -49,11 +49,11 @@ The table below lists the configuration group names assigned to each WAN-Edge ro
 To confirm the configuration, you can use the <font color="orange">**show sdwan system status</font>** command on each WAN-Edge router. This command provides details on the configuration group attached to the device, allowing you to validate the setup.
 
 !!! note
-    The show outputs provided below are from the **London-Hub**; however, it is important to perform this verification on each WAN-Edge router in the topology.
+    The show outputs provided below are from the **London-Branch**; however, it is important to perform this verification on each WAN-Edge router in the topology.
 
 
 ``` {.ios, .no-copy, title="Configuration Template Verification", linenums="1", hl_lines="38 40"}
-London-Hub#show sdwan system status
+London-Branch#show sdwan system status
 Viptela (tm) vEdge Operating System Software
 Copyright (c) 2013-2024 by Viptela, Inc.
 Controller Compatibility: 20.15
@@ -92,7 +92,7 @@ Device role:             cEdge-SDWAN
 Services:                None
 vManaged:                true
 Commit pending:          false
-Configuration template:  EMEA-London-Hub
+Configuration template:  EMEA-London-Branch
 Chassis serial number:   SSI130300YK
 ```
 If any WAN-Edge router is **not managed by the SD-WAN Manager (vManage)** or does not have a configuration group attached, you can log in to SD-WAN Manager (vManage) and confirms if WAN-Edge router is associated with configuration group or not.
@@ -119,7 +119,7 @@ If the WAN-Edge router is not associated with the configuration group, then we c
 </figure>
 
 One we see list of WAN-Edge devices, we need to make sure we select the right device as per the configuration group name.
-As in our exhibit below, we selected **EMEA-Stockhoml-Branch**
+As in our exhibit below, we selected **EMEA-Stockholm-Branch**
 
 <figure markdown>
   ![Configuration Device Selection](./assets/cg-associate-selection.png){ align=left, .off-glb }
