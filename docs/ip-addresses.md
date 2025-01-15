@@ -10,7 +10,7 @@ throughout the lab exercises.
     * All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.site-id.1/24**.
     * All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.site-id.site-id.1/24**.
 
-## Stockholm Branch
+## Stockholm Branch (Site-ID 10)
 
 | System IP        | 10.1.1.1        |
 |------------------|-----------------|
@@ -19,7 +19,7 @@ throughout the lab exercises.
 | Stockholm-FW     | 10.10.10.2/24   |
 | Stockholm-User   | 192.168.10.2/24 |
 
-## Sydney Branch
+## Sydney Branch (Site-ID 20)
 
 | System IP        | 10.1.1.2        |
 |------------------|-----------------|
@@ -29,14 +29,14 @@ throughout the lab exercises.
 | Sydney-User      | 192.168.20.2/24 |
 
 
-## London Branch
+## London Branch (Site-ID 101)
 
 | System IP        | 10.0.0.1        |
 |------------------|-----------------|
 | GigabitEthernet4 | 10.101.101.1/24 |
 | London-FW        | 10.101.101.2/24 |
 
-## Singapore Branch
+## Singapore Branch (Site-ID 102)
 
 | System IP        | 10.0.0.2        |
 |------------------|-----------------|
