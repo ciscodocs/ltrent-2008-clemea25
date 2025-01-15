@@ -645,7 +645,7 @@ Sydney-Branch#
 ```
 ## Configuring Centralized Data Policy for Traffic Steering
 
-Next, we will configure a centralized data policy to ensure that traffic initiated from the **Sydney-User** destined for 
+Next, we will configure a **centralized data policy** to ensure that traffic initiated from the **Sydney-User** destined for 
 the **Stockholm-User** is first inspected by the **Sydney-FW** in **VRF-2** before reaching its destination. This policy
 enforces the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we 
 will use the **service-chain number** that was previously configured and noted in **<font color="green">step 20</font>** under "**Configuring Service-Chain in Configuration Group**" section. 
