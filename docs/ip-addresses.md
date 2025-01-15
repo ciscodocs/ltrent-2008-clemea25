@@ -6,7 +6,7 @@ is designed to facilitate seamless routing, service insertion, and service chain
 Adhering to this predefined IP addressing plan ensures consistent configuration and simplifies troubleshooting 
 throughout the lab exercises.
 
-!!! note
+!!! info
     All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.<font color="green"><site-id></font>.1/24**
     All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.<font color="green"><site-id></font>.<font color="green"><site-id></font>.1/24**
 
