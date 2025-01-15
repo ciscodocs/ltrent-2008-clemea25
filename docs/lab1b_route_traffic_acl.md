@@ -377,7 +377,7 @@ UDP inside  192.168.10.2:58180 inside  192.168.20.2:33446, idle 0:00:08, bytes 1
 ```
 To verify that packets are matching the ACL configuration, we can use the following CLI command:
 
-```{.ios .no-copy linenums="1", hl_lines="4" }
+```{.ios .no-copy linenums="1", hl_lines="5" }
 Stockholm-Branch#show sdwan policy access-list-counters 
 NAME                  COUNTER NAME                      PACKETS       BYTES             
 ----------------------------------------------------------------------------------------
