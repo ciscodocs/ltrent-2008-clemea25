@@ -114,10 +114,12 @@ Following Table exhibit how traffic is flowing from **Sydney-User** to **Stockho
 
 Next, we will configure a service chain within the service-profile parcel in the configuration group by following the
 below steps. This service chain defines the sequence of services that will be applied to traffic originating
-from the **Sydney-Branch** and destined for the **Stockholm-Branch**. By specifying the service chain in the
-configuration, we instruct the **Sydney WAN-Edge** on the type of services to be applied to the traffic,
-such as redirection through a firewall. This configuration ensures that the desired service policies are enforced
-as traffic flows between the branches.
+from the **Sydney-Branch** and destined for the **Stockholm-Branch**. 
+
+By specifying the service chain in the configuration, we instruct the **Sydney WAN-Edge** on the type of services to be applied to the traffic,
+such as redirection through a firewall. 
+
+This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
 
 !!! note
     Since the firewall is hosted on the **Stockholm-Branch** WAN-Edge router, it is essential to define the firewall service
