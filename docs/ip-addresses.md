@@ -6,6 +6,9 @@ is designed to facilitate seamless routing, service insertion, and service chain
 Adhering to this predefined IP addressing plan ensures consistent configuration and simplifies troubleshooting 
 throughout the lab exercises.
 
+!!! note
+    All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.<font color="green"><site-id></font>.1/24**
+    All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.<font color="green"><site-id></font>.<font color="green"><site-id></font>.1/24**
 
 ## Stockholm Branch
 
@@ -15,7 +18,6 @@ throughout the lab exercises.
 | GigabitEthernet4 | 10.10.10.1/24   |
 | Stockholm-FW     | 10.10.10.2/24   |
 | Stockholm-User   | 192.168.10.2/24 |
-
 
 ## Sydney Branch
 
