@@ -686,6 +686,8 @@ This centralized policy ensures that traffic adheres to the intended security an
       - **Encapsulation** - **<font color="green">IPSEC</font>** 
   - Uncheck **<font color="green">Restrict</font>**. 
   ![Configuring Data Policies](./assets/S-4-figure-19.png){ .off-glb }
+!!! info
+    When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
 16. Click “**Save Match and Actions**”. 
     ![Configuring Data Policies](./assets/S-4-figure-20.png){ .off-glb }
 17. Once data policy is saved, we can click **Policy Application** and under **Policy Application**, we select **<font color="green">Traffic Data</font>** to apply the data policy **scenario-4-data-policy**.

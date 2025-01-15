@@ -694,8 +694,10 @@ This centralized policy ensures that traffic adheres to the intended security an
 15. Click **<font color="orange">Service Chain Type</font>** and scroll the options down a bit and select “**Service Chain Type**” – for example **<font color="green">SC8</font>**. 
     - Under VPN, specify VPN **<font color="green">2</font>**.
     - Under **TLOC List** select **<font color="green">Local</font>**. 
-    - Uncheck **<font color="green">Restrict</font>**. 
+    - Uncheck **<font color="green">Restrict</font>**.
     ![Configuring Data Policies](./assets/S-3-figure-39.png){ .off-glb }
+!!! info
+    When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
 16. Click “**Save Match and Actions**”. 
     ![Configuring Data Policies](./assets/S-3-figure-40.png){ .off-glb }
 17. Once data policy is saved, we can click **Policy Application** and under **Policy Application**, we select **<font color="green">Traffic Data</font>** to apply the data policy **scenario-3-data-policy**.
