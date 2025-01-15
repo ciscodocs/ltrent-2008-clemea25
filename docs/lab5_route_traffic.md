@@ -13,7 +13,7 @@ Here is a breakdown of the key components involved in the network path:
 Ensure that each component is properly configured and verify the traffic flow is going through **Sydney-FW**.
 
 !!! note
-    Through this lab, firewall is configured to inspect traffic automatically in **inspected mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
+    Through this lab, firewall is configured to inspect traffic automatically in **inspect mode**, ***<font color="red"> without requiring any additional configuration</font>***. This inspection ensures that only safe and authorized traffic flows through the network, enhancing security and protecting against potential threats.
 
 ## Intended Traffic Flow Diagram
 
