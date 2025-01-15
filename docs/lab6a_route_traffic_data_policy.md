@@ -1,4 +1,4 @@
-# Lab 6a - Route traffic from Sydney to Stockholm via remote firewall in Stockholm in same VRF using <font color="grey">**Data Policy**</font>
+Instead, the service label, which is advertised in# Lab 6a - Route traffic from Sydney to Stockholm via remote firewall in Stockholm in same VRF using <font color="grey">**Data Policy**</font>
 
 ## Introduction
 
@@ -168,7 +168,7 @@ for advertising its service routes to the SD-WAN Controller (vSmart), which then
 within its **Routing Information Base (RIB)**. 
 
 **<font color="green">Notably, the SD-WAN Controller (vSmart) controller does not propagate these service routes to 
-other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised in the service 
+other WAN-Edge routers within the SD-WAN fabric</font>**. Instead, the service label, which is advertised by WAN-Edge router in the service 
 route to the SD-WAN Controller (vSmart), plays a crucial role. If traffic destined for a particular vRoute needs to 
 traverse a service, the SD-WAN Controller (vSmart) controller replaces the vRoute’s label with the service label.
 
