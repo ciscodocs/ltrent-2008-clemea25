@@ -116,9 +116,13 @@ The following table provides a detailed overview of the IP addressing configurat
 ## Configuring Firewall Service in Configuration Group
 
 Next, we will configure a service chain within the service-profile parcel in the configuration group by following the below setps. 
+
 This service chain defines the sequence of services that will be applied to traffic originating from the **Stockholm-Branch** and destined 
-for the **Sydney-Branch**. By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services 
+for the **Sydney-Branch**. 
+
+By specifying the service chain in the configuration, we instruct the **Stockholm WAN-Edge** on the type of services 
 to be applied to the traffic, such as redirection through a **London-FW** firewall in **<font color="#9AAFCB">VRF 1</font>**. 
+
 This configuration ensures that the desired service policies are enforced as traffic flows between the branches.
 
 1. From the vManage Landing Page, navigate to the left-hand panel, select Configuration, and click Configuration Groups.
