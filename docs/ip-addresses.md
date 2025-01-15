@@ -8,7 +8,7 @@ throughout the lab exercises.
 
 !!! info
     * All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.site-id.1/24**.
-    * All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.site-id.site-id.1/24**
+    * All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.site-id.site-id.1/24**.
 
 ## Stockholm Branch
 
