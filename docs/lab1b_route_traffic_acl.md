@@ -384,7 +384,7 @@ NAME                  COUNTER NAME                      PACKETS       BYTES
 CL-ACL-Service-Chain  default_action_count              0             0                 
                       MATCH-SYDNEY-DATA-TRAFFIC         58            4772              
 ```
-The following command provides a reliable way to validate that the ACL is functioning correctly and traffic is being processed in accordance with the service-chaining configuration.
+We can use the following show commands to see packets are matching and service chaining is working on **Stockholm** WAN-Edge router. 
 
 - **show platform software sdwan service-chain stats detail**
 - **show platform hardware qfp active feature sdwan datapath service-chain stats**

@@ -403,6 +403,46 @@ UDP inside  192.168.10.2:45482 inside  192.168.20.2:33442, idle 0:00:08, bytes 0
 UDP inside  192.168.10.2:45482 inside  192.168.20.2:33452, idle 0:00:08, bytes 18, flags - 
 London-Hub-FW# 
 ```
+We can use the following show commands to see packets are matching and service chaining is working on **London** WAN-Edge router. 
+
+- **show platform software sdwan service-chain stats detail**
+- **show platform hardware qfp active feature sdwan datapath service-chain stats**
+
+```{.ios .no-copy linenums="1", hl_lines="1 3 4 5 6 9"}
+London-Branch#show platform software sdwan service-chain stats detail  
+
+Service Chain: SC5
+   vrf: 1
+   label: 1007
+   state: up
+   description:  London-Firewall-SC-Def
+
+   service: FW
+      tx: 34 rx: 28
+      ha_pair 1: ipv4
+         active
+            tx: 34 rx: 28 
+            tx tracker: sent: 5 dropped: 0 rtt: 2
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+         backup
+            tx: 0 rx: 0 
+            tx tracker: sent: 0 dropped: 0 rtt: 0
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+```
+
+```{ .ios .no-copy linenums="1", hl_lines="7 8" }
+London-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats 
+Service-Chain ID: 5
+  Global stats: 34
+  Global stats v6: 0
+  Per Service stats 
+    Service: Firewall
+      Tx pkt: 34
+      Rx pkt: 28
+      Tx pkt v6: 0
+      Rx pkt v6: 0  
+```
+
 ## Conclusion
 In conclusion, the configuration group and centralized traffic data policy implemented in this lab successfully ensured that traffic originating from the **Stockholm-User** 
 at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** was routed through the **firewall (London-FW)** at **London-Branch**. 
