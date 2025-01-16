@@ -856,8 +856,8 @@ Sydney-User:~$
 - Next, verify on the **Sydney-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the **Google DNS server**. 
 - This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized policy **<font color="green">even though users are in different VRF</font>**.
 
-```{.ios .no-copy linenums="1", hl_lines="4"}
-Sydney-FW# show conn all
+```{.ios .no-copy linenums="1"}
+Sydney-FW#show conn all
 51 in use, 51 most used
 
 UDP inside  192.168.20.2:53653 inside  8.8.8.8:33485, idle 0:00:02, bytes 18, flags - 
