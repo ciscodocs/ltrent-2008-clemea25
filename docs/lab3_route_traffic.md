@@ -796,7 +796,7 @@ UDP inside  192.168.20.2:38643 inside  192.168.10.2:33441, idle 0:00:04, bytes 1
 UDP inside  192.168.20.2:38643 inside  192.168.10.2:33442, idle 0:00:04, bytes 18, flags - 
 Sydney-FW# 
 ```
-We can use the following show commands to see packets are matching and service chaining is working on **Stockholm** WAN-Edge router. 
+We can use the following show commands to see packets are matching and service chaining is working on **Sydney** WAN-Edge router. 
 
 - **show platform software sdwan service-chain stats detail**
 - **show platform hardware qfp active feature sdwan datapath service-chain stats**
