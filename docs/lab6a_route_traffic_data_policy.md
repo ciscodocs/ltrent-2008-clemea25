@@ -412,17 +412,41 @@ Stockholm-FW#
 The following command provides a reliable way to validate that the data policy is functioning correctly and traffic is 
 being processed in accordance with the service-chaining configuration.
 
+- **show platform software sdwan service-chain stats detail**
 - **show platform hardware qfp active feature sdwan datapath service-chain stats**
+
+
+```{.ios .no-copy linenums="1", hl_lines="1 3 4 5 6 9"}
+Stockholm-Branch#sh platform software sdwan service-chain stats detail 
+
+Service Chain: SC7
+   vrf: 1
+   label: 1011
+   state: up
+   description:  Stockholm-Firewall-SC-Def
+
+   service: FW
+      tx: 21 rx: 15
+      ha_pair 1: ipv4
+         active
+            tx: 21 rx: 15 
+            tx tracker: sent: 31 dropped: 0 rtt: 1
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+         backup
+            tx: 0 rx: 0 
+            tx tracker: sent: 0 dropped: 0 rtt: 0
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+```
 
 ```{.ios .no-copy linenums="1", hl_lines="7 8"}
 Stockholm-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats    
 Service-Chain ID: 7
-  Global stats: 121
+  Global stats: 21
   Global stats v6: 0
   Per Service stats 
     Service: Firewall
-      Tx pkt: 121
-      Rx pkt: 115
+      Tx pkt: 21
+      Rx pkt: 15
       Tx pkt v6: 0
       Rx pkt v6: 0
 ```
