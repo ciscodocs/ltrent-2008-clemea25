@@ -790,7 +790,42 @@ UDP inside  192.168.10.2:34198 inside  192.168.20.2:33443, idle 0:00:01, bytes 0
 UDP inside  192.168.10.2:34198 inside  192.168.20.2:33450, idle 0:00:01, bytes 18, flags - 
 Singapore-FW# 
 ```
+We can use the following show commands to see packets are matching and service chaining is working on **Singapore** WAN-Edge router. 
 
+```{.ios .no-copy linenums="1", hl_lines="1 3 4 5 6 9"}
+Singapore-Branch#show platform software sdwan service-chain stats detail 
+
+Service Chain: SC6
+   vrf: 2
+   label: 1009
+   state: up
+   description:  Singapore-Firewall-SC-Def
+
+   service: FW
+      tx: 12 rx: 9
+      ha_pair 1: ipv4
+         active
+            tx: 12 rx: 9 
+            tx tracker: sent: 4 dropped: 0 rtt: 1
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+         backup
+            tx: 0 rx: 0 
+            tx tracker: sent: 0 dropped: 0 rtt: 0
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+```
+
+```{.ios .no-copy linenums="1", hl_lines="1 7 8"}
+Stockholm-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats      
+Service-Chain ID: 6
+  Global stats: 12
+  Global stats v6: 0
+  Per Service stats 
+    Service: Firewall
+      Tx pkt: 12
+      Rx pkt: 9
+      Tx pkt v6: 0
+      Rx pkt v6: 0 
+```
 ## Conclusion
 In conclusion, the configuration group and centralized policy implemented in this lab successfully achieved the intended traffic 
 flow and inspection requirements. Traffic originating from the **Stockholm-User** at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** 
