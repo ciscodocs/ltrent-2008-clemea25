@@ -21,7 +21,7 @@ Additionally, any traffic destined for the **Internet** must be inspected by the
 - Investigate and resolve the issue preventing the **Amsterdam-Branch** WAN-Edge router from joining the fabric.
 - Verify and ensure that the configuration aligns with the desired intent of achieving **<font color="green">site-to-site connectivity</font>**.
 - Implement the necessary policies to ensure that all **Internet-bound** traffic is directed to the **London-Firewall** for inspection and subsequently routed to the Internet through the **London-Branch** WAN-Edge router.
-
+- The IT Administrator has already created the **<font color="green">Amsterdam-Branch</font>** policy on the SD-WAN Manager. Activate the policy and verify that it is correctly configured to achieve the intended objectives.
 ### Intended Traffic Flow Diagram
 
 The following diagram illustrates the **<font color="orange">flow of traffic for the Amsterdam-Branch</font>**.
