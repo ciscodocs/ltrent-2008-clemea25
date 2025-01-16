@@ -386,7 +386,30 @@ CL-ACL-Service-Chain  default_action_count              0             0
 ```
 The following command provides a reliable way to validate that the ACL is functioning correctly and traffic is being processed in accordance with the service-chaining configuration.
 
+- **show platform software sdwan service-chain stats detail**
 - **show platform hardware qfp active feature sdwan datapath service-chain stats**
+
+```{.ios .no-copy linenums="1", hl_lines="1 3 4 5 6 9"}
+Stockholm-Branch#show platform software sdwan service-chain stats detail
+
+Service Chain: SC7
+   vrf: 1
+   label: 1009
+   state: up
+   description:  Stockholm-Firewall-SC-Def
+
+   service: FW
+      tx: 12 rx: 9
+      ha_pair 1: ipv4
+         active
+            tx: 12 rx: 9 
+            tx tracker: sent: 3 dropped: 0 rtt: 3
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+         backup
+            tx: 0 rx: 0 
+            tx tracker: sent: 0 dropped: 0 rtt: 0
+            rx tracker: sent: 0 dropped: 0 rtt: 0
+```
 
 ```{ .ios .no-copy linenums="1", hl_lines="7 8" }
 Stockholm-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats 

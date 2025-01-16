@@ -378,8 +378,13 @@ UDP inside  192.168.10.2:53460 inside  192.168.20.2:33441, idle 0:00:03, bytes 1
 UDP inside  192.168.10.2:53460 inside  192.168.20.2:33445, idle 0:00:03, bytes 18, flags - 
 Stockholm-FW# 
 ```
+The following command provides a reliable way to validate that the ACL is functioning correctly and traffic is being processed in accordance with the service-chaining configuration.
+
+- **show platform software sdwan service-chain stats detail**
+- **show platform hardware qfp active feature sdwan datapath service-chain stats**
+
 ```{.ios .no-copy linenums="1", hl_lines="1 3 4 5 6 9"}
-Stockholm-Branch#sh platform software sdwan service-chain stats detail
+Stockholm-Branch#show platform software sdwan service-chain stats detail
 
 Service Chain: SC7
    vrf: 1
