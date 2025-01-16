@@ -430,7 +430,7 @@ Service Chain: SC5
             rx tracker: sent: 0 dropped: 0 rtt: 0
 ```
 
-```{ .ios .no-copy linenums="1", hl_lines="7 8" }
+```{ .ios .no-copy linenums="1", hl_lines="1 2 7 8" }
 London-Branch#show platform hardware qfp active feature sdwan datapath service-chain stats 
 Service-Chain ID: 5
   Global stats: 34
