@@ -445,6 +445,7 @@ UDP inside  192.168.10.2:42735 inside  192.168.20.2:33447, idle 0:00:01, bytes 1
 UDP inside  192.168.10.2:42735 inside  192.168.20.2:33442, idle 0:00:01, bytes 0, flags - 
 UDP inside  192.168.10.2:42735 inside  192.168.20.2:33451, idle 0:00:01, bytes 18, flags - 
 ```
+
 ## Conclusion
 In conclusion, the configuration group and centralized control policy implemented in this lab successfully ensured that traffic originating from the **Stockholm-User** 
 at **Stockholm-Branch (site-10)** and destined for the **Sydney-User** at **Sydney-Branch (site-20)** was routed through the **firewall (London-FW)** at **London-Branch**. 
