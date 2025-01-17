@@ -146,13 +146,15 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-6.png){ .off-glb }
 10. Click **Import**, and load **EMEA-London-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-2-figure-10.png){ .off-glb }
-19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the **FW service** is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
-    ![Attaching CSV file](./assets/S-2b-figure-7.png){ .off-glb }
-20. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
-    ![Attaching CSV file](./assets/S-2b-figure-8.png){ .off-glb }
-21. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
-    ![Attaching CSV file](./assets/S-2b-figure-9.png){ .off-glb }
-22. To verify the configuration group status, click on the **EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
+!!! tip
+    All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**.
+11. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the **FW service** is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
+    ![Attaching CSV file](./assets/S-2b-figure-7.png){ .off-glb } 
+12. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
+    ![Attaching CSV file](./assets/S-2b-figure-8.png){ .off-glb } 
+13. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
+    ![Attaching CSV file](./assets/S-2b-figure-9.png){ .off-glb } 
+14. To verify the configuration group status, click on the **EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
     correctly linked to the **London-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Attaching CSV file](./assets/S-2b-figure-10.png){ .off-glb }
