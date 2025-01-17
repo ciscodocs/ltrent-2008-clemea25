@@ -153,6 +153,8 @@ as traffic flows between the branches.
     ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 17. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
+!!! tip
+    All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**.
 18. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
     ![CLI Preview](./assets/S-1-figure-19.png){ .off-glb } 
 19. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
