@@ -2,7 +2,7 @@
 
 
 <figure markdown>
-  ![SD-WAN Topology](./assets/sdwan-topology.png)
+  ![SD-WAN Topology](./assets/sdwan-topology.png){ .off-glb }
 </figure>
 
 <map name="image-map">
