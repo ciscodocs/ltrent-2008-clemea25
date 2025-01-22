@@ -7,9 +7,24 @@ Priority: **<font color="green">High</font>**
 
 ### Topology Diagram
 
-<figure markdown>
-  ![Ticket Topology](./assets/Challenge-Topology.png)
-</figure>
+
+![Ticket Topology](./assets/Challenge-Topology.png){usemap="#image-map"}
+<map name="image-map">
+     <area target="" alt="Stockholm-Branch" title="Stockholm-Branch" href="telnet://127.0.0.1:9009" coords="232,611,28" shape="circle">
+     <area target="" alt="Stockholm-FW" title="Stockholm-FW" href="telnet://127.0.0.1:9010" coords="37,594,70,618" shape="rect">
+     <area target="" alt="Stockholm-User" title="Stockholm-User" href="telnet://127.0.0.1:9011" coords="35,678,74,707" shape="rect">
+     <area target="" alt="Amsterdam-Branch" title="Amsterdam-Branch" href="telnet://127.0.0.1:9000" coords="406,665,25" shape="circle">
+     <area target="" alt="Amsterdam-User" title="Amsterdam-User" href="telnet://127.0.0.1:9001" coords="587,649,623,673" shape="rect">
+     <area target="" alt="Sydney-Branch" title="Sydney-Branch" href="telnet://127.0.0.1:9012" coords="783,606,23" shape="circle">
+     <area target="" alt="Sydney-FW" title="Sydney-FW" href="telnet://127.0.0.1:9013" coords="948,583,982,610" shape="rect">
+     <area target="" alt="Sydney-User" title="Sydney-User" href="telnet://127.0.0.1:9014" coords="949,677,983,700" shape="rect">
+     <area target="" alt="London-Branch" title="London-Branch" href="telnet://127.0.0.1:9004" coords="293,206,29" shape="circle">
+     <area target="" alt="London-FW" title="London-FW" href="telnet://127.0.0.1:9005" coords="101,191,135,216" shape="rect">
+     <area target="" alt="Singapore-Branch" title="Singapore-Branch" href="telnet://127.0.0.1:9007" coords="552,206,27" shape="circle">
+     <area target="" alt="Singapore-FW" title="Singapore-FW" href="telnet://127.0.0.1:9008" coords="714,186,753,212" shape="rect">
+     <area target="" alt="Controller-1" title="Controller-1" href="telnet://127.0.0.1:9002" coords="429,29,30" shape="circle">
+</map>
+
 
 ### Intent
 
