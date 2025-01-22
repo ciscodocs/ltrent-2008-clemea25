@@ -1,7 +1,9 @@
 # Lab topology
 
 
+
 ![SD-WAN Topology](./assets/sdwan-topology.png){ .off-glb }
+
 <map name="image-map">
     <area target="" alt="Singapore-Branch" title="Singapore-Branch" href="telnet://127.0.0.1:9007" coords="603,245,31" shape="circle">
     <area target="" alt="Singapore-FW" title="Singapore-FW" href="telnet://127.0.0.1:9008" coords="800,226,841,251" shape="rect">    
