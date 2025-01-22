@@ -2,8 +2,8 @@
 
 
 <figure markdown>
- ![SD-WAN Topology](./assets/sdwan-topology.png){ .off-glb }
-</figure>>
+ ![SD-WAN Topology](./assets/sdwan-topology.png)
+</figure>
 
 <map name="image-map">
     <area target="" alt="Singapore-Branch" title="Singapore-Branch" href="telnet://127.0.0.1:9007" coords="603,245,31" shape="circle">
