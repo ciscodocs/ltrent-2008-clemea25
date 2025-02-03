@@ -5,7 +5,7 @@ The IT Administrator is in the process of bringing the **Amsterdam-Branch** onli
 
 Priority: **<font color="red">High</font>**
 
-Total Faults: **<font color="orange">6</font>**
+Total Faults: **<font color="green">6</font>**
 
 ### Topology Diagram
 
