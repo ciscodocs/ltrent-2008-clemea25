@@ -76,6 +76,7 @@ To confirm the configuration, you can use the <font color="orange">**show sdwan 
 
 !!! note
     The show outputs provided below are from the **London-Branch**; however, it is important to perform this verification on each WAN-Edge router in the topology.
+    All WAN-Edges(cEdges) are configured with the default username and password (**admin/admin**).
 
 
 ``` {.ios, .no-copy, title="Configuration Template Verification", linenums="1", hl_lines="38 40"}
