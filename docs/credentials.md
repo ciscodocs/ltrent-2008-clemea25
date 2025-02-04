@@ -8,7 +8,6 @@
 | Controllers      | Putty session    | admin           | admin      |
 | WAN-Edge (cEdge) | Putty session    | admin           | admin      |
 | User Desktops    | Putty session    | cisco           | cisco      |
-| Firewalls        | Putty session    | cisco           | cisco      |
 
 !!! note 
     Enable password for Firewalls are **ltrent2008**.
