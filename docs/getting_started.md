@@ -1,7 +1,7 @@
 # Getting Started
 Connecting to the lab network requires VPN access to the lab environment. After successfully establishing VPN connection, you access with RDP the jump-host workstation with preconfigured session manager.
 
-### How to RDP
+## How to RDP
 
 - RDP to the Management Workstation.
 - Open the Remote Desktop Connection application
