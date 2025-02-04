@@ -21,8 +21,8 @@ Connecting to the lab network requires VPN access to the lab environment. After 
 
 - Once inside the dCloud management workstation:
   - Open Google Chrome 
-  - Click on lab guide from bookmark bar. 
-  - In new Tab, click on SD-WAN Manager from bookmark bar. 
+  - Click on lab guide **LTRENT-2008 Beyond...** from bookmark bar. 
+  - In new Tab, click on **SD-WAN Manager** from bookmark bar. 
 
 ![RDP-Bookmark](./assets/RDP-Bookmark.png)
 
