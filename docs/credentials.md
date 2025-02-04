@@ -10,4 +10,4 @@
 | User Desktops    | Putty session              | cisco           | cisco      |
 
 !!! note 
-    Enable password for Firewalls are **ltrent2008**.
+    The **enable** password for Firewall is **ltrent2008**.
