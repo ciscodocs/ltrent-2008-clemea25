@@ -90,6 +90,7 @@ nav:
       - Lab 6 - Using Data Policy for Route Traffic from Sydney to Stockholm via remote Firewall in Same VRF: lab6a_route_traffic_data_policy.md
       - Conclusion: conclusion.md
   - Topology: topologies.md
+  - Credentials: credentials.md
   - IP Addresses: ip-addresses.md
   - Troubleshooting Ticket : challenge.md
   - Troubleshooting Commands: troubleshooting-commands.md
