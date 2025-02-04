@@ -58,6 +58,9 @@ TENANT    VPN    PREFIX              FROM PEER        ID     LABEL    STATUS    
 
 To verify this, we initiate a ping from the **Stockholm-User** (**<font color="#9AAFCB">IP: 192.168.10.2</font>**) to the **Sydney-User** (**<font color="#9AAFCB">IP: 192.168.20.2</font>**). A successful ping response confirms that reachability between the two branches is intact.
 
+!!! note 
+    All **user desktops** are configured with the default username and password (**cisco/cisco**).
+
 ```{.ios, .no-copy}
 Stockholm-User:~$ ping 192.168.20.2
 PING 192.168.20.2 (192.168.20.2): 56 data bytes
@@ -361,6 +364,9 @@ traceroute to 192.168.20.2 (192.168.20.2), 30 hops max, 46 byte packets
 Stockholm-User:~$ 
 ```
 - Next, verify on the **Stockholm-FW** itself to ensure that the traffic is being **inspected** before continuing its journey toward the Sydney-User. This step confirms that the traffic is correctly following the service chain configuration as defined in the centralized data policy.
+
+!!! note 
+    All Firewalls have pre-configured **enable** password **ltrent2008.**  
 
 ```{.ios .no-copy title="Stockholm Firewall traffic inspection"}
 Stockholm-FW# show conn all
