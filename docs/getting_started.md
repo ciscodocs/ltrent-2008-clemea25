@@ -8,10 +8,10 @@ Connecting to the lab network requires VPN access to the lab environment. After 
 
   ![RDP](./assets/RDP.png)
 
-- Enter Computer and Username details and click Connect.
-  - Computer: **198.18.133.252**
-  - User name:**\\Administrator**
-  - Password: **C1sco12345**
+- Enter Computer and Username details and click Connect. 
+    - Computer: **198.18.133.252**
+    - User name:**\\Administrator**
+    - Password: **C1sco12345**
   
   ![RDP-Connect](./assets/RDP-Connect.png)
 
@@ -20,11 +20,12 @@ Connecting to the lab network requires VPN access to the lab environment. After 
   ![RDP-Certificate](./assets/RDP-Certificate.png)
 
 - Once inside the dCloud management workstation:
-  - Open Google Chrome 
-  - Click on lab guide **LTRENT-2008 Beyond...** from bookmark bar. 
-  - In new Tab, click on **SD-WAN Manager** from bookmark bar. 
+    - Open Google Chrome 
+    - Click on lab guide **LTRENT-2008 Beyond...** from bookmark bar. 
+    - In new Tab, click on **SD-WAN Manager** from bookmark bar. 
 
 ![RDP-Bookmark](./assets/RDP-Bookmark.png)
+
 
 ## Understanding the Lab Topology
 This lab features a topology comprising four WAN-Edge routers strategically deployed across two regions: **EMEA** and **APAC**. In the **EMEA region**, the routers are located in **London** and **Stockholm**, while in the **APAC region**, they are deployed in **Singapore** and **Sydney**. Each WAN-Edge router is integrated with a <font color="red">**firewall**</font>, which is essential for redirecting traffic for inspection across various use cases. The deployment leverages two transport types ***Internet*** and ***MPLS*** to provide reliable connectivity between the WAN-Edge routers across regions. This setup creates a robust environment for simulating real-world traffic routing and inspection scenarios.
