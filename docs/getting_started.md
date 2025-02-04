@@ -10,8 +10,10 @@ Connecting to the lab network requires VPN access to the lab environment. After 
   - Computer: **198.18.133.252**
   - User name:**\\Administrator**
   - Password: **C1sco12345**
+  
   ![RDP-Connect](./assets/RDP-Connect.png)
 - Click on **Yes** when prompted about the computer certificate.
+  
   ![RDP-Certificate](./assets/RDP-Certificate.png)
 
 ## Understanding the Lab Topology
