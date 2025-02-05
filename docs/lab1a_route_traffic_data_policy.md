@@ -298,13 +298,12 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
     !!! warning
         Use the <font color="red">**Service Chain Type**</font>, from **point 19** of "**Configuring Service-Chain in Configuration Group**".
 
-    
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
 19. Under **TLOC List** select **Local** and uncheck **Restrict**.
     ![Data Policy](./assets/S-1-figure-42.png){ .off-glb .small .center }
 
     !!! info
-        When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
+        When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>. 
 
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
     ![Data Policy](./assets/S-1-figure-43.png){ .off-glb .small .center }
