@@ -129,7 +129,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Service Attachment Gateway Definition](./assets/S-4-figure-5.png){ .off-glb }
 7. Now click **<font color="green">Add Service Chain Definition</font>** to add the service chain definition.
    ![Service Attachment Gateway Definition](./assets/S-4-figure-51.png){ .off-glb } 
-8. Select name **Singapore-Firewall-SC-Def** and description **Singapore-Firewall-SC-Def**. 
+8. Select name **Singapore-Firewall-SC** and description **Singapore-Firewall-SC**. 
 9. Now select **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-4-figure-14.png){ .off-glb } 
 10. Under Basic Information, enter **VPN** <font color="orange">**2**</font>. 
@@ -223,7 +223,7 @@ Service Chain: SC6
    vrf: 2
    label: 1009
    state: up
-   description:  Singapore-Firewall-SC-Def
+   description:  Singapore-Firewall-SC
 
    service: FW
       sequence: 1
@@ -801,7 +801,7 @@ Service Chain: SC6
    vrf: 2
    label: 1009
    state: up
-   description:  Singapore-Firewall-SC-Def
+   description:  Singapore-Firewall-SC
 
    service: FW
       tx: 12 rx: 9
