@@ -474,3 +474,4 @@ Cisco SD-WAN fabric.
     data policy configured in the current exercise. **Deactivating** the policy ensures that no unintended traffic 
     steering or service chaining configurations remain active. This step is critical to maintain a clean and 
     controlled environment for the upcoming configurations and scenarios.
+    From the left hand navigation pane select **<font color="red">Configuration -> Policies -> {{Respected-Scenario-Centralized-Policy}} -> ... -> Deactivate</font>**.

@@ -461,4 +461,4 @@ This demonstrates the practical application of service chaining and centralized 
     ensures that no unintended traffic steering or service chaining configurations remain active, which could interfere with subsequent lab tasks. Once the centralized control policy is successfully deactivated 
     and confirmed, delete the service in **London-Branch-Service-Attachment** in **London-Branch** WAN-Edge service profile **EMEA-London-Branch-Service-VPN**. Now we can confidently move forward to 
     the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
-
+    From the left hand navigation pane select **<font color="red">Configuration -> Policies -> {{Respected-Scenario-Centralized-Policy}} -> ... -> Deactivate</font>**.
