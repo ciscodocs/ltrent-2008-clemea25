@@ -283,7 +283,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
    ![Traffic Data Rules](./assets/S-1-figure-31.png){ .off-glb .small .center }
 8. To create a new data policy, enter the **Name** as **Scenario-2-Data-Policy** and provide the **Description** as **Scenario-2-Data-Policy**. 
    ![Traffic Data Rules Name and Description](./assets/S-1-figure-32.png){ .off-glb .small .center }
-9. Next, click on the **Default Action** icon to configure the **default behavior** of the policy. 
+9. Next, select **Default Action** and **click on pencil icon** to configure the **default behavior** of the policy. 
    Under the **Actions section**, select **<font color="green">Accept</font>** to ensure that unmatched traffic is allowed by default. Once done, click **Save** and **Match** to confirm the settings.
 10. To configure the data policy, begin by clicking **Sequence Type**. In the Add Data Policy pop-up window, select **Custom** as the sequence type to define a tailored policy.
     ![Traffic Data Rules](./assets/S-1-figure-33.png){ .off-glb .small .center }
