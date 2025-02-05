@@ -338,7 +338,7 @@ This centralized policy ensures that traffic adheres to the intended security an
     ![Data Policy](./assets/S-6a-figure-5.png){ .off-glb } 
 30. Click Preview to review the policy and after reviewing click **OK**.
     ![Data Policy](./assets/S-6a-figure-6.png){ .off-glb }
-31. Now go to **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb width="25" } on the **Scenario-6** policy.
+31. Under **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb width="25" } on the **Scenario-6** policy.
     1. Click **Activate**. 
     2. Click **Activate** on **Activate Policy** pop-up. 
     ![Data Policy Push](./assets/S-1-figure-50.png){ .off-glb }

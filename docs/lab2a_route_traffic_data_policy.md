@@ -327,7 +327,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
     ![Data Policy](./assets/S-2-figure-21.png){ .off-glb } 
 29. Click Preview to review the policy and after reviewing click **OK**.
     ![Data Policy](./assets/S-2-figure-22.png){ .off-glb } 
-30. Now go to **Policies > Centralized Policy** page, click 3 dots on the **Scenario-2** policy.
+30. Under **Policies > Centralized Policy** page, click 3 dots on the **Scenario-2** policy.
     1. Click **Activate**. 
     2. Click **Activate** on **Activate Policy** pop-up. 
     ![Data Policy Push](./assets/S-2-figure-23.png){ .off-glb } 
