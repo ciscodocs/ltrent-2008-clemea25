@@ -204,7 +204,7 @@ Service Chain: SC7
    vrf: 1
    label: 1009
    state: up
-   description:  Stockholm-Firewall-SC-Def
+   description:  Stockholm-Firewall-SC
 
    service: FW
       sequence: 1
@@ -398,7 +398,7 @@ Service Chain: SC7
    vrf: 1
    label: 1009
    state: up
-   description:  Stockholm-Firewall-SC-Def
+   description:  Stockholm-Firewall-SC
 
    service: FW
       tx: 12 rx: 9
