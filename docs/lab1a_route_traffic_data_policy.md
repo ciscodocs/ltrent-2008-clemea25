@@ -227,7 +227,7 @@ Service Chain: SC7
 
 Next, we will configure a **centralized data policy** to ensure that traffic initiated from the **Stockholm-User** destined for the **Sydney-User** is first inspected by the **Stockholm-FW** before reaching its destination. This policy enforces the required traffic inspection by leveraging the service chain defined earlier. During the configuration, we will use the **service-chain number** that was previously configured and noted in **<font color="green">step 19</font>**. This centralized policy ensures that traffic adheres to the intended security and inspection workflow within the SD-WAN fabric.
 
-1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
+1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select **Configuration**, followed by **Classic**, and then click on **Policies**. 
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb .small .center }
 2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small .center }
