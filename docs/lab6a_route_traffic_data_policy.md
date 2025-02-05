@@ -323,7 +323,7 @@ This centralized policy ensures that traffic adheres to the intended security an
         When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
 
     !!! warning
-        Use the <font color="red">**Service Chain Type**</font> from **point 20** of "**Configuring Service-Chain in Configuration Group**".
+        Use the <font color="red">**Service Chain Type**</font> from **point 19** of "**Configuring Service-Chain in Configuration Group**".
 
 
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
