@@ -153,18 +153,18 @@ This configuration ensures that the desired service policies are enforced as tra
 18. Click **Import**, and load **EMEA-London-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-2-figure-10.png){ .off-glb }
 !!! tip
-    All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**.
+    All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**. 
 19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition 
     is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
     This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
-    ![CLI Preview](./assets/S-2-figure-11.png){ .off-glb }
+    ![CLI Preview](./assets/S-2-figure-11.png){ .off-glb } 
 20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**#9AAFCB**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
     The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
-    ![CLI Preview of Service Chain Number](./assets/S-2-figure-12.png){ .off-glb }
+    ![CLI Preview of Service Chain Number](./assets/S-2-figure-12.png){ .off-glb } 
 21. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
     ![CLI Preview of Service Chain Number](./assets/S-2-figure-13.png){ .off-glb } 
 22. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
-    ![CLI Preview of Service Chain Number](./assets/S-2-figure-14.png){ .off-glb }
+    ![CLI Preview of Service Chain Number](./assets/S-2-figure-14.png){ .off-glb } 
 23. To verify the configuration group status, click on the **EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
     correctly linked to the **London-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
