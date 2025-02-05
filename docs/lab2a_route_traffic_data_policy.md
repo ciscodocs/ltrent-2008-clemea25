@@ -132,7 +132,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-2-figure-6.png){ .off-glb }
-8. Enter the name **London-Firewall-SC-Def** and Description **London-Firewall-SC-Def** for the service chain definition.
+8. Enter the name **London-Firewall-SC** and Description **London-Firewall-SC** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-2-figure-7.png){ .off-glb }
 10. Under Basic Information, enter **VPN** <font color="orange">**1**</font>.
@@ -219,7 +219,7 @@ Service Chain: SC5
    vrf: 1
    label: 1007
    state: up
-   description:  London-Firewall-SC-Def
+   description:  London-Firewall-SC
 
    service: FW
       sequence: 1
@@ -417,7 +417,7 @@ Service Chain: SC5
    vrf: 1
    label: 1007
    state: up
-   description:  London-Firewall-SC-Def
+   description:  London-Firewall-SC
 
    service: FW
       tx: 34 rx: 28
