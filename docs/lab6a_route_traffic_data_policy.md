@@ -318,8 +318,14 @@ This centralized policy ensures that traffic adheres to the intended security an
 19. Under **TLOC List** select **Remote** and uncheck **Restrict**. Now enter the TLOC information of the **<font color="orange">Stockholm-Branch</font>** TLOC 
     (<font color="green">**biz-internet**</font>**:**<font color="green">**10.1.1.1**</font>) and select **IPSEC** Encapsulation.
     ![Data Policy](./assets/S-6a-figure-1.png){ .off-glb }
-!!! info
-    When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
+
+    !!! info
+        When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
+
+    !!! warning
+        Use the <font color="red">**Service Chain Type**</font> from **point 20** of "**Configuring Service-Chain in Configuration Group**".
+
+
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
     ![Data Policy](./assets/S-6a-figure-2.png){ .off-glb }
 21. Click **Next** and enter **Policy Name** – **Scenario-6**. 
