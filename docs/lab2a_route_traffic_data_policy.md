@@ -302,7 +302,12 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
 17. Scroll to the **right** to select <font color="green">**Service Chain**</font>.
     ![Data Policy](./assets/S-1-figure-40.png){ .off-glb .small .center }
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC5</font>**.
+
+    !!! warning
+        Use the <font color="red">**Service Chain Type**</font> from **point 19** of "**Configuring Service-Chain in Configuration Group**".
+
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
+
 19. To proceed with the configuration, follow the steps below to set up the VPN and TLOC parameters for the service attachment:
     1. Enter VPN: **<font color="green">1</font>** in the designated field.
     2. Under the TLOC section

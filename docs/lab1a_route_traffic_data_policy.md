@@ -296,7 +296,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC7</font>**.
 
     !!! warning
-        Use the <font color="red">**Service Chain Type**</font>, from **point 19** of "**Configuring Service-Chain in Configuration Group**".
+        Use the <font color="red">**Service Chain Type**</font> from **point 19** of "**Configuring Service-Chain in Configuration Group**".
 
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
 
