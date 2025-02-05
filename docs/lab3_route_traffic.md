@@ -761,6 +761,10 @@ from-vsmart lists data-prefix-list Sydney-Branch-User
     on the **Sydney-Branch** WAN-Edge, only the data policy will be visible. This distinction ensures that control decisions are managed centrally while data traffic 
     is handled locally at the edge for optimized performance and enforcement.
 
+
+!!! warning
+    It could be possible that Service-chain number might be different.
+
 To verify that the centralized data policy is functioning as intended, navigate back to the **Sydney-User** in the **Sydney-Branch** site. 
 
 - Perform a traceroute to the **Stockholm-User** located in the **Stockholm-Branch** site using the **traceroute** command: 

@@ -367,6 +367,10 @@ from-vsmart lists data-prefix-list Stockholm-Branch-User
 from-vsmart lists data-prefix-list Sydney-Branch-User
  ip-prefix 192.168.20.0/24
 ```
+
+!!! warning
+    It could be possible that Service-chain number might be different.
+
 To verify that the centralized data policy is functioning as intended, navigate back to the **Stockholm-User** in the **Stockholm-Branch** site. 
 
 - Perform a traceroute to the **Sydney-User** located in the **Sydney-Branch** site using the **traceroute** command: 
