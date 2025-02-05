@@ -308,7 +308,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
 
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
     ![Data Policy](./assets/S-1-figure-43.png){ .off-glb .small .center }
-21. Enter **Policy Name** – **Scenario-1**. 
+21. Click **Next** and enter **Policy Name** – **Scenario-1**. 
 22. Enter **Policy Description** - **Scenario-1**.
     ![Data Policy](./assets/S-1-figure-44.png){ .off-glb .small .center }
 23. Click **Traffic Data** and then click **New Site/WAN Region List and VPN List**
