@@ -235,7 +235,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
    ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb .small .center }
 
     !!! info
-        Some lists are pre-configured.
+        Some lists are **pre-configured**.
 
 
    1. Click **New Data Prefix List** to define the first prefix list:
