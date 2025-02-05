@@ -132,7 +132,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-3-figure-5.png){ .off-glb }
-8. Enter the name **Sydney-Firewall-SC-Def** and Description **Sydney-Firewall-SC-Def** for the service chain definition.
+8. Enter the name **Sydney-Firewall-SC** and Description **Sydney-Firewall-SC** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-3-figure-6.png){ .off-glb }
 10. Under Basic Information, enter **VPN** <font color="orange">**2**</font>.
@@ -226,7 +226,7 @@ Service Chain: SC8
    vrf: 2
    label: 1008
    state: up
-   description:  Sydney-Firewall-SC-Def
+   description:  Sydney-Firewall-SC
 
    service: FW
       sequence: 1
@@ -810,7 +810,7 @@ Service Chain: SC8
    vrf: 2
    label: 1008
    state: up
-   description:  Sydney-Firewall-SC-Def
+   description:  Sydney-Firewall-SC
 
    service: FW
       tx: 24 rx: 18
