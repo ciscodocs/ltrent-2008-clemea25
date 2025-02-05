@@ -152,8 +152,10 @@ This configuration ensures that the desired service policies are enforced as tra
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-2-figure-9.png){ .off-glb }
 18. Click **Import**, and load **EMEA-London-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-2-figure-10.png){ .off-glb }
-!!! tip
-    All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**. 
+
+    !!! info
+        All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**.
+
 19. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the service-chain gateway definition 
     is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. 
     This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.

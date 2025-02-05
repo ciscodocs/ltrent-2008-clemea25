@@ -117,8 +117,10 @@ Without NAT, traffic from the private VRF cannot traverse the underlay network t
     ![Deoplying Configuration Group with Service Chain Definition](./assets/S-3-figure-8.png){ .off-glb } 
 11. Click **Import**, and load **APAC-Sydney-Branch.csv** file which loads all the values for the variables.
     ![Attaching CSV file](./assets/S-3-figure-9.png){ .off-glb } 
-!!! tip
-    All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**.
+
+    !!! info
+        All CSV files are located in the **<font color="green">CSV files</font>** folder on the **Desktop** of **_jump-host_**.
+
 12. After uploading the **CSV files**, click on **Preview CLI** to review the configuration changes before deployment. This step ensures that the **NAT** is enabled on **INET TLOC**. 
     ![CLI Preview](./assets/S-3-figure-10.png){ .off-glb } 
 13. Scroll down the **New Configuration** section to locate the ***ip nat*** configuration section.
