@@ -244,7 +244,7 @@ Service Chain: SC7
                 state: up
 ```
 
-## Configuring Centralized Policy for Traffic Steering 
+## Configuring Centralized Data Policy for Traffic Steering 
 
 Next, we will configure a **centralized data policy** to ensure that traffic initiated from the **Sydney-User** destined 
 for the **Stockholm-User** is inspected by the **Stockholm-FW** before reaching **Stockholm-User**. This policy enforces
