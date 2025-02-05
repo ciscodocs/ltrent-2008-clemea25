@@ -322,7 +322,7 @@ This centralized policy ensures that traffic adheres to the intended security an
     When **restrict** is configured in the set service-chain action, packets are dropped if a service chain goes down or if the **TLOCs** that are specified in a policy are **NOT** available. The restrict behavior is suitable for security services such as a <font color="green">firewall</font>.
 20. Click **Save Match and Actions** and after that click **_Save Data Policy_**. 
     ![Data Policy](./assets/S-6a-figure-2.png){ .off-glb }
-21. Enter **Policy Name** – **Scenario-6**. 
+21. Click **Next** and enter **Policy Name** – **Scenario-6**. 
 22. Enter **Policy Description** - **Scenario-6**.
     ![Data Policy](./assets/S-6a-figure-3.png){ .off-glb }
 23. Click **Traffic Data** and then click **New Site/WAN Region List and VPN List**
