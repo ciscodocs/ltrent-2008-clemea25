@@ -158,7 +158,7 @@ This configuration ensures that the desired service policies are enforced as tra
 
 19. After uploading the **CSV files**, click **next** then click on **Preview CLI** then select the device from the **left hand** navigation pane to review the configuration changes before deployment. This step ensures that the service-chain gateway definition is correctly included in the configuration. By previewing the CLI, you can verify that all required parameters have been accurately applied and are ready for deployment. This validation step is critical to confirm that the service chain configuration aligns with the intended design and will function as expected once deployed.
     ![CLI Preview](./assets/S-2-figure-11.png){ .off-glb } 
-20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**#9AAFCB**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
+20. Scroll down the **New Configuration** section to locate the **service-chain number** highlighted in <font color="#9AAFCB">**blue**</font>. <font color="red">Make a note of this number</font>, as it will be required when configuring the data policy in later sections.
     The **service-chain number** is a <font color="red">critical identifier</font> used to link the service chain definition to the appropriate policy, ensuring that traffic is processed through the configured service chain as intended.
     ![CLI Preview of Service Chain Number](./assets/S-2-figure-12.png){ .off-glb } 
 21. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. 
@@ -304,7 +304,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
 18. Click **Service Chain Type** and scroll the options down a bit and select **Service Chain Type** – **<font color="red">SC5</font>**.
 
     !!! warning
-        Use the <font color="red">**Service Chain Type**</font> from **point 19** of "**Configuring Service-Chain in Configuration Group**".
+        Use the <font color="red">**Service Chain Type**</font> from **point 20** of "**Configuring Service-Chain in Configuration Group**".
 
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
 
