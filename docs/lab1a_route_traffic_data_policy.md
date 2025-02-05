@@ -233,6 +233,11 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb .small .center }
 3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
    ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb .small .center }
+
+    !!! info
+        Some lists are pre-configured.
+
+
    1. Click **New Data Prefix List** to define the first prefix list:
       1. Data Prefix List Name: **Internet**
       2. Internet Protocol: IPv4 
