@@ -299,6 +299,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
         Use the <font color="red">**Service Chain Type**</font>, from **point 19** of "**Configuring Service-Chain in Configuration Group**".
 
     ![Data Policy](./assets/S-1-figure-41.png){ .off-glb .small .center }
+
 19. Under **TLOC List** select **Local** and uncheck **Restrict**.
     ![Data Policy](./assets/S-1-figure-42.png){ .off-glb .small .center }
 
