@@ -122,7 +122,7 @@ as traffic flows between the branches.
    ![Attaching Service Attachment in Configuration Group](./assets/S-1-figure-9.png){ .off-glb }
 6. On the **Service Chain Attachment Gateway** configuration page, provide ***Name*** and ***Description*** for the attachment gateway. For example, use the name **<font color="orange">Stockholm-Branch-Service-Attachment</font>**.
    ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png){ .off-glb }
-7. Click **Add Service Chain Definition** to define the service chain. 
+7. Click **Add Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-1-figure-11.png){ .off-glb }
 8. Enter the name **Stockholm-Firewall-SC-Def** and Description **Stockholm-Firewall-SC-Def** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
