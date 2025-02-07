@@ -224,7 +224,7 @@ sdwan
    To retrieve the service chain number configured on the **Stockholm-Branch** WAN-Edge router, we can also use the following command on **Stockholm-Branch** WAN-Edge router.
 
 
-   - <font color="green">**show platform software sdwan service-chain database**</font>
+   * <font color="green">**show platform software sdwan service-chain database**</font>
    
 
 8. Select **EMEA-Stockholm-Branch** from the left navigation pane and scroll down the **New Configuration** section to locate the **ACL configuration and service-chain number**.
