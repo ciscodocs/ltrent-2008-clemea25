@@ -339,7 +339,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
 25. Click outside the selection box to expose **Select VPN List**
 26. Select VPN List by clicking in the box – **<font color="green">VPN-1</font>**.
     ![Data Policy](./assets/S-2-figure-20.png){ .off-glb .small }
-27. Click **Save Policy** at the bottom.
+27. Click **Add and Save Policy** at the bottom.
 28. On **Policies > Centralized Policy** page, click ![edit icon](./assets/S-1-figure-dots.png){ .off-glb width="25" } on the **Scenario-2** policy.
     ![Data Policy](./assets/S-2-figure-21.png){ .off-glb } 
 29. Click Preview to review the policy and after reviewing click **OK**.
