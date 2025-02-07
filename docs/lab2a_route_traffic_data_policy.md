@@ -165,7 +165,7 @@ This configuration ensures that the desired service policies are enforced as tra
     ![CLI Preview of Service Chain Number](./assets/S-2-figure-13.png){ .off-glb } 
 22. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
     ![CLI Preview of Service Chain Number](./assets/S-2-figure-14.png){ .off-glb } 
-23. To verify the configuration group status, click on the **EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
+23. To verify the configuration group status, click **Configuration > Configuration Groups > EMEA-London-Branch** configuration group. Ensure that the **Associated column indicates <font color="orange">1</font> device**, confirming that the configuration group is 
     correctly linked to the **London-Branch** WAN-Edge router. Additionally, check that the Provisioning column displays **<font color="orange">0 out of sync</font>** indicating that the configuration has been successfully deployed 
     and is fully synchronized with the device. This step ensures that the configuration group is correctly applied and functioning as intended.
     ![Device is sync.](./assets/S-2-figure-15.png){ .off-glb }
