@@ -242,15 +242,14 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     !!! note
         Some lists are already **pre-configured**.
 
-
    2. Navigate to **VPN** in the left navigation pane. 
       1. Click **New VPN List** to create the **VPN list**:
       2. VPN List Name: **VPN-1**
       3. Add VPN: <font color="orange">1</font>
    ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small }
-
-   !!! note
-       Some VPN lists are already **pre-configured**.
+    
+    !!! note
+        Some VPN lists are already **pre-configured**.
 
    3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the **<font color="green">control policy</font> creation** process.
 5. To proceed with configuring **control policy** rules for the centralized control policy, click **Next** to navigate to the **Configure Topology and VPN Membership** configuration section. 
