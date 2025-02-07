@@ -259,6 +259,11 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
       2. Internet Protocol: IPv4 
       3. Add Data Prefix: **192.168.20.0/24**
   ![Adding Data Prefix List](./assets/S-1-figure-26.png){ .off-glb .small .center }
+
+   !!! note
+       Some lists are already **pre-configured**.
+
+
 4. To configure the required **Site Lists** and **VPN List** for the centralized data policy, follow these steps:
    1. Navigate to **Site** in the left navigation pane:
       1. Click **New Site List** to create the first site list:
@@ -269,7 +274,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
          2. Add Site: **20**
    ![Adding Site List](./assets/S-1-figure-27.png){ .off-glb .small .center }
    
-    !!! info
+    !!! note
         Some lists are already **pre-configured**.
 
    2. Navigate to **VPN** in the left navigation pane. 
