@@ -275,7 +275,7 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 13. Once the match conditions and actions are fully configured, click **Save Match and Actions** to finalize the rule. This step ensures that the defined criteria and corresponding actions are stored within the control policy.
     By saving, you confirm the rule’s configuration, making it ready to be included in the policy sequence.
     ![Save Match and Actions](./assets/S-2b-figure-19.png){ .off-glb .small }
-14. Click **<font color="green">Save Control Policy</font>**.
+14. Click **<font color="green">Save Control Policy</font>** to save the control policy.
 15. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
     ![Adding VPN List](./assets/S-2b-figure-20.png){ .off-glb .small }
 16. Under **Topology** section click **New Site/WAN Region List**.
