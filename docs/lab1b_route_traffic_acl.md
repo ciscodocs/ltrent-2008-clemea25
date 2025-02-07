@@ -219,7 +219,7 @@ sdwan
 7. Now we need to enter the value of the variable _Stockholm-Service-Chain-Number_ for **service-chain** number which we noted down in **step 19** above.
    ![Service chain number](./assets/S-1b-figure-3.png){ .off-glb }
 
-    !!! note
+    !!! info
         To retrieve the service chain number configured on the **Stockholm-Branch** WAN-Edge router, we can also use the command <font color="green">**show platform software sdwan service-chain database**</font> on **Stockholm-Branch** WAN-Edge router.
 
 8. Scroll down the **New Configuration** section to locate the **ACL configuration and service-chain number**.
