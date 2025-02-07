@@ -275,26 +275,27 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
 13. Once the match conditions and actions are fully configured, click **Save Match and Actions** to finalize the rule. This step ensures that the defined criteria and corresponding actions are stored within the control policy.
     By saving, you confirm the rule’s configuration, making it ready to be included in the policy sequence.
     ![Save Match and Actions](./assets/S-2b-figure-19.png){ .off-glb .small }
-14. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
+14. Save the control policy.
+15. Now click **Next** and as we are NOT configuring any **Traffic Rules** so we click **Next** again. After that we land to **Apply Policies to Sites and VPNs** section.
     ![Adding VPN List](./assets/S-2b-figure-20.png){ .off-glb .small }
-15. Under **Topology** section click **New Site/WAN Region List**.
+16. Under **Topology** section click **New Site/WAN Region List**.
     ![Adding VPN List](./assets/S-2b-figure-21.png){ .off-glb .small }
-16. Make sure we select **Site List** and under **Outbound Site List**, we select **<font color="green">Stockholm-Branch</font>**. So intent of the control policy is to select
+17. Make sure we select **Site List** and under **Outbound Site List**, we select **<font color="green">Stockholm-Branch</font>**. So intent of the control policy is to select
     when SD-WAN Controller (vSmart), advertised the routes of **Sydney-Branch** more specifically **Sydney-Branch-User**, we set the TLOC of **London-Branch** and advertised towards the
     **Stockholm-Branch**, as policy is applied in **<font color="green">outbound</font>** direction. Once **Stockholm-Branch** is selected from **Outbound Site List**, we select **Add**. So
     configuration of the direction is saved under control policy like below.
     ![Adding VPN List](./assets/S-2b-figure-22.png){ .off-glb .small }
-17. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-2</font>** as the name and description.
+18. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-2</font>** as the name and description.
     ![Adding VPN List](./assets/S-2b-figure-23.png){ .off-glb .small }
-18. Now click the three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
+19. Now click the three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
     ![Activating Policy](./assets/S-2b-figure-24.png){ .off-glb .small }
-19. Click **Preview** to review the policy and after reviewing click **OK**.
+20. Click **Preview** to review the policy and after reviewing click **OK**.
     ![Preview Policy](./assets/S-2b-figure-25.png){ .off-glb .small }
-20. Now go to **Policies > Centralized Policy** page, click 3 dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
+21. Now go to **Policies > Centralized Policy** page, click 3 dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
     1. Click **Activate**. 
     2. Click **Activate** on **Activate Policy** pop-up. 
     ![Preview Policy](./assets/S-2b-figure-26.png){ .off-glb .small }
-21. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
+22. Click **Activate** and observe **Push vSmart Policy** <font color="green">**Validation success**</font> and <font color="orange">Message</font> **Done – Push vSmart Policy**. 
     ![Preview Policy](./assets/S-2b-figure-27.png){ .off-glb .small }
 
 ## Verification
