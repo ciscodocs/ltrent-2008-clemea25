@@ -259,7 +259,7 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
    ![Custom Control](./assets/S-2b-figure-12.png){ .off-glb .small }
 7. To define the topology policy, provide the name and description as **scenario-2-control-policy**.
    ![Adding VPN List](./assets/S-2b-figure-13.png){ .off-glb .small }
-8. Now click **<font color="green">Default Action</font>** and click **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
+8. Now click **<font color="green">Default Action</font>** and click on **pencil icon** and select **Accept**, so all the remaining routes are accepted if they did not match in the policy entries.
    ![Adding VPN List](./assets/S-2b-figure-14.png){ .off-glb .small }
 9. Next, click on **Sequence Type** to define the structure of the control policy. The sequence type determines the logical flow of the policy, specifying how matching conditions and corresponding actions are applied to the control plane. By selecting the appropriate sequence type, you can configure precise rules that dictate the routing behavior for specific traffic patterns or destinations.
    ![Adding VPN List](./assets/S-2b-figure-15.png){ .off-glb .small } 
