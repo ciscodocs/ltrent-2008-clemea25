@@ -268,6 +268,10 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
          1. Site List Name: **Sydney-Branch**
          2. Add Site: **20**
    ![Adding Site List](./assets/S-1-figure-27.png){ .off-glb .small .center }
+   
+    !!! info
+        Some lists are already **pre-configured**.
+
    2. Navigate to **VPN** in the left navigation pane. 
       1. Click **New VPN List** to create the **VPN list**:
       2. VPN List Name: **VPN-1**
