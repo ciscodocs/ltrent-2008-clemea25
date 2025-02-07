@@ -285,13 +285,13 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
     **Stockholm-Branch**, as policy is applied in **<font color="green">outbound</font>** direction. Once **Stockholm-Branch** is selected from **Outbound Site List**, we select **Add**. So
     configuration of the direction is saved under control policy like below.
     ![Adding VPN List](./assets/S-2b-figure-22.png){ .off-glb .small }
-18. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-2</font>** as the name and description.
+18. To complete the control policy setup, configure the policy name and description. Enter **<font color="green">scenario-2b</font>** as the name and description.
     ![Adding VPN List](./assets/S-2b-figure-23.png){ .off-glb .small }
-19. Now click the three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
+19. Now click the three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2b** policy.
     ![Activating Policy](./assets/S-2b-figure-24.png){ .off-glb .small }
 20. Click **Preview** to review the policy and after reviewing click **OK**.
     ![Preview Policy](./assets/S-2b-figure-25.png){ .off-glb .small }
-21. Now go to **Policies > Centralized Policy** page, click 3 dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2** policy.
+21. Now go to **Policies > Centralized Policy** page, click 3 dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **scenario-2b** policy.
     1. Click **Activate**. 
     2. Click **Activate** on **Activate Policy** pop-up. 
     ![Preview Policy](./assets/S-2b-figure-26.png){ .off-glb .small }
