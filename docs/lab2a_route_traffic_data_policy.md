@@ -337,6 +337,8 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
 24. **Select Site List** by clicking in the box – **<font color="green">Stockholm-Branch</font>**
     ![Data Policy](./assets/S-2-figure-19.png){ .off-glb }
 25. Click outside the selection box to expose **Select VPN List**
+
+
 26. Select VPN List by clicking in the box – **<font color="green">VPN-1</font>**.
     ![Data Policy](./assets/S-2-figure-20.png){ .off-glb align=center }
 27. Click **Add and Save Policy** at the bottom.
