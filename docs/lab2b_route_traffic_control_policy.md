@@ -135,7 +135,7 @@ This configuration ensures that the desired service policies are enforced as tra
    ![EMEA London Configuration Group](./assets/S-2b-figure-1.png){ .off-glb }
 5. Now click, **Service**, and in order to Add **<font color="green">FW service</font>** click **Add Service** like below.
    ![EMEA London Configuration Group](./assets/S-2b-figure-2.png){ .off-glb }
-6. Select **FW** from the list and enter IP address of **FW** **<font color="green">10.101.101.2</font>** as exhibited below.
+6. Select **FW** from the list and enter IP address of **FW** **<font color="green">10.101.101.2</font>** as exhibited below. And **Click Add and Save**.
    ![EMEA London Configuration Group](./assets/S-2b-figure-3.png){ .off-glb }
 7. After ensuring all the necessary details have been entered correctly, the next step involves adding and introducing **Firewall (FW)** services at the **London-Branch**. 
    This integration is critical to route and secure the traffic flow between **Stockholm** and **Sydney**. 
