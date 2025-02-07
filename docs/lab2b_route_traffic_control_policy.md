@@ -225,6 +225,10 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
       2. Internet Protocol: IPv4 
       3. Add Data Prefix: **192.168.20.0/24**
   ![Adding Data Prefix List](./assets/S-1-figure-26.png){ .off-glb .small }
+
+    !!! note
+        Some data prefix lists are already **pre-configured**.
+
 4. To configure the required **Site Lists** and **VPN List** for the centralized data policy, follow these steps:
    1. Navigate to **Site** in the left navigation pane:
       1. Click **New Site List** to create the first site list:
@@ -234,11 +238,20 @@ ensuring that traffic destined for the **Sydney-Branch** site (<font color="gree
          1. Site List Name: **Sydney-Branch**
          2. Add Site: **20**
    ![Adding Site List](./assets/S-1-figure-27.png){ .off-glb .small }
+   
+    !!! note
+        Some lists are already **pre-configured**.
+
+
    2. Navigate to **VPN** in the left navigation pane. 
       1. Click **New VPN List** to create the **VPN list**:
       2. VPN List Name: **VPN-1**
       3. Add VPN: <font color="orange">1</font>
    ![Adding VPN List](./assets/S-1-figure-28.png){ .off-glb .small }
+
+   !!! note
+       Some VPN lists are already **pre-configured**.
+
    3. Once the lists are configured, scroll down and click **<font color="green">Next</font>** to proceed with the **<font color="green">control policy</font> creation** process.
 5. To proceed with configuring **control policy** rules for the centralized control policy, click **Next** to navigate to the **Configure Topology and VPN Membership** configuration section. 
    Under the heading Choose a tab and click **Topology** under the selected type, select the **Add Topology** tab.  
