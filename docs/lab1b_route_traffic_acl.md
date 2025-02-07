@@ -219,7 +219,7 @@ sdwan
    ![Deploying Configuration Group with Service Chain Definition](./assets/S-1-figure-17.png){ .off-glb }
 6. Click **Import**, and load **EMEA-Stockholm-Branch.csv** file which loads all the values for the variables.
    ![Attaching CSV file](./assets/S-1-figure-18.png){ .off-glb }
-7. Now we need to enter the value of the variable _Stockholm-Service-Chain-Number_ for **service-chain** number which we noted down in **step 19** above.
+7. Click **EMEA-Stockholm-Branch** from the left navigation pane and enter the value of the variable _**Stockholm-Service-Chain-Number**_ for **service-chain** number which we noted down in **step 19** above.
    ![Service chain number](./assets/S-1b-figure-3.png){ .off-glb }
 
    !!! info
