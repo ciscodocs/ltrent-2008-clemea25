@@ -261,7 +261,7 @@ Next, we will configure a **centralized data policy** to ensure that traffic ini
   ![Adding Data Prefix List](./assets/S-1-figure-26.png){ .off-glb .small .center }
 
    !!! note
-       Some lists are already **pre-configured**.
+       Some data perfix lists are already **pre-configured**.
 
 
 4. To configure the required **Site Lists** and **VPN List** for the centralized data policy, follow these steps:
