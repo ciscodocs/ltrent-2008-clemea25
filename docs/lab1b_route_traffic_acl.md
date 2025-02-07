@@ -222,7 +222,11 @@ sdwan
 7. Click **EMEA-Stockholm-Branch** from the left navigation pane and enter the value of the variable _**Stockholm-Service-Chain-Number**_ for **service-chain** number which we noted down in **step 19** above.
    ![Service chain number](./assets/S-1b-figure-3.png){ .off-glb }
    To retrieve the service chain number configured on the **Stockholm-Branch** WAN-Edge router, we can also use the following command on **Stockholm-Branch** WAN-Edge router.
+
+
    - <font color="green">**show platform software sdwan service-chain database**</font>
+   
+
 8. Select **EMEA-Stockholm-Branch** from the left navigation pane and scroll down the **New Configuration** section to locate the **ACL configuration and service-chain number**.
    ![CLI Preview of Service Chain Number](./assets/S-1b-figure-4.png){ .off-glb } 
 9. After finalizing the configuration, click **Cancel** to exit the current screen and then click **Deploy** to initiate the deployment process. Once the deployment is triggered, navigate to the **View Deployment Status** section to monitor the progress. Wait until the deployment status indicates **<font color="green">Success</font>**, confirming that the configuration has been successfully applied to the relevant devices.
