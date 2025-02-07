@@ -455,4 +455,4 @@ in steering traffic through desired network functions within the Cisco SD-WAN fa
     could interfere with subsequent lab tasks. Once the ACL policy is successfully removed and confirmed, you can confidently move forward 
     to the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
     !!! note 
-        ONLY **remove service-chain ACL configuration** and **platform console serial** command remain in the CLI-Add on configuration.
+        ONLY **remove service-chain ACL configuration** and leave **<font color="green">platform serial console</font>** command in the CLI-Add on configuration.
