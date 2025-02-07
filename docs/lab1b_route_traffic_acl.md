@@ -452,4 +452,4 @@ in steering traffic through desired network functions within the Cisco SD-WAN fa
     **Removing** the **ACL policy** ensures that no unintended traffic steering or service chaining configurations remain active, which 
     could interfere with subsequent lab tasks. Once the ACL policy is successfully removed and confirmed, you can confidently move forward 
     to the next lab. This step is critical to maintain a clean and controlled environment for the upcoming configurations and scenarios.
-    From the left hand navigation pane select **<font color="red">Configuration -> Policies -> {{Respected-Scenario-Centralized-Policy}} -> ... -> Deactivate</font>**.
+    
