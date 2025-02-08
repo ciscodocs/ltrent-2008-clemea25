@@ -1,3 +1,5 @@
+# Lab 6 - Using Data Policy for Route Traffic from Sydney to Stockholm via remote Firewall in Same VRF
+
 ## Introduction
 
 In this lab exercise, you will explore the traffic flow from a user located in the **EMEA-Sydney-Branch (site-20)** to a user situated at the **APAC-Stockholm-Branch (site-10)**.
