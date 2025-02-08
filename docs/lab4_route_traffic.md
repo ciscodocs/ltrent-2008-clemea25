@@ -439,7 +439,7 @@ aligning with the network's operational requirements.
 13. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
 ![Save Default Action Control Policy](./assets/S-4-figure-16.png){ .off-glb }
 14. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-4-route-leak</font>** 
-    policy in inbound direction on **Stockholm-Sydney-Singapore** branches. Now after that click **<font color="green">Save Policy</font>**.
+    policy in inbound direction on **Stockholm-Sydney-Singapore** branches. Now after that click **<font color="green">Add and Save Policy</font>**.
     * Enter Policy Name: **scenario-4**.
     * Enter Policy Description: **scenario-4**.
 ![Applying Control Policy](./assets/S-4-figure-17.png){ .off-glb }
