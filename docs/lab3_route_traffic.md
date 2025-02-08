@@ -407,44 +407,44 @@ aligning with the network's operational requirements.
    
 ![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
    2. Click VPN.  
-      1. Click “**New VPN List**” 
-         1. VPN List Name – **VPN-1** 
-            1. Add VPN – <font color="green">1</font> 
-         2. VPN List Name – **VPN-2** 
-            1. Add VPN – <font color="green">2</font> 
-         3. VPN List Name – **VPN-1-2** 
-            1. Add VPN – <font color="green">1,2</font>
+      1. Click “**New VPN List**”<br> 
+         1. VPN List Name – **VPN-1**<br> 
+            1. Add VPN – <font color="green">1</font><br> 
+         2. VPN List Name – **VPN-2** <br>
+            1. Add VPN – <font color="green">2</font><br> 
+         3. VPN List Name – **VPN-1-2**<br> 
+            1. Add VPN – <font color="green">1,2</font><br>
        
    !!! note
        Some VPN lists are already **pre-configured**.
 
 ![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
-4. Scroll down and click Next.
-5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
+4. Scroll down and click Next.<br>
+5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.<br>
 ![Control Policy](./assets/S-3-figure-16.png){ .off-glb }
-6. Proceed by entering the required details as outlined below and follow the steps to configure the control policy. 
-   * Enter **scenario-3-route-leak** as the policy name. 
-   * Description: Provide a brief description, using **scenario-3-route-leak** for clarity and consistency. 
+6. Proceed by entering the required details as outlined below and follow the steps to configure the control policy.<br> 
+   * Enter **scenario-3-route-leak** as the policy name.<br> 
+   * Description: Provide a brief description, using **scenario-3-route-leak** for clarity and consistency. <br>
    * Navigate to **<font color="green">Sequence Type</font>**. Under **Add Control Policy**, choose **Route** to define the **route-leaking** configuration.
-     These steps ensure that the policy is accurately defined and aligned with the lab's objectives, facilitating effective route-leaking between VPNs as part of the scenario setup.
+     These steps ensure that the policy is accurately defined and aligned with the lab's objectives, facilitating effective route-leaking between VPNs as part of the scenario setup.<br>
      ![Control Policy](./assets/S-3-figure-17.png){ .off-glb }
-7. Click **<font color="green">Sequence Rule</font>**.
+7. Click **<font color="green">Sequence Rule</font>**.<br>
 ![Control Policy](./assets/S-3-figure-18.png){ .off-glb }
-8. In the **Match** section, configure the parameters to define the scope of the **control policy**. Begin by selecting Site and VPN as the matching criteria. Next, specify the following details:
-   * **Site List**: Select <font color="orange">**Both-Branches**</font> to include both branches in the policy.
-   * **VPN List**: Choose <font color="orange">**VPN-1-2**</font> to encompass the VPNs involved in the route-leaking configuration.
-   This configuration ensures that the policy applies to the specified sites and VPNs, enabling precise control over route-leaking between the designated network segments.
+8. In the **Match** section, configure the parameters to define the scope of the **control policy**. Begin by selecting Site and VPN as the matching criteria. Next, specify the following details:<br>
+   * **Site List**: Select <font color="orange">**Both-Branches**</font> to include both branches in the policy.<br>
+   * **VPN List**: Choose <font color="orange">**VPN-1-2**</font> to encompass the VPNs involved in the route-leaking configuration.<br>
+   This configuration ensures that the policy applies to the specified sites and VPNs, enabling precise control over route-leaking between the designated network segments.<br>
    ![Control Policy](./assets/S-3-figure-19.png){ .off-glb }
 9. Next, navigate to the Action section and configure the route-leaking process to enable communication between **VPN-1** and **VPN-2**. 
    Specifically, ensure that routes from **VPN-1** are leaked into **VPN-2** and vice versa. This step is critical to establishing bidirectional
    connectivity, allowing resources in both VPNs to communicate seamlessly. Proper configuration at this stage ensures the integrity of the routing 
-   setup and facilitates the intended traffic flow between the VPNs as per the lab topology design.
-    1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**. 
-    2. Export To: **<font color="orange">VPN-1-2</font>**
+   setup and facilitates the intended traffic flow between the VPNs as per the lab topology design.<br>
+    1. Click **Action** > **Accept** > **<font color=orange">Export To</font>**.<br>
+    2. Export To: **<font color="orange">VPN-1-2</font>**<br>
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
-10. Click **<font color="orange">Save Match and Actions</font>**.
+10. Click **<font color="orange">Save Match and Actions</font>**.<br>
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
-11. Click **Default Action**, click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. 
+11. Click **Default Action**, click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. <br>
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
 12. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
 ![Save Default Action Control Policy](./assets/S-3-figure-23.png){ .off-glb }
