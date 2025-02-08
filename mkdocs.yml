@@ -86,8 +86,8 @@ nav:
       - Lab 2b - Using Control Policy for Routing traffic from Stockholm to Sydney via London firewall in Same VRF: lab2b_route_traffic_control_policy.md
       - Lab 3 - Using Data Policy for Routing traffic from Sydney to Stockholm via local firewall in Sydney in different VRF: lab3_route_traffic.md
       - Lab 4 - Using Data Policy for Routing traffic from Stockholm to Sydney via Singapore firewall in different VRF: lab4_route_traffic.md
-      - Lab 5 - Direct Internet Breakout for Sydney-Branch Traffic via Underlay with Firewall Inspection: lab5_route_traffic.md
-      - Lab 6 - Using Data Policy for Routing Traffic from Sydney to Stockholm via remote Firewall in Same VRF: lab6a_route_traffic_data_policy.md
+      - Lab 5 - Using Data for Direct Internet Breakout for Sydney-Branch Traffic via Underlay with local Firewall Inspection: lab5_route_traffic.md
+      - Lab 6 - Using Data Policy for Routing Traffic from Sydney to Stockholm via Stockholm firewall in Same VRF: lab6a_route_traffic_data_policy.md
       - Conclusion: conclusion.md
   - Topology: topologies.md
   - Credentials: credentials.md
