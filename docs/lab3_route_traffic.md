@@ -405,7 +405,7 @@ aligning with the network's operational requirements.
    !!! note
        Some lists are already **pre-configured**.
    
-![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
+![Control Policy Site List](./assets/S-3-figure-SiteList.png){ .off-glb }
    2. Click VPN.  
       1. Click “**New VPN List**” 
          1. VPN List Name – **VPN-1** 
