@@ -402,8 +402,8 @@ aligning with the network's operational requirements.
          1. Site List Name – **Both-Branches** 
          2. Add Site – <font color="green">10,20</font> 
 
-   !!! note
-       Some lists are already **pre-configured**.
+      !!! note
+          New change Some lists are already **pre-configured**.
    
 ![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
    2. Click VPN.  
