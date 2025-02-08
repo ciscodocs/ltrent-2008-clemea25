@@ -441,18 +441,19 @@ aligning with the network's operational requirements.
 ![Control Policy](./assets/S-3-figure-20.png){ .off-glb }
 10. Click **<font color="orange">Save Match and Actions</font>**.<br>
 ![Save Control Policy](./assets/S-3-figure-21.png){ .off-glb }
-11. Click **Default Action**, click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**. <br>
+11. Click **Default Action**, click ![pencil](./assets/S-3-figure-pencil.png){ .off-glb width="25"}icon and click **Accept**. Click **<font color="orange">Save Match and Action</font>**.<br>
 ![Save Default Action Control Policy](./assets/S-3-figure-22.png){ .off-glb }
-12. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
+12. Click **<font color="green">Save Control Policy</font>** to save the control policy.
+13. Now click **Next** and ignore **Configure Traffic Rules** and move to **Apply Policies to Sites and VPNs** section.
 ![Save Default Action Control Policy](./assets/S-3-figure-23.png){ .off-glb }
-13. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-3-route-leak</font>** 
+14. In order to apply the control policy for route-leaking, select **New Site/WAN Region List** and apply the **<font color="green">scenario-3-route-leak</font>** 
     policy in inbound direction on both **Stockholm-Branch** and **Sydney-Branch**. Now after that click **<font color="green">Save Policy</font>**.
 ![Applying Control Policy](./assets/S-3-figure-24.png){ .off-glb }
-14. Now click ![three dots](./assets/S-1-figure-dots.png){ .off-glb width="25" } and select **Preview** to see the content of the control policy.
+15. Now click ![three dots](./assets/S-1-figure-dots.png){ .off-glb width="25" } and select **Preview** to see the content of the control policy.
 ![Applying Control Policy](./assets/S-3-figure-25.png){ .off-glb }
-15. In order to deploy the policy click **Activate**.
+16. In order to deploy the policy click **Activate**.
 ![Activating Control Policy](./assets/S-3-figure-26.png){ .off-glb }
-16. Once policy is being pushed successfully, we can have **<font color="green">Success</font>** message that policy is pushed successfully to **SD-WAN controller**.
+17. Once policy is being pushed successfully, we can have **<font color="green">Success</font>** message that policy is pushed successfully to **SD-WAN controller**.
 ![Activating Control Policy](./assets/S-3-figure-27.png){ .off-glb }
 
 ## Verification of Centralized Control Policy
