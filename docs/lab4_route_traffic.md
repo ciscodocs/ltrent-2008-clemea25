@@ -9,7 +9,7 @@ centralized policies, and the interactions between network elements to ensure th
 Here is a breakdown of the key components involved in the network path:
 
 - **Source:** The traffic originates from a **Stockholm-User** in the **EMEA-Stockholm-Branch (site-10)**.
-- **Destination:** The intended recipient is a **Sydney-User** in the A**PAC-Sydney-Branch (site-20)**.
+- **Destination:** The intended recipient is a **Sydney-User** in the **APAC-Sydney-Branch (site-20)**.
 - **Firewall:** All traffic passes through a **firewall (Singapore-FW)**, which is hosted locally at the **APAC-Singapore-Branch (site-20)** in **<font color="green">VRF-2</font>**.
 - **WAN Edge Router:** The **Singapore-Branch** WAN-Edge router, facilitates the traffic's reachability to the firewall configured in ***<font color="#9AAFCB">VRF-2</font>*** and subsequent routing towards the destination.
 
