@@ -403,7 +403,7 @@ aligning with the network's operational requirements.
          2. Add Site – <font color="green">10,20</font> 
          
       !!! note
-          Some data prefix lists are already **pre-configured**.
+          Some lists are already **pre-configured**.
    
 ![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
    2. Click VPN.  
