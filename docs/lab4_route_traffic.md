@@ -705,7 +705,7 @@ This centralized policy ensures that traffic adheres to the intended security an
 
 16. Click “**Save Match and Actions**”. 
     ![Configuring Data Policies](./assets/S-4-figure-20.png){ .off-glb }
-17. Once data policy is saved, we can click **Policy Application** and under **Policy Application**, we select **<font color="green">Traffic Data</font>** to apply the data policy **scenario-4-data-policy**.
+17. Once data policy is saved, we can click **Policy Application > Traffic Data**, we select **<font color="green">Traffic Data</font>** to apply the data policy **scenario-4-data-policy**.
     ![Configuring Data Policies](./assets/S-4-figure-26.png){ .off-glb }
 18. Now Click **New Site/WAN Region List and VPN List**
     * Keep **<font color="orange">From Service</font>** radio button checked.
