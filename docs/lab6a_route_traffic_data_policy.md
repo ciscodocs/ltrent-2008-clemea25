@@ -1,5 +1,3 @@
-Instead, the service label, which is advertised in# Lab 6a - Route traffic from Sydney to Stockholm via remote firewall in Stockholm in same VRF using <font color="grey">**Data Policy**</font>
-
 ## Introduction
 
 In this lab exercise, you will explore the traffic flow from a user located in the **EMEA-Sydney-Branch (site-20)** to a user situated at the **APAC-Stockholm-Branch (site-10)**.
