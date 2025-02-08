@@ -715,13 +715,8 @@ This centralized policy ensures that traffic adheres to the intended security an
     * Select VPN List by clicking in the box – **<font color="green">VPN-1</font>**. 
     ![Configuring Data Policies](./assets/S-4-figure-21.png){ .off-glb }
 19. Click **<font color="orange">Add and Save Policy Changes</font>** at the bottom.
-20. Now data policy is added into centralized policy **scenario-4**. We can click three dots ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} and click **Preview** to review policy. 
-    * Click **Okay** once reviewed.
-    ![Configuring Data Policies](./assets/S-4-figure-22.png){ .off-glb }
-21. In order to activate the policy, click ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} on the **<font color="green">Scenario-4</font>** policy.
-    * Click **Activate**. 
-    * Click **Activate** on **Activate Policy** pop-up.
-    ![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
+21. Click **Activate** on **Activate Policy** pop-up.
+![Configuring Data Policies](./assets/S-3-figure-44.png){ .off-glb }
 22. Once policy is being pushed successfully, we can have **Push vSmart Policy** **Validation success** and **Message** “**<font color="green">Done – Push vSmart Policy**</font>”. 
     ![Configuring Data Policies](./assets/S-3-figure-45.png){ .off-glb }
 
