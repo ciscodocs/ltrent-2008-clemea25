@@ -390,7 +390,7 @@ aligning with the network's operational requirements.
 2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb }
 3. To create the required **Groups of Interest**, start by selecting **Site List** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
-   ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb }
+   ![Configuring Group of Interests](./assets/S-3-figure-SiteList.png){ .off-glb }
    1. Click Site in left navigation pane and check if following sites are already created. 
       1. Click “**New Site List**” 
          1. Site List Name - **Stockholm-Branch** 
@@ -401,11 +401,11 @@ aligning with the network's operational requirements.
       3. Click “**New Site List**” 
          1. Site List Name – **Both-Branches** 
          2. Add Site – <font color="green">10,20</font> 
-         
-   !!! note
-       Some lists are already **pre-configured**.
+
+      !!! note
+          Some lists are already **pre-configured**.
    
-![Control Policy Site List](./assets/S-3-figure-SiteList.png){ .off-glb }
+![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
    2. Click VPN.  
       1. Click “**New VPN List**” 
          1. VPN List Name – **VPN-1** 
@@ -415,8 +415,8 @@ aligning with the network's operational requirements.
          3. VPN List Name – **VPN-1-2** 
             1. Add VPN – <font color="green">1,2</font>
        
-   !!! note
-        Some **VPN lists** are already **pre-configured**.
+        !!! note
+            Some VPN lists are already **pre-configured**.
 
 
 ![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
