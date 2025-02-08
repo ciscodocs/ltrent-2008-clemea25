@@ -389,7 +389,7 @@ aligning with the network's operational requirements.
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb }
 2. Under the Centralized Policy section, click Add Policy to create a new policy. This will initiate the process of defining and implementing the centralized data policy to enforce traffic inspection and routing as per the lab requirements.
    ![Configuring Centralized Policies](./assets/S-1-figure-24.png){ .off-glb }
-3. To create the required **Groups of Interest**, start by selecting **Data Prefix** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
+3. To create the required **Groups of Interest**, start by selecting **Site List** from the left navigation pane within the **Centralized Policy** configuration window. Follow these steps:
    ![Configuring Group of Interests](./assets/S-1-figure-25.png){ .off-glb }
    1. Click Site in left navigation pane and check if following sites are already created. 
       1. Click “**New Site List**” 
@@ -402,8 +402,8 @@ aligning with the network's operational requirements.
          1. Site List Name – **Both-Branches** 
          2. Add Site – <font color="green">10,20</font> 
          
-      !!! note
-          Some lists are already **pre-configured**.
+   !!! note
+       Some lists are already **pre-configured**.
    
 ![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
    2. Click VPN.  
@@ -414,6 +414,11 @@ aligning with the network's operational requirements.
             1. Add VPN – <font color="green">2</font> 
          3. VPN List Name – **VPN-1-2** 
             1. Add VPN – <font color="green">1,2</font>
+       
+   !!! note
+        Some VPN lists are already **pre-configured**.
+
+
 ![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
 4. Scroll down and click Next.
 5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.
