@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab exercise, you will explore the traffic flow from a user located in the **EMEA-Sydney-Branch (site-20)** to a user situated at the **APAC-Stockholm-Branch (site-10)**.
+In this lab exercise, you will explore the traffic flow from a user located in the **APAC-Sydney-Branch (site-20)** to a user situated at the **EMEA-Stockholm-Branch (site-10)**.
 
 Here is a breakdown of the key components involved in the network path:
 
