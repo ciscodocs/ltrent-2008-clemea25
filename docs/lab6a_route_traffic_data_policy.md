@@ -1,4 +1,4 @@
-# Lab 6 - Using Data Policy for Route Traffic from Sydney to Stockholm via remote Firewall in Same VRF
+# Lab 6 - Using Data Policy for Routing Traffic from Sydney to Stockholm via Stockholm firewall in Same VRF
 
 ## Introduction
 
