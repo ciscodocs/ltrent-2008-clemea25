@@ -1,4 +1,4 @@
-# Lab 5 - Direct Internet Breakout for Sydney-Branch Traffic via Underlay with Firewall Inspection
+# Lab 5 - Using Data for Direct Internet Breakout for Sydney-Branch Traffic via Underlay with local Firewall Inspection
 
 ## Introduction
 In this lab exercise, you will explore the traffic flow from a user located in the **APAC-Sydney-Branch (site-20)** breakout directly to **<font color="green">Internet</font>** via underlay. Here is a breakdown of the key components involved in the network path: 

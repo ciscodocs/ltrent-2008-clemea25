@@ -1,4 +1,4 @@
-# Lab 1a - Route traffic from Stockholm to Sydney via local firewall in Stockholm in same VRF using <font color="grey">**Data Policy**</font>
+# Lab 1a - Using Data Policy for Routing traffic from Stockholm to Sydney via local firewall in Stockholm
 
 ## Introduction
 

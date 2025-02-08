@@ -1,4 +1,4 @@
-# Lab 1b - Route traffic from Stockholm to Sydney via local firewall in Stockholm in same VRF using <font color="grey">**Access Control List (ACL)**</font>
+# Lab 1b - Using Access Control List for Routing traffic from Stockholm to Sydney via local firewall in Stockholm
 
 ## Introduction
 
