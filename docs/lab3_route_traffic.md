@@ -385,8 +385,10 @@ communication between the two VRFs, ensuring full bidirectional reachability. By
 we establish a cohesive routing environment that allows resources in **VRF-1** and **VRF-2** to interact efficiently, 
 aligning with the network's operational requirements.
 
+
 !!! info 
     Some **Site-lists**,**VPN-Lists** are **<font color="green">pre-configured</font>**.
+
 
 1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager interface. From there, select Configuration, followed by Classic, and then click on Policies. 
    ![Configuring Policies](./assets/S-1-figure-23.png){ .off-glb }
