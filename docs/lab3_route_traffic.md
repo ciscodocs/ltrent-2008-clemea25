@@ -416,7 +416,7 @@ aligning with the network's operational requirements.
             1. Add VPN – <font color="green">1,2</font>
        
    !!! note
-        Some VPN lists are already **pre-configured**.
+        Some **VPN lists** are already **pre-configured**.
 
 
 ![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
