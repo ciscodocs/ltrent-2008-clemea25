@@ -400,13 +400,7 @@ aligning with the network's operational requirements.
          2. Add Site – <font color="green">20</font>
       3. Click “**New Site List**” 
          1. Site List Name – **Both-Branches** 
-         2. Add Site – <font color="green">10,20</font> 
-
-
-  !!! note
-      New 3rd change Some lists are already **pre-configured**.
- 
-
+         2. Add Site – <font color="green">10,20</font>
 ![Control Policy Site List](./assets/S-3-figure-14.png){ .off-glb }
    2. Click VPN.  
       1. Click “**New VPN List**”<br> 
@@ -415,11 +409,7 @@ aligning with the network's operational requirements.
          2. VPN List Name – **VPN-2** <br>
             1. Add VPN – <font color="green">2</font><br> 
          3. VPN List Name – **VPN-1-2**<br> 
-            1. Add VPN – <font color="green">1,2</font><br>
-       
-   !!! note
-       Some VPN lists are already **pre-configured**.
-
+            1. Add VPN – <font color="green">1,2</font><br> 
 ![Control Policy VPN List](./assets/S-3-figure-15.png){ .off-glb }
 4. Scroll down and click Next.<br>
 5. Under Topology, click **<font color="orange">Add Topology</font>** dropdown (for creating route-leaking policy) and select **<font color="green">Custom Control ( Route and TLOC)</font>**.<br>
