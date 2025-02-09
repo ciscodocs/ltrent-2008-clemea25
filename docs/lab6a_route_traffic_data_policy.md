@@ -132,7 +132,7 @@ as traffic flows between the branches.
    ![Service Attachment Gateway Name and Description](./assets/S-1-figure-10.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-1-figure-11.png){ .off-glb }
-8. Enter the name **Stockholm-Firewall-SC** and Description **Stockholm-Firewall-SC** for the service chain definition.
+8. Enter the name **Stockholm-Firewall-SC-6** and Description **Stockholm-Firewall-SC-6** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-1-figure-12.png){ .off-glb }
 10. Under Basic Information, enter **VPN** <font color="orange">**1**</font>.
