@@ -498,13 +498,11 @@ m        10.102.102.0/24 [251/0] via 10.0.0.2, 23:14:38, Sdwan-system-intf
 
 ## Configuring Centralized Control Policy for Route Leaking
 
-Next, we will configure a centralized **control policy** to ensure that traffic initiated from the **Sydney-User** destined 
-for the **Internet-Traffic** is first inspected by the **Sydney-FW** before reaching its destination. Since the 
-**Sydney-Firewall** (**<font color="green">Sydney-FW</font>**) is positioned within **<font color="orange">VRF-2</font>**, it is necessary to configure a centralized control policy 
+Since the **Sydney-Firewall** (**<font color="green">Sydney-FW</font>**) is positioned within **<font color="orange">VRF-2</font>**, it is necessary to configure a centralized control policy 
 to enable **route-leaking**. This configuration ensures that traffic from the **Sydney-User** can reach the **Sydney-Firewall** 
 and maintain connectivity with the **Internet via DIA**. 
 
-The control policy facilitates seamless communication between the two VRFs, ensuring full bidirectional reachability. By implementing this policy, 
+The control policy facilitates seamless communication between the **two VRFs**, ensuring full bidirectional reachability. By implementing this policy, 
 we establish a cohesive routing environment that allows resources in **VRF-1** and **VRF-2** to interact efficiently, 
 aligning with the network's operational requirements.
 
