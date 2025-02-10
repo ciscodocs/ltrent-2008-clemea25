@@ -258,7 +258,7 @@ to be applied to the traffic, such as redirection through a **Sydney-FW** firewa
    ![Service Attachment Gateway Name and Description](./assets/S-2-figure-5.png){ .off-glb }
 7. Click **Add Service Chain Definition** to define the service chain. 
    ![Service Attachment Gateway](./assets/S-3-figure-5.png){ .off-glb }
-8. Enter the name **Sydney-Firewall-SC** and Description **Sydney-Firewall-SC** for the service chain definition.
+8. Enter the name **Sydney-Firewall-SC-5** and Description **Sydney-Firewall-SC-5** for the service chain definition.
 9. Select a **Service Type** <font color="red">**Firewall**</font> by click dropdown and click **<font color="orange">Save</font>**
    ![Service Attachment Gateway Definition](./assets/S-3-figure-6.png){ .off-glb }
 10. Under Basic Information, enter **VPN** <font color="orange">**2**</font>.
@@ -348,7 +348,7 @@ Service Chain: SC8
    vrf: 2
    label: 1008
    state: up
-   description:  Sydney-Firewall-SC
+   description:  Sydney-Firewall-SC-5
 
    service: FW
       sequence: 1
@@ -940,7 +940,7 @@ Service Chain: SC8
    vrf: 2
    label: 1008
    state: up
-   description:  Sydney-Firewall-SC
+   description:  Sydney-Firewall-SC-5
 
    service: FW
       tx: 75 rx: 66
