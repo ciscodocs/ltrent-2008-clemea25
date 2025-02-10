@@ -41,7 +41,7 @@ Additionally, any traffic destined for the **Internet** must be inspected by the
 - The IT Administrator has already **configured** the **<font color="green">Amsterdam-Branch policy</font>** on the SD-WAN Manager. **<font color="green">Activate the policy</font>** and verify that it is correctly configured to achieve the intended objectives.
 ### Intended Traffic Flow Diagram
 
-The following diagram illustrates the **<font color="orange">flow of traffic for the Amsterdam-Branch</font>**.
+The following diagram illustrates the **<font color="orange">flow of Internet traffic for the Amsterdam-Branch</font>**.
 
 <figure markdown>
   ![Ticket Flow Topology](./assets/Challenge.gif)
