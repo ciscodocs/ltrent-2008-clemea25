@@ -18,11 +18,22 @@ network performance and reliability.
 - **show sdwan control local-properties**
 - **show sdwan control connections**
 
+## ACL show commands
+
+- **show sdwan policy data-policy-filter**
+- **show sdwan policy access-list-names**
+- **show sdwan policy access-list-associations**
+- **show sdwan policy access-list-counters**
+
 ## OMP peering and routes show commands
 
 - **show sdwan omp peers**
 - **show sdwan omp routes**
 - **show sdwan omp services**
+
+## NAT Translations show commands
+
+- **show sdwan nat-fwd ip-nat-translation**
 
 ## Service Chaining/Insertion show commands
 
@@ -30,11 +41,4 @@ network performance and reliability.
 - **show platform software sdwan service-chain stats detail**
 - **show platform hardware qfp active feature sdwan datapath service-chain database**
 - **show platform hardware qfp active feature sdwan datapath service-chain service-chain stats**
-
-## ACL show commands
-
-- **show sdwan policy data-policy-filter**
-- **show sdwan policy access-list-names**
-- **show sdwan policy access-list-associations**
-- **show sdwan policy access-list-counters**
 
