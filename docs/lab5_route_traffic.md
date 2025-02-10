@@ -27,9 +27,6 @@ This scenario demonstrates how traffic is securely routed through the firewall f
 
 ## Traffic flow without any NAT
 
-!!! info 
-    This is **<font color=orange>mandatory</font>** piece of configuration required for DIA to work. In this lab guide this **configuration is already done**.
-
 In the initial configuration, prior to applying any traffic policies or making modifications to the configuration group, it is observed that connectivity to the Internet, specifically to the **<font color="orange">Google DNS server 8.8.8.8</font>**, is not established from **VRF-1** on the **Sydney-Branch** WAN-Edge router. This lack of connectivity indicates that the current setup does not support direct Internet access from **VRF-1**, highlighting the need for further configuration, such as route adjustments, NAT settings, or centralized policies, to enable Internet reachability. This baseline observation provides a starting point for implementing the necessary changes in subsequent steps.
 
 ```{ .ios .no-copy }
@@ -94,6 +91,9 @@ Success rate is 0 percent (0/5)
 Sydney-Branch#
 ```
 ## Enabling NAT in Configuration Group for Sydney-Branch 
+
+!!! info 
+    This is **<font color=orange>mandatory</font>** piece of configuration required for DIA to work. In this lab guide this **configuration is already done**.
 
 In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the interface is crucial for reaching the underlay network for **Direct Internet Access (DIA)**. NAT translates internal private IP addresses into public IP addresses, allowing devices in **private VRFs** to communicate with external networks, such as the **Internet**. 
 
