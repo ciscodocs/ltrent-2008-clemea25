@@ -93,7 +93,7 @@ Sydney-Branch#
 ## Enabling NAT in Configuration Group for Sydney-Branch 
 
 !!! info 
-    This is **<font color=orange>mandatory</font>** piece of configuration required for DIA to work. In this lab guide this **configuration is already done**.
+    This is **<font color=orange>mandatory</font>** piece of configuration required for **DIA** to work. In this lab guide this **configuration is already done**.
 
 In Cisco Catalyst SD-WAN, enabling **NAT** (Network Address Translation) on the interface is crucial for reaching the underlay network for **Direct Internet Access (DIA)**. NAT translates internal private IP addresses into public IP addresses, allowing devices in **private VRFs** to communicate with external networks, such as the **Internet**. 
 
