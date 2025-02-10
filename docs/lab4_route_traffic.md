@@ -379,7 +379,7 @@ aligning with the network's operational requirements.
 
 
 !!! info 
-    Some **Site-lists**,**VPN-Lists** are **<font color="green">pre-configured</font>**.
+    Some **Site-lists**, **VPN-Lists** are **<font color="green">pre-configured</font>**.
 
 
 1. To begin configuring the centralized data policy, navigate to the left-hand pane in the SD-WAN Manager (vManage) interface. From there, select Configuration, followed by Classic, and then click on Policies. 
