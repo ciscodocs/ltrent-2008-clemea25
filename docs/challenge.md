@@ -46,3 +46,9 @@ The following diagram illustrates the **<font color="orange">flow of traffic for
 <figure markdown>
   ![Ticket Flow Topology](./assets/Challenge.gif)
 </figure>
+
+### Final verification for Troubleshooting-Pro
+
+1. **<font color="green">Amsterdam-Branch</font>** centralized policy **<font color="green">activated</font>** in **SD-WAN Manager**.
+2. Successful ping from **<font color="green">Amsterdam-User</font>** towards **<font color="orange">Sydney-User</font>** and **<font color="orange">Stockholm-User</font>**. 
+3. Successful _traceroute_ from **Amsterdam-User** towards **<font color="green">Internet</font>** **8.8.8.8** via **London-FW**. 
