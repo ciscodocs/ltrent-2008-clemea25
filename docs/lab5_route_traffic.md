@@ -737,7 +737,7 @@ This centralized policy ensures that traffic adheres to the intended security an
    for inspection, providing additional security and compliance. To implement this, navigate to the centralized policy section, click on ![dots](./assets/S-1-figure-dots.png){ .off-glb width="25"} next to the <font color="green">**scenario-5**</font> policy, and select **<font color="green">Edit</font>** to add the data policy. 
    This ensures seamless integration of traffic inspection within the existing policy framework.
    ![Configuring Policies](./assets/S-5-figure-11.png){ .off-glb }
-3. In order to add data policy, click **Traffic Rules**.
+3. In order to add data policy, click **Traffic Rules > Traffic Data**.
    ![Configuring Policies](./assets/S-3-figure-29.png){ .off-glb }
 4. Now click **Add Policy** and then click **Create New**.
    ![Configuring Policies](./assets/S-3-figure-30.png){ .off-glb }
