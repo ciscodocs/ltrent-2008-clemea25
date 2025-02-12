@@ -11,7 +11,7 @@ Connecting to the lab network requires VPN access to the lab environment. After 
 
 !!! note
     * **Connect Lab** is **<font color="red">not</font>** linked to anything.
-    * Only **Documentation** and **::POD::** links are working and linked.
+    * Only **Documentation** and **::POD::** links are working.
 
 ## Connect via RDP
 
