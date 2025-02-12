@@ -6,9 +6,14 @@ is designed to facilitate seamless routing, service insertion, and service chain
 Adhering to this predefined IP addressing plan ensures consistent configuration and simplifies troubleshooting 
 throughout the lab exercises.
 
+!!! info 
+    All **<font color="green">biz-internet</font>** TLOCs have IP address of <font color="green">172.16.1.**<site-id>**/24</font>
+    All **<font color="green">mpls</font>** TLOCs have IP address of <font color="green">172.16.2.**<site-id>**/24<font>
+
 !!! info
     * All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.site-id.1/24**.
     * All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.site-id.site-id.1/24**.
+
 
 ## Stockholm Branch (Site-ID 10)
 
