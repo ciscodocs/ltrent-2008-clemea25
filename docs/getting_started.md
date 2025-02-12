@@ -1,6 +1,15 @@
 # Getting Started
 Connecting to the lab network requires VPN access to the lab environment. After successfully establishing VPN connection, you access with RDP the jump-host workstation with preconfigured session manager.
 
+## Establishing VPN connectivity
+
+1. Go to lab assistant tool at https://lab-assistant.com/home/?next=/
+2. Enter the access code - **<font color="green">558045</font>**
+3. Click **<font color="orange">::POD::</font>**
+4. Select **one** pod from the available PODs. 
+5. Under **POD details**, enter the details (host name, username and password) in the **AnyConnect VPN** client to establish VPN connectivity to the **dCloud**. 
+
+
 ## Connect via RDP
 
 - RDP to the Management Workstation.
