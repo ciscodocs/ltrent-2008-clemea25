@@ -7,8 +7,8 @@ Adhering to this predefined IP addressing plan ensures consistent configuration 
 throughout the lab exercises.
 
 !!! info 
-    * All **<font color="green">biz-internet</font>** TLOCs have IP address of <font color="green">172.16.1.**<site-id>**/24</font>
-    * All **<font color="green">mpls</font>** TLOCs have IP address of <font color="green">172.16.2.**<site-id>**/24<font>
+    * All **<font color="green">biz-internet</font>** TLOCs have IP address of <font color="green">172.16.1.**site-id**/24</font>.
+    * All **<font color="green">mpls</font>** TLOCs have IP address of <font color="green">172.16.2.**site-id**/24<font>.
 
 !!! info
     * All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.site-id.1/24**.
