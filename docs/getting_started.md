@@ -3,7 +3,7 @@ Connecting to the lab network requires VPN access to the lab environment. After 
 
 ## Establishing VPN connectivity
 
-1. Go to lab assistant tool at https://lab-assistant.com/home/?next=/
+1. Go to lab assistant tool at <a href="https://lab-assistant.com/home/?next=/">Lab-assistant-tool</a>.
 2. Enter the access code - **<font color="green">558045</font>**
 3. Click **<font color="orange">::POD::</font>**
 4. Select **one** pod from the available PODs. 
