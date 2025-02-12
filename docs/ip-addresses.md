@@ -7,12 +7,12 @@ Adhering to this predefined IP addressing plan ensures consistent configuration 
 throughout the lab exercises.
 
 !!! info 
-    * All **biz-internet** TLOCs have IP address of <font color="green">172.16.1.**site-id**/24</font>.
-    * All **mpls** TLOCs have IP address of <font color="green">172.16.2.**site-id**/24<font>.
+    * All **biz-internet** TLOCs have IP address of **172.16.1.site-id/24**</font>.
+    * All **mpls** TLOCs have IP address of **172.16.2.site-id/24**<font>.
 
 !!! info
-    * All **<font color="green">GigabitEthernet 3</font>** interfaces have standard IP addressing schema **192.168.site-id.1/24**.
-    * All **<font color="green">GigabitEthernet 4</font>** interfaces have standard IP addressing schema **10.site-id.site-id.1/24**.
+    * All **GigabitEthernet 3** interfaces have standard IP addressing schema **192.168.site-id.1/24**.
+    * All **GigabitEthernet 4** interfaces have standard IP addressing schema **10.site-id.site-id.1/24**.
 
 
 ## Stockholm Branch (Site-ID 10)
