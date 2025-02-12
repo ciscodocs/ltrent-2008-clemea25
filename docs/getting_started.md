@@ -9,6 +9,9 @@ Connecting to the lab network requires VPN access to the lab environment. After 
 4. Select **one** pod from the available PODs. 
 5. Under **POD details**, enter the details (host name, username and password) in the **AnyConnect VPN** client to establish VPN connectivity to the **dCloud**. 
 
+!!! note
+    * **Connect Lab** is not linked to anything.
+    * Only **Documentation** and **::POD::** links are working and linked.
 
 ## Connect via RDP
 
