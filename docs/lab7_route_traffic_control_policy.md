@@ -1,4 +1,4 @@
-# Lab 7 - Using Data Policy for Routing Traffic from A to B via C firewall in Same VRF in AWS
+# Lab 7 - Using Data Policy for Routing Traffic from A to B via C firewall in Same VRF in AWS A
 ## Introduction
 
 In this lab exercise, you will explore the traffic flow from a user located in the **EMEA-Sydney-Branch (site-20)** to a user situated at the **APAC-Stockholm-Branch (site-10)**.
