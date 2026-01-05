@@ -40,8 +40,8 @@ extra_css:
 plugins:
   - search
   - with-pdf:
-      cover_title: LTRENT-2008
-      cover_subtitle: "Beyond Basics: Practical SD-WAN Strategies for Route Leaking and Service Insertion"
+      cover_title: LTRENT-3008
+      cover_subtitle: "Beyond Basics: Practical SD-WAN Service Insertion Strategies Using UX2.0"
       cover_logo: template_assets/Cisco-Live-White-Blue-APJC.svg
   - glightbox:
       touchNavigation: true
